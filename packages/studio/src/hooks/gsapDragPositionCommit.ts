@@ -157,7 +157,7 @@ export async function commitGsapPositionFromDrag(
           ease: "none",
         },
         {
-          label: "Move layer (new keyframe)",
+          label: "移动图层（新关键帧）",
           keyframeAction: "add",
           softReload: true,
           beforeReload: restoreOffset,
@@ -181,7 +181,7 @@ export async function commitGsapPositionFromDrag(
           x: newX,
           y: newY,
         },
-        { label: "Move layer (waypoint)", softReload: true, beforeReload: restoreOffset },
+        { label: "移动图层（路径点）", softReload: true, beforeReload: restoreOffset },
       );
       setActiveKeyframePct(null);
       parkPlayheadOnKeyframe(anim, pct);
@@ -204,7 +204,7 @@ export async function commitGsapPositionFromDrag(
         ease: "none",
       },
       {
-        label: "Move layer (new keyframe)",
+        label: "移动图层（新关键帧）",
         keyframeAction: "add",
         softReload: true,
         beforeReload: restoreOffset,
@@ -213,7 +213,7 @@ export async function commitGsapPositionFromDrag(
     return { status: "persisted" };
   }
   return commitValueAtPlayhead(selection, anim, { x: newX, y: newY }, iframe, callbacks, {
-    label: "Move layer",
+    label: "移动图层",
     backfill: { x: baseGsapX, y: baseGsapY },
     beforeReload: restoreOffset,
   });

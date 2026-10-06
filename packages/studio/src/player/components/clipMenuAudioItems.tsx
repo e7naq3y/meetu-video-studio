@@ -74,7 +74,7 @@ export function ClipMenuAudioItems({
           openAudioGainDialog(element);
         }}
       >
-        <span>Audio Gain…</span>
+        <span>音频增益…</span>
         <span className="text-neutral-500 text-[10px] ml-3">G</span>
       </button>
     );
@@ -88,7 +88,7 @@ export function ClipMenuAudioItems({
       className={ITEM_CLASS}
       onClick={() => void toggleDuck()}
     >
-      <span>Duck under voice</span>
+      <span>人声出现时自动压低</span>
       <span aria-hidden="true">{ducked ? "✓" : ""}</span>
     </button>
   );

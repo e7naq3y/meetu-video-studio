@@ -56,14 +56,14 @@ export function useGsapAnimationOps({
           { kind: "set", animationId, properties: updates },
           sdkSession,
           sdkDeps,
-          { label: "Edit GSAP animation", coalesceKey: `gsap:${animationId}:meta` },
+          { label: "编辑 GSAP 动画", coalesceKey: `gsap:${animationId}:meta` },
         );
         if (cutoverCommittedOrThrow(handled)) return;
       }
       return commitMutationSafely(
         selection,
         { type: "update-meta", animationId, updates },
-        { label: "Edit GSAP animation", coalesceKey: `gsap:${animationId}:meta`, softReload: true },
+        { label: "编辑 GSAP 动画", coalesceKey: `gsap:${animationId}:meta`, softReload: true },
       );
     },
     [commitMutationSafely, activeCompPath, sdkSession, sdkDeps],
@@ -78,14 +78,14 @@ export function useGsapAnimationOps({
           { kind: "remove", animationId },
           sdkSession,
           sdkDeps,
-          { label: "Delete GSAP animation" },
+          { label: "删除 GSAP 动画" },
         );
         if (cutoverCommittedOrThrow(handled)) return;
       }
       return commitMutationSafely(
         selection,
         { type: "delete", animationId, stripStudioEdits: true },
-        { label: "Delete GSAP animation", softReload: true },
+        { label: "删除 GSAP 动画", softReload: true },
       );
     },
     [commitMutationSafely, activeCompPath, sdkSession, sdkDeps],
@@ -100,14 +100,14 @@ export function useGsapAnimationOps({
           targetSelector,
           sdkSession,
           sdkDeps,
-          { label: "Delete all animations for element" },
+          { label: "删除该元素的所有动画" },
         );
         if (cutoverCommittedOrThrow(handled)) return;
       }
       void commitMutation(
         selection,
         { type: "delete-all-for-selector", targetSelector },
-        { label: "Delete all animations for element", softReload: true },
+        { label: "删除该元素的所有动画", softReload: true },
       );
     },
     [commitMutation, activeCompPath, sdkSession, sdkDeps],
@@ -172,7 +172,7 @@ export function useGsapAnimationOps({
           { kind: "add", target: selection.hfId, spec },
           sdkSession,
           sdkDeps,
-          { label: `Add GSAP ${method} animation` },
+          { label: `添加 GSAP ${method} 动画` },
         );
         if (cutoverCommittedOrThrow(handled)) return;
       }
@@ -189,7 +189,7 @@ export function useGsapAnimationOps({
           properties: toDefaults[method] ?? { opacity: 1 },
           fromProperties: method === "fromTo" ? { opacity: 0 } : undefined,
         },
-        { label: `Add GSAP ${method} animation`, softReload: true },
+        { label: `添加 GSAP ${method} 动画`, softReload: true },
       );
     },
     [

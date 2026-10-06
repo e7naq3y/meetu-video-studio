@@ -93,9 +93,9 @@ export const SnapToolbar = memo(function SnapToolbar() {
           }`}
           onClick={() => setMotionPathArmed(!motionPathArmed)}
           title={
-            motionPathArmed ? "Click the canvas to set the destination" : "Set motion destination"
+            motionPathArmed ? "点击画布设置目标位置" : "设置运动目标位置"
           }
-          aria-label="Set motion destination"
+          aria-label="设置运动目标位置"
         >
           <Path size={16} weight={motionPathArmed ? "fill" : "regular"} />
         </button>
@@ -121,8 +121,8 @@ export const SnapToolbar = memo(function SnapToolbar() {
               toggle();
               trackPreviewFeatureUsed(key === "rulerVisible" ? "ruler" : "safe_margins", "button");
             }}
-            title={`${label} ${visible ? "on" : "off"}`}
-            aria-label={`Toggle ${label.toLowerCase()}`}
+            title={`${label}${visible ? "已开启" : "已关闭"}`}
+            aria-label={`切换${label.toLowerCase()}`}
             aria-pressed={visible}
           >
             <Icon size={16} weight={visible ? "fill" : "regular"} />
@@ -137,8 +137,8 @@ export const SnapToolbar = memo(function SnapToolbar() {
             : "bg-black/40 text-white/60 hover:bg-black/60 hover:text-white/80"
         }`}
         onClick={toggleSnap}
-        title={prefs.snapEnabled ? "Snap enabled (S)" : "Snap disabled (S)"}
-        aria-label="Toggle snap"
+        title={prefs.snapEnabled ? "吸附已开启 (S)" : "吸附已关闭 (S)"}
+        aria-label="切换吸附"
       >
         <MagnetStraight size={16} weight={prefs.snapEnabled ? "fill" : "regular"} />
       </button>
@@ -160,10 +160,10 @@ export const SnapToolbar = memo(function SnapToolbar() {
           }}
           title={
             prefs.gridVisible
-              ? "Grid visible (G) — right-click for spacing options"
-              : "Grid hidden (G) — right-click for spacing options"
+              ? "网格已显示 (G)，右键可设置间距"
+              : "网格已隐藏 (G)，右键可设置间距"
           }
-          aria-label="Toggle grid"
+          aria-label="切换网格"
         >
           <GridFour size={16} weight={prefs.gridVisible ? "fill" : "regular"} />
         </button>
@@ -174,8 +174,8 @@ export const SnapToolbar = memo(function SnapToolbar() {
             if (gridPopoverOpen) settleGridSpacing();
             setGridPopoverOpen((v) => !v);
           }}
-          title="Grid options"
-          aria-label="Grid options"
+          title="网格选项"
+          aria-label="网格选项"
           aria-expanded={gridPopoverOpen}
         >
           <svg width="7" height="7" viewBox="0 0 8 8" fill="currentColor" aria-hidden="true">
@@ -189,7 +189,7 @@ export const SnapToolbar = memo(function SnapToolbar() {
             className="absolute right-0 top-full mt-1 rounded-lg bg-raised border border-border p-3 shadow-xl min-w-[180px]"
           >
             <label className="flex items-center justify-between text-xs text-white/80 mb-2">
-              <span>Grid spacing</span>
+              <span>网格间距</span>
               <input
                 type="number"
                 min={10}
@@ -227,7 +227,7 @@ export const SnapToolbar = memo(function SnapToolbar() {
                 }}
                 className="accent-studio-accent"
               />
-              <span>Snap to grid</span>
+              <span>吸附到网格</span>
             </label>
           </div>
         )}

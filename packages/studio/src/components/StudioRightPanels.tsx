@@ -288,7 +288,7 @@ export const StudioRightPanels = memo(function StudioRightPanels({
       </Dock.Panel>
       <Dock.Panel
         id="renders"
-        title={renderJobs.length > 0 ? `Renders (${renderJobs.length})` : undefined}
+        title={renderJobs.length > 0 ? `渲染记录（${renderJobs.length}）` : undefined}
       >
         <RenderQueuePanel />
       </Dock.Panel>

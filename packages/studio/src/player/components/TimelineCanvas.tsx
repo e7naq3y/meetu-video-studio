@@ -95,7 +95,7 @@ export const TimelineCanvas = memo(function TimelineCanvas() {
             height: TRACK_H - CLIP_Y * 2,
           }}
         >
-          {props.acceptsMediaDrop && "Drop media here"}
+          {props.acceptsMediaDrop && "将媒体拖到这里"}
         </div>
       )}
 

@@ -153,9 +153,9 @@ function readRuntimeColorGradingStatus(
       | null
       | undefined;
     const status = win?.__hf?.colorGrading?.getStatus?.(target);
-    return status ?? { state: "pending", message: "Waiting for runtime" };
+    return status ?? { state: "pending", message: "等待运行时" };
   } catch {
-    return { state: "unavailable", message: "Preview unavailable" };
+    return { state: "unavailable", message: "无法预览" };
   }
 }
 
@@ -210,7 +210,7 @@ export function useColorGradingController({
   const [applyBusy, setApplyBusy] = useState(false);
   const [runtimeStatus, setRuntimeStatus] = useState<RuntimeColorGradingStatus>(() => ({
     state: "pending",
-    message: "Waiting for runtime",
+    message: "等待运行时",
   }));
   const selectedAssetPath = useMemo(
     () => selectedMediaAssetPath(element, projectId),
@@ -245,7 +245,7 @@ export function useColorGradingController({
     compareEnabledRef.current = false;
     setApplyScope("source-file");
     setApplyBusy(false);
-    setRuntimeStatus({ state: "pending", message: "Waiting for runtime" });
+    setRuntimeStatus({ state: "pending", message: "等待运行时" });
     setMediaMetadata(null);
   }
 
@@ -351,7 +351,7 @@ export function useColorGradingController({
         const reverted = confirmedGradingRef.current;
         latestGradingRef.current = reverted;
         setGrading(reverted);
-        setRuntimeStatus({ state: "unavailable", message: "Save failed — reverted" });
+        setRuntimeStatus({ state: "unavailable", message: "保存失败，已还原" });
       };
       // The callback is the primary result signal; the rejection path supports
       // other setAttributeLive implementations.
@@ -474,7 +474,7 @@ export function useColorGradingController({
     (nextGrading: NormalizedHfColorGrading) => {
       latestGradingRef.current = nextGrading;
       setGrading(nextGrading);
-      setRuntimeStatus({ state: "pending", message: "Updating shader" });
+      setRuntimeStatus({ state: "pending", message: "正在更新着色器" });
       postColorGrading(nextGrading);
       const active = isHfColorGradingActive(nextGrading);
       if (compareEnabledRef.current) {

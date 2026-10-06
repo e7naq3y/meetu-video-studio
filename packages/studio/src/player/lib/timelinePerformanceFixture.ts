@@ -127,7 +127,7 @@ export function createTimelinePerformanceFixture(
       key: id,
       domId: id,
       selector: `#${id}`,
-      label: `Fixture ${index + 1}`,
+      label: `测试样例 ${index + 1}`,
       tag: spec.profile === "remote-unsupported" && index % 2 === 0 ? "video" : "div",
       start,
       duration: geometry.clipDuration,

@@ -51,7 +51,7 @@ function PropertyGroupNavigation({
     <span className="flex shrink-0 items-center gap-0.5">
       <button
         type="button"
-        aria-label={`Previous ${label} keyframe`}
+        aria-label={`上一个${label}关键帧`}
         disabled={!navigation.prevKeyframe}
         className={CHEVRON_BUTTON_CLASS}
         onClick={(event) => {
@@ -64,7 +64,7 @@ function PropertyGroupNavigation({
       {children}
       <button
         type="button"
-        aria-label={`Next ${label} keyframe`}
+        aria-label={`下一个${label}关键帧`}
         disabled={!navigation.nextKeyframe}
         className={CHEVRON_BUTTON_CLASS}
         onClick={(event) => {
@@ -151,8 +151,8 @@ export function PropertyGroupHeaderRow({
         <button
           type="button"
           aria-pressed={!!navigation.currentKeyframe}
-          aria-label={`${navigation.currentKeyframe ? "Remove" : "Add"} ${label} keyframe`}
-          title={`${navigation.currentKeyframe ? "Remove" : "Add"} ${label} keyframe`}
+          aria-label={`${navigation.currentKeyframe ? "删除" : "添加"}${label}关键帧`}
+          title={`${navigation.currentKeyframe ? "删除" : "添加"}${label}关键帧`}
           // h-6 w-6 = the 24x24 WCAG 2.2 minimum target; the ◆ glyph stays 11px.
           className="flex h-6 w-6 shrink-0 items-center justify-center border-0 bg-transparent p-0 text-[11px] text-accent-ink focus-visible:outline-solid focus-visible:outline-1 focus-visible:outline-ring"
           onClick={(event) => {
@@ -259,8 +259,8 @@ export function AutomationLaneHeaderRow({
       <button
         type="button"
         tabIndex={-1}
-        aria-label={onReveal ? `Show ${label} in the effect rack` : undefined}
-        title={onReveal ? `Show ${label} in the effect rack` : label}
+        aria-label={onReveal ? `在效果架中显示${label}` : undefined}
+        title={onReveal ? `在效果架中显示${label}` : label}
         disabled={!onReveal}
         className="flex min-w-0 flex-1 flex-col justify-center rounded-sm border-0 bg-transparent p-0 text-left leading-tight enabled:hover:text-text-0 focus-visible:outline-solid focus-visible:outline-1 focus-visible:outline-ring"
         onPointerDown={(event) => event.stopPropagation()}
@@ -286,9 +286,9 @@ export function AutomationLaneHeaderRow({
           <span
             data-automation-lane-also=""
             className="truncate text-[9px] text-warning-ink"
-            title={`${alsoAutomatedBy} is also fading this — the two multiply.`}
+            title={`${alsoAutomatedBy} 也在淡化此项，两者效果会叠乘。`}
           >
-            {alsoAutomatedBy} is also fading this.
+            {alsoAutomatedBy} 也在淡化此项。
           </span>
         ) : null}
       </button>
@@ -308,8 +308,8 @@ export function AutomationLaneHeaderRow({
       {onRemove && target !== null && !isCarve && (
         <button
           type="button"
-          aria-label={`Remove ${label} automation`}
-          title={`Remove ${label} automation`}
+          aria-label={`移除${label}自动化`}
+          title={`移除${label}自动化`}
           // h-6 w-6 is the 24x24 WCAG 2.2 target; the glyph stays small.
           className="flex h-6 w-6 shrink-0 items-center justify-center border-0 bg-transparent p-0 text-[11px] text-text-muted hover:text-text-0 focus-visible:outline-solid focus-visible:outline-1 focus-visible:outline-ring"
           onPointerDown={(event) => event.stopPropagation()}

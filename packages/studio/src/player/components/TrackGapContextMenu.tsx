@@ -88,7 +88,7 @@ export const TrackGapContextMenu = memo(function TrackGapContextMenu({
           onClose();
         }}
       >
-        <span>Close gap</span>
+        <span>消除间隙</span>
         {gapWidth != null && (
           <span className="text-neutral-500 text-[10px] ml-3">{gapWidth.toFixed(2)}s</span>
         )}
@@ -105,7 +105,7 @@ export const TrackGapContextMenu = memo(function TrackGapContextMenu({
           onClose();
         }}
       >
-        <span>Close all gaps</span>
+        <span>消除所有间隙</span>
       </button>
     </div>,
     document.body,

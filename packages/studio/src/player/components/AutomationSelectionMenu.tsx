@@ -67,13 +67,13 @@ export const AutomationSelectionMenu = memo(function AutomationSelectionMenu({
         type="button"
         className={row}
         disabled={!canSimplify}
-        title={canSimplify ? undefined : "Fewer than three points in the selection"}
+        title={canSimplify ? undefined : "选区中少于三个点"}
         onClick={() => {
           onSimplify();
           onClose();
         }}
       >
-        Simplify
+        简化
       </button>
     </div>,
     document.body,

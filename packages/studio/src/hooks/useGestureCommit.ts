@@ -262,7 +262,7 @@ export function useGestureCommit({
                 duration: roundTo3(duration),
                 keyframes,
               },
-              { label: "Gesture recording (replace set)", softReload: true, keyframeAction: "add" },
+              { label: "手势录制（替换）", softReload: true, keyframeAction: "add" },
             );
           } else {
             const tweenStart = existingPositionTween.resolvedStart ?? 0;
@@ -321,7 +321,7 @@ export function useGestureCommit({
                   keyframes: merged,
                   ...keyframeEases(existingPositionTween),
                 },
-                { label: "Gesture recording (merge)", softReload: true, keyframeAction: "add" },
+                { label: "手势录制（合并）", softReload: true, keyframeAction: "add" },
               );
             } else {
               // Emit one tween per property group so a mixed-prop gesture (e.g.
@@ -343,7 +343,7 @@ export function useGestureCommit({
                     easeEach: "none",
                   },
                   {
-                    label: "Gesture recording (new range)",
+                    label: "手势录制（新区间）",
                     ...coalesceOptions,
                     ...reloadOnlyLast(index, keyframeGroups.length),
                   },
@@ -366,7 +366,7 @@ export function useGestureCommit({
                 easeEach: "none",
               },
               {
-                label: "Gesture recording",
+                label: "手势录制",
                 ...coalesceOptions,
                 ...reloadOnlyLast(index, keyframeGroups.length),
               },

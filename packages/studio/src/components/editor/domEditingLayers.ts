@@ -100,7 +100,7 @@ export function collectDomEditTextFields(el: HTMLElement): DomEditTextField[] {
           if (!text.trim()) continue;
           fields.push({
             key: `text-node:${childIdx}`,
-            label: `Text ${childIdx + 1}`,
+            label: `文字 ${childIdx + 1}`,
             value: text,
             tagName: "#text",
             attributes: [],
@@ -164,7 +164,7 @@ export function serializeDomEditTextFields(fields: DomEditTextField[]): string {
 export function buildDefaultDomEditTextField(base?: Partial<DomEditTextField>): DomEditTextField {
   return {
     key: `child:new:${Date.now()}`,
-    label: "Text",
+    label: "文字",
     value: "New text",
     tagName: "span",
     attributes: [],

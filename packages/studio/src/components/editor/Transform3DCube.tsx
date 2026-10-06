@@ -196,7 +196,7 @@ export function Transform3DCube({
         onKeyDown={onKeyDown}
         tabIndex={0}
         role="slider"
-        aria-label="3D rotation. Arrow keys rotate X/Y, Shift+arrows roll Z, Alt for fine steps; drag to rotate, scroll to change depth"
+        aria-label="3D 旋转。方向键绕 X/Y 轴旋转，Shift+方向键绕 Z 轴滚转，按住 Alt 微调；拖动旋转，滚动滚轮调整景深"
         aria-valuetext={`X ${Math.round(shown.rotationX)}°, Y ${Math.round(
           shown.rotationY,
         )}°, Z ${Math.round(shown.rotationZ)}°`}
@@ -292,8 +292,8 @@ export function Transform3DCube({
         <button
           type="button"
           onClick={onRecenter}
-          title="Reset 3D orientation"
-          aria-label="Reset 3D orientation"
+          title="重置 3D 朝向"
+          aria-label="重置 3D 朝向"
           className="absolute right-1.5 top-1.5 rounded-sm p-0.5 text-neutral-500 hover:bg-neutral-800 hover:text-neutral-200"
         >
           <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor">
@@ -308,10 +308,10 @@ export function Transform3DCube({
           onClick={onKeyframe}
           title={
             keyframed
-              ? "3D transform is keyframed — click a field diamond to add keyframes"
-              : "Keyframe the 3D transform (animate it over time)"
+              ? "3D 变换已设关键帧，点击字段旁的菱形可添加关键帧"
+              : "为 3D 变换设置关键帧（让它随时间变化）"
           }
-          aria-label="Keyframe 3D transform"
+          aria-label="为 3D 变换添加关键帧"
           aria-pressed={keyframed}
           className={`absolute left-1.5 top-1.5 rounded p-0.5 hover:bg-neutral-800 ${
             keyframed ? "text-accent-ink" : "text-neutral-500 hover:text-neutral-200"

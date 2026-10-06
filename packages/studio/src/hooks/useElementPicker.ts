@@ -318,7 +318,7 @@ function toPickedElement(el: PickedElementInfo, iframe: HTMLIFrameElement): Pick
     id: el.id ?? null,
     tagName: el.tagName ?? "div",
     selector: el.selector ?? "",
-    label: el.label ?? el.tagName ?? "Element",
+    label: el.label ?? el.tagName ?? "元素",
     boundingBox: el.boundingBox ?? { x: 0, y: 0, width: 0, height: 0 },
     textContent: el.textContent ?? null,
     src: el.src ?? null,

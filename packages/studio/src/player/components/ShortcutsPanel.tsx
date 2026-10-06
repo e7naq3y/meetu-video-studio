@@ -73,13 +73,13 @@ export const ShortcutsPanel = memo(function ShortcutsPanel({
 
   return (
     <div ref={shortcutsPanelRef} className="relative shrink-0">
-      <Tooltip label="Shortcuts and tools">
+      <Tooltip label="快捷键与工具">
         <button
           ref={triggerRef}
           type="button"
           onClick={() => setShowShortcuts((v) => !v)}
           className={showShortcuts ? flatActive : flatIdle}
-          aria-label="Shortcuts and tools"
+          aria-label="快捷键与工具"
           aria-expanded={showShortcuts}
           aria-controls={shortcutsPanelId}
         >
@@ -105,7 +105,7 @@ export const ShortcutsPanel = memo(function ShortcutsPanel({
           ref={panelBodyRef}
           tabIndex={-1}
           role="dialog"
-          aria-label="Keyboard shortcuts and tools"
+          aria-label="键盘快捷键与工具"
           // Deliberately NOT aria-modal. This is a non-modal disclosure: focus is
           // not trapped and the rest of the editor stays operable, so claiming
           // modality would make assistive tech treat the whole app as inert.
@@ -116,7 +116,7 @@ export const ShortcutsPanel = memo(function ShortcutsPanel({
         >
           <div className="px-3 pt-3 pb-2.5">
             <p className="text-[9px] font-medium text-neutral-500 uppercase tracking-wider mb-1.5">
-              Jump to frame
+              跳到指定帧
             </p>
             <form onSubmit={handleJumpSubmit} className="flex items-center gap-1.5">
               <input
@@ -125,19 +125,19 @@ export const ShortcutsPanel = memo(function ShortcutsPanel({
                 disabled={disabled}
                 inputMode="numeric"
                 pattern="[0-9]*"
-                aria-label="Jump to frame"
-                placeholder="frame number"
+                aria-label="跳到指定帧"
+                placeholder="帧号"
                 className="h-6 flex-1 rounded-sm border border-neutral-700 bg-neutral-900 px-2 text-[10px] font-mono tabular-nums text-neutral-200 outline-hidden transition-colors placeholder:text-neutral-600 focus:border-studio-accent/60"
                 onKeyDown={handleJumpKeyDown}
                 onBlur={commitJumpFrame}
               />
-              <Tooltip label="Jump to frame">
+              <Tooltip label="跳到指定帧">
                 <button
                   type="submit"
                   disabled={disabled}
                   className="h-6 px-2 rounded-sm border border-neutral-700 text-[10px] text-neutral-300 transition-colors hover:border-neutral-500 hover:bg-neutral-800 disabled:opacity-40"
                 >
-                  Go
+                  跳转
                 </button>
               </Tooltip>
             </form>
@@ -145,7 +145,7 @@ export const ShortcutsPanel = memo(function ShortcutsPanel({
           <div className="border-t border-border" />
           <div className="px-3 pt-2.5 pb-2">
             <p className="text-[9px] font-medium text-neutral-500 uppercase tracking-wider mb-1.5">
-              Work area
+              工作区域
             </p>
             <div className="flex flex-col gap-1">
               <div className="flex items-center justify-between gap-2">
@@ -153,7 +153,7 @@ export const ShortcutsPanel = memo(function ShortcutsPanel({
                   <span className="font-mono text-[10px] rounded-sm border border-neutral-700 px-1.5 py-0.5 text-neutral-300 min-w-[20px] text-center bg-hover">
                     I
                   </span>
-                  <span className="text-[10px] text-neutral-400">In-point</span>
+                  <span className="text-[10px] text-neutral-400">入点</span>
                 </div>
                 <div className="flex items-center gap-1.5">
                   {inPoint !== null ? (
@@ -161,12 +161,12 @@ export const ShortcutsPanel = memo(function ShortcutsPanel({
                       <span className="font-mono text-[10px] text-neutral-300">
                         {formatTime(inPoint)}
                       </span>
-                      <Tooltip label="Clear in-point">
+                      <Tooltip label="清除入点">
                         <button
                           type="button"
                           onClick={() => setInPoint(null)}
                           className="w-4 h-4 flex items-center justify-center rounded-sm text-neutral-500 hover:text-neutral-200 transition-colors"
-                          aria-label="Clear in-point"
+                          aria-label="清除入点"
                         >
                           <svg
                             width="8"
@@ -191,7 +191,7 @@ export const ShortcutsPanel = memo(function ShortcutsPanel({
                   <span className="font-mono text-[10px] rounded-sm border border-neutral-700 px-1.5 py-0.5 text-neutral-300 min-w-[20px] text-center bg-hover">
                     O
                   </span>
-                  <span className="text-[10px] text-neutral-400">Out-point</span>
+                  <span className="text-[10px] text-neutral-400">出点</span>
                 </div>
                 <div className="flex items-center gap-1.5">
                   {outPoint !== null ? (
@@ -199,12 +199,12 @@ export const ShortcutsPanel = memo(function ShortcutsPanel({
                       <span className="font-mono text-[10px] text-neutral-300">
                         {formatTime(outPoint)}
                       </span>
-                      <Tooltip label="Clear out-point">
+                      <Tooltip label="清除出点">
                         <button
                           type="button"
                           onClick={() => setOutPoint(null)}
                           className="w-4 h-4 flex items-center justify-center rounded-sm text-neutral-500 hover:text-neutral-200 transition-colors"
-                          aria-label="Clear out-point"
+                          aria-label="清除出点"
                         >
                           <svg
                             width="8"

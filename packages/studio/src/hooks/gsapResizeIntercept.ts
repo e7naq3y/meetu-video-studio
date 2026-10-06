@@ -108,7 +108,7 @@ export async function commitSizeAtPlayhead(
     iframe,
     callbacks,
     {
-      label: "Resize",
+      label: "调整尺寸",
       backfill: {
         ...preGestureBoxSize(selection.element),
         ...(anchor && { x: anchor.baseGsapX, y: anchor.baseGsapY }),
@@ -220,7 +220,7 @@ export async function tryGsapResizeIntercept(
     if (!scriptWritesSize) {
       const firstKey = firstSizeKey(selection, sized, resizeGroup, workingAnimations);
       if (!firstKey) return { status: "element-size" };
-      await commitMutation(selection, firstKey, { label: "Resize", softReload: true });
+      await commitMutation(selection, firstKey, { label: "调整尺寸", softReload: true });
       return handOverDraftSize(selection, { status: "persisted" }, sized, draw);
     }
     const sel = selectorFromSelection(selection) ?? writeTargetSelector(selection);
@@ -524,7 +524,7 @@ export async function tryGsapResizeIntercept(
     return handOverDraftSize(selection, written, resizeProps, draw);
   }
   const written = await commitValueAtPlayhead(selection, anim, resizeProps, iframe, callbacks, {
-    label: "Resize",
+    label: "调整尺寸",
     backfill: resizeBackfill,
   });
   if (written.status !== "persisted") return written;

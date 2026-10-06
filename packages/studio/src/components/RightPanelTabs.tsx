@@ -39,7 +39,7 @@ export function RightPanelTabs({
       }}
     >
       <TabsList
-        aria-label="Inspector panels"
+        aria-label="检查器面板"
         activateOnFocus={activateOnFocus}
         className="flex min-w-0 items-center gap-1 overflow-hidden rounded-none border-b border-border-strong bg-transparent px-3 py-2"
       >

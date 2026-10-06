@@ -21,14 +21,14 @@ import { projectProvenance } from "./projectProvenance";
 const FAILURE_FOLLOW_UP: FollowUpQuestion = {
   id: "failure",
   prompt: "That export failed.",
-  placeholder: "What were you exporting?",
+  placeholder: "你在导出什么？",
   presets: [
-    { label: "Happens every time", hint: "Every export of this project fails this way" },
-    { label: "First time", hint: "Exports normally work for me" },
-    { label: "Long composition", hint: "Over a minute, or a lot of scenes" },
-    { label: "Big media files", hint: "Large video or image assets in the project" },
-    { label: "Has audio", hint: "The composition includes voiceover, music or sound" },
-    { label: "Embedded video", hint: "One or more video clips inside the composition" },
+    { label: "每次都这样", hint: "这个项目每次导出都这样失败" },
+    { label: "第一次遇到", hint: "我平时导出都正常" },
+    { label: "合成较长", hint: "超过一分钟，或场景很多" },
+    { label: "媒体文件较大", hint: "项目里有较大的视频或图片素材" },
+    { label: "含音频", hint: "合成中包含配音、音乐或音效" },
+    { label: "内嵌视频", hint: "合成中包含一个或多个视频片段" },
   ],
 };
 
@@ -40,14 +40,14 @@ const FAILURE_FOLLOW_UP: FollowUpQuestion = {
 const CRASH_FOLLOW_UP: FollowUpQuestion = {
   id: "crash",
   prompt: "Studio crashed. What were you doing?",
-  placeholder: "The last thing you touched",
+  placeholder: "你最后操作的内容",
   presets: [
-    { label: "Editing the timeline", hint: "Dragging, trimming or splitting clips" },
-    { label: "Playing the preview", hint: "Scrubbing or playing back the composition" },
-    { label: "Adding media", hint: "Importing video, images or audio" },
-    { label: "Editing properties", hint: "Changing styles, transforms or keyframes" },
-    { label: "Exporting", hint: "Starting or watching a render" },
-    { label: "Just opened it", hint: "It broke before I did anything" },
+    { label: "编辑时间线", hint: "拖动、修剪或分割片段" },
+    { label: "播放预览", hint: "拖动播放头或播放合成" },
+    { label: "添加媒体", hint: "导入视频、图片或音频" },
+    { label: "编辑属性", hint: "修改样式、变换或关键帧" },
+    { label: "导出中", hint: "开始渲染或查看渲染进度" },
+    { label: "刚打开就出问题", hint: "我还没做任何操作就坏了" },
   ],
 };
 
@@ -206,7 +206,7 @@ export const StudioFeedbackCard = memo(function StudioFeedbackCard() {
   return (
     <div
       role="dialog"
-      aria-label="Send feedback to the HyperFrames team"
+      aria-label="向 HyperFrames 团队发送反馈"
       className={`motion-reduce:animate-none ${exiting ? "hf-toast-exit" : "hf-toast-enter"}`}
       onKeyDown={(e) => {
         if (e.key === "Escape") close("escape");
@@ -219,7 +219,7 @@ export const StudioFeedbackCard = memo(function StudioFeedbackCard() {
           <p
             className={`min-w-0 flex-1 text-[12px] leading-5 ${failed ? "text-danger-ink" : "text-text-0"}`}
           >
-            {step === "thanks" ? "Thanks, that helps." : title}
+            {step === "thanks" ? "谢谢，这很有帮助。" : title}
           </p>
           {step === "thanks" && (
             <a
@@ -233,14 +233,14 @@ export const StudioFeedbackCard = memo(function StudioFeedbackCard() {
               }}
               className="h-6 shrink-0 whitespace-nowrap rounded-full border border-border-strong bg-hover px-2.5 text-[11px] leading-6 text-neutral-100 transition-[background-color,border-color,transform] duration-150 ease-out hover:border-text-muted hover:bg-press active:scale-[0.97] motion-reduce:transition-none"
             >
-              Talk to us, 30 min
+              和我们聊 30 分钟
             </a>
           )}
           <button
             type="button"
             onClick={() => close("close")}
             className="-mr-1 -mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-md text-neutral-500 transition-colors duration-150 hover:bg-press hover:text-neutral-200"
-            aria-label="Dismiss"
+            aria-label="关闭"
           >
             <svg
               width="10"
@@ -265,7 +265,7 @@ export const StudioFeedbackCard = memo(function StudioFeedbackCard() {
           <>
             {/* Native radios: free arrow-key navigation, grouping and labels. */}
             <fieldset className="grid grid-cols-11 gap-[3px]">
-              <legend className="sr-only">Rate this export from 0 to 10</legend>
+              <legend className="sr-only">给这次导出打分（0 到 10）</legend>
               {RATINGS.map((n) => (
                 <label
                   key={n}
@@ -286,8 +286,8 @@ export const StudioFeedbackCard = memo(function StudioFeedbackCard() {
               ))}
             </fieldset>
             <div className="flex justify-between text-[10px] leading-none text-neutral-500">
-              <span>Not likely</span>
-              <span>Extremely likely</span>
+              <span>不太可能</span>
+              <span>非常可能</span>
             </div>
           </>
         )}
@@ -309,7 +309,7 @@ export const StudioFeedbackCard = memo(function StudioFeedbackCard() {
                   onBlur={() => setHint(null)}
                   // The hint reaches a screen reader through the label, since
                   // it never gets the hover that reveals it visually.
-                  aria-label={`${preset.label}. ${preset.hint}`}
+                  aria-label={`${preset.label}。${preset.hint}`}
                   // Hover has to be unmistakable, not a shade brighter: the
                   // chip under the pointer is the one the hint line is talking
                   // about, so if you cannot tell which is hovered, the hint is
@@ -329,7 +329,7 @@ export const StudioFeedbackCard = memo(function StudioFeedbackCard() {
                 bubble below lands on the input. One reserved line occludes
                 nothing and needs no hover delay to be readable. */}
             <p className="h-3.5 truncate text-[10.5px] leading-[14px] text-neutral-500">
-              {hint ?? "Tap one, or write your own."}
+              {hint ?? "点选一项，或自己填写。"}
             </p>
             <div className="flex items-center gap-2">
               <input
@@ -350,7 +350,7 @@ export const StudioFeedbackCard = memo(function StudioFeedbackCard() {
                 onClick={() => submit()}
                 className="h-7 shrink-0 rounded-md bg-press px-2.5 text-[11px] text-neutral-100 transition-[background-color,transform] duration-150 ease-out hover:bg-on active:scale-[0.97] motion-reduce:transition-none"
               >
-                Send
+                发送
               </button>
             </div>
           </>

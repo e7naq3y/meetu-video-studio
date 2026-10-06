@@ -177,13 +177,13 @@ export const AnimationCard = memo(function AnimationCard({
       <div className="border-b border-neutral-800 pb-2">
         <div className="flex items-center gap-2 py-1.5">
           <span className="rounded-sm bg-neutral-800 px-1.5 py-0.5 text-[10px] font-medium text-neutral-400">
-            Position
+            位置
           </span>
           <span className="text-[11px] text-neutral-500">
             x: {Math.round(Number(animation.properties.x ?? 0))}, y:{" "}
             {Math.round(Number(animation.properties.y ?? 0))}
           </span>
-          <span className="ml-auto text-[9px] text-neutral-600">drag to move</span>
+          <span className="ml-auto text-[9px] text-neutral-600">拖动以移动</span>
         </div>
       </div>
     );
@@ -212,7 +212,7 @@ export const AnimationCard = memo(function AnimationCard({
         </span>
         <span
           className={`text-[11px] font-medium ${flat ? "text-panel-text-3" : "text-neutral-400"}`}
-          title="When this effect plays"
+          title="该效果的播放时间"
         >
           {typeof animation.position === "number"
             ? `${parseFloat(animation.position.toFixed(3))}s`
@@ -221,7 +221,7 @@ export const AnimationCard = memo(function AnimationCard({
         </span>
         <span
           className={`ml-auto text-[10px] ${flat ? "text-panel-text-3" : "text-neutral-500"}`}
-          title={headerEase ?? "Mixed"}
+          title={headerEase ?? "混合值"}
           data-card-ease
         >
           {easeLabel}
@@ -256,12 +256,12 @@ export const AnimationCard = memo(function AnimationCard({
                         clipPath: "polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)",
                       }}
                     />
-                    Keyframed — click a segment below to edit its curve
+                    已设关键帧，点击下方某一段可编辑其曲线
                   </p>
                 )}
                 {runEase && runEase !== "none" && (
                   <p className="mt-1 text-[9px] text-neutral-500" data-card-run-ease>
-                    Run ease: {easeDisplayName(runEase)}
+                    整体缓动： {easeDisplayName(runEase)}
                   </p>
                 )}
               </div>
@@ -273,30 +273,30 @@ export const AnimationCard = memo(function AnimationCard({
                   setTimeout(() => setCopied(false), 1500);
                 }}
                 className="shrink-0 rounded-sm px-1.5 py-0.5 text-[9px] font-medium text-neutral-500 transition-colors hover:bg-neutral-800 hover:text-neutral-300"
-                title="Copy description to clipboard — paste into agent prompts"
+                title="复制描述到剪贴板，可粘贴到 AI 助手的提示词中"
               >
-                {copied ? "Copied" : "Copy"}
+                {copied ? "已复制" : "复制"}
               </button>
             </div>
             <div className={RESPONSIVE_GRID}>
               {animation.method !== "set" && (
                 <MetricField
-                  label="Length"
+                  label="时长"
                   value={String(Math.max(0, animation.duration ?? 0))}
                   suffix="s"
-                  tooltip="How long this effect lasts"
+                  tooltip="该效果持续多长时间"
                   onCommit={commitDuration}
                 />
               )}
               <MetricField
-                label="Starts at"
+                label="开始于"
                 value={
                   typeof animation.position === "string"
                     ? animation.position
                     : String(parseFloat(Math.max(0, animation.position).toFixed(3)))
                 }
                 suffix={typeof animation.position === "number" ? "s" : undefined}
-                tooltip="When this effect begins on the timeline"
+                tooltip="该效果在时间线上的开始时间"
                 onCommit={commitPosition}
               />
             </div>
@@ -334,7 +334,7 @@ export const AnimationCard = memo(function AnimationCard({
                 ) : (
                   <>
                     <SelectField
-                      label="Speed"
+                      label="速度"
                       value={easeName.startsWith("custom(") ? "custom" : easeName}
                       options={[...SUPPORTED_EASES, "custom"]}
                       onChange={(next) => {
@@ -365,7 +365,7 @@ export const AnimationCard = memo(function AnimationCard({
             {animation.method === "fromTo" && (
               <div className="space-y-1">
                 <p className="text-[9px] font-semibold uppercase tracking-wider text-warning-ink">
-                  From
+                  从
                 </p>
                 <div className="space-y-1.5">
                   {Object.entries(animation.fromProperties ?? {}).map(([prop, val]) => (
@@ -396,7 +396,7 @@ export const AnimationCard = memo(function AnimationCard({
 
             {animation.method === "fromTo" && Object.keys(animation.properties).length > 0 && (
               <p className="text-[9px] font-semibold uppercase tracking-wider text-accent-ink">
-                To
+                到
               </p>
             )}
 
@@ -466,9 +466,9 @@ export const AnimationCard = memo(function AnimationCard({
                 type="button"
                 onClick={() => onDeleteAnimation(animation.id)}
                 className="ml-auto text-[11px] font-medium rounded-sm text-danger-ink transition-colors hover:bg-danger/15"
-                title="Remove this animation"
+                title="移除此动画"
               >
-                Remove
+                移除
               </button>
             </div>
           </div>

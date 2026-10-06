@@ -20,7 +20,7 @@ export function CompositionBreadcrumb({ stack, onNavigate }: CompositionBreadcru
 
   return (
     <nav
-      aria-label="Composition navigation"
+      aria-label="合成导航"
       className="flex items-center gap-1 px-2 h-8 border-b border-hairline bg-bg-1 shrink-0"
     >
       {/* Back button — always goes to parent */}
@@ -34,8 +34,8 @@ export function CompositionBreadcrumb({ stack, onNavigate }: CompositionBreadcru
           onNavigate(stack.length - 2);
         }}
         className="flex items-center gap-1 px-1.5 py-0.5 rounded-sm text-xs text-text-3 hover:text-text-0 hover:bg-hover active:scale-[0.98] transition-colors"
-        title="Back (Esc, or double-click empty timeline)"
-        aria-label="Back to parent composition"
+        title="返回（Esc，或双击时间线空白处）"
+        aria-label="返回上级合成"
       >
         <ArrowLeft size={12} weight="bold" />
       </button>

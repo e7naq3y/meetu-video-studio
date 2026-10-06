@@ -17,7 +17,7 @@ export function useKeyframeEaseCommits({
       const selection = domEditSelectionRef.current;
       if (!selection || targets.length === 0) return;
       const options = {
-        label: targets.length === 1 ? "Update keyframe ease" : "Update segment ease",
+        label: targets.length === 1 ? "更新关键帧缓动" : "更新分段缓动",
         softReload: true,
       };
       const calls = targets.map(({ animationId, tweenPercentage }) => ({
@@ -68,7 +68,7 @@ export function useKeyframeEaseCommits({
           animationId,
           updates: { easeEach: ease, resetKeyframeEases: true },
         },
-        { label: "Apply ease to all segments", softReload: true },
+        { label: "将缓动应用到所有分段", softReload: true },
       );
     },
     [gsapCommitMutation, domEditSelectionRef],

@@ -88,7 +88,7 @@ export function TimelineLayerGroupHeader({
               letterSpacing: 0,
             }}
           >
-            Inside: {contextKey}
+            内部： {contextKey}
           </span>
         </div>
       </div>

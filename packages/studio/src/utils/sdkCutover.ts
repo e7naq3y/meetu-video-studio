@@ -588,7 +588,7 @@ export async function sdkDeletePersist(
     originalContent,
     deps,
     (session) => session.removeElement(hfId),
-    { label: "Delete element" },
+    { label: "删除元素" },
   );
   trackCutoverResult(result, "lifecycle", { hfId, opCount: 1 });
   return result;

@@ -79,7 +79,7 @@ function GroupNameDialog({
     return (
       <div
         role="dialog"
-        aria-label="This track cannot be grouped"
+        aria-label="此轨道无法编组"
         className="z-200 w-64 rounded-md border border-[var(--timeline-tick-major)] bg-[var(--timeline-dialog-bg)] p-3 text-[11px] leading-snug text-[var(--timeline-text-soft)] shadow-xl"
         style={{ position: "fixed", ...groupDialogPosition(anchorRect) }}
         onPointerDown={(event) => event.stopPropagation()}
@@ -97,7 +97,7 @@ function GroupNameDialog({
   return (
     <div
       role="dialog"
-      aria-label="Name this group"
+      aria-label="为编组命名"
       className="z-200 w-64 rounded-md border border-[var(--timeline-tick-major)] bg-[var(--timeline-dialog-bg)] p-3 text-[11px] text-[var(--timeline-text-soft)] shadow-xl"
       style={{ position: "fixed", ...groupDialogPosition(anchorRect) }}
       onPointerDown={(event) => event.stopPropagation()}
@@ -109,19 +109,18 @@ function GroupNameDialog({
         if (event.key === "Enter") confirm();
       }}
     >
-      <p className="mb-1.5 font-medium text-[var(--timeline-text-solid)]">Name this group</p>
+      <p className="mb-1.5 font-medium text-[var(--timeline-text-solid)]">为编组命名</p>
       <input
         ref={inputRef}
         type="text"
-        aria-label="Group name"
+        aria-label="编组名称"
         value={label}
         onChange={(event) => setLabel(event.currentTarget.value)}
         className="w-full rounded-sm border border-[var(--timeline-border-strong)] bg-[var(--timeline-input-bg)] px-1.5 py-1 text-[11px] text-[var(--timeline-text-solid)] outline-hidden focus:border-[var(--timeline-accent)]"
       />
       {/* The sentence. No jargon, and it names both things a bus does. */}
       <p className="mt-2 leading-snug">
-        Effects you add to the group apply to {clipCount === 2 ? "both" : `all ${clipCount}`} clips
-        at once, and they share one volume.
+        添加到编组的特效会同时作用于 {clipCount === 2 ? "both" : `全部 ${clipCount} 个`} 片段，且它们共用同一个音量。
       </p>
       <div className="mt-2.5 flex justify-end gap-1.5">
         <button
@@ -129,14 +128,14 @@ function GroupNameDialog({
           className="rounded-sm border border-[var(--timeline-border-strong)] px-2 py-1 text-[10px] text-[var(--timeline-text-soft)] hover:bg-[var(--timeline-tick-major)]"
           onClick={onCancel}
         >
-          Cancel
+          取消
         </button>
         <button
           type="button"
           className="rounded-sm border border-[var(--timeline-accent)] bg-[var(--timeline-accent-button-bg)] px-2 py-1 text-[10px] font-semibold text-[var(--timeline-accent)] hover:bg-[var(--timeline-accent-hover)]"
           onClick={confirm}
         >
-          Group
+          编组
         </button>
       </div>
     </div>
@@ -213,8 +212,8 @@ export function TimelineFxButton(props: TimelineFxButtonProps) {
           type="button"
           tabIndex={-1}
           ref={buttonRef}
-          aria-label="Effects — group these clips first"
-          title="Group these clips to add effects to all of them"
+          aria-label="特效 — 请先将这些片段编组"
+          title="将这些片段编组后，可为它们统一添加特效"
           className="flex h-6 items-center justify-center rounded-sm border-0 bg-transparent px-1 text-[10px] font-semibold text-[var(--timeline-text-faint)] hover:text-[var(--timeline-text-soft)]"
           onPointerDown={(event) => event.stopPropagation()}
           onClick={(event) => {
@@ -222,7 +221,7 @@ export function TimelineFxButton(props: TimelineFxButtonProps) {
             openAt();
           }}
         >
-          FX
+          特效
         </button>
         {open &&
           anchorRect &&
@@ -253,8 +252,8 @@ export function TimelineFxButton(props: TimelineFxButtonProps) {
         type="button"
         tabIndex={-1}
         ref={buttonRef}
-        aria-label={nodeCount > 0 ? `Effects — ${nodeCount} applied` : "Effects"}
-        title="Effects"
+        aria-label={nodeCount > 0 ? `特效 — 已应用 ${nodeCount} 个` : "特效"}
+        title="特效"
         className={`flex h-6 items-center justify-center gap-0.5 rounded border-0 bg-transparent px-1 text-[10px] font-semibold transition-colors ${
           open || nodeCount > 0
             ? "text-[var(--timeline-accent)]"
@@ -266,7 +265,7 @@ export function TimelineFxButton(props: TimelineFxButtonProps) {
           openAt();
         }}
       >
-        FX{nodeCount > 0 ? ` ${nodeCount}` : ""}
+        特效{nodeCount > 0 ? ` ${nodeCount}` : ""}
       </button>
       {open &&
         anchorRect &&

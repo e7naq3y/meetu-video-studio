@@ -415,7 +415,7 @@ export const BeatStrip = memo(function BeatStrip({
           <div
             key={`${t}-${i}`}
             className="absolute select-none"
-            title="Drag to move · ⌥-click to delete"
+            title="拖动可移动 · ⌥+点击可删除"
             draggable={false}
             style={{
               left: x - BEAT_HIT_W / 2,

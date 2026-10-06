@@ -105,7 +105,7 @@ export function useEditorSave({
     (candidate: EditorSaveCandidate): Promise<EditorSaveDrainResult> => {
       const task = saveProjectFilesWithHistory({
         projectId: candidate.projectId,
-        label: "Edit source",
+        label: "编辑源码",
         coalesceKey: `source:${candidate.path}`,
         files: { [candidate.path]: () => candidate.content },
         readFile: readProjectFile,

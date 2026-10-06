@@ -416,7 +416,7 @@ export function FontFamilyField({
           type="text"
           value={query}
           disabled={disabled}
-          placeholder={lists.loaded ? "Search fonts" : "Loading Google Fonts..."}
+          placeholder={lists.loaded ? "搜索字体" : "正在加载 Google 字体…"}
           onChange={(e) => {
             setQuery(e.target.value);
             setActiveIndex(-1);
@@ -459,7 +459,7 @@ export function FontFamilyField({
             onClick={loadBrowserLocalFonts}
             className="rounded-lg border border-neutral-700 bg-neutral-900 px-2.5 text-[10px] font-medium text-neutral-400 transition-colors hover:border-neutral-600 hover:text-neutral-100 disabled:cursor-not-allowed disabled:text-text-off"
           >
-            {loadingLocalFonts ? "..." : "Local"}
+            {loadingLocalFonts ? "..." : "本地"}
           </button>
         )}
         <button
@@ -468,14 +468,14 @@ export function FontFamilyField({
           onClick={() => fontInputRef.current?.click()}
           className="rounded-lg border border-neutral-700 bg-neutral-900 px-2.5 text-[10px] font-medium text-neutral-400 transition-colors hover:border-neutral-600 hover:text-neutral-100 disabled:cursor-not-allowed disabled:text-text-off"
         >
-          {importingFonts ? "..." : "Import"}
+          {importingFonts ? "..." : "导入"}
         </button>
         <input
           ref={fontInputRef}
           type="file"
           accept=".ttf,.otf,.ttc,.woff,.woff2,.eot,font/*"
           multiple
-          aria-label="Import local font files"
+          aria-label="导入本地字体文件"
           disabled={disabled || importingFonts || !onImportFonts}
           className="hidden"
           onChange={async (event) => {
@@ -491,7 +491,7 @@ export function FontFamilyField({
       )}
       <div className="max-h-64 overflow-y-auto p-1">
         {filteredOptions.length === 0 ? (
-          <div className="px-2 py-3 text-[11px] text-neutral-500">No fonts found.</div>
+          <div className="px-2 py-3 text-[11px] text-neutral-500">没有找到字体。</div>
         ) : (
           filteredOptions.map((option, index) => (
             <button
@@ -530,7 +530,7 @@ export function FontFamilyField({
   if (flat) {
     return (
       <div ref={containerRef} className="relative flex min-h-[30px] items-center justify-between">
-        <span className="text-[11px] text-panel-text-2">Font</span>
+        <span className="text-[11px] text-panel-text-2">字体</span>
         <button
           type="button"
           data-flat-font-trigger="true"
@@ -561,7 +561,7 @@ export function FontFamilyField({
 
   return (
     <div ref={containerRef} className="relative grid min-w-0 gap-1.5">
-      <span className={LABEL}>Font family</span>
+      <span className={LABEL}>字体</span>
       <button
         type="button"
         disabled={disabled}
@@ -575,7 +575,7 @@ export function FontFamilyField({
           {currentFamily}
         </span>
         <span className="shrink-0 text-[10px] uppercase tracking-[0.14em] text-neutral-600">
-          Font
+          字体
         </span>
       </button>
       {dropdown}

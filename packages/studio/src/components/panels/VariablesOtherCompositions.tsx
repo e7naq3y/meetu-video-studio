@@ -56,13 +56,13 @@ function CompositionSection({
               </span>
               <span className="ml-auto flex items-center gap-1">
                 <RowAction
-                  label="Edit"
-                  title="Edit declaration"
+                  label="编辑"
+                  title="编辑声明"
                   onClick={() => onToggleEdit(editing ? null : key)}
                 />
                 <RowAction
                   label="✕"
-                  title="Remove declaration"
+                  title="移除声明"
                   danger
                   onClick={() => onRemove(group.path, decl.id)}
                 />
@@ -139,7 +139,7 @@ export function VariablesOtherCompositions({
   return (
     <div className="space-y-3 border-t border-neutral-800 pt-3">
       <p className="text-[9px] font-medium uppercase tracking-wider text-neutral-600">
-        Other compositions
+        其他合成
       </p>
       {groups.map((group) => (
         <CompositionSection

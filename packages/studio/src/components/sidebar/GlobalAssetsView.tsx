@@ -60,20 +60,19 @@ export function GlobalAssetsView({ searchQuery }: { searchQuery: string }) {
   const rows = useMemo(() => globalAssetRows(records ?? [], searchQuery), [records, searchQuery]);
 
   if (records === null) {
-    return <p className="px-4 py-3 text-[11px] text-panel-text-5">Loading global assets…</p>;
+    return <p className="px-4 py-3 text-[11px] text-panel-text-5">正在加载全局素材…</p>;
   }
   if (rows.length === 0) {
     return (
       <p className="px-4 py-3 text-[11px] text-panel-text-5">
-        No assets in the global cache yet. Resolved media is promoted to <code>~/.media</code> and
-        becomes reusable across projects.
+        全局缓存中还没有素材。已解析的媒体会被提升到 <code>~/.media</code> ，即可在各项目间复用。
       </p>
     );
   }
   return (
     <div>
       <div className="px-4 py-2 border-t border-panel-border text-[11px] text-panel-text-5">
-        {rows.length} reusable across all projects
+        {rows.length} 可在所有项目间复用
       </div>
       {rows.map((row) => (
         <div

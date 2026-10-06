@@ -31,8 +31,8 @@ export function DockStripActions({
     <div className="hf-dock-strip-actions">
       <Menu
         align="end"
-        aria-label="Panel menu"
-        trigger={<IconButton size="sm" aria-label="Panel menu" icon={<DotsThree size={16} />} />}
+        aria-label="面板菜单"
+        trigger={<IconButton size="sm" aria-label="面板菜单" icon={<DotsThree size={16} />} />}
       >
         {menuPanels.map((id) => (
           <MenuCheckboxItem
@@ -44,17 +44,17 @@ export function DockStripActions({
           </MenuCheckboxItem>
         ))}
         <MenuSeparator />
-        <MenuItem onClick={resetLayout}>Reset layout</MenuItem>
+        <MenuItem onClick={resetLayout}>重置布局</MenuItem>
       </Menu>
       <IconButton
         size="sm"
-        aria-label={maximized ? "Restore panel" : "Maximize panel"}
+        aria-label={maximized ? "还原面板" : "最大化面板"}
         icon={maximized ? <CornersIn size={16} /> : <CornersOut size={16} />}
         onClick={() => (maximized ? api.exitMaximized() : api.maximize())}
       />
       <IconButton
         size="sm"
-        aria-label="Close group"
+        aria-label="关闭编组"
         icon={<X size={16} />}
         onClick={() => api.close()}
       />

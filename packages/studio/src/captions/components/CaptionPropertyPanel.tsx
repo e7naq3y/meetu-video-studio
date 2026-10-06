@@ -188,7 +188,7 @@ export const CaptionPropertyPanel = memo(function CaptionPropertyPanel({
   if (selectedSegmentIds.size === 0) {
     return (
       <div className="flex items-center justify-center h-full px-4 text-center">
-        <p className="text-xs text-neutral-500">Select caption words to edit their style</p>
+        <p className="text-xs text-neutral-500">选择字幕词来编辑样式</p>
       </div>
     );
   }
@@ -218,7 +218,7 @@ export const CaptionPropertyPanel = memo(function CaptionPropertyPanel({
           <span className="text-2xs text-neutral-500">{countLabel}</span>
         </div>
         {/* Tab switcher */}
-        <div className="flex gap-1" role="tablist" aria-label="Caption editing tabs">
+        <div className="flex gap-1" role="tablist" aria-label="字幕编辑标签页">
           <button
             type="button"
             role="tab"
@@ -231,7 +231,7 @@ export const CaptionPropertyPanel = memo(function CaptionPropertyPanel({
                 : "text-neutral-500 border border-neutral-800 hover:text-neutral-300 hover:border-neutral-600",
             ].join(" ")}
           >
-            Style
+            样式
           </button>
           <button
             type="button"
@@ -245,7 +245,7 @@ export const CaptionPropertyPanel = memo(function CaptionPropertyPanel({
                 : "text-neutral-500 border border-neutral-800 hover:text-neutral-300 hover:border-neutral-600",
             ].join(" ")}
           >
-            Animation
+            动画
           </button>
         </div>
       </div>
@@ -256,12 +256,12 @@ export const CaptionPropertyPanel = memo(function CaptionPropertyPanel({
       {/* Style tab — Transform only */}
       {activeTab === "style" && (
         <div className="flex-1 overflow-y-auto px-3 py-2">
-          <Section label="Position">
+          <Section label="位置">
             <Row label="X">
               <NumberField
                 value={x}
                 mixed={xMixed}
-                ariaLabel="X position"
+                ariaLabel="X 位置"
                 onCommit={(v) => handleStyleChange({ x: v })}
               />
             </Row>
@@ -269,27 +269,27 @@ export const CaptionPropertyPanel = memo(function CaptionPropertyPanel({
               <NumberField
                 value={y}
                 mixed={yMixed}
-                ariaLabel="Y position"
+                ariaLabel="Y 位置"
                 onCommit={(v) => handleStyleChange({ y: v })}
               />
             </Row>
           </Section>
 
-          <Section label="Transform">
-            <Row label="Scale">
+          <Section label="变换">
+            <Row label="缩放">
               <NumberField
                 value={scaleX}
                 mixed={scaleMixed}
                 step={0.1}
-                ariaLabel="Scale"
+                ariaLabel="缩放"
                 onCommit={(v) => handleStyleChange({ scaleX: v, scaleY: v })}
               />
             </Row>
-            <Row label="Rotation">
+            <Row label="旋转">
               <NumberField
                 value={rotation}
                 mixed={rotationMixed}
-                ariaLabel="Rotation"
+                ariaLabel="旋转"
                 onCommit={(v) => handleStyleChange({ rotation: v })}
               />
             </Row>

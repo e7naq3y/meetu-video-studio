@@ -135,7 +135,7 @@ export function useDomEditPersist({
       }
 
       const history = {
-        label: options?.label ?? "Edit layer",
+        label: options?.label ?? "编辑图层",
         coalesceKey: options?.coalesceKey,
         coalesceMs: options?.coalesceMs,
       };

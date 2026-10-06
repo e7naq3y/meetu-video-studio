@@ -7,8 +7,8 @@ export function TrackClipCount({ clipCount }: { clipCount: number }) {
   if (clipCount < 2) return null;
   return (
     <span
-      aria-label={`${clipCount} clips`}
-      title={`${clipCount} clips`}
+      aria-label={`${clipCount} 个片段`}
+      title={`${clipCount} 个片段`}
       className="shrink-0 rounded-full bg-hover px-1 text-[9px] leading-[14px] tabular-nums text-text-muted"
     >
       {clipCount}

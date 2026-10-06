@@ -38,7 +38,7 @@ function SyncMenu({
     <div
       ref={menuRef}
       role="menu"
-      aria-label="Out of sync"
+      aria-label="不同步"
       className={`${menuClasses.panel} fixed z-200 min-w-[170px]`}
       style={{ left, top }}
     >
@@ -47,21 +47,21 @@ function SyncMenu({
         role="menuitem"
         className={ROW}
         disabled={!onLinkEdit || moveStart === null}
-        title={moveStart === null ? "Would move the clip before 0:00" : undefined}
+        title={moveStart === null ? "会把片段移到 0:00 之前" : undefined}
         onClick={() => {
           if (moveStart !== null)
             void onLinkEdit?.({ kind: "move-into-sync", element: el, start: moveStart });
           onClose();
         }}
       >
-        Move into Sync
+        移动以同步
       </button>
       <button
         type="button"
         role="menuitem"
         className={ROW}
         disabled={!onLinkEdit || slipMediaStart === null}
-        title={slipMediaStart === null ? "Would slip before the start of the file" : undefined}
+        title={slipMediaStart === null ? "会滑移到文件开头之前" : undefined}
         onClick={() => {
           if (slipMediaStart !== null) {
             void onLinkEdit?.({ kind: "slip-into-sync", element: el, mediaStart: slipMediaStart });
@@ -69,7 +69,7 @@ function SyncMenu({
           onClose();
         }}
       >
-        Slip into Sync
+        滑移以同步
       </button>
     </div>,
     document.body,
@@ -102,8 +102,8 @@ export const OutOfSyncBadge = memo(function OutOfSyncBadge({ el }: { el: Timelin
         role="button"
         tabIndex={-1}
         aria-haspopup="menu"
-        aria-label={`Out of sync with ${partnerName} by ${label} frames`}
-        title={`Out of sync with ${partnerName} by ${label} — click for Move or Slip into Sync`}
+        aria-label={`与 ${partnerName} 相差 ${label} 帧，不同步`}
+        title={`与 ${partnerName} 相差 ${label}，不同步 — 点击选择移动或滑移以同步`}
         data-testid="out-of-sync-badge"
         className="absolute bottom-0.5 left-1 z-[12] cursor-pointer rounded-[3px] bg-red-600 px-1 font-mono text-[9px] leading-[14px] text-white tabular-nums"
         onPointerDown={stop}

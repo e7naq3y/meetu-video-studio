@@ -148,7 +148,7 @@ function EaseTypeDropdown({
           ref={menuRef}
           id={menuId}
           role="menu"
-          aria-label={`${MODE_LABELS[kind]} ease presets`}
+          aria-label={`${MODE_LABELS[kind]}缓动预设`}
           onKeyDown={handleMenuKeyDown}
           className="absolute inset-x-0 top-full z-20 mt-1 rounded-md border border-border bg-raised p-2 shadow-xl"
         >
@@ -396,12 +396,12 @@ export function EaseCurveSection({
       <EaseTypeDropdown kind={mode} ease={displayedEase} label={label} onSelect={commitEase} />
       {collidingAnimationTargets && collidingAnimationTargets.length > 1 && (
         <p className="mb-1 text-[9px] text-neutral-500">
-          Applies to {collidingAnimationTargets.length} animations
+          应用于 {collidingAnimationTargets.length} animations
         </p>
       )}
       <EaseModeToggle mode={mode} onCommit={commitEase} />
       <span className="sr-only" aria-live="polite">
-        {MODE_LABELS[mode]} ease editor selected
+        {MODE_LABELS[mode]} 缓动编辑器已选中
       </span>
       {showGraph ? (
         <>
@@ -510,7 +510,7 @@ export function EaseCurveSection({
                       fill="transparent"
                       role="slider"
                       tabIndex={0}
-                      aria-label={`${key === "p1" ? "First" : "Second"} bezier control point`}
+                      aria-label={`${key === "p1" ? "第一个" : "第二个"}贝塞尔控制点`}
                       aria-valuemin={0}
                       aria-valuemax={1}
                       aria-valuenow={key === "p1" ? x1 : x2}
@@ -541,7 +541,7 @@ export function EaseCurveSection({
         </>
       ) : (
         <p className="px-0.5 py-1.5 text-[10px] leading-relaxed text-neutral-500">
-          {label} preset: switch to Curve, Spring, or Wiggle above to shape it by hand.
+          {label} 预设：如需手动调整形状，请切换到上方的曲线、弹簧或摆动模式。
         </p>
       )}
     </div>

@@ -53,8 +53,8 @@ function GroupNameButton({
     <button
       type="button"
       tabIndex={-1}
-      aria-label={showAudioEffects ? `Open ${label} effects` : `Select ${label}`}
-      title={showAudioEffects ? "Open effects" : "Select group"}
+      aria-label={showAudioEffects ? `打开${label}特效` : `选择${label}`}
+      title={showAudioEffects ? "打开特效" : "选择编组"}
       // No `flex-1`: the row's control group owns the slack now (`ml-auto`), so
       // claiming it here would push the controls off the right edge — and the
       // count with them, since it rides inside this button.
@@ -77,7 +77,7 @@ function GroupNameButton({
       <span
         className="shrink-0 rounded-full bg-[var(--timeline-tick-major)] px-1 text-[9px] leading-[14px] tabular-nums text-[var(--timeline-handle)]"
         aria-hidden="true"
-        title={`${memberCount} tracks`}
+        title={`${memberCount} 条轨道`}
       >
         {memberCount}
       </span>
@@ -121,8 +121,8 @@ export function TimelineGroupHeader({
         type="button"
         tabIndex={-1}
         aria-expanded={isExpanded}
-        aria-label={`${isExpanded ? "Hide" : "Show"} ${label} tracks`}
-        title={`${isExpanded ? "Hide" : "Show"} tracks`}
+        aria-label={`${isExpanded ? "隐藏" : "显示"} ${label} 轨道`}
+        title={`${isExpanded ? "隐藏" : "显示"}轨道`}
         // 13px mono, matching the property panel's preset-run caret
         // (`hf-fx-preset-run-caret`) — the same disclosure, so the same glyph
         // at the same size rather than a smaller one unique to this row.
@@ -170,8 +170,8 @@ export function TimelineGroupHeader({
             type="button"
             tabIndex={-1}
             aria-expanded={isLaneOpen}
-            aria-label={`${isLaneOpen ? "Hide" : "Show"} ${label} lanes`}
-            title={`${isLaneOpen ? "Hide" : "Show"} lanes`}
+            aria-label={`${isLaneOpen ? "隐藏" : "显示"} ${label} 轨道行`}
+            title={`${isLaneOpen ? "隐藏" : "显示"}轨道行`}
             // Anchored right, matching every other header's lane toggle.
             className={`ml-auto flex h-6 items-center justify-center gap-0.5 rounded border-0 bg-transparent px-1 text-[11px] leading-none focus-visible:outline-solid focus-visible:outline-1 focus-visible:outline-[var(--timeline-accent)] ${
               isLaneOpen

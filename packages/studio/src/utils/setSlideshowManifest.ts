@@ -88,7 +88,7 @@ export async function persistSlideshowManifest(args: PersistSlideshowArgs): Prom
     originalContent,
     deps,
     {
-      label: label ?? "Edit slideshow",
+      label: label ?? "编辑幻灯片",
       ...(coalesceKey ? { coalesceKey } : {}),
     },
   );

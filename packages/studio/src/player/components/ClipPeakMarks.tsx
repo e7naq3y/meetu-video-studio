@@ -59,7 +59,7 @@ export function ClipPeakMarks({
             className="pointer-events-auto absolute right-4 bottom-1 font-mono text-[9px] leading-none text-red-400"
             data-peak-badge
           >
-            ▲<span data-peak-text> Too loud</span>
+            ▲<span data-peak-text> 音量过大</span>
           </span>
         </div>
       )}

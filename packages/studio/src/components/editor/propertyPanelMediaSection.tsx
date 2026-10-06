@@ -145,7 +145,7 @@ export function MediaSection({
         {srcAttr && (
           <div className="min-w-0">
             <div className="flex items-center justify-between gap-2">
-              <div className="text-[11px] font-medium text-neutral-500">Source</div>
+              <div className="text-[11px] font-medium text-neutral-500">来源</div>
               <button
                 type="button"
                 onClick={() => {
@@ -157,7 +157,7 @@ export function MediaSection({
                 className="flex h-6 items-center gap-1 rounded-lg border border-neutral-700 bg-neutral-950 px-2 text-[10px] font-medium text-neutral-400 transition-colors hover:border-neutral-600 hover:text-neutral-200"
               >
                 {copied ? <Check size={11} /> : <ClipboardList size={11} />}
-                <span>{copied ? "Copied" : "Copy"}</span>
+                <span>{copied ? "已复制" : "复制"}</span>
               </button>
             </div>
             <div
@@ -173,9 +173,9 @@ export function MediaSection({
           <div className="grid min-w-0 max-w-full gap-2 overflow-hidden rounded-md bg-panel-input/30 p-2">
             <div className="flex min-w-0 items-center justify-between gap-2">
               <div className="min-w-0">
-                <div className={LABEL}>Cutout</div>
+                <div className={LABEL}>抠图</div>
                 <div className="mt-0.5 truncate text-[10px] text-panel-text-4">
-                  Create transparent {isVideo ? "WebM video" : "PNG image"}
+                  生成透明素材 {isVideo ? "WebM 视频" : "PNG 图片"}
                 </div>
               </div>
               <button
@@ -188,36 +188,36 @@ export function MediaSection({
                 className="flex h-8 shrink-0 items-center gap-1.5 rounded-md bg-panel-input px-2.5 text-[11px] font-medium text-panel-text-2 transition-colors hover:bg-panel-hover hover:text-panel-text-1 disabled:cursor-not-allowed disabled:opacity-50"
                 title={
                   canRemoveBackground
-                    ? "Remove background and save a transparent asset"
-                    : "Select a project-local image or video asset"
+                    ? "去除背景并保存为透明素材"
+                    : "选择项目内的图片或视频素材"
                 }
               >
                 <Scissors size={13} />
-                <span>{removeBusy ? "Working" : "Remove BG"}</span>
+                <span>{removeBusy ? "处理中" : "去除背景"}</span>
               </button>
             </div>
 
             <div className="grid grid-cols-2 gap-2">
               <SelectField
-                label="Quality"
+                label="画质"
                 value={quality}
                 onChange={(next) => setQuality(next as typeof quality)}
                 options={["fast", "balanced", "best"]}
               />
               {isVideo ? (
                 <div className="grid min-w-0 gap-1.5">
-                  <span className={LABEL}>BG plate</span>
+                  <span className={LABEL}>背景板</span>
                   <SegmentedControl
                     trackName="BG plate"
                     value={createPlate ? "on" : "off"}
                     onChange={(next) => setCreatePlate(next === "on")}
                     options={[
-                      { label: "On", value: "on" },
-                      { label: "Off", value: "off" },
+                      { label: "开", value: "on" },
+                      { label: "关", value: "off" },
                     ]}
                   />
                   <span className="text-[10px] leading-tight text-panel-text-4">
-                    Optional hole-cut background copy.
+                    可选：生成挖空主体的背景副本。
                   </span>
                 </div>
               ) : (
@@ -229,7 +229,7 @@ export function MediaSection({
               <div className="space-y-1">
                 <div className="flex min-w-0 items-center justify-between gap-2 text-[10px] text-panel-text-4">
                   <span className="min-w-0 flex-1 truncate">
-                    {removeProgress.error ?? removeProgress.stage ?? "Processing"}
+                    {removeProgress.error ?? removeProgress.stage ?? "处理中"}
                   </span>
                   <span>{Math.round(removeProgress.progress)}%</span>
                 </div>
@@ -249,7 +249,7 @@ export function MediaSection({
                 className="truncate text-[10px] font-medium text-panel-text-3"
                 title={removeProgress.outputPath}
               >
-                Applied {removeProgress.outputPath}
+                已应用 {removeProgress.outputPath}
               </div>
             )}
           </div>
@@ -258,7 +258,7 @@ export function MediaSection({
         {(isVideo || isAudio) && (
           <>
             <div className="grid min-w-0 gap-1.5">
-              <span className={LABEL}>Volume</span>
+              <span className={LABEL}>音量</span>
               <SliderControl
                 trackName="Volume"
                 value={volumeFaderPosition}
@@ -274,7 +274,7 @@ export function MediaSection({
             </div>
 
             <div className="grid min-w-0 gap-1.5">
-              <span className={LABEL}>Playback rate</span>
+              <span className={LABEL}>播放速率</span>
               <SliderControl
                 trackName="Playback rate"
                 value={playbackRate * 100}
@@ -290,7 +290,7 @@ export function MediaSection({
             </div>
 
             <div className="grid min-w-0 gap-1.5">
-              <span className={LABEL}>Media start</span>
+              <span className={LABEL}>媒体起点</span>
               <SliderControl
                 trackName="Media start"
                 value={Math.round(mediaStart * 100)}
@@ -307,7 +307,7 @@ export function MediaSection({
 
             <div className={RESPONSIVE_GRID}>
               <div className="grid min-w-0 gap-1.5">
-                <span className={LABEL}>Loop</span>
+                <span className={LABEL}>循环</span>
                 <SegmentedControl
                   trackName="Loop"
                   value={hasLoop ? "on" : "off"}
@@ -315,20 +315,20 @@ export function MediaSection({
                     void onSetHtmlAttribute("loop", next === "on" ? "true" : null);
                   }}
                   options={[
-                    { label: "On", value: "on" },
-                    { label: "Off", value: "off" },
+                    { label: "开", value: "on" },
+                    { label: "关", value: "off" },
                   ]}
                 />
               </div>
               <div className="grid min-w-0 gap-1.5">
-                <span className={LABEL}>Muted</span>
+                <span className={LABEL}>已静音</span>
                 <SegmentedControl
                   trackName="Muted"
                   value={hasMuted ? "on" : "off"}
                   onChange={(next) => void commitMutedToggle(mediaEdit, next === "on")}
                   options={[
-                    { label: "On", value: "on" },
-                    { label: "Off", value: "off" },
+                    { label: "开", value: "on" },
+                    { label: "关", value: "off" },
                   ]}
                 />
               </div>
@@ -336,14 +336,14 @@ export function MediaSection({
 
             {isVideo && (
               <div className="grid min-w-0 gap-1.5">
-                <span className={LABEL}>Has audio track</span>
+                <span className={LABEL}>包含音轨</span>
                 <SegmentedControl
                   trackName="Has audio track"
                   value={hasAudio ? "yes" : "no"}
                   onChange={(next) => void commitHasAudioToggle(mediaEdit, next === "yes")}
                   options={[
-                    { label: "Yes", value: "yes" },
-                    { label: "No", value: "no" },
+                    { label: "是", value: "yes" },
+                    { label: "否", value: "no" },
                   ]}
                 />
               </div>
@@ -355,7 +355,7 @@ export function MediaSection({
           <>
             <div className={RESPONSIVE_GRID}>
               <SelectField
-                label="Fit"
+                label="适应窗口"
                 value={objectFit}
                 onChange={(next) => {
                   void onSetStyle("object-fit", next);
@@ -363,7 +363,7 @@ export function MediaSection({
                 options={["contain", "cover", "fill", "none", "scale-down"]}
               />
               <SelectField
-                label="Position"
+                label="位置"
                 value={objectPosition}
                 onChange={(next) => {
                   void onSetStyle("object-position", next);

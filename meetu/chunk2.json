@@ -1,0 +1,1307 @@
+[
+ {
+  "id": 522,
+  "text": "Hide finished renders from this list (files stay on disk)",
+  "ctx": "renders/RenderQueue.tsx [attr:label]"
+ },
+ {
+  "id": 523,
+  "text": "Hide finished",
+  "ctx": "renders/RenderQueue.tsx [jsxtext]"
+ },
+ {
+  "id": 524,
+  "text": "Open ${job.filename} in a new tab",
+  "ctx": "renders/RenderQueueItem.tsx [attr:aria-label]"
+ },
+ {
+  "id": 525,
+  "text": "Rendering",
+  "ctx": "renders/RenderQueueItem.tsx [jsxexpr]"
+ },
+ {
+  "id": 526,
+  "text": "Render progress: ${job.progress}%",
+  "ctx": "renders/RenderQueueItem.tsx [attr:aria-label]"
+ },
+ {
+  "id": 527,
+  "text": "Cancelled",
+  "ctx": "renders/RenderQueueItem.tsx [jsxtext]"
+ },
+ {
+  "id": 528,
+  "text": "Delete?",
+  "ctx": "renders/RenderQueueItem.tsx [jsxtext]"
+ },
+ {
+  "id": 529,
+  "text": "Keep",
+  "ctx": "renders/RenderQueueItem.tsx [jsxtext]"
+ },
+ {
+  "id": 530,
+  "text": "Available when the render finishes",
+  "ctx": "renders/RenderQueueItem.tsx [attr:label]"
+ },
+ {
+  "id": 531,
+  "text": "Download ${job.filename}",
+  "ctx": "renders/RenderQueueItem.tsx [attr:aria-label]"
+ },
+ {
+  "id": 532,
+  "text": "Delete render file",
+  "ctx": "renders/RenderQueueItem.tsx [attr:label]"
+ },
+ {
+  "id": 533,
+  "text": "Delete ${job.filename}",
+  "ctx": "renders/RenderQueueItem.tsx [attr:aria-label]"
+ },
+ {
+  "id": 534,
+  "text": "Changes not saved",
+  "ctx": "panels/SlideshowPanel.tsx [jsxtext]"
+ },
+ {
+  "id": 535,
+  "text": "Retrying…",
+  "ctx": "panels/SlideshowPanel.tsx [jsxexpr]"
+ },
+ {
+  "id": 536,
+  "text": "Undo last slideshow edit (⌘Z)",
+  "ctx": "panels/SlideshowPanel.tsx [attr:title]"
+ },
+ {
+  "id": 537,
+  "text": "Undo (",
+  "ctx": "panels/SlideshowPanel.tsx [jsxtext]"
+ },
+ {
+  "id": 538,
+  "text": "Slides (",
+  "ctx": "panels/SlideshowPanel.tsx [jsxtext]"
+ },
+ {
+  "id": 539,
+  "text": "Slide Inspector",
+  "ctx": "panels/SlideshowPanel.tsx [jsxtext]"
+ },
+ {
+  "id": 540,
+  "text": "Select a scene above to inspect",
+  "ctx": "panels/SlideshowPanel.tsx [jsxtext]"
+ },
+ {
+  "id": 541,
+  "text": "Branches (",
+  "ctx": "panels/SlideshowPanel.tsx [jsxtext]"
+ },
+ {
+  "id": 542,
+  "text": "Hotspot Tool",
+  "ctx": "panels/SlideshowPanel.tsx [jsxtext]"
+ },
+ {
+  "id": 543,
+  "text": "Include ${scene.label} as main-line slide",
+  "ctx": "panels/SlideshowSubPanels.tsx [attr:aria-label]"
+ },
+ {
+  "id": 544,
+  "text": "Move slide up",
+  "ctx": "panels/SlideshowSubPanels.tsx [attr:aria-label]"
+ },
+ {
+  "id": 545,
+  "text": "Move up",
+  "ctx": "panels/SlideshowSubPanels.tsx [attr:title]; editor/propertyPanelFxNodeRow.tsx [attr:label]"
+ },
+ {
+  "id": 546,
+  "text": "Move slide down",
+  "ctx": "panels/SlideshowSubPanels.tsx [attr:aria-label]"
+ },
+ {
+  "id": 547,
+  "text": "Move down",
+  "ctx": "panels/SlideshowSubPanels.tsx [attr:title]; editor/propertyPanelFxNodeRow.tsx [attr:label]"
+ },
+ {
+  "id": 548,
+  "text": "No scenes found",
+  "ctx": "panels/SlideshowSubPanels.tsx [jsxtext]"
+ },
+ {
+  "id": 549,
+  "text": "Scene:",
+  "ctx": "panels/SlideshowSubPanels.tsx [jsxtext]"
+ },
+ {
+  "id": 550,
+  "text": "Notes",
+  "ctx": "panels/SlideshowSubPanels.tsx [jsxtext]"
+ },
+ {
+  "id": 551,
+  "text": "Speaker notes or script...",
+  "ctx": "panels/SlideshowSubPanels.tsx [attr:placeholder]"
+ },
+ {
+  "id": 552,
+  "text": "Fragment hold-points",
+  "ctx": "panels/SlideshowSubPanels.tsx [jsxtext]"
+ },
+ {
+  "id": 553,
+  "text": "Mark ${currentTime.toFixed(2)}s as hold-point",
+  "ctx": "panels/SlideshowSubPanels.tsx [attr:title]"
+ },
+ {
+  "id": 554,
+  "text": "Mark",
+  "ctx": "panels/SlideshowSubPanels.tsx [jsxtext]"
+ },
+ {
+  "id": 555,
+  "text": "Remove fragment at ${t.toFixed(2)}s",
+  "ctx": "panels/SlideshowSubPanels.tsx [attr:aria-label]"
+ },
+ {
+  "id": 556,
+  "text": "No hold-points yet",
+  "ctx": "panels/SlideshowSubPanels.tsx [jsxtext]"
+ },
+ {
+  "id": 557,
+  "text": "New branch name...",
+  "ctx": "panels/SlideshowSubPanels.tsx [attr:placeholder]"
+ },
+ {
+  "id": 558,
+  "text": "New branch sequence name",
+  "ctx": "panels/SlideshowSubPanels.tsx [attr:aria-label]"
+ },
+ {
+  "id": 559,
+  "text": "No branches yet",
+  "ctx": "panels/SlideshowSubPanels.tsx [jsxtext]"
+ },
+ {
+  "id": 560,
+  "text": "Rename branch ${seq.label}",
+  "ctx": "panels/SlideshowSubPanels.tsx [attr:aria-label]"
+ },
+ {
+  "id": 561,
+  "text": "Click to rename",
+  "ctx": "panels/SlideshowSubPanels.tsx [attr:title]"
+ },
+ {
+  "id": 562,
+  "text": "Delete branch ${seq.label}",
+  "ctx": "panels/SlideshowSubPanels.tsx [attr:aria-label]"
+ },
+ {
+  "id": 563,
+  "text": "Delete branch &ldquo;",
+  "ctx": "panels/SlideshowSubPanels.tsx [jsxtext]"
+ },
+ {
+  "id": 564,
+  "text": " and its ${seq.slides.length} slide${seq.slides.length === 1 ? \"\" : \"s\"}",
+  "ctx": "panels/SlideshowSubPanels.tsx [jsxexpr]"
+ },
+ {
+  "id": 565,
+  "text": "? Hotspots pointing to it will no longer resolve.",
+  "ctx": "panels/SlideshowSubPanels.tsx [jsxtext]"
+ },
+ {
+  "id": 566,
+  "text": "Assign ${scene.label || scene.id} to branch ${seq.label}",
+  "ctx": "panels/SlideshowSubPanels.tsx [attr:aria-label]"
+ },
+ {
+  "id": 567,
+  "text": "No scenes",
+  "ctx": "panels/SlideshowSubPanels.tsx [jsxtext]"
+ },
+ {
+  "id": 568,
+  "text": "Select a scene in the Slides list",
+  "ctx": "panels/SlideshowSubPanels.tsx [jsxtext]"
+ },
+ {
+  "id": 569,
+  "text": "Selected element:",
+  "ctx": "panels/SlideshowSubPanels.tsx [jsxtext]"
+ },
+ {
+  "id": 570,
+  "text": "Click an element on the canvas to choose the hotspot target.",
+  "ctx": "panels/SlideshowSubPanels.tsx [jsxtext]"
+ },
+ {
+  "id": 571,
+  "text": "Create a branch in the Branches section first — hotspots jump to a branch.",
+  "ctx": "panels/SlideshowSubPanels.tsx [jsxtext]"
+ },
+ {
+  "id": 572,
+  "text": "Hotspot label",
+  "ctx": "panels/SlideshowSubPanels.tsx [jsxtext]; panels/SlideshowSubPanels.tsx [attr:aria-label]"
+ },
+ {
+  "id": 573,
+  "text": "Button label...",
+  "ctx": "panels/SlideshowSubPanels.tsx [attr:placeholder]"
+ },
+ {
+  "id": 574,
+  "text": "Target branch",
+  "ctx": "panels/SlideshowSubPanels.tsx [jsxtext]"
+ },
+ {
+  "id": 575,
+  "text": "Target branch sequence",
+  "ctx": "panels/SlideshowSubPanels.tsx [attr:aria-label]"
+ },
+ {
+  "id": 576,
+  "text": "— select branch —",
+  "ctx": "panels/SlideshowSubPanels.tsx [jsxtext]"
+ },
+ {
+  "id": 577,
+  "text": "Select an element on the canvas first",
+  "ctx": "panels/SlideshowSubPanels.tsx [attr:title]"
+ },
+ {
+  "id": 578,
+  "text": "Choose a target branch first",
+  "ctx": "panels/SlideshowSubPanels.tsx [attr:title]"
+ },
+ {
+  "id": 579,
+  "text": "Make hotspot",
+  "ctx": "panels/SlideshowSubPanels.tsx [jsxtext]"
+ },
+ {
+  "id": 580,
+  "text": "Hotspots on this slide",
+  "ctx": "panels/SlideshowSubPanels.tsx [jsxtext]"
+ },
+ {
+  "id": 581,
+  "text": "Remove hotspot ${h.label}",
+  "ctx": "panels/SlideshowSubPanels.tsx [attr:aria-label]"
+ },
+ {
+  "id": 582,
+  "text": "Image source",
+  "ctx": "panels/VariablesBindElement.tsx [prop:label]"
+ },
+ {
+  "id": 583,
+  "text": "Media source",
+  "ctx": "panels/VariablesBindElement.tsx [prop:label]"
+ },
+ {
+  "id": 584,
+  "text": "${selection.label} image",
+  "ctx": "panels/VariablesBindElement.tsx [prop:label]"
+ },
+ {
+  "id": 585,
+  "text": "${selection.label} source",
+  "ctx": "panels/VariablesBindElement.tsx [prop:label]"
+ },
+ {
+  "id": 586,
+  "text": "Text",
+  "ctx": "panels/VariablesBindElement.tsx [prop:label]; editor/domEditingLayers.ts [prop:label]"
+ },
+ {
+  "id": 587,
+  "text": "${selection.label} text",
+  "ctx": "panels/VariablesBindElement.tsx [prop:label]"
+ },
+ {
+  "id": 588,
+  "text": "Text color",
+  "ctx": "panels/VariablesBindElement.tsx [prop:label]; editor/propertyPanelFlatStyleSections.tsx [attr:label]"
+ },
+ {
+  "id": 589,
+  "text": "${selection.label} color",
+  "ctx": "panels/VariablesBindElement.tsx [prop:label]"
+ },
+ {
+  "id": 590,
+  "text": "Background",
+  "ctx": "panels/VariablesBindElement.tsx [prop:label]"
+ },
+ {
+  "id": 591,
+  "text": "${selection.label} background",
+  "ctx": "panels/VariablesBindElement.tsx [prop:label]"
+ },
+ {
+  "id": 592,
+  "text": "Font",
+  "ctx": "panels/VariablesBindElement.tsx [prop:label]; editor/propertyPanelFont.tsx [jsxtext]"
+ },
+ {
+  "id": 593,
+  "text": "${selection.label} font",
+  "ctx": "panels/VariablesBindElement.tsx [prop:label]"
+ },
+ {
+  "id": 594,
+  "text": "Bind selected:",
+  "ctx": "panels/VariablesBindElement.tsx [jsxtext]"
+ },
+ {
+  "id": 595,
+  "text": "Variable id for",
+  "ctx": "panels/VariablesBindElement.tsx [jsxtext]"
+ },
+ {
+  "id": 596,
+  "text": "\" already exists. This element will use its current value",
+  "ctx": "panels/VariablesBindElement.tsx [jsxtext]"
+ },
+ {
+  "id": 597,
+  "text": ", not the element's own — binding won't change \"",
+  "ctx": "panels/VariablesBindElement.tsx [jsxtext]"
+ },
+ {
+  "id": 598,
+  "text": "Bind anyway",
+  "ctx": "panels/VariablesBindElement.tsx [jsxexpr]"
+ },
+ {
+  "id": 599,
+  "text": "Bind",
+  "ctx": "panels/VariablesBindElement.tsx [jsxexpr]"
+ },
+ {
+  "id": 600,
+  "text": "→&nbsp;variable",
+  "ctx": "panels/VariablesBindElement.tsx [jsxtext]"
+ },
+ {
+  "id": 601,
+  "text": "ID",
+  "ctx": "panels/VariablesDeclarationForm.tsx [attr:label]"
+ },
+ {
+  "id": 602,
+  "text": "Label",
+  "ctx": "panels/VariablesDeclarationForm.tsx [attr:label]"
+ },
+ {
+  "id": 603,
+  "text": "Title",
+  "ctx": "panels/VariablesDeclarationForm.tsx [attr:placeholder]"
+ },
+ {
+  "id": 604,
+  "text": "Type",
+  "ctx": "panels/VariablesDeclarationForm.tsx [attr:label]; editor/EaseParamFields.tsx [jsxtext]"
+ },
+ {
+  "id": 605,
+  "text": "Default",
+  "ctx": "panels/VariablesDeclarationForm.tsx [attr:label]"
+ },
+ {
+  "id": 606,
+  "text": "Options (one per line, value:Label)",
+  "ctx": "panels/VariablesDeclarationForm.tsx [attr:label]"
+ },
+ {
+  "id": 607,
+  "text": "Description (optional)",
+  "ctx": "panels/VariablesDeclarationForm.tsx [attr:label]"
+ },
+ {
+  "id": 608,
+  "text": "Edit",
+  "ctx": "panels/VariablesOtherCompositions.tsx [attr:label]; panels/VariablesPanel.tsx [attr:label]"
+ },
+ {
+  "id": 609,
+  "text": "Edit declaration",
+  "ctx": "panels/VariablesOtherCompositions.tsx [attr:title]; panels/VariablesPanel.tsx [attr:title]"
+ },
+ {
+  "id": 610,
+  "text": "Remove declaration",
+  "ctx": "panels/VariablesOtherCompositions.tsx [attr:title]; panels/VariablesPanel.tsx [attr:title]"
+ },
+ {
+  "id": 611,
+  "text": "Other compositions",
+  "ctx": "panels/VariablesOtherCompositions.tsx [jsxtext]"
+ },
+ {
+  "id": 612,
+  "text": "No script reads this variable",
+  "ctx": "panels/VariablesPanel.tsx [attr:title]"
+ },
+ {
+  "id": 613,
+  "text": "Set default",
+  "ctx": "panels/VariablesPanel.tsx [attr:label]"
+ },
+ {
+  "id": 614,
+  "text": "Persist this value as the declared default",
+  "ctx": "panels/VariablesPanel.tsx [attr:title]"
+ },
+ {
+  "id": 615,
+  "text": "Read by scripts, not declared",
+  "ctx": "panels/VariablesPanel.tsx [jsxtext]"
+ },
+ {
+  "id": 616,
+  "text": "Declare",
+  "ctx": "panels/VariablesPanel.tsx [attr:label]"
+ },
+ {
+  "id": 617,
+  "text": "Declare as a string variable",
+  "ctx": "panels/VariablesPanel.tsx [attr:title]"
+ },
+ {
+  "id": 618,
+  "text": "Variables",
+  "ctx": "panels/VariablesPanel.tsx [jsxtext]; dock/panelRegistry.ts [prop:title]"
+ },
+ {
+  "id": 619,
+  "text": "Previewing ${overrideCount} custom",
+  "ctx": "panels/VariablesPanel.tsx [jsxexpr]"
+ },
+ {
+  "id": 620,
+  "text": "Previewing defaults",
+  "ctx": "panels/VariablesPanel.tsx [jsxexpr]"
+ },
+ {
+  "id": 621,
+  "text": "Reset",
+  "ctx": "panels/VariablesPanel.tsx [jsxtext]; editor/ArcPathControls.tsx [jsxtext]"
+ },
+ {
+  "id": 622,
+  "text": "Use this template",
+  "ctx": "panels/VariablesPanel.tsx [jsxtext]"
+ },
+ {
+  "id": 623,
+  "text": "Copy render command",
+  "ctx": "panels/VariablesPanel.tsx [attr:label]"
+ },
+ {
+  "id": 624,
+  "text": "CLI command rendering exactly what the preview shows",
+  "ctx": "panels/VariablesPanel.tsx [attr:title]"
+ },
+ {
+  "id": 625,
+  "text": "Copy values JSON",
+  "ctx": "panels/VariablesPanel.tsx [attr:label]"
+ },
+ {
+  "id": 626,
+  "text": "Effective values (defaults merged with preview overrides)",
+  "ctx": "panels/VariablesPanel.tsx [attr:title]"
+ },
+ {
+  "id": 627,
+  "text": "No variables declared. Variables make parts of this composition dynamic — declare them here (or\n    in",
+  "ctx": "panels/VariablesPanel.tsx [jsxtext]"
+ },
+ {
+  "id": 628,
+  "text": "data-composition-variables",
+  "ctx": "panels/VariablesPanel.tsx [jsxtext]"
+ },
+ {
+  "id": 629,
+  "text": "), read them with",
+  "ctx": "panels/VariablesPanel.tsx [jsxtext]"
+ },
+ {
+  "id": 630,
+  "text": "getVariables()",
+  "ctx": "panels/VariablesPanel.tsx [jsxtext]"
+ },
+ {
+  "id": 631,
+  "text": ", and pass values at render time with",
+  "ctx": "panels/VariablesPanel.tsx [jsxtext]"
+ },
+ {
+  "id": 632,
+  "text": "--variables",
+  "ctx": "panels/VariablesPanel.tsx [jsxtext]"
+ },
+ {
+  "id": 633,
+  "text": "Open a composition to manage its variables.",
+  "ctx": "panels/VariablesPanel.tsx [jsxtext]"
+ },
+ {
+  "id": 634,
+  "text": "Scripts access variables dynamically — usage info may be incomplete.",
+  "ctx": "panels/VariablesPanel.tsx [jsxtext]"
+ },
+ {
+  "id": 635,
+  "text": "+ Add variable",
+  "ctx": "panels/VariablesPanel.tsx [jsxtext]"
+ },
+ {
+  "id": 636,
+  "text": "Master",
+  "ctx": "nle/useCompositionStack.ts [prop:label]; nle/useCompositionStack.ts [prop:label]"
+ },
+ {
+  "id": 637,
+  "text": "Preview: ${name}",
+  "ctx": "nle/AssetPreviewOverlay.tsx [attr:aria-label]"
+ },
+ {
+  "id": 638,
+  "text": "Close preview",
+  "ctx": "nle/AssetPreviewOverlay.tsx [attr:aria-label]"
+ },
+ {
+  "id": 639,
+  "text": "Lights when the preview reaches −1 dBFS, the export ceiling. Click to reset.",
+  "ctx": "nle/AudioMeterStrip.tsx [attr:title]"
+ },
+ {
+  "id": 640,
+  "text": "CLIP",
+  "ctx": "nle/AudioMeterStrip.tsx [jsxtext]"
+ },
+ {
+  "id": 641,
+  "text": "${title}: ${readout}",
+  "ctx": "nle/AudioMeterStrip.tsx [attr:title]"
+ },
+ {
+  "id": 642,
+  "text": "${strip.label} level",
+  "ctx": "nle/AudioMeterStrip.tsx [attr:aria-label]"
+ },
+ {
+  "id": 643,
+  "text": "${strip.label} volume",
+  "ctx": "nle/AudioMeterStrip.tsx [attr:label]; nle/AudioMeterStrip.tsx [attr:title]"
+ },
+ {
+  "id": 644,
+  "text": "Preview monitor volume",
+  "ctx": "nle/AudioMeterStrip.tsx [attr:title]"
+ },
+ {
+  "id": 645,
+  "text": "Composition navigation",
+  "ctx": "nle/CompositionBreadcrumb.tsx [attr:aria-label]"
+ },
+ {
+  "id": 646,
+  "text": "Back (Esc, or double-click empty timeline)",
+  "ctx": "nle/CompositionBreadcrumb.tsx [attr:title]"
+ },
+ {
+  "id": 647,
+  "text": "Back to parent composition",
+  "ctx": "nle/CompositionBreadcrumb.tsx [attr:aria-label]"
+ },
+ {
+  "id": 648,
+  "text": "Composition preview",
+  "ctx": "nle/NLEPreview.tsx [attr:aria-label]"
+ },
+ {
+  "id": 649,
+  "text": "Editing captions",
+  "ctx": "nle/PreviewOverlays.tsx [jsxtext]"
+ },
+ {
+  "id": 650,
+  "text": "Exit",
+  "ctx": "nle/PreviewOverlays.tsx [jsxtext]; captions/components/CaptionAnimationPanel.tsx [attr:label]"
+ },
+ {
+  "id": 651,
+  "text": "Edit captions",
+  "ctx": "nle/PreviewOverlays.tsx [jsxtext]"
+ },
+ {
+  "id": 652,
+  "text": "Fit the whole frame in view",
+  "ctx": "nle/PreviewZoomOverlay.tsx [attr:aria-label]"
+ },
+ {
+  "id": 653,
+  "text": "Loading composition…",
+  "ctx": "nle/TimelinePane.tsx [jsxtext]"
+ },
+ {
+  "id": 654,
+  "text": "The part you never use",
+  "ctx": "feedback/feedbackTrigger.ts [prop:placeholder]"
+ },
+ {
+  "id": 655,
+  "text": "Layers panel",
+  "ctx": "feedback/feedbackTrigger.ts [prop:label]"
+ },
+ {
+  "id": 656,
+  "text": "The layer tree on the right",
+  "ctx": "feedback/feedbackTrigger.ts [prop:hint]"
+ },
+ {
+  "id": 657,
+  "text": "Variables panel",
+  "ctx": "feedback/feedbackTrigger.ts [prop:label]"
+ },
+ {
+  "id": 658,
+  "text": "Composition variables on the right",
+  "ctx": "feedback/feedbackTrigger.ts [prop:hint]"
+ },
+ {
+  "id": 659,
+  "text": "Blocks browser",
+  "ctx": "feedback/feedbackTrigger.ts [prop:label]"
+ },
+ {
+  "id": 660,
+  "text": "The block library in the sidebar",
+  "ctx": "feedback/feedbackTrigger.ts [prop:hint]"
+ },
+ {
+  "id": 661,
+  "text": "Caption editing",
+  "ctx": "feedback/feedbackTrigger.ts [prop:label]"
+ },
+ {
+  "id": 662,
+  "text": "Editing caption words and presets in Studio",
+  "ctx": "feedback/feedbackTrigger.ts [prop:hint]"
+ },
+ {
+  "id": 663,
+  "text": "Render history",
+  "ctx": "feedback/feedbackTrigger.ts [prop:label]"
+ },
+ {
+  "id": 664,
+  "text": "The list of past exports",
+  "ctx": "feedback/feedbackTrigger.ts [prop:hint]"
+ },
+ {
+  "id": 665,
+  "text": "Nothing",
+  "ctx": "feedback/feedbackTrigger.ts [prop:label]"
+ },
+ {
+  "id": 666,
+  "text": "It all earns its place",
+  "ctx": "feedback/feedbackTrigger.ts [prop:hint]"
+ },
+ {
+  "id": 667,
+  "text": "The step you finished somewhere else",
+  "ctx": "feedback/feedbackTrigger.ts [prop:placeholder]"
+ },
+ {
+  "id": 668,
+  "text": "Fix the exported file",
+  "ctx": "feedback/feedbackTrigger.ts [prop:label]"
+ },
+ {
+  "id": 669,
+  "text": "Remuxing or re-encoding the output by hand",
+  "ctx": "feedback/feedbackTrigger.ts [prop:hint]"
+ },
+ {
+  "id": 670,
+  "text": "Convert source media",
+  "ctx": "feedback/feedbackTrigger.ts [prop:label]"
+ },
+ {
+  "id": 671,
+  "text": "Re-encoding footage before it would import cleanly",
+  "ctx": "feedback/feedbackTrigger.ts [prop:hint]"
+ },
+ {
+  "id": 672,
+  "text": "Match loudness",
+  "ctx": "feedback/feedbackTrigger.ts [prop:label]"
+ },
+ {
+  "id": 673,
+  "text": "Normalising levels across the finished audio",
+  "ctx": "feedback/feedbackTrigger.ts [prop:hint]"
+ },
+ {
+  "id": 674,
+  "text": "Make images or graphics",
+  "ctx": "feedback/feedbackTrigger.ts [prop:label]"
+ },
+ {
+  "id": 675,
+  "text": "Creating visual assets in another tool",
+  "ctx": "feedback/feedbackTrigger.ts [prop:hint]"
+ },
+ {
+  "id": 676,
+  "text": "Record footage",
+  "ctx": "feedback/feedbackTrigger.ts [prop:label]"
+ },
+ {
+  "id": 677,
+  "text": "Capturing screen or camera video",
+  "ctx": "feedback/feedbackTrigger.ts [prop:hint]"
+ },
+ {
+  "id": 678,
+  "text": "Nothing, it was all here",
+  "ctx": "feedback/feedbackTrigger.ts [prop:label]"
+ },
+ {
+  "id": 679,
+  "text": "No outside tools needed",
+  "ctx": "feedback/feedbackTrigger.ts [prop:hint]"
+ },
+ {
+  "id": 680,
+  "text": "The thing that slowed you down",
+  "ctx": "feedback/feedbackTrigger.ts [prop:placeholder]"
+ },
+ {
+  "id": 681,
+  "text": "Audio mixing",
+  "ctx": "feedback/feedbackTrigger.ts [prop:label]"
+ },
+ {
+  "id": 682,
+  "text": "Levels, ducking or the balance in the exported mix",
+  "ctx": "feedback/feedbackTrigger.ts [prop:hint]"
+ },
+ {
+  "id": 683,
+  "text": "Export encoding",
+  "ctx": "feedback/feedbackTrigger.ts [prop:label]"
+ },
+ {
+  "id": 684,
+  "text": "The render fails, or the finished file is wrong",
+  "ctx": "feedback/feedbackTrigger.ts [prop:hint]"
+ },
+ {
+  "id": 685,
+  "text": "Export matches preview",
+  "ctx": "feedback/feedbackTrigger.ts [prop:label]"
+ },
+ {
+  "id": 686,
+  "text": "The exported video differs from the preview",
+  "ctx": "feedback/feedbackTrigger.ts [prop:hint]"
+ },
+ {
+  "id": 687,
+  "text": "Media and fonts",
+  "ctx": "feedback/feedbackTrigger.ts [prop:label]"
+ },
+ {
+  "id": 688,
+  "text": "Adding video, images or fonts to a project",
+  "ctx": "feedback/feedbackTrigger.ts [prop:hint]"
+ },
+ {
+  "id": 689,
+  "text": "Render speed",
+  "ctx": "feedback/feedbackTrigger.ts [prop:label]"
+ },
+ {
+  "id": 690,
+  "text": "Exports take too long to finish",
+  "ctx": "feedback/feedbackTrigger.ts [prop:hint]"
+ },
+ {
+  "id": 691,
+  "text": "Re-rendering everything",
+  "ctx": "feedback/feedbackTrigger.ts [prop:label]"
+ },
+ {
+  "id": 692,
+  "text": "A small change means rendering the whole thing",
+  "ctx": "feedback/feedbackTrigger.ts [prop:hint]"
+ },
+ {
+  "id": 693,
+  "text": "Checks and warnings",
+  "ctx": "feedback/feedbackTrigger.ts [prop:label]"
+ },
+ {
+  "id": 694,
+  "text": "Lint flags things that are fine, or misses real ones",
+  "ctx": "feedback/feedbackTrigger.ts [prop:hint]"
+ },
+ {
+  "id": 695,
+  "text": "The thing that made that a low score",
+  "ctx": "feedback/feedbackTrigger.ts [prop:placeholder]"
+ },
+ {
+  "id": 696,
+  "text": "Export failed",
+  "ctx": "feedback/feedbackTrigger.ts [prop:label]"
+ },
+ {
+  "id": 697,
+  "text": "The render did not finish",
+  "ctx": "feedback/feedbackTrigger.ts [prop:hint]"
+ },
+ {
+  "id": 698,
+  "text": "Output looked wrong",
+  "ctx": "feedback/feedbackTrigger.ts [prop:label]"
+ },
+ {
+  "id": 699,
+  "text": "It rendered, but not the way I built it",
+  "ctx": "feedback/feedbackTrigger.ts [prop:hint]"
+ },
+ {
+  "id": 700,
+  "text": "Crashed or froze",
+  "ctx": "feedback/feedbackTrigger.ts [prop:label]"
+ },
+ {
+  "id": 701,
+  "text": "The editor stopped responding",
+  "ctx": "feedback/feedbackTrigger.ts [prop:hint]"
+ },
+ {
+  "id": 702,
+  "text": "Lost my edits",
+  "ctx": "feedback/feedbackTrigger.ts [prop:label]"
+ },
+ {
+  "id": 703,
+  "text": "Changes did not save, or came back changed",
+  "ctx": "feedback/feedbackTrigger.ts [prop:hint]"
+ },
+ {
+  "id": 704,
+  "text": "Too slow",
+  "ctx": "feedback/feedbackTrigger.ts [prop:label]"
+ },
+ {
+  "id": 705,
+  "text": "Waiting on renders, or the editor itself lagging",
+  "ctx": "feedback/feedbackTrigger.ts [prop:hint]"
+ },
+ {
+  "id": 706,
+  "text": "Could not figure it out",
+  "ctx": "feedback/feedbackTrigger.ts [prop:label]"
+ },
+ {
+  "id": 707,
+  "text": "Could not find or understand something",
+  "ctx": "feedback/feedbackTrigger.ts [prop:hint]"
+ },
+ {
+  "id": 708,
+  "text": "What were you exporting?",
+  "ctx": "feedback/StudioFeedbackCard.tsx [prop:placeholder]"
+ },
+ {
+  "id": 709,
+  "text": "Happens every time",
+  "ctx": "feedback/StudioFeedbackCard.tsx [prop:label]"
+ },
+ {
+  "id": 710,
+  "text": "Every export of this project fails this way",
+  "ctx": "feedback/StudioFeedbackCard.tsx [prop:hint]"
+ },
+ {
+  "id": 711,
+  "text": "First time",
+  "ctx": "feedback/StudioFeedbackCard.tsx [prop:label]"
+ },
+ {
+  "id": 712,
+  "text": "Exports normally work for me",
+  "ctx": "feedback/StudioFeedbackCard.tsx [prop:hint]"
+ },
+ {
+  "id": 713,
+  "text": "Long composition",
+  "ctx": "feedback/StudioFeedbackCard.tsx [prop:label]"
+ },
+ {
+  "id": 714,
+  "text": "Over a minute, or a lot of scenes",
+  "ctx": "feedback/StudioFeedbackCard.tsx [prop:hint]"
+ },
+ {
+  "id": 715,
+  "text": "Big media files",
+  "ctx": "feedback/StudioFeedbackCard.tsx [prop:label]"
+ },
+ {
+  "id": 716,
+  "text": "Large video or image assets in the project",
+  "ctx": "feedback/StudioFeedbackCard.tsx [prop:hint]"
+ },
+ {
+  "id": 717,
+  "text": "Has audio",
+  "ctx": "feedback/StudioFeedbackCard.tsx [prop:label]"
+ },
+ {
+  "id": 718,
+  "text": "The composition includes voiceover, music or sound",
+  "ctx": "feedback/StudioFeedbackCard.tsx [prop:hint]"
+ },
+ {
+  "id": 719,
+  "text": "Embedded video",
+  "ctx": "feedback/StudioFeedbackCard.tsx [prop:label]"
+ },
+ {
+  "id": 720,
+  "text": "One or more video clips inside the composition",
+  "ctx": "feedback/StudioFeedbackCard.tsx [prop:hint]"
+ },
+ {
+  "id": 721,
+  "text": "The last thing you touched",
+  "ctx": "feedback/StudioFeedbackCard.tsx [prop:placeholder]"
+ },
+ {
+  "id": 722,
+  "text": "Editing the timeline",
+  "ctx": "feedback/StudioFeedbackCard.tsx [prop:label]"
+ },
+ {
+  "id": 723,
+  "text": "Dragging, trimming or splitting clips",
+  "ctx": "feedback/StudioFeedbackCard.tsx [prop:hint]"
+ },
+ {
+  "id": 724,
+  "text": "Playing the preview",
+  "ctx": "feedback/StudioFeedbackCard.tsx [prop:label]"
+ },
+ {
+  "id": 725,
+  "text": "Scrubbing or playing back the composition",
+  "ctx": "feedback/StudioFeedbackCard.tsx [prop:hint]"
+ },
+ {
+  "id": 726,
+  "text": "Adding media",
+  "ctx": "feedback/StudioFeedbackCard.tsx [prop:label]"
+ },
+ {
+  "id": 727,
+  "text": "Importing video, images or audio",
+  "ctx": "feedback/StudioFeedbackCard.tsx [prop:hint]"
+ },
+ {
+  "id": 728,
+  "text": "Editing properties",
+  "ctx": "feedback/StudioFeedbackCard.tsx [prop:label]"
+ },
+ {
+  "id": 729,
+  "text": "Changing styles, transforms or keyframes",
+  "ctx": "feedback/StudioFeedbackCard.tsx [prop:hint]"
+ },
+ {
+  "id": 730,
+  "text": "Exporting",
+  "ctx": "feedback/StudioFeedbackCard.tsx [prop:label]"
+ },
+ {
+  "id": 731,
+  "text": "Starting or watching a render",
+  "ctx": "feedback/StudioFeedbackCard.tsx [prop:hint]"
+ },
+ {
+  "id": 732,
+  "text": "Just opened it",
+  "ctx": "feedback/StudioFeedbackCard.tsx [prop:label]"
+ },
+ {
+  "id": 733,
+  "text": "It broke before I did anything",
+  "ctx": "feedback/StudioFeedbackCard.tsx [prop:hint]"
+ },
+ {
+  "id": 734,
+  "text": "Send feedback to the HyperFrames team",
+  "ctx": "feedback/StudioFeedbackCard.tsx [attr:aria-label]"
+ },
+ {
+  "id": 735,
+  "text": "Thanks, that helps.",
+  "ctx": "feedback/StudioFeedbackCard.tsx [jsxexpr]"
+ },
+ {
+  "id": 736,
+  "text": "Talk to us, 30 min",
+  "ctx": "feedback/StudioFeedbackCard.tsx [jsxtext]"
+ },
+ {
+  "id": 737,
+  "text": "Rate this export from 0 to 10",
+  "ctx": "feedback/StudioFeedbackCard.tsx [jsxtext]"
+ },
+ {
+  "id": 738,
+  "text": "hf-studio-feedback-rating",
+  "ctx": "feedback/StudioFeedbackCard.tsx [attr:name]"
+ },
+ {
+  "id": 739,
+  "text": "Not likely",
+  "ctx": "feedback/StudioFeedbackCard.tsx [jsxtext]"
+ },
+ {
+  "id": 740,
+  "text": "Extremely likely",
+  "ctx": "feedback/StudioFeedbackCard.tsx [jsxtext]"
+ },
+ {
+  "id": 741,
+  "text": "${preset.label}. ${preset.hint}",
+  "ctx": "feedback/StudioFeedbackCard.tsx [attr:aria-label]"
+ },
+ {
+  "id": 742,
+  "text": "Tap one, or write your own.",
+  "ctx": "feedback/StudioFeedbackCard.tsx [jsxexpr]"
+ },
+ {
+  "id": 743,
+  "text": "Send",
+  "ctx": "feedback/StudioFeedbackCard.tsx [jsxtext]"
+ },
+ {
+  "id": 744,
+  "text": "Text ${childIdx + 1}",
+  "ctx": "editor/domEditingLayers.ts [prop:label]"
+ },
+ {
+  "id": 745,
+  "text": "Linear",
+  "ctx": "editor/easePresetLibrary.ts [prop:label]; editor/propertyPanelFill.tsx [prop:label]"
+ },
+ {
+  "id": 746,
+  "text": "Ease In",
+  "ctx": "editor/easePresetLibrary.ts [prop:label]"
+ },
+ {
+  "id": 747,
+  "text": "Quad In",
+  "ctx": "editor/easePresetLibrary.ts [prop:label]"
+ },
+ {
+  "id": 748,
+  "text": "Cubic In",
+  "ctx": "editor/easePresetLibrary.ts [prop:label]"
+ },
+ {
+  "id": 749,
+  "text": "Ease Out",
+  "ctx": "editor/easePresetLibrary.ts [prop:label]"
+ },
+ {
+  "id": 750,
+  "text": "Quad Out",
+  "ctx": "editor/easePresetLibrary.ts [prop:label]"
+ },
+ {
+  "id": 751,
+  "text": "Cubic Out",
+  "ctx": "editor/easePresetLibrary.ts [prop:label]"
+ },
+ {
+  "id": 752,
+  "text": "Ease In & Out",
+  "ctx": "editor/easePresetLibrary.ts [prop:label]"
+ },
+ {
+  "id": 753,
+  "text": "Quad Ease",
+  "ctx": "editor/easePresetLibrary.ts [prop:label]"
+ },
+ {
+  "id": 754,
+  "text": "Cubic Ease",
+  "ctx": "editor/easePresetLibrary.ts [prop:label]"
+ },
+ {
+  "id": 755,
+  "text": "Circular Ease",
+  "ctx": "editor/easePresetLibrary.ts [prop:label]"
+ },
+ {
+  "id": 756,
+  "text": "Ease In Back",
+  "ctx": "editor/easePresetLibrary.ts [prop:label]"
+ },
+ {
+  "id": 757,
+  "text": "Ease Out Back",
+  "ctx": "editor/easePresetLibrary.ts [prop:label]"
+ },
+ {
+  "id": 758,
+  "text": "Flow 1",
+  "ctx": "editor/easePresetLibrary.ts [prop:label]"
+ },
+ {
+  "id": 759,
+  "text": "Flow 2",
+  "ctx": "editor/easePresetLibrary.ts [prop:label]"
+ },
+ {
+  "id": 760,
+  "text": "Flow 3",
+  "ctx": "editor/easePresetLibrary.ts [prop:label]"
+ },
+ {
+  "id": 761,
+  "text": "Flow 4",
+  "ctx": "editor/easePresetLibrary.ts [prop:label]"
+ },
+ {
+  "id": 762,
+  "text": "Flow 5",
+  "ctx": "editor/easePresetLibrary.ts [prop:label]"
+ },
+ {
+  "id": 763,
+  "text": "Flow 6",
+  "ctx": "editor/easePresetLibrary.ts [prop:label]"
+ },
+ {
+  "id": 764,
+  "text": "Flow 7",
+  "ctx": "editor/easePresetLibrary.ts [prop:label]"
+ },
+ {
+  "id": 765,
+  "text": "Bounce 1",
+  "ctx": "editor/easePresetLibrary.ts [prop:label]"
+ },
+ {
+  "id": 766,
+  "text": "Bounce 2",
+  "ctx": "editor/easePresetLibrary.ts [prop:label]"
+ },
+ {
+  "id": 767,
+  "text": "Bounce 3",
+  "ctx": "editor/easePresetLibrary.ts [prop:label]"
+ },
+ {
+  "id": 768,
+  "text": "Bounce 4",
+  "ctx": "editor/easePresetLibrary.ts [prop:label]"
+ },
+ {
+  "id": 769,
+  "text": "Hold",
+  "ctx": "editor/easePresetLibrary.ts [prop:label]"
+ },
+ {
+  "id": 770,
+  "text": "Ease In & Out Back",
+  "ctx": "editor/easePresetLibrary.ts [prop:label]"
+ },
+ {
+  "id": 771,
+  "text": "Expo In",
+  "ctx": "editor/easePresetLibrary.ts [prop:label]"
+ },
+ {
+  "id": 772,
+  "text": "Expo Out",
+  "ctx": "editor/easePresetLibrary.ts [prop:label]"
+ },
+ {
+  "id": 773,
+  "text": "Gentle",
+  "ctx": "editor/easePresetLibrary.ts [prop:label]"
+ },
+ {
+  "id": 774,
+  "text": "Quick",
+  "ctx": "editor/easePresetLibrary.ts [prop:label]"
+ },
+ {
+  "id": 775,
+  "text": "Bouncy",
+  "ctx": "editor/easePresetLibrary.ts [prop:label]"
+ },
+ {
+  "id": 776,
+  "text": "Slow",
+  "ctx": "editor/easePresetLibrary.ts [prop:label]"
+ },
+ {
+  "id": 777,
+  "text": "Edit muted",
+  "ctx": "editor/mediaAudioEdits.ts [prop:label]"
+ },
+ {
+  "id": 778,
+  "text": "Edit has audio",
+  "ctx": "editor/mediaAudioEdits.ts [prop:label]"
+ },
+ {
+  "id": 779,
+  "text": "Essentials",
+  "ctx": "editor/propertyPanelFlatEffectSpecs.ts [prop:label]"
+ },
+ {
+  "id": 780,
+  "text": "Blur",
+  "ctx": "editor/propertyPanelFlatEffectSpecs.ts [prop:label]; editor/AnimationCardParts.tsx [prop:label]"
+ },
+ {
+  "id": 781,
+  "text": "Pixelate",
+  "ctx": "editor/propertyPanelFlatEffectSpecs.ts [prop:label]; editor/propertyPanelColorGradingControls.tsx [prop:label]"
+ },
+ {
+  "id": 782,
+  "text": "Bloom",
+  "ctx": "editor/propertyPanelFlatEffectSpecs.ts [prop:label]"
+ }
+]

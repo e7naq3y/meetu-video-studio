@@ -34,7 +34,7 @@ function CopyChip({ feedback, asset }: { feedback: CopyFeedback; asset: string }
         feedback.ok ? "text-accent-ink bg-panel-accent/10" : "text-danger-ink bg-red-500/10"
       }`}
     >
-      {feedback.ok ? "Copied" : "Copy failed"}
+      {feedback.ok ? "已复制" : "复制失败"}
     </span>
   );
 }
@@ -209,7 +209,7 @@ export function AssetCard({
         draggable
         role="button"
         tabIndex={0}
-        aria-label={`${name} — open, drag to timeline, right-click for actions`}
+        aria-label={`${name} — 点击打开，拖到时间线，右键查看更多操作`}
         onPointerDown={handlePointerDown}
         onPointerUp={handlePointerUp}
         onKeyDown={(e) => {
@@ -262,7 +262,7 @@ export function AssetCard({
           {/* "Added" badge — top-left */}
           {used && (
             <span className="absolute top-1 left-1 text-[9px] font-semibold leading-none px-1.5 py-[3px] rounded-sm bg-neutral-950/80 text-panel-text-1">
-              Added
+              已添加
             </span>
           )}
 
@@ -337,7 +337,7 @@ export function FontRow({
         draggable
         role="button"
         tabIndex={0}
-        aria-label={`${name} — copy path, drag to timeline, right-click for actions`}
+        aria-label={`${name} — 复制路径，拖到时间线，右键查看更多操作`}
         onClick={() => onCopy(asset)}
         onKeyDown={(e) => {
           if (e.target !== e.currentTarget) return;
@@ -367,7 +367,7 @@ export function FontRow({
             <span className="text-[10px] text-neutral-600 truncate">{extension}</span>
             {used && (
               <span className="text-[9px] font-medium text-accent-ink bg-panel-accent/10 px-1.5 py-px rounded-sm">
-                in use
+                使用中
               </span>
             )}
             <CopyChip feedback={copyFeedback} asset={asset} />

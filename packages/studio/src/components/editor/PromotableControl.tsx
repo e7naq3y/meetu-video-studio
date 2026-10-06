@@ -84,7 +84,7 @@ export function PromotableControl({
           // Sits above the row (not on top of top-0) so it clears a value that
           // renders flush to the row's right edge, e.g. flat Font/Color rows.
           className="pointer-events-none absolute -top-2 right-1.5 z-10 inline-flex max-w-[60%] items-center gap-1 truncate rounded-sm bg-studio-accent/20 px-1 py-px font-mono text-[8px] font-medium text-accent-ink"
-          title={`Bound to variable "${promote.boundId}"`}
+          title={`已绑定到变量「${promote.boundId}」`}
         >
           ◆ {promote.boundId}
         </span>
@@ -92,14 +92,14 @@ export function PromotableControl({
       {canPromote && (
         <button
           type="button"
-          title="Make this a variable"
+          title="设为变量"
           onClick={(e) => {
             e.stopPropagation();
             promote.promote();
           }}
           className="absolute -top-2 right-1.5 z-10 inline-flex items-center gap-1 rounded-sm bg-raised/80 px-1 py-px font-mono text-[8px] font-medium text-neutral-400 opacity-70 transition-colors hover:bg-studio-accent/20 hover:text-accent-ink hover:opacity-100"
         >
-          ◇ var
+          ◇ 变量
         </button>
       )}
     </div>

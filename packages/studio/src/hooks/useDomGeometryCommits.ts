@@ -89,7 +89,7 @@ export function useDomGeometryCommits({
       if (crop) patches.push(crop.patch);
       if (offset) patches.push(...writePlainMove(element, offset));
       return commitPositionPatchToHtml(selection, patches, {
-        label: "Resize layer box",
+        label: "调整图层框大小",
         ...(undoKey
           ? { coalesceKey: undoKey, coalesceMs: Number.POSITIVE_INFINITY, deferRender: true }
           : {
@@ -129,7 +129,7 @@ export function useDomGeometryCommits({
       clearStudioRotation(element);
       // skipRefresh:false triggers reloadPreview() which re-syncs selection on load
       return commitPositionPatchToHtml(selection, clearPatches, {
-        label: "Reset layer edits",
+        label: "重置图层编辑",
         coalesceKey: `manual-reset:${getDomEditTargetKey(selection)}`,
         skipRefresh: false,
       }).catch((error) => {

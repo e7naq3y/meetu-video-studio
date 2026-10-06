@@ -236,7 +236,7 @@ export function TimelinePropertyLanes({
           key={group}
           id={timelineLogicalRowCellId(id, timelinePropertyRowId(elementId, group), "content")}
           role="group"
-          aria-label={`${group} keyframes`}
+          aria-label={`${group}关键帧`}
           data-property-group={group}
           data-timeline-element-id={elementId}
           data-timeline-property-lane=""

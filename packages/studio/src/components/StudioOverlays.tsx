@@ -57,7 +57,7 @@ export const StudioOverlays = memo(function StudioOverlays({
           findings={consoleErrors}
           projectId={projectId}
           projectDir={projectDir}
-          title="Console errors in preview"
+          title="预览中的控制台错误"
           promptIntro="Fix these runtime console errors from the composition preview"
           onClose={clearConsoleErrors}
         />

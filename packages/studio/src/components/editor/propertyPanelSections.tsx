@@ -189,7 +189,7 @@ function FontWeightField({
   return (
     <div className={FIELD}>
       <div className="flex min-w-0 items-center gap-3">
-        <span className="shrink-0 text-[11px] font-medium text-neutral-500">Weight</span>
+        <span className="shrink-0 text-[11px] font-medium text-neutral-500">字重</span>
         <select
           value={value}
           disabled={disabled}
@@ -225,14 +225,14 @@ function AdvancedTextControls({
     <div className="space-y-4">
       <div className={RESPONSIVE_GRID}>
         <SelectField
-          label="Line"
+          label="行高"
           value={getTextStyleValue(field, inheritedStyles, "line-height", "normal")}
           disabled={disabled}
           options={["normal", "1", "1.1", "1.2", "1.25", "1.3", "1.4", "1.5", "1.6", "1.75", "2"]}
           onChange={(n) => onCommit("line-height", normalizeTextMetricValue("line-height", n))}
         />
         <SelectField
-          label="Track"
+          label="字间距"
           value={getTextStyleValue(field, inheritedStyles, "letter-spacing", "0px")}
           disabled={disabled}
           options={[
@@ -258,14 +258,14 @@ function AdvancedTextControls({
       </div>
       <div className={RESPONSIVE_GRID}>
         <SelectField
-          label="Align"
+          label="对齐"
           value={getTextStyleValue(field, inheritedStyles, "text-align", "start")}
           disabled={disabled}
           onChange={(n) => onCommit("text-align", n)}
           options={["start", "left", "center", "right", "justify", "end"]}
         />
         <SelectField
-          label="Case"
+          label="大小写"
           value={getTextStyleValue(field, inheritedStyles, "text-transform", "none")}
           disabled={disabled}
           onChange={(n) => onCommit("text-transform", n)}
@@ -273,7 +273,7 @@ function AdvancedTextControls({
         />
       </div>
       <SelectField
-        label="Style"
+        label="样式"
         value={getTextStyleValue(field, inheritedStyles, "font-style", "normal")}
         disabled={disabled}
         onChange={(n) => onCommit("font-style", n)}
@@ -312,7 +312,7 @@ function TextFieldEditor({
       <div className={showRemove ? "flex min-w-0 items-center justify-between gap-2" : "min-w-0"}>
         <div className="min-w-0">
           <div className="truncate text-[11px] font-medium text-neutral-100">
-            {formatTextFieldPreview(field.value) || "Text"}
+            {formatTextFieldPreview(field.value) || "文字"}
           </div>
           <div className="text-[10px] text-neutral-500">{field.tagName}</div>
         </div>
@@ -325,7 +325,7 @@ function TextFieldEditor({
             }}
             className="inline-flex h-7 shrink-0 items-center rounded-lg border border-neutral-700 bg-neutral-950 px-2.5 text-[11px] font-medium text-neutral-300 transition-colors hover:border-neutral-600 hover:text-text-0"
           >
-            Remove
+            移除
           </button>
         )}
       </div>
@@ -333,7 +333,7 @@ function TextFieldEditor({
         {({ value, onCommit }) => (
           <TextAreaField
             key={field.key}
-            label="Content"
+            label="内容"
             value={value ?? field.value}
             disabled={false}
             autoFocus={showRemove}
@@ -347,7 +347,7 @@ function TextFieldEditor({
       >
         {({ value, onCommit }) => (
           <ColorField
-            label="Text color"
+            label="文字颜色"
             value={value ?? getTextFieldColor(field, styles)}
             disabled={false}
             onCommit={onCommit ?? ((next) => onSetTextFieldStyle(field.key, "color", next))}
@@ -356,7 +356,7 @@ function TextFieldEditor({
       </PromotableControl>
       <div className={RESPONSIVE_GRID}>
         <MetricField
-          label="Size"
+          label="尺寸"
           value={field.computedStyles["font-size"] || styles["font-size"] || "16px"}
           disabled={false}
           liveCommit
@@ -455,7 +455,7 @@ export function TextSection({
     );
     if (hideOwnHeading) return content;
     return (
-      <Section title="Text" icon={<Type size={15} />} defaultCollapsed>
+      <Section title="文字" icon={<Type size={15} />} defaultCollapsed>
         {content}
       </Section>
     );
@@ -465,7 +465,7 @@ export function TextSection({
     <div className="space-y-4">
       <div className="grid gap-1.5">
         <div className="flex min-w-0 flex-wrap items-center justify-between gap-2">
-          <span className={LABEL}>Text layers</span>
+          <span className={LABEL}>文字图层</span>
           <button
             type="button"
             onClick={() => {
@@ -477,7 +477,7 @@ export function TextSection({
             className="inline-flex h-7 max-w-full items-center gap-1.5 rounded-lg border border-neutral-700 bg-neutral-950 px-2.5 text-[11px] font-medium text-neutral-300 transition-colors hover:border-neutral-600 hover:text-text-0"
           >
             <Plus size={12} className="shrink-0" />
-            <span className="truncate">Add text</span>
+            <span className="truncate">添加文字</span>
           </button>
         </div>
         <div className="grid gap-2">
@@ -501,7 +501,7 @@ export function TextSection({
                       style={{ backgroundColor: getTextFieldColor(field, styles) }}
                     />
                     <span className="min-w-0 truncate text-[11px] font-medium text-neutral-100">
-                      {formatTextFieldPreview(field.value) || `Text ${index + 1}`}
+                      {formatTextFieldPreview(field.value) || `文字 ${index + 1}`}
                     </span>
                   </div>
                   <span className="shrink-0 rounded-md border border-neutral-700 bg-neutral-950 px-1.5 py-0.5 text-[10px] text-neutral-500">
@@ -527,7 +527,7 @@ export function TextSection({
   );
   if (hideOwnHeading) return content;
   return (
-    <Section title="Text" icon={<Type size={15} />}>
+    <Section title="文字" icon={<Type size={15} />}>
       {content}
     </Section>
   );

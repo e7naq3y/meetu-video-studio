@@ -35,14 +35,14 @@ export function CropPresetBar({
   return (
     <div
       role="toolbar"
-      aria-label="Crop presets"
+      aria-label="裁剪预设"
       data-dom-edit-crop-bar="true"
       className="pointer-events-auto absolute z-20 flex gap-1 rounded-md border border-white/15 bg-neutral-900/95 p-1 shadow-lg"
       style={{ left, top: Math.max(4, top - 34), transform: "translateX(-50%)" }}
       onPointerDown={(event) => event.stopPropagation()}
     >
-      <button type="button" className={CHIP} title="Drag the edges freely">
-        Free
+      <button type="button" className={CHIP} title="自由拖动边缘">
+        自由
       </button>
       {CROP_ASPECT_PRESETS.map((preset) => (
         <button
@@ -55,14 +55,14 @@ export function CropPresetBar({
         </button>
       ))}
       <button type="button" className={CHIP} onClick={() => onApply(null)}>
-        Reset
+        重置
       </button>
       <button
         type="button"
         className="rounded-sm border border-studio-accent bg-studio-accent px-1.5 py-0.5 text-[10px] font-semibold text-black"
         onClick={onDone}
       >
-        Done
+        完成
       </button>
     </div>
   );

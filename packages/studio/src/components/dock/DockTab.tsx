@@ -53,7 +53,7 @@ export function DockTab({ api }: IDockviewPanelHeaderProps) {
       <div
         role="button"
         tabIndex={-1}
-        aria-label={`Close ${title}`}
+        aria-label={`关闭${title}`}
         className="hf-dock-tab-close"
         onPointerDown={(event) => event.stopPropagation()}
         onClick={(event) => {

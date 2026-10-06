@@ -24,21 +24,21 @@ export const COLOR_GRADING_ADJUST_SLIDERS: Array<{
   scale: number;
   suffix: string;
 }> = [
-  { key: "exposure", label: "Exposure", min: -200, max: 200, step: 5, scale: 100, suffix: "" },
-  { key: "contrast", label: "Contrast", min: -100, max: 100, step: 1, scale: 100, suffix: "%" },
+  { key: "exposure", label: "曝光", min: -200, max: 200, step: 5, scale: 100, suffix: "" },
+  { key: "contrast", label: "对比度", min: -100, max: 100, step: 1, scale: 100, suffix: "%" },
   {
     key: "highlights",
-    label: "Highlights",
+    label: "高光",
     min: -100,
     max: 100,
     step: 1,
     scale: 100,
     suffix: "%",
   },
-  { key: "shadows", label: "Shadows", min: -100, max: 100, step: 1, scale: 100, suffix: "%" },
+  { key: "shadows", label: "阴影", min: -100, max: 100, step: 1, scale: 100, suffix: "%" },
   {
     key: "whites",
-    label: "White Point",
+    label: "白点",
     min: -100,
     max: 100,
     step: 1,
@@ -47,17 +47,17 @@ export const COLOR_GRADING_ADJUST_SLIDERS: Array<{
   },
   {
     key: "blacks",
-    label: "Black Point",
+    label: "黑点",
     min: -100,
     max: 100,
     step: 1,
     scale: 100,
     suffix: "%",
   },
-  { key: "temperature", label: "Warmth", min: -100, max: 100, step: 1, scale: 100, suffix: "%" },
-  { key: "tint", label: "Tint", min: -100, max: 100, step: 1, scale: 100, suffix: "%" },
-  { key: "vibrance", label: "Vibrance", min: -100, max: 100, step: 1, scale: 100, suffix: "%" },
-  { key: "saturation", label: "Saturation", min: -100, max: 100, step: 1, scale: 100, suffix: "%" },
+  { key: "temperature", label: "色温", min: -100, max: 100, step: 1, scale: 100, suffix: "%" },
+  { key: "tint", label: "色调", min: -100, max: 100, step: 1, scale: 100, suffix: "%" },
+  { key: "vibrance", label: "自然饱和度", min: -100, max: 100, step: 1, scale: 100, suffix: "%" },
+  { key: "saturation", label: "饱和度", min: -100, max: 100, step: 1, scale: 100, suffix: "%" },
 ];
 
 export const COLOR_GRADING_DETAIL_SLIDERS: Array<{
@@ -70,10 +70,10 @@ export const COLOR_GRADING_DETAIL_SLIDERS: Array<{
   suffix: string;
   defaultValue?: number;
 }> = [
-  { key: "vignette", label: "Vignette", min: 0, max: 100, step: 1, scale: 100, suffix: "%" },
+  { key: "vignette", label: "暗角", min: 0, max: 100, step: 1, scale: 100, suffix: "%" },
   {
     key: "vignetteMidpoint",
-    label: "Midpoint",
+    label: "中点",
     min: 0,
     max: 100,
     step: 1,
@@ -83,7 +83,7 @@ export const COLOR_GRADING_DETAIL_SLIDERS: Array<{
   },
   {
     key: "vignetteRoundness",
-    label: "Roundness",
+    label: "圆度",
     min: -100,
     max: 100,
     step: 1,
@@ -92,7 +92,7 @@ export const COLOR_GRADING_DETAIL_SLIDERS: Array<{
   },
   {
     key: "vignetteFeather",
-    label: "Feather",
+    label: "羽化",
     min: 0,
     max: 100,
     step: 1,
@@ -100,10 +100,10 @@ export const COLOR_GRADING_DETAIL_SLIDERS: Array<{
     suffix: "%",
     defaultValue: 65,
   },
-  { key: "grain", label: "Grain", min: 0, max: 100, step: 1, scale: 100, suffix: "%" },
+  { key: "grain", label: "颗粒", min: 0, max: 100, step: 1, scale: 100, suffix: "%" },
   {
     key: "grainSize",
-    label: "Grain Size",
+    label: "颗粒大小",
     min: 0,
     max: 100,
     step: 1,
@@ -113,7 +113,7 @@ export const COLOR_GRADING_DETAIL_SLIDERS: Array<{
   },
   {
     key: "grainRoughness",
-    label: "Roughness",
+    label: "粗糙度",
     min: 0,
     max: 100,
     step: 1,
@@ -139,8 +139,8 @@ const EFFECT_SLIDERS: Array<{
   scale: number;
   suffix: string;
 }> = [
-  { key: "blur", label: "Blur", min: 0, max: 100, step: 1, scale: 100, suffix: "%" },
-  { key: "pixelate", label: "Pixelate", min: 0, max: 100, step: 1, scale: 100, suffix: "%" },
+  { key: "blur", label: "模糊", min: 0, max: 100, step: 1, scale: 100, suffix: "%" },
+  { key: "pixelate", label: "像素化", min: 0, max: 100, step: 1, scale: 100, suffix: "%" },
 ];
 
 const AMOUNT_DETAIL_SLIDERS = COLOR_GRADING_DETAIL_SLIDERS.filter(
@@ -324,7 +324,7 @@ export function ColorGradingControls({
   return (
     <div className="space-y-3">
       <label className="grid min-w-0 gap-1.5">
-        <span className={LABEL}>Preset</span>
+        <span className={LABEL}>预设</span>
         <select
           value={String(grading.preset ?? "neutral")}
           onChange={(event) => applyPreset(event.target.value)}
@@ -338,7 +338,7 @@ export function ColorGradingControls({
         </select>
       </label>
       <ColorGradingSliderControl
-        label="Preset strength"
+        label="预设强度"
         value={Math.round(grading.intensity * 100)}
         min={0}
         max={100}
@@ -362,7 +362,7 @@ export function ColorGradingControls({
           ) : (
             <ChevronRight size={11} className="shrink-0 text-panel-text-5" />
           )}
-          <span className="min-w-0 flex-1 truncate">Custom LUT</span>
+          <span className="min-w-0 flex-1 truncate">自定义 LUT</span>
           {grading.lut && <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-studio-accent" />}
         </button>
         {lutOpen && (
@@ -379,11 +379,11 @@ export function ColorGradingControls({
                   );
                 }}
                 className="w-full min-w-0 rounded-md bg-panel-input px-3 py-2 text-[11px] font-medium text-panel-text-1 outline-hidden"
-                title="Uploaded .cube LUT"
+                title="已上传的 .cube LUT"
               >
-                <option value="">None</option>
+                <option value="">无</option>
                 {lutAssets.length > 0 && (
-                  <optgroup label="Uploaded LUTs">
+                  <optgroup label="已上传的 LUT">
                     {lutAssets.map((asset) => (
                       <option key={asset} value={asset}>
                         {asset.split("/").pop() ?? asset}
@@ -400,8 +400,8 @@ export function ColorGradingControls({
                   lutInputRef.current?.click();
                 }}
                 className="flex h-8 w-8 items-center justify-center rounded-md bg-panel-input text-panel-text-4 transition-colors hover:bg-panel-hover hover:text-panel-text-1 active:scale-[0.97] disabled:cursor-not-allowed disabled:opacity-40"
-                title={lutImporting ? "Importing…" : "Import .cube LUT"}
-                aria-label="Import .cube LUT"
+                title={lutImporting ? "导入中…" : "导入 .cube LUT"}
+                aria-label="导入 .cube LUT"
                 aria-busy={lutImporting}
               >
                 {lutImporting ? (
@@ -441,13 +441,13 @@ export function ColorGradingControls({
                   <div className="flex min-w-0 items-start gap-2 text-[10px] leading-4 text-panel-text-3">
                     <span className="mt-[5px] h-1.5 w-1.5 shrink-0 rounded-full bg-studio-accent" />
                     <span className="min-w-0 flex-1 truncate" title={selectedProjectLut}>
-                      <span className="font-medium text-panel-text-2">Uploaded LUT</span>
+                      <span className="font-medium text-panel-text-2">已上传的 LUT</span>
                       {` · ${selectedProjectLut}`}
                     </span>
                   </div>
                 )}
                 <ColorGradingSliderControl
-                  label="LUT Strength"
+                  label="LUT 强度"
                   value={Math.round((grading.lut.intensity ?? 1) * 100)}
                   min={0}
                   max={100}
@@ -465,7 +465,7 @@ export function ColorGradingControls({
       </div>
 
       <div className="grid min-w-0 gap-1.5">
-        <span className={LABEL}>Adjust</span>
+        <span className={LABEL}>调整</span>
         <div className="grid min-w-0 grid-cols-2 gap-1.5">
           {COLOR_GRADING_ADJUST_SLIDERS.map((slider) => {
             const value = grading.adjust[slider.key] * slider.scale;
@@ -501,12 +501,12 @@ export function ColorGradingControls({
       </div>
 
       <div className="grid min-w-0 gap-1.5">
-        <span className={LABEL}>Finishing</span>
+        <span className={LABEL}>收尾效果</span>
         <div className="grid min-w-0 grid-cols-2 gap-1.5">
           {AMOUNT_DETAIL_SLIDERS.map((slider) =>
             renderDetailSlider(slider, {
               active: slider.key === "vignette" ? vignetteSettingsActive : grainSettingsActive,
-              label: `${slider.label} settings`,
+              label: `${slider.label}设置`,
               onClick: () =>
                 setDetailSettings((current) =>
                   current === slider.key ? null : (slider.key as "vignette" | "grain"),
@@ -518,12 +518,12 @@ export function ColorGradingControls({
           <div className="grid min-w-0 gap-1.5 rounded-md border border-panel-border bg-panel-input/40 p-1.5 shadow-xl shadow-black/20">
             <div className="flex min-w-0 items-center gap-2 px-0.5">
               <span className={`${LABEL} min-w-0 flex-1 truncate`}>
-                {detailSettings === "vignette" ? "Vignette settings" : "Grain settings"}
+                {detailSettings === "vignette" ? "暗角设置" : "颗粒设置"}
               </span>
               <button
                 type="button"
-                aria-label="Close settings"
-                title="Close settings"
+                aria-label="关闭设置"
+                title="关闭设置"
                 onClick={() => setDetailSettings(null)}
                 className="flex h-5 w-5 shrink-0 items-center justify-center rounded-sm text-panel-text-5 transition-colors hover:bg-panel-hover hover:text-panel-text-1"
               >
@@ -538,7 +538,7 @@ export function ColorGradingControls({
       </div>
 
       <div className="grid min-w-0 gap-1.5">
-        <span className={LABEL}>Effects</span>
+        <span className={LABEL}>特效</span>
         <div className="grid min-w-0 grid-cols-2 gap-1.5">
           {EFFECT_SLIDERS.map((slider) => {
             const value = grading.effects[slider.key] * slider.scale;

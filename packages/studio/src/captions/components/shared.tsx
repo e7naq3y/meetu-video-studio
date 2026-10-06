@@ -82,7 +82,7 @@ export function NumberField({
       type="number"
       className={inputCls}
       value={display}
-      placeholder={mixed ? "Mixed" : undefined}
+      placeholder={mixed ? "混合值" : undefined}
       step={step}
       min={min}
       max={max}

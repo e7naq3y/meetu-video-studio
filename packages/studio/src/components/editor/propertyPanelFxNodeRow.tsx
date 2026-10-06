@@ -69,7 +69,7 @@ function profileParam(type: string): HfAudioFxParam | null {
     max: 1,
     step: 0.01,
     default: 0.5,
-    hint: `Sets ${profile.derives.length} settings at once. Open Details to see where they land.`,
+    hint: `一次设置 ${profile.derives.length} 项参数。打开「详情」查看具体作用在哪里。`,
   };
 }
 
@@ -197,20 +197,20 @@ function FxNodeHeader({
         type="button"
         className="hf-fx-bypass rounded-[3px] border border-panel-border-input px-1.5 py-0.5 font-mono text-[9px] text-panel-text-2 hover:text-panel-text-0 disabled:opacity-40"
         aria-pressed={bypassed}
-        title={bypassed ? "Enable" : "Bypass"}
+        title={bypassed ? "启用" : "旁通"}
         disabled={disabled}
         onClick={onToggleBypass}
       >
-        {bypassed ? "Off" : "On"}
+        {bypassed ? "关" : "开"}
       </button>
       <FxMoveButton
-        label="Move up"
+        label="上移"
         glyph="&uarr;"
         disabled={Boolean(disabled) || first}
         onClick={() => onMove(-1)}
       />
       <FxMoveButton
-        label="Move down"
+        label="下移"
         glyph="&darr;"
         disabled={Boolean(disabled) || last}
         onClick={() => onMove(1)}
@@ -218,7 +218,7 @@ function FxNodeHeader({
       <button
         type="button"
         className="hf-fx-remove px-1 font-mono text-[11px] text-panel-text-2 hover:text-danger-ink disabled:opacity-40"
-        title="Remove"
+        title="移除"
         disabled={disabled}
         onClick={onRemove}
       >

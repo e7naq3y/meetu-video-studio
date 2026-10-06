@@ -138,7 +138,7 @@ export function TimelineFxPopover({
     <div
       ref={rootRef}
       role="dialog"
-      aria-label="Effects"
+      aria-label="特效"
       className="z-200 flex flex-col overflow-hidden rounded-md border border-border bg-raised p-2 shadow-xl"
       style={clampedStyle(anchorRect)}
       onKeyDown={onKeyDown}
@@ -174,7 +174,7 @@ export function TimelineFxPopover({
             onOpenRack();
           }}
         >
-          + effect
+          + 效果
         </button>
         <button
           type="button"
@@ -184,7 +184,7 @@ export function TimelineFxPopover({
             onOpenRack();
           }}
         >
-          Open rack ›
+          打开效果架 ›
         </button>
       </div>
     </div>

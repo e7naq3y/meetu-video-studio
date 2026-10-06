@@ -48,12 +48,11 @@ function HdrMediaWarning({ metadata }: { metadata: MediaMetadata | null }) {
       <div className="mb-1 flex min-w-0 items-center justify-between gap-2">
         <span className="font-semibold">{metadata.color.label} source</span>
         <span className="rounded-sm bg-amber-500/15 px-1.5 py-0.5 text-[9px] font-semibold uppercase tracking-wide text-warning-ink">
-          SDR preview
+          SDR 预览
         </span>
       </div>
       <p className="text-text-2">
-        These controls use the current SDR shader preview path. Render may stay HDR-tagged, but this
-        is not true HDR color grading yet.
+        这些控件使用当前的 SDR 着色器预览。渲染结果可能仍带 HDR 标记，但这还不是真正的 HDR 调色。
       </p>
       {details && <p className="mt-1 truncate text-[10px] text-text-muted">{details}</p>}
     </div>
@@ -98,7 +97,7 @@ function HoldBeforeButton({
       type="button"
       disabled={disabled}
       aria-pressed={active}
-      aria-label="Hold to show original"
+      aria-label="按住显示原图"
       onPointerDown={startHold}
       onPointerUp={stopHold}
       onPointerCancel={stopHold}
@@ -123,7 +122,7 @@ function HoldBeforeButton({
           ? "bg-studio-accent text-on-accent"
           : "text-panel-text-4 hover:bg-panel-hover hover:text-panel-text-1"
       } disabled:cursor-not-allowed disabled:opacity-40`}
-      title="Hold to show original"
+      title="按住显示原图"
     >
       <Compare size={13} />
     </button>
@@ -177,7 +176,7 @@ export function ColorGradingSection({
 
   return (
     <Section
-      title="Color grading"
+      title="调色"
       icon={<Palette size={15} />}
       accessory={
         <div className="flex min-w-0 items-center gap-1.5">
@@ -195,7 +194,7 @@ export function ColorGradingSection({
               resetGrading();
             }}
             className="flex h-6 w-6 shrink-0 items-center justify-center rounded-sm text-panel-text-4 transition-colors hover:bg-panel-hover hover:text-panel-text-1"
-            title="Reset color grading"
+            title="重置调色"
           >
             <RotateCcw size={12} />
           </button>
@@ -219,10 +218,10 @@ export function ColorGradingSection({
             }}
             disabled={applyBusy}
             className="w-full min-w-0 rounded-md bg-panel-input px-3 py-2 text-[11px] font-medium text-panel-text-1 outline-hidden disabled:cursor-not-allowed disabled:opacity-50"
-            title="Choose where to copy these color grading settings"
+            title="选择要把这些调色设置复制到哪里"
           >
-            <option value="source-file">Current file media</option>
-            <option value="project">All project media</option>
+            <option value="source-file">当前文件的媒体</option>
+            <option value="project">项目中所有媒体</option>
           </select>
           <button
             type="button"
@@ -233,9 +232,9 @@ export function ColorGradingSection({
               void applyToScope();
             }}
             className="h-8 rounded-md bg-panel-input px-3 text-[11px] font-medium text-panel-text-2 transition-colors hover:bg-panel-hover hover:text-panel-text-1 disabled:cursor-not-allowed disabled:opacity-50"
-            title="Copy these color grading settings to the selected scope"
+            title="把这些调色设置复制到所选范围"
           >
-            {applyBusy ? "Applying" : "Apply"}
+            {applyBusy ? "正在应用" : "应用"}
           </button>
         </div>
       )}

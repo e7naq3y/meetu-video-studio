@@ -18,15 +18,15 @@ function FlatEmptyState() {
           <path d="M4 3l6 14 2-6 6-2z" strokeLinejoin="round" />
         </svg>
       </span>
-      <div className="text-[13px] font-semibold text-panel-text-0">Nothing selected</div>
+      <div className="text-[13px] font-semibold text-panel-text-0">未选中任何内容</div>
       <div className="max-w-[250px] text-[11px] leading-normal text-panel-text-3">
-        Click any element on the canvas to edit it, or drag to select several.
+        点击画布上的任意元素进行编辑，或拖动框选多个元素。
       </div>
       <div className="mt-2 flex w-full flex-col gap-1.5">
         <span className="flex items-center justify-between rounded-lg border border-panel-border bg-panel-bg px-3 py-2">
           <span className="flex items-center gap-2 text-[11px] text-panel-text-2">
             <span className="text-danger-ink">●</span>
-            Record a gesture
+            录制手势
           </span>
           <span className="rounded-sm border border-panel-border-input px-[5px] py-px font-mono text-[9px] text-panel-text-5">
             R
@@ -35,7 +35,7 @@ function FlatEmptyState() {
         <span className="flex items-center justify-between rounded-lg border border-panel-border bg-panel-bg px-3 py-2">
           <span className="flex items-center gap-2 text-[11px] text-panel-text-2">
             <span className="text-accent-ink">✦</span>
-            Describe a change to the agent
+            向 AI 助手描述你想要的修改
           </span>
           <span className="rounded-sm border border-panel-border-input px-[5px] py-px font-mono text-[9px] text-panel-text-5">
             ⌘K
@@ -81,16 +81,16 @@ function FlatMultiSelectState({
         </span>
         <div className="min-w-0 flex-1">
           <div className="text-[13px] font-semibold text-panel-text-0">
-            {multiSelectCount} elements selected
+            {multiSelectCount} 个元素已选中
           </div>
           <div className="mt-px font-mono text-[10px] text-panel-text-3">
-            shift-click to add or remove
+            按住 Shift 点击可添加或移除
           </div>
         </div>
         <button
           type="button"
           data-flat-multiselect-clear="true"
-          aria-label="Clear selection"
+          aria-label="清除选区"
           onClick={onClearSelection}
           className="flex h-[26px] w-[26px] shrink-0 items-center justify-center text-panel-text-3"
         >
@@ -149,7 +149,7 @@ function FlatMultiSelectState({
             className="flex h-[34px] flex-1 items-center justify-center gap-2 rounded-lg bg-panel-hover text-[11px] font-semibold text-panel-text-0"
           >
             <Layers size={13} />
-            Group selection
+            编组选中内容
           </button>
           <button
             type="button"
@@ -162,12 +162,12 @@ function FlatMultiSelectState({
             className="flex h-[34px] items-center gap-1.5 rounded-lg border border-panel-border-input bg-panel-input px-3 text-[11px] font-medium text-panel-text-2"
           >
             <Eye size={13} />
-            Hide all
+            全部隐藏
           </button>
         </div>
       )}
       <span className="text-center text-[10px] text-panel-text-5">
-        Select a single element to edit its properties
+        选择单个元素以编辑其属性
       </span>
     </div>
   );
@@ -209,22 +209,20 @@ export function PropertyPanelEmptyState({
           <>
             <Layers size={18} className="mb-3 text-neutral-600" />
             <p className="text-sm font-medium text-neutral-200">
-              {multiSelectCount} elements selected
+              {multiSelectCount} 个元素已选中
             </p>
             <p className="mt-2 max-w-[260px] text-xs leading-5 text-neutral-500">
-              Select a single element to edit its properties. Click an element in the preview or use
-              the timeline layer panel.
+              选择单个元素以编辑其属性。可在预览中点击元素，或使用时间线图层面板。
             </p>
           </>
         ) : (
           <>
             <Eye size={18} className="mb-3 text-neutral-600" />
             <p className="text-sm font-medium text-neutral-200">
-              Select an element in the preview.
+              在预览中选择一个元素。
             </p>
             <p className="mt-2 max-w-[260px] text-xs leading-5 text-neutral-500">
-              The inspector is tuned for element edits with safer geometry controls, color picking,
-              and cleaner grouped layer controls.
+              检查器针对元素编辑做了优化，提供更安全的几何控制、取色功能和更清晰的分组图层控制。
             </p>
           </>
         )}

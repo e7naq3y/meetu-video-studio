@@ -177,8 +177,8 @@ export const KeyframeNavigation = memo(function KeyframeNavigation({
         type="button"
         disabled={!prevKf}
         onClick={() => prevKf && onSeek(prevKf.percentage)}
-        title="Previous keyframe"
-        aria-label={`Previous ${property} keyframe`}
+        title="上一个关键帧"
+        aria-label={`上一个${property}关键帧`}
         className="relative flex h-5 w-3 items-center justify-center disabled:cursor-default before:absolute before:-inset-1.5 before:content-['']"
       >
         <ArrowLeft disabled={!prevKf} />
@@ -189,18 +189,18 @@ export const KeyframeNavigation = memo(function KeyframeNavigation({
         size={9}
         title={
           diamondState === "ghost"
-            ? `Convert ${property} to keyframes`
+            ? `将${property}转为关键帧`
             : diamondState === "active"
-              ? `Remove ${property} keyframe`
-              : `Add ${property} keyframe`
+              ? `移除${property}关键帧`
+              : `添加${property}关键帧`
         }
       />
       <button
         type="button"
         disabled={!nextKf}
         onClick={() => nextKf && onSeek(nextKf.percentage)}
-        title="Next keyframe"
-        aria-label={`Next ${property} keyframe`}
+        title="下一个关键帧"
+        aria-label={`下一个${property}关键帧`}
         className="relative flex h-5 w-3 items-center justify-center disabled:cursor-default before:absolute before:-inset-1.5 before:content-['']"
       >
         <ArrowRight disabled={!nextKf} />

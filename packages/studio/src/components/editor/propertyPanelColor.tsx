@@ -326,7 +326,7 @@ export function ColorField({
         <div
           ref={panelRef}
           role="dialog"
-          aria-label={`${label} color picker`}
+          aria-label={`${label}取色器`}
           tabIndex={-1}
           className="fixed z-9999 w-[292px] overflow-hidden rounded-2xl border border-neutral-700 bg-neutral-950 shadow-2xl shadow-black/50 outline-hidden"
           style={{
@@ -337,7 +337,7 @@ export function ColorField({
           <div className="flex items-center justify-between border-b border-neutral-800 px-3 py-2">
             <div className="min-w-0">
               <div className="truncate text-[11px] font-medium text-neutral-100">{label}</div>
-              <div className="text-[9px] uppercase tracking-[0.16em] text-neutral-600">Color</div>
+              <div className="text-[9px] uppercase tracking-[0.16em] text-neutral-600">颜色</div>
             </div>
             <button
               type="button"
@@ -346,7 +346,7 @@ export function ColorField({
                 setOpen(false);
               }}
               className="flex h-7 w-7 items-center justify-center rounded-lg text-neutral-500 transition-colors hover:bg-neutral-900 hover:text-neutral-200"
-              aria-label="Close color picker"
+              aria-label="关闭取色器"
             >
               <X size={13} />
             </button>
@@ -403,7 +403,7 @@ export function ColorField({
             </div>
 
             <ColorSlider
-              label="Hue"
+              label="色相"
               value={hsv.hue}
               min={0}
               max={360}
@@ -419,7 +419,7 @@ export function ColorField({
             />
 
             <ColorSlider
-              label="Alpha"
+              label="透明度"
               value={draftColor.alpha}
               min={0}
               max={1}
@@ -469,7 +469,7 @@ export function ColorField({
           type="button"
           data-flat-color-trigger="true"
           disabled={disabled}
-          aria-label={`Pick ${label.toLowerCase()} color`}
+          aria-label={`选取${label.toLowerCase()}颜色`}
           ref={buttonRef}
           onClick={openPicker}
           className="flex items-center gap-2 disabled:cursor-not-allowed"
@@ -486,7 +486,7 @@ export function ColorField({
               data-color-mixed-indicator="true"
               className="rounded-sm bg-panel-hover px-1.5 py-0.5 text-[9px] font-medium text-panel-text-4"
             >
-              Mixed
+              混合值
             </span>
           )}
         </button>
@@ -506,14 +506,14 @@ export function ColorField({
             onClick={onReset}
             className="rounded-sm bg-panel-hover px-1.5 py-0.5 text-[9px] font-medium text-panel-text-4 transition-colors hover:text-panel-text-0 disabled:cursor-not-allowed disabled:opacity-40"
           >
-            Reset
+            重置
           </button>
         )}
       </div>
       <button
         type="button"
         disabled={disabled}
-        aria-label={`Pick ${label.toLowerCase()} color`}
+        aria-label={`选取${label.toLowerCase()}颜色`}
         ref={buttonRef}
         onClick={openPicker}
         className={`${FIELD} flex items-center gap-3 text-left hover:border-neutral-700 disabled:cursor-not-allowed ${open ? "border-neutral-600" : ""}`}
@@ -530,7 +530,7 @@ export function ColorField({
             data-color-mixed-indicator="true"
             className="rounded-sm bg-panel-hover px-1.5 py-0.5 text-[9px] font-medium text-panel-text-4"
           >
-            Mixed
+            混合值
           </span>
         )}
       </button>

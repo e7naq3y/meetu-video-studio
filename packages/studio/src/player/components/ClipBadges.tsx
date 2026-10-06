@@ -59,7 +59,7 @@ export const ClipBadges = memo(function ClipBadges({
       )}
       <span
         className={`${BADGE_CLASS} pointer-events-auto shrink-0 cursor-pointer ${hasEffects ? FX_ON : FX_OFF}`}
-        title={hasEffects ? effects.join(" · ") : "No effects"}
+        title={hasEffects ? effects.join(" · ") : "无特效"}
         data-badge="fx"
         data-fx-active={hasEffects ? "true" : "false"}
         onPointerDown={(event) => event.stopPropagation()}

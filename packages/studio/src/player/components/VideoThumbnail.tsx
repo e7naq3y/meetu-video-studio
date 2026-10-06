@@ -159,7 +159,7 @@ export const VideoThumbnail = memo(function VideoThumbnail({
       {snapshot.status === "error" && (
         <div className="absolute inset-0 flex items-center justify-center bg-neutral-900/60">
           <span className="rounded-sm bg-black/50 px-1 text-[8px] text-neutral-500">
-            no preview
+            无预览
           </span>
         </div>
       )}

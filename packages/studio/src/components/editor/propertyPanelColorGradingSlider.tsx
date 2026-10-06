@@ -172,14 +172,14 @@ export function ColorGradingSliderControl({
           <button
             type="button"
             disabled={disabled}
-            aria-label={`Reset ${label}`}
+            aria-label={`重置${label}`}
             onClick={(event) => {
               event.stopPropagation();
               track("button", `Reset ${label}`);
               onReset();
             }}
             className="flex h-5 w-5 shrink-0 items-center justify-center rounded-sm text-panel-text-5 transition-colors hover:bg-panel-hover hover:text-panel-text-1 disabled:cursor-not-allowed disabled:opacity-40"
-            title={`Reset ${label}`}
+            title={`重置${label}`}
           >
             <RotateCcw size={11} />
           </button>
@@ -265,20 +265,20 @@ export function ColorGradingSliderControl({
           <button
             type="button"
             disabled={disabled}
-            aria-label={`Decrease ${label}`}
+            aria-label={`减小${label}`}
             onClick={() => nudge(-1)}
             className="flex h-5 w-5 items-center justify-center text-panel-text-4 transition-colors hover:bg-panel-hover hover:text-panel-text-1 disabled:cursor-not-allowed disabled:opacity-40"
-            title={`Decrease ${label}`}
+            title={`减小${label}`}
           >
             <Minus size={11} />
           </button>
           <button
             type="button"
             disabled={disabled}
-            aria-label={`Increase ${label}`}
+            aria-label={`增大${label}`}
             onClick={() => nudge(1)}
             className="flex h-5 w-5 items-center justify-center border-l border-panel-border text-panel-text-4 transition-colors hover:bg-panel-hover hover:text-panel-text-1 disabled:cursor-not-allowed disabled:opacity-40"
-            title={`Increase ${label}`}
+            title={`增大${label}`}
           >
             <Plus size={11} />
           </button>

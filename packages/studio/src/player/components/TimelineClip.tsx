@@ -143,7 +143,7 @@ export const TimelineClip = memo(function TimelineClip({
       data-active={isActive ? "" : undefined}
       aria-hidden={isGestureActor ? "true" : undefined}
       tabIndex={isGestureActor ? undefined : tabIndex}
-      aria-label={`${displayLabel}, ${startLabel} to ${endLabel} seconds`}
+      aria-label={`${displayLabel}，${startLabel} 至 ${endLabel} 秒`}
       aria-pressed={isGestureActor ? undefined : isSelected}
       aria-keyshortcuts={isGestureActor || !capabilities.canMove ? undefined : "Space"}
       aria-description={
@@ -155,7 +155,7 @@ export const TimelineClip = memo(function TimelineClip({
       style={style}
       title={
         isComposition
-          ? `${el.compositionSrc} • Double-click to open`
+          ? `${el.compositionSrc} • 双击打开`
           : `${displayLabel} • ${startLabel}s – ${endLabel}s`
       }
       onPointerEnter={onHoverStart}

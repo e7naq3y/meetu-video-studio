@@ -247,7 +247,7 @@ async function writeAndRecord(
   }
   try {
     await deps.editHistory.recordEdit({
-      label: options?.label ?? "Edit layer",
+      label: options?.label ?? "编辑图层",
       ...(options?.coalesceKey ? { coalesceKey: options.coalesceKey } : {}),
       ...(options?.coalesceMs != null ? { coalesceMs: options.coalesceMs } : {}),
       files: { [targetPath]: { before: originalContent, after } },

@@ -28,34 +28,34 @@ export interface PanelDefinition {
 
 export const PANEL_DEFINITIONS = {
   preview: {
-    title: "Preview",
+    title: "预览",
     zone: "center",
     reopen: { near: "timeline", direction: "above" },
     keepMounted: true,
   },
   timeline: {
-    title: "Timeline",
+    title: "时间线",
     zone: "center",
     reopen: { near: "preview", direction: "below" },
     keepMounted: true,
   },
   compositions: {
-    title: "Compositions",
+    title: "合成",
     zone: "left",
     reopen: { near: "preview", direction: "left" },
   },
-  assets: { title: "Assets", zone: "left", reopen: { near: "compositions", direction: "within" } },
-  code: { title: "Code", zone: "left", reopen: { near: "compositions", direction: "within" } },
+  assets: { title: "素材", zone: "left", reopen: { near: "compositions", direction: "within" } },
+  code: { title: "代码", zone: "left", reopen: { near: "compositions", direction: "within" } },
   catalog: {
-    title: "Catalog",
+    title: "素材库",
     zone: "left",
     reopen: { near: "compositions", direction: "within" },
   },
-  design: { title: "Design", zone: "right", reopen: { near: "preview", direction: "right" } },
-  layers: { title: "Layers", zone: "right", reopen: { near: "design", direction: "within" } },
-  renders: { title: "Renders", zone: "right", reopen: { near: "design", direction: "within" } },
-  variables: { title: "Variables", zone: "right", reopen: { near: "design", direction: "within" } },
-  slideshow: { title: "Slideshow", zone: "right", reopen: { near: "design", direction: "within" } },
+  design: { title: "设计", zone: "right", reopen: { near: "preview", direction: "right" } },
+  layers: { title: "图层", zone: "right", reopen: { near: "design", direction: "within" } },
+  renders: { title: "渲染记录", zone: "right", reopen: { near: "design", direction: "within" } },
+  variables: { title: "变量", zone: "right", reopen: { near: "design", direction: "within" } },
+  slideshow: { title: "幻灯片", zone: "right", reopen: { near: "design", direction: "within" } },
 } as const satisfies Record<PanelId, PanelDefinition>;
 
 export function isPanelId(value: unknown): value is PanelId {

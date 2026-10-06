@@ -8,10 +8,10 @@ import { useColorGradingScopes } from "./useColorGradingScopes";
 import { RotateCw } from "../../icons/SystemIcons";
 
 const MODES: Array<{ id: ColorGradingScopeMode; label: string }> = [
-  { id: "histogram", label: "Histogram" },
-  { id: "waveform", label: "Waveform" },
-  { id: "parade", label: "RGB Parade" },
-  { id: "vectorscope", label: "Vectorscope" },
+  { id: "histogram", label: "直方图" },
+  { id: "waveform", label: "波形" },
+  { id: "parade", label: "RGB 分量图" },
+  { id: "vectorscope", label: "矢量示波器" },
 ];
 
 function densityAlpha(value: number, maximum: number): number {
@@ -207,15 +207,15 @@ export function PropertyPanelColorScopes({
           onClick={() => setOpen((value) => !value)}
           className="flex min-h-7 flex-1 items-center justify-between text-left"
         >
-          <span className="text-[11px] text-panel-text-2">Scopes</span>
-          <span className="text-[9px] text-panel-text-5">{open ? status : "Off"}</span>
+          <span className="text-[11px] text-panel-text-2">示波器</span>
+          <span className="text-[9px] text-panel-text-5">{open ? status : "关"}</span>
         </button>
         <span className="flex items-center gap-2">
           {open && (
             <button
               type="button"
-              aria-label="Refresh scopes"
-              title="Refresh scopes"
+              aria-label="刷新示波器"
+              title="刷新示波器"
               onClick={refresh}
               className="p-1 text-panel-text-4 hover:text-panel-text-1"
             >
@@ -248,7 +248,7 @@ export function PropertyPanelColorScopes({
             width={320}
             height={144}
             role="img"
-            aria-label={`${MODES.find((candidate) => candidate.id === mode)?.label ?? mode} scope, ${status}`}
+            aria-label={`${MODES.find((candidate) => candidate.id === mode)?.label ?? mode} 示波器，${status}`}
             className="block h-auto w-full border border-panel-hairline bg-black"
           />
         </div>

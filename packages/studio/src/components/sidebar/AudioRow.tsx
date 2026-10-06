@@ -208,7 +208,7 @@ export function AudioRow({
         onPointerUp={handlePointerUp}
         role="button"
         tabIndex={0}
-        aria-label={`${name} — open, drag to timeline, right-click for actions`}
+        aria-label={`${name} — 点击打开，拖到时间线，右键查看更多操作`}
         onKeyDown={(e) => {
           // Only when the row itself is focused — keydowns bubbling from the
           // inner controls (play button) must keep their native activation.
@@ -236,7 +236,7 @@ export function AudioRow({
         }`}
       >
         <button
-          aria-label={playing ? `Pause preview of ${name}` : `Play preview of ${name}`}
+          aria-label={playing ? `暂停试听 ${name}` : `试听 ${name}`}
           aria-pressed={playing}
           className={`w-7 h-7 rounded-md shrink-0 flex items-center justify-center transition-colors active:scale-[0.95] ${
             playing
@@ -268,13 +268,13 @@ export function AudioRow({
             </span>
             {!playing && (
               <span className="text-[11px] text-panel-text-5 shrink-0">
-                {meta?.duration ? `${meta.duration}s · ` : ""}
+                {meta?.duration ? `${meta.duration} 秒 · ` : ""}
                 {subtype}
               </span>
             )}
             {used && (
               <span className="text-[9px] font-medium text-accent-ink bg-panel-accent/10 px-1.5 py-px rounded-sm shrink-0">
-                in use
+                使用中
               </span>
             )}
             {(isCopied || copyFailed) && (
@@ -286,7 +286,7 @@ export function AudioRow({
                     : "text-accent-ink bg-panel-accent/10"
                 }`}
               >
-                {copyFailed ? "Copy failed" : "Copied"}
+                {copyFailed ? "复制失败" : "已复制"}
               </span>
             )}
           </div>

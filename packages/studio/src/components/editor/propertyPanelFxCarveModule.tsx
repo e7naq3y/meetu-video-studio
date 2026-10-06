@@ -199,11 +199,11 @@ export function FxCarveModule({
           // element resolve by stylesheet order, not by the order written.
           style={{ color: tint, letterSpacing: "0.16em" }}
           // Truncates in a narrow panel like every other name in the rack.
-          title="Voiceover carve"
+          title="人声避让"
           aria-expanded={open}
           onClick={onToggleOpen}
         >
-          Voiceover carve
+          人声避让
         </button>
         <span className="hf-fx-carve-summary shrink-0 font-mono text-[9px] text-panel-text-2">
           {summary}
@@ -215,14 +215,14 @@ export function FxCarveModule({
           type="button"
           className="hf-fx-bypass hf-fx-carve-toggle rounded-[3px] border border-panel-border-input px-1.5 py-0.5 font-mono text-[9px] text-panel-text-2 hover:text-panel-text-0 disabled:opacity-40"
           aria-pressed={on}
-          title={on ? "Switch the carve off" : "Switch the carve on"}
+          title={on ? "关闭人声避让" : "开启人声避让"}
           disabled={disabled}
           onClick={() => {
             onCarveChange({ ...carve, enabled: !on });
             trackInput("toggle", "carve-enabled");
           }}
         >
-          {on ? "On" : "Off"}
+          {on ? "开" : "关"}
         </button>
       </div>
       {open && on ? (
@@ -244,13 +244,13 @@ export function FxCarveModule({
               param={{
                 kind: "number",
                 key: "strength",
-                label: "Strength",
+                label: "强度",
                 unit: "",
                 min: 0,
                 max: 1,
                 step: 0.05,
                 default: DEFAULT_CARVE.strength,
-                hint: "How hard to carve: deeper cuts, in more bands, and more room made by dropping the bed's level under the voice. At 0 it carves frequencies only. Moving this re-runs the analysis on what is already here.",
+                hint: "避让的力度：数值越大，削减越深、涉及的频段越多，并会在人声出现时压低背景音的音量。为 0 时只削减频率。调整后会对现有内容重新分析。",
               }}
               value={carve.strength}
               disabled={disabled || carve.sources.length === 0}
@@ -348,7 +348,7 @@ function CarveSourceRow({
       {/* Wraps like every other name in this column (see FxParamRow) — one
           truncating row beside wrapping ones reads as a rendering bug. */}
       <span className="hf-fx-label w-[86px] shrink-0 wrap-break-word text-[10px] leading-tight text-panel-text-2">
-        Listen to
+        参考
       </span>
       {soleVoice ? (
         <span
@@ -367,7 +367,7 @@ function CarveSourceRow({
             <label
               key={o.id}
               className="flex min-w-0 items-center gap-1 font-mono text-[9px] text-panel-text-1"
-              title={`Make room for ${o.label}`}
+              title={`为${o.label}让出空间`}
             >
               <input
                 type="checkbox"
@@ -441,14 +441,14 @@ function CarveAnalysis({
             d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"
           />
         </svg>
-        Analysing…
+        正在分析…
       </p>
     );
   }
   if (nodes.length === 0) {
     return (
       <p className="hf-fx-carve-working border-t border-panel-border-input py-1.5 text-center text-[10px] text-panel-text-2">
-        {hasSources ? "Nothing analysed yet." : "Pick the voices this bed should make room for."}
+        {hasSources ? "还没有分析过。" : "选择这段背景音需要避让的人声。"}
       </p>
     );
   }

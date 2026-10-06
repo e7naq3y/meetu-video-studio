@@ -66,7 +66,7 @@ export function ProjectUnreachableBanner({ projectId }: ProjectUnreachableBanner
       {soleProject ? (
         <>
           <span>
-            This Studio is serving <strong>{servedLabel}</strong>. This tab was opened for{" "}
+            当前视频工作室正在打开 <strong>{servedLabel}</strong>，而此标签页要打开的是{" "}
             <strong>{projectId}</strong>.
           </span>
           {/* Reloading re-runs the mount-time hash check, which rewrites the hash
@@ -78,11 +78,11 @@ export function ProjectUnreachableBanner({ projectId }: ProjectUnreachableBanner
             onClick={() => window.location.reload()}
             className="shrink-0 rounded-sm border border-amber-300/20 px-2 py-1 text-[11px] text-amber-100 transition-colors hover:bg-amber-400/10 active:scale-[0.98]"
           >
-            Open {servedLabel}
+            打开 {servedLabel}
           </button>
         </>
       ) : (
-        <span>Couldn&apos;t open this project — it may have been renamed, moved, or deleted.</span>
+        <span>无法打开此项目，它可能已被重命名、移动或删除。</span>
       )}
     </div>
   );

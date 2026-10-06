@@ -179,7 +179,7 @@ export function useTimelineAssetDropOps({
 
         await saveProjectFilesWithHistory({
           projectId: pid,
-          label: "Add timeline asset",
+          label: "添加时间线素材",
           files: { [targetPath]: insertAsset },
           readFile: (path) => readFileContent(pid, path),
           writeFile: writeProjectFile,

@@ -1,0 +1,1307 @@
+[
+ {
+  "id": 261,
+  "text": "Group ${elements.length} clips as ${groupLabel}",
+  "ctx": "hooks/timelineAudioGroupCreate.ts [prop:label]"
+ },
+ {
+  "id": 262,
+  "text": "Group ${elements.length} voice clips",
+  "ctx": "hooks/timelineAudioGroupCreate.ts [prop:label]"
+ },
+ {
+  "id": 263,
+  "text": "Unlink clips",
+  "ctx": "hooks/timelineLinkEditPlan.ts [prop:label]"
+ },
+ {
+  "id": 264,
+  "text": "Link clips",
+  "ctx": "hooks/timelineLinkEditPlan.ts [prop:label]"
+ },
+ {
+  "id": 265,
+  "text": "${verb} ${elements.length} elements",
+  "ctx": "hooks/timelineTrackVisibility.ts [prop:label]"
+ },
+ {
+  "id": 266,
+  "text": "${verb} element",
+  "ctx": "hooks/timelineTrackVisibility.ts [prop:label]"
+ },
+ {
+  "id": 267,
+  "text": "Keyframe 3D transform",
+  "ctx": "hooks/useAnimatedPropertyCommit.ts [prop:label]; editor/Transform3DCube.tsx [attr:aria-label]"
+ },
+ {
+  "id": 268,
+  "text": "Edit ${primaryProp} (extended keyframe)",
+  "ctx": "hooks/useAnimatedPropertyCommit.ts [prop:label]"
+ },
+ {
+  "id": 269,
+  "text": "Edit ${primaryProp} (keyframe ${pct}%)",
+  "ctx": "hooks/useAnimatedPropertyCommit.ts [prop:label]"
+ },
+ {
+  "id": 270,
+  "text": "Add ${primaryProp} keyframe",
+  "ctx": "hooks/useAnimatedPropertyCommit.ts [prop:label]"
+ },
+ {
+  "id": 271,
+  "text": "Edit timing",
+  "ctx": "hooks/useDomEditAttributeCommits.ts [prop:label]"
+ },
+ {
+  "id": 272,
+  "text": "Edit ${attr.replace(/-/g, \" \")}",
+  "ctx": "hooks/useDomEditAttributeCommits.ts [prop:label]"
+ },
+ {
+  "id": 273,
+  "text": "Edit ${attr.replace(/^(data-)?/, \"\").replace(/-/g, \" \")}",
+  "ctx": "hooks/useDomEditAttributeCommits.ts [prop:label]; hooks/useDomEditAttributeCommits.ts [prop:label]"
+ },
+ {
+  "id": 274,
+  "text": "Edit ${attr}",
+  "ctx": "hooks/useDomEditAttributeCommits.ts [prop:label]"
+ },
+ {
+  "id": 275,
+  "text": "Edit text",
+  "ctx": "hooks/useDomEditTextCommits.ts [prop:label]; hooks/useDomEditTextCommits.ts [prop:label]"
+ },
+ {
+  "id": 276,
+  "text": "Resize layer box",
+  "ctx": "hooks/useDomGeometryCommits.ts [prop:label]"
+ },
+ {
+  "id": 277,
+  "text": "Reset layer edits",
+  "ctx": "hooks/useDomGeometryCommits.ts [prop:label]"
+ },
+ {
+  "id": 278,
+  "text": "Edit source",
+  "ctx": "hooks/useEditorSave.ts [prop:label]"
+ },
+ {
+  "id": 279,
+  "text": "Reorder layers",
+  "ctx": "hooks/useElementLifecycleOps.ts [prop:label]"
+ },
+ {
+  "id": 280,
+  "text": "Element",
+  "ctx": "hooks/useElementPicker.ts [prop:label]"
+ },
+ {
+  "id": 281,
+  "text": "Enable keyframes",
+  "ctx": "hooks/useEnableKeyframes.ts [prop:label]; hooks/useEnableKeyframes.ts [prop:label]"
+ },
+ {
+  "id": 282,
+  "text": "Add keyframe",
+  "ctx": "hooks/useEnableKeyframes.ts [prop:label]; hooks/useEnableKeyframes.ts [prop:label]"
+ },
+ {
+  "id": 283,
+  "text": "Remove keyframe",
+  "ctx": "hooks/useEnableKeyframes.ts [prop:label]"
+ },
+ {
+  "id": 284,
+  "text": "Gesture recording (replace set)",
+  "ctx": "hooks/useGestureCommit.ts [prop:label]"
+ },
+ {
+  "id": 285,
+  "text": "Gesture recording (merge)",
+  "ctx": "hooks/useGestureCommit.ts [prop:label]"
+ },
+ {
+  "id": 286,
+  "text": "Gesture recording (new range)",
+  "ctx": "hooks/useGestureCommit.ts [prop:label]"
+ },
+ {
+  "id": 287,
+  "text": "Gesture recording",
+  "ctx": "hooks/useGestureCommit.ts [prop:label]"
+ },
+ {
+  "id": 288,
+  "text": "Edit GSAP animation",
+  "ctx": "hooks/useGsapAnimationOps.ts [prop:label]; hooks/useGsapAnimationOps.ts [prop:label]"
+ },
+ {
+  "id": 289,
+  "text": "Delete GSAP animation",
+  "ctx": "hooks/useGsapAnimationOps.ts [prop:label]; hooks/useGsapAnimationOps.ts [prop:label]"
+ },
+ {
+  "id": 290,
+  "text": "Delete all animations for element",
+  "ctx": "hooks/useGsapAnimationOps.ts [prop:label]; hooks/useGsapAnimationOps.ts [prop:label]"
+ },
+ {
+  "id": 291,
+  "text": "Add GSAP ${method} animation",
+  "ctx": "hooks/useGsapAnimationOps.ts [prop:label]; hooks/useGsapAnimationOps.ts [prop:label]"
+ },
+ {
+  "id": 292,
+  "text": "Enable arc path",
+  "ctx": "hooks/useGsapArcPathOps.ts [prop:label]"
+ },
+ {
+  "id": 293,
+  "text": "Disable arc path",
+  "ctx": "hooks/useGsapArcPathOps.ts [prop:label]"
+ },
+ {
+  "id": 294,
+  "text": "Update arc segment",
+  "ctx": "hooks/useGsapArcPathOps.ts [prop:label]"
+ },
+ {
+  "id": 295,
+  "text": "Remove arc path",
+  "ctx": "hooks/useGsapArcPathOps.ts [prop:label]"
+ },
+ {
+  "id": 296,
+  "text": "Unroll to literal tweens",
+  "ctx": "hooks/useGsapAwareEditing.ts [prop:label]"
+ },
+ {
+  "id": 297,
+  "text": "Move animated layer (group)",
+  "ctx": "hooks/useGsapAwareGroupMove.ts [prop:label]; hooks/useGsapAwareGroupMove.ts [prop:label]"
+ },
+ {
+  "id": 298,
+  "text": "Add keyframe at ${percentage}%",
+  "ctx": "hooks/useGsapKeyframeOps.ts [prop:label]; hooks/useGsapKeyframeOps.ts [prop:label]"
+ },
+ {
+  "id": 299,
+  "text": "Move keyframe to ${toPercentage}%",
+  "ctx": "hooks/useGsapKeyframeOps.ts [prop:label]"
+ },
+ {
+  "id": 300,
+  "text": "Retime keyframe (resize tween)",
+  "ctx": "hooks/useGsapKeyframeOps.ts [prop:label]"
+ },
+ {
+  "id": 301,
+  "text": "Remove all keyframes",
+  "ctx": "hooks/useGsapKeyframeOps.ts [prop:label]; hooks/useGsapKeyframeOps.ts [prop:label]"
+ },
+ {
+  "id": 302,
+  "text": "Add GSAP ${property}",
+  "ctx": "hooks/useGsapPropertyDebounce.ts [prop:label]; hooks/useGsapPropertyDebounce.ts [prop:label]"
+ },
+ {
+  "id": 303,
+  "text": "Remove GSAP ${from ? `from-${property}` : property}",
+  "ctx": "hooks/useGsapPropertyDebounce.ts [prop:label]"
+ },
+ {
+  "id": 304,
+  "text": "Remove GSAP from-${property}",
+  "ctx": "hooks/useGsapPropertyDebounce.ts [prop:label]"
+ },
+ {
+  "id": 305,
+  "text": "Remove GSAP ${property}",
+  "ctx": "hooks/useGsapPropertyDebounce.ts [prop:label]"
+ },
+ {
+  "id": 306,
+  "text": "Edit GSAP from-${property}",
+  "ctx": "hooks/useGsapPropertyDebounce.ts [prop:label]; hooks/useGsapPropertyDebounce.ts [prop:label]"
+ },
+ {
+  "id": 307,
+  "text": "Add GSAP from-${property}",
+  "ctx": "hooks/useGsapPropertyDebounce.ts [prop:label]; hooks/useGsapPropertyDebounce.ts [prop:label]"
+ },
+ {
+  "id": 308,
+  "text": "Update keyframe ease",
+  "ctx": "hooks/useKeyframeEaseCommits.ts [prop:label]"
+ },
+ {
+  "id": 309,
+  "text": "Update segment ease",
+  "ctx": "hooks/useKeyframeEaseCommits.ts [prop:label]"
+ },
+ {
+  "id": 310,
+  "text": "Apply ease to all segments",
+  "ctx": "hooks/useKeyframeEaseCommits.ts [prop:label]"
+ },
+ {
+  "id": 311,
+  "text": "Failed to run lint: ${msg}",
+  "ctx": "hooks/useLintModal.ts [prop:message]"
+ },
+ {
+  "id": 312,
+  "text": "Add timeline asset",
+  "ctx": "hooks/useTimelineAssetDropOps.ts [prop:label]"
+ },
+ {
+  "id": 313,
+  "text": "Move timeline clip",
+  "ctx": "hooks/useTimelineClipTimingEditing.ts [prop:label]; hooks/useTimelineClipTimingEditing.ts [prop:label]"
+ },
+ {
+  "id": 314,
+  "text": "Resize timeline clip",
+  "ctx": "hooks/useTimelineClipTimingEditing.ts [prop:label]; hooks/useTimelineClipTimingEditing.ts [prop:label]"
+ },
+ {
+  "id": 315,
+  "text": "Resize timeline clips",
+  "ctx": "hooks/useTimelineGroupEditing.ts [prop:label]; hooks/useTimelineGroupEditing.ts [prop:label]"
+ },
+ {
+  "id": 316,
+  "text": "Apply color grading",
+  "ctx": "studioColorGradingScope.ts [prop:label]"
+ },
+ {
+  "id": 317,
+  "text": "Clear color grading",
+  "ctx": "studioColorGradingScope.ts [prop:label]"
+ },
+ {
+  "id": 318,
+  "text": "Copy prompt to AI agent",
+  "ctx": "AskAgentModal.tsx [attr:aria-label]; AskAgentModal.tsx [jsxtext]"
+ },
+ {
+  "id": 319,
+  "text": "${selectionLabel.slice(0, 49)}…",
+  "ctx": "AskAgentModal.tsx [jsxexpr]"
+ },
+ {
+  "id": 320,
+  "text": "Close",
+  "ctx": "AskAgentModal.tsx [attr:aria-label]; ExternalFileConflictBanner.tsx [jsxtext]"
+ },
+ {
+  "id": 321,
+  "text": "Describe what you want to change…",
+  "ctx": "AskAgentModal.tsx [attr:placeholder]"
+ },
+ {
+  "id": 322,
+  "text": "Context included in prompt",
+  "ctx": "AskAgentModal.tsx [jsxtext]"
+ },
+ {
+  "id": 323,
+  "text": "Ctrl",
+  "ctx": "AskAgentModal.tsx [jsxexpr]; sidebar/PromptPreviewModal.tsx [jsxexpr]"
+ },
+ {
+  "id": 324,
+  "text": "+Enter to copy",
+  "ctx": "AskAgentModal.tsx [jsxtext]; sidebar/PromptPreviewModal.tsx [jsxtext]"
+ },
+ {
+  "id": 325,
+  "text": "Copy prompt",
+  "ctx": "AskAgentModal.tsx [jsxtext]; sidebar/PromptPreviewModal.tsx [jsxexpr]"
+ },
+ {
+  "id": 326,
+  "text": "is no longer on disk. Select another composition to keep editing.",
+  "ctx": "CompositionMissingBanner.tsx [jsxtext]"
+ },
+ {
+  "id": 327,
+  "text": "Captions",
+  "ctx": "EditorShell.tsx [jsxtext]"
+ },
+ {
+  "id": 328,
+  "text": "Review both versions of",
+  "ctx": "ExternalFileConflictBanner.tsx [jsxtext]"
+ },
+ {
+  "id": 329,
+  "text": "Reviewing or exporting does not change either version.",
+  "ctx": "ExternalFileConflictBanner.tsx [jsxtext]"
+ },
+ {
+  "id": 330,
+  "text": "File on disk",
+  "ctx": "ExternalFileConflictBanner.tsx [prop:title]"
+ },
+ {
+  "id": 331,
+  "text": "Unsaved Studio version",
+  "ctx": "ExternalFileConflictBanner.tsx [prop:title]"
+ },
+ {
+  "id": 332,
+  "text": "Download",
+  "ctx": "ExternalFileConflictBanner.tsx [jsxtext]; ExternalFileConflictBanner.tsx [jsxtext]"
+ },
+ {
+  "id": 333,
+  "text": "Recover unsaved Studio draft for",
+  "ctx": "ExternalFileConflictBanner.tsx [jsxtext]"
+ },
+ {
+  "id": 334,
+  "text": "Copy or download this draft before choosing to discard it.",
+  "ctx": "ExternalFileConflictBanner.tsx [jsxtext]"
+ },
+ {
+  "id": 335,
+  "text": "${conflict.error.filePath} changed outside Studio. Preview is paused so neither version is lost.",
+  "ctx": "ExternalFileConflictBanner.tsx [jsxexpr]"
+ },
+ {
+  "id": 336,
+  "text": "Studio could not safely finish local saves: ${errorMessage(blocked.error)}. Preview is paused.",
+  "ctx": "ExternalFileConflictBanner.tsx [jsxexpr]"
+ },
+ {
+  "id": 337,
+  "text": "Review or export both",
+  "ctx": "ExternalFileConflictBanner.tsx [jsxtext]"
+ },
+ {
+  "id": 338,
+  "text": "Review or export Studio draft",
+  "ctx": "ExternalFileConflictBanner.tsx [jsxtext]"
+ },
+ {
+  "id": 339,
+  "text": "Retry save",
+  "ctx": "ExternalFileConflictBanner.tsx [jsxtext]"
+ },
+ {
+  "id": 340,
+  "text": "Discard Studio edits and reload file",
+  "ctx": "ExternalFileConflictBanner.tsx [jsxtext]"
+ },
+ {
+  "id": 341,
+  "text": "Overwrite file with Studio version",
+  "ctx": "ExternalFileConflictBanner.tsx [jsxtext]"
+ },
+ {
+  "id": 342,
+  "text": "Overwrite file with recovered Studio draft",
+  "ctx": "ExternalFileConflictBanner.tsx [jsxtext]"
+ },
+ {
+  "id": 343,
+  "text": "Linked clips",
+  "ctx": "LinkedSelectionToggle.tsx [attr:aria-label]"
+ },
+ {
+  "id": 344,
+  "text": "Show out-of-sync indicators",
+  "ctx": "LinkedSelectionToggle.tsx [jsxtext]"
+ },
+ {
+  "id": 345,
+  "text": "Linked Selection on — a click selects both halves (⌥-click for one)",
+  "ctx": "LinkedSelectionToggle.tsx [attr:label]"
+ },
+ {
+  "id": 346,
+  "text": "Linked Selection off — a click selects one clip",
+  "ctx": "LinkedSelectionToggle.tsx [attr:label]"
+ },
+ {
+  "id": 347,
+  "text": "Linked Selection",
+  "ctx": "LinkedSelectionToggle.tsx [attr:aria-label]"
+ },
+ {
+  "id": 348,
+  "text": "${errors.length} error${errors.length !== 1 ? \"s\" : \"\"}, ${warnings.length} warning${warnings.length !== 1 ? \"s\" : \"\"}",
+  "ctx": "LintModal.tsx [jsxexpr]"
+ },
+ {
+  "id": 349,
+  "text": "All checks passed",
+  "ctx": "LintModal.tsx [jsxexpr]"
+ },
+ {
+  "id": 350,
+  "text": "No errors or warnings found. Your composition looks good!",
+  "ctx": "LintModal.tsx [jsxtext]"
+ },
+ {
+  "id": 351,
+  "text": "Couldn't load this file — it may be missing or corrupt",
+  "ctx": "MediaPreview.tsx [jsxtext]"
+ },
+ {
+  "id": 352,
+  "text": "Binary file — preview not available",
+  "ctx": "MediaPreview.tsx [jsxtext]"
+ },
+ {
+  "id": 353,
+  "text": "This Studio is serving",
+  "ctx": "ProjectUnreachableBanner.tsx [jsxtext]"
+ },
+ {
+  "id": 354,
+  "text": ". This tab was opened for",
+  "ctx": "ProjectUnreachableBanner.tsx [jsxtext]"
+ },
+ {
+  "id": 355,
+  "text": "Open",
+  "ctx": "ProjectUnreachableBanner.tsx [jsxtext]"
+ },
+ {
+  "id": 356,
+  "text": "Couldn&apos;t open this project — it may have been renamed, moved, or deleted.",
+  "ctx": "ProjectUnreachableBanner.tsx [jsxtext]"
+ },
+ {
+  "id": 357,
+  "text": "Inspector panels",
+  "ctx": "RightPanelTabs.tsx [attr:aria-label]"
+ },
+ {
+  "id": 358,
+  "text": "Retry saving",
+  "ctx": "SaveQueuePausedBanner.tsx [jsxtext]"
+ },
+ {
+  "id": 359,
+  "text": "Something went wrong",
+  "ctx": "StudioErrorBoundary.tsx [jsxtext]"
+ },
+ {
+  "id": 360,
+  "text": "Try again",
+  "ctx": "StudioErrorBoundary.tsx [jsxtext]"
+ },
+ {
+  "id": 361,
+  "text": "Reload Studio",
+  "ctx": "StudioErrorBoundary.tsx [jsxtext]"
+ },
+ {
+  "id": 362,
+  "text": "Capturing frame…",
+  "ctx": "StudioHeader.tsx [attr:label]"
+ },
+ {
+  "id": 363,
+  "text": "Capture current frame",
+  "ctx": "StudioHeader.tsx [attr:label]; StudioHeader.tsx [attr:aria-label]"
+ },
+ {
+  "id": 364,
+  "text": "Capturing frame",
+  "ctx": "StudioHeader.tsx [attr:aria-label]; editor/propertyPanelColorSecondary.tsx [jsxexpr]"
+ },
+ {
+  "id": 365,
+  "text": "Capturing…",
+  "ctx": "StudioHeader.tsx [jsxexpr]"
+ },
+ {
+  "id": 366,
+  "text": "Capture",
+  "ctx": "StudioHeader.tsx [jsxexpr]"
+ },
+ {
+  "id": 367,
+  "text": "Inspector",
+  "ctx": "StudioHeader.tsx [attr:label]; StudioHeader.tsx [attr:aria-label]"
+ },
+ {
+  "id": 368,
+  "text": "FFmpeg is not installed. Opens the Renders panel with the install command.",
+  "ctx": "StudioHeader.tsx [attr:label]"
+ },
+ {
+  "id": 369,
+  "text": "A render is already in progress",
+  "ctx": "StudioHeader.tsx [attr:label]; sidebar/CompositionsTab.tsx [attr:label]"
+ },
+ {
+  "id": 370,
+  "text": "Render and export this composition",
+  "ctx": "StudioHeader.tsx [attr:label]"
+ },
+ {
+  "id": 371,
+  "text": "Rendering…",
+  "ctx": "StudioHeader.tsx [jsxexpr]; renders/RenderQueue.tsx [jsxexpr]"
+ },
+ {
+  "id": 372,
+  "text": "Export",
+  "ctx": "StudioHeader.tsx [jsxexpr]; renders/RenderQueue.tsx [jsxexpr]"
+ },
+ {
+  "id": 373,
+  "text": "Select a file to edit",
+  "ctx": "StudioLeftPanels.tsx [jsxtext]"
+ },
+ {
+  "id": 374,
+  "text": "Loading",
+  "ctx": "StudioLeftPanels.tsx [jsxtext]"
+ },
+ {
+  "id": 375,
+  "text": "Console errors in preview",
+  "ctx": "StudioOverlays.tsx [attr:title]"
+ },
+ {
+  "id": 376,
+  "text": "Renders (${renderJobs.length})",
+  "ctx": "StudioRightPanels.tsx [attr:title]"
+ },
+ {
+  "id": 377,
+  "text": "Waiting for preview server… run",
+  "ctx": "StudioSplash.tsx [jsxtext]"
+ },
+ {
+  "id": 378,
+  "text": "npm run dev",
+  "ctx": "StudioSplash.tsx [jsxtext]"
+ },
+ {
+  "id": 379,
+  "text": "Connecting to project…",
+  "ctx": "StudioSplash.tsx [jsxtext]"
+ },
+ {
+  "id": 380,
+  "text": "Dismiss",
+  "ctx": "StudioToast.tsx [attr:aria-label]; nle/PreviewOverlays.tsx [attr:aria-label]"
+ },
+ {
+  "id": 381,
+  "text": "Select",
+  "ctx": "TimelineToolPicker.tsx [prop:label]"
+ },
+ {
+  "id": 382,
+  "text": "Split",
+  "ctx": "TimelineToolPicker.tsx [prop:label]"
+ },
+ {
+  "id": 383,
+  "text": "Select leftward",
+  "ctx": "TimelineToolPicker.tsx [prop:label]"
+ },
+ {
+  "id": 384,
+  "text": "Select rightward",
+  "ctx": "TimelineToolPicker.tsx [prop:label]"
+ },
+ {
+  "id": 385,
+  "text": "Timeline tools",
+  "ctx": "TimelineToolPicker.tsx [attr:aria-label]"
+ },
+ {
+  "id": 386,
+  "text": "Timeline tool: ${current.label}",
+  "ctx": "TimelineToolPicker.tsx [attr:aria-label]"
+ },
+ {
+  "id": 387,
+  "text": "Snapping on (N)",
+  "ctx": "TimelineToolbar.tsx [attr:label]"
+ },
+ {
+  "id": 388,
+  "text": "Snapping off (N)",
+  "ctx": "TimelineToolbar.tsx [attr:label]"
+ },
+ {
+  "id": 389,
+  "text": "Toggle timeline snapping",
+  "ctx": "TimelineToolbar.tsx [attr:aria-label]"
+ },
+ {
+  "id": 390,
+  "text": "Ripple on — keeps the main track gapless",
+  "ctx": "TimelineToolbar.tsx [attr:label]"
+ },
+ {
+  "id": 391,
+  "text": "Ripple off — deleting a main-track clip leaves a gap",
+  "ctx": "TimelineToolbar.tsx [attr:label]"
+ },
+ {
+  "id": 392,
+  "text": "Toggle ripple edit",
+  "ctx": "TimelineToolbar.tsx [attr:aria-label]"
+ },
+ {
+  "id": 393,
+  "text": "Hide audio meters",
+  "ctx": "TimelineToolbar.tsx [attr:label]"
+ },
+ {
+  "id": 394,
+  "text": "Show audio meters",
+  "ctx": "TimelineToolbar.tsx [attr:label]"
+ },
+ {
+  "id": 395,
+  "text": "Toggle audio meters",
+  "ctx": "TimelineToolbar.tsx [attr:aria-label]"
+ },
+ {
+  "id": 396,
+  "text": "Motion path endpoints cannot be removed",
+  "ctx": "TimelineToolbar.tsx [attr:label]"
+ },
+ {
+  "id": 397,
+  "text": "Select an animated element to add keyframes",
+  "ctx": "TimelineToolbar.tsx [attr:label]"
+ },
+ {
+  "id": 398,
+  "text": "Extend motion path to playhead (K)",
+  "ctx": "TimelineToolbar.tsx [attr:label]"
+ },
+ {
+  "id": 399,
+  "text": "Remove waypoint from motion path (K)",
+  "ctx": "TimelineToolbar.tsx [attr:label]"
+ },
+ {
+  "id": 400,
+  "text": "Add waypoint to motion path (K)",
+  "ctx": "TimelineToolbar.tsx [attr:label]"
+ },
+ {
+  "id": 401,
+  "text": "Remove keyframe at playhead (K)",
+  "ctx": "TimelineToolbar.tsx [attr:label]"
+ },
+ {
+  "id": 402,
+  "text": "Add keyframe at playhead, extends animation (K)",
+  "ctx": "TimelineToolbar.tsx [attr:label]"
+ },
+ {
+  "id": 403,
+  "text": "Add keyframe at playhead (K)",
+  "ctx": "TimelineToolbar.tsx [attr:label]"
+ },
+ {
+  "id": 404,
+  "text": "Add keyframe (K)",
+  "ctx": "TimelineToolbar.tsx [attr:label]"
+ },
+ {
+  "id": 405,
+  "text": "Motion path endpoint",
+  "ctx": "TimelineToolbar.tsx [attr:aria-label]"
+ },
+ {
+  "id": 406,
+  "text": "Remove motion path waypoint",
+  "ctx": "TimelineToolbar.tsx [attr:aria-label]"
+ },
+ {
+  "id": 407,
+  "text": "Extend motion path to playhead",
+  "ctx": "TimelineToolbar.tsx [attr:aria-label]"
+ },
+ {
+  "id": 408,
+  "text": "Add motion path waypoint",
+  "ctx": "TimelineToolbar.tsx [attr:aria-label]"
+ },
+ {
+  "id": 409,
+  "text": "Remove keyframe at playhead",
+  "ctx": "TimelineToolbar.tsx [attr:aria-label]"
+ },
+ {
+  "id": 410,
+  "text": "Add keyframe at playhead",
+  "ctx": "TimelineToolbar.tsx [attr:aria-label]"
+ },
+ {
+  "id": 411,
+  "text": "Auto-record manual edits as keyframes (click to turn off)",
+  "ctx": "TimelineToolbar.tsx [attr:label]"
+ },
+ {
+  "id": 412,
+  "text": "Manual edits will not be recorded as keyframes (click to turn on)",
+  "ctx": "TimelineToolbar.tsx [attr:label]"
+ },
+ {
+  "id": 413,
+  "text": "Auto-record manual edits as keyframes",
+  "ctx": "TimelineToolbar.tsx [attr:aria-label]"
+ },
+ {
+  "id": 414,
+  "text": "Split at playhead (${splitShortcut})",
+  "ctx": "TimelineToolbar.tsx [attr:label]"
+ },
+ {
+  "id": 415,
+  "text": "Move the playhead inside the clip to split",
+  "ctx": "TimelineToolbar.tsx [attr:label]"
+ },
+ {
+  "id": 416,
+  "text": "Select a clip to split",
+  "ctx": "TimelineToolbar.tsx [attr:label]"
+ },
+ {
+  "id": 417,
+  "text": "Split at playhead",
+  "ctx": "TimelineToolbar.tsx [attr:aria-label]"
+ },
+ {
+  "id": 418,
+  "text": "Add a music track with beat analysis to place beats",
+  "ctx": "TimelineToolbar.tsx [attr:label]"
+ },
+ {
+  "id": 419,
+  "text": "Add beat at playhead",
+  "ctx": "TimelineToolbar.tsx [attr:label]; TimelineToolbar.tsx [attr:aria-label]"
+ },
+ {
+  "id": 420,
+  "text": "A beat already exists at the playhead",
+  "ctx": "TimelineToolbar.tsx [attr:label]"
+ },
+ {
+  "id": 421,
+  "text": "Hide thumbnails — labels only",
+  "ctx": "TimelineToolbar.tsx [attr:label]; TimelineToolbar.tsx [attr:aria-label]"
+ },
+ {
+  "id": 422,
+  "text": "Show thumbnails — posters stay visible; richer previews appear on interaction",
+  "ctx": "TimelineToolbar.tsx [attr:label]; TimelineToolbar.tsx [attr:aria-label]"
+ },
+ {
+  "id": 423,
+  "text": "Fit timeline to width",
+  "ctx": "TimelineToolbar.tsx [attr:label]; TimelineToolbar.tsx [attr:aria-label]"
+ },
+ {
+  "id": 424,
+  "text": "Zoom out",
+  "ctx": "TimelineToolbar.tsx [attr:label]; TimelineToolbar.tsx [attr:aria-label]"
+ },
+ {
+  "id": 425,
+  "text": "${displayedTimelineZoomPercent}%",
+  "ctx": "TimelineToolbar.tsx [attr:title]; TimelineToolbar.tsx [jsxexpr]"
+ },
+ {
+  "id": 426,
+  "text": "Timeline zoom",
+  "ctx": "TimelineToolbar.tsx [attr:aria-label]"
+ },
+ {
+  "id": 427,
+  "text": "Zoom in",
+  "ctx": "TimelineToolbar.tsx [attr:label]; TimelineToolbar.tsx [attr:aria-label]"
+ },
+ {
+  "id": 428,
+  "text": "Timeline zoom level",
+  "ctx": "TimelineToolbar.tsx [attr:aria-label]"
+ },
+ {
+  "id": 429,
+  "text": "Fit",
+  "ctx": "TimelineToolbar.tsx [jsxexpr]; nle/PreviewZoomOverlay.tsx [jsxtext]"
+ },
+ {
+  "id": 430,
+  "text": "Hyperframes",
+  "ctx": "ui/HyperframesLogo.tsx [attr:aria-label]"
+ },
+ {
+  "id": 431,
+  "text": "VIDEO",
+  "ctx": "ui/VideoFrameThumbnail.tsx [jsxexpr]"
+ },
+ {
+  "id": 432,
+  "text": "Copied",
+  "ctx": "sidebar/AssetCard.tsx [jsxexpr]; sidebar/AudioRow.tsx [jsxexpr]"
+ },
+ {
+  "id": 433,
+  "text": "Copy failed",
+  "ctx": "sidebar/AssetCard.tsx [jsxexpr]; sidebar/AudioRow.tsx [jsxexpr]"
+ },
+ {
+  "id": 434,
+  "text": "${name} — open, drag to timeline, right-click for actions",
+  "ctx": "sidebar/AssetCard.tsx [attr:aria-label]; sidebar/AudioRow.tsx [attr:aria-label]"
+ },
+ {
+  "id": 435,
+  "text": "Added",
+  "ctx": "sidebar/AssetCard.tsx [jsxtext]"
+ },
+ {
+  "id": 436,
+  "text": "${name} — copy path, drag to timeline, right-click for actions",
+  "ctx": "sidebar/AssetCard.tsx [attr:aria-label]"
+ },
+ {
+  "id": 437,
+  "text": "in use",
+  "ctx": "sidebar/AssetCard.tsx [jsxtext]; sidebar/AudioRow.tsx [jsxtext]"
+ },
+ {
+  "id": 438,
+  "text": "Actions for ${filename(asset)}",
+  "ctx": "sidebar/AssetContextMenu.tsx [attr:aria-label]"
+ },
+ {
+  "id": 439,
+  "text": "Add at playhead",
+  "ctx": "sidebar/AssetContextMenu.tsx [jsxtext]"
+ },
+ {
+  "id": 440,
+  "text": "Copy path",
+  "ctx": "sidebar/AssetContextMenu.tsx [jsxtext]"
+ },
+ {
+  "id": 441,
+  "text": "Rename",
+  "ctx": "sidebar/AssetContextMenu.tsx [jsxtext]; sidebar/AssetContextMenu.tsx [jsxtext]"
+ },
+ {
+  "id": 442,
+  "text": "Rename ${filename(asset)}",
+  "ctx": "sidebar/AssetContextMenu.tsx [attr:aria-label]"
+ },
+ {
+  "id": 443,
+  "text": "Importing…",
+  "ctx": "sidebar/AssetsTab.tsx [jsxexpr]; editor/propertyPanelColorGradingControls.tsx [attr:title]"
+ },
+ {
+  "id": 444,
+  "text": "Import media",
+  "ctx": "sidebar/AssetsTab.tsx [jsxexpr]"
+ },
+ {
+  "id": 445,
+  "text": "No assets match &ldquo;",
+  "ctx": "sidebar/AssetsTab.tsx [jsxtext]"
+ },
+ {
+  "id": 446,
+  "text": "&rdquo;",
+  "ctx": "sidebar/AssetsTab.tsx [jsxtext]; panels/SlideshowSubPanels.tsx [jsxtext]"
+ },
+ {
+  "id": 447,
+  "text": "Clear search",
+  "ctx": "sidebar/AssetsTab.tsx [jsxtext]"
+ },
+ {
+  "id": 448,
+  "text": "Drop media files here",
+  "ctx": "sidebar/AssetsTab.tsx [jsxtext]"
+ },
+ {
+  "id": 449,
+  "text": "This project",
+  "ctx": "sidebar/AssetsTab.tsx [jsxexpr]"
+ },
+ {
+  "id": 450,
+  "text": "All projects",
+  "ctx": "sidebar/AssetsTab.tsx [jsxexpr]"
+ },
+ {
+  "id": 451,
+  "text": "Search assets...",
+  "ctx": "sidebar/AssetsTab.tsx [attr:placeholder]"
+ },
+ {
+  "id": 452,
+  "text": "Search assets",
+  "ctx": "sidebar/AssetsTab.tsx [attr:aria-label]"
+ },
+ {
+  "id": 453,
+  "text": "All",
+  "ctx": "sidebar/AssetsTab.tsx [jsxtext]; sidebar/BlocksTab.tsx [attr:label]"
+ },
+ {
+  "id": 454,
+  "text": "In use",
+  "ctx": "sidebar/AssetsTab.tsx [jsxtext]"
+ },
+ {
+  "id": 455,
+  "text": "Unused",
+  "ctx": "sidebar/AssetsTab.tsx [jsxtext]"
+ },
+ {
+  "id": 456,
+  "text": "Pause preview of ${name}",
+  "ctx": "sidebar/AudioRow.tsx [attr:aria-label]"
+ },
+ {
+  "id": 457,
+  "text": "Play preview of ${name}",
+  "ctx": "sidebar/AudioRow.tsx [attr:aria-label]"
+ },
+ {
+  "id": 458,
+  "text": "${meta.duration}s · ",
+  "ctx": "sidebar/AudioRow.tsx [jsxexpr]"
+ },
+ {
+  "id": 459,
+  "text": "Loading blocks…",
+  "ctx": "sidebar/BlocksTab.tsx [jsxtext]"
+ },
+ {
+  "id": 460,
+  "text": "Search by name, category, or tag…",
+  "ctx": "sidebar/BlocksTab.tsx [attr:placeholder]"
+ },
+ {
+  "id": 461,
+  "text": "Search blocks",
+  "ctx": "sidebar/BlocksTab.tsx [attr:aria-label]"
+ },
+ {
+  "id": 462,
+  "text": "VFX blocks use WebGL via HTML-in-Canvas. Enable",
+  "ctx": "sidebar/BlocksTab.tsx [jsxtext]"
+ },
+ {
+  "id": 463,
+  "text": "chrome://flags/#html-in-canvas",
+  "ctx": "sidebar/BlocksTab.tsx [jsxtext]"
+ },
+ {
+  "id": 464,
+  "text": "for\n            preview.",
+  "ctx": "sidebar/BlocksTab.tsx [jsxtext]"
+ },
+ {
+  "id": 465,
+  "text": "No blocks match your search",
+  "ctx": "sidebar/BlocksTab.tsx [jsxtext]"
+ },
+ {
+  "id": 466,
+  "text": "Add to composition at current time",
+  "ctx": "sidebar/BlocksTab.tsx [attr:title]"
+ },
+ {
+  "id": 467,
+  "text": "Adding…",
+  "ctx": "sidebar/BlocksTab.tsx [jsxexpr]; editor/propertyPanelFlatOverlaysSection.tsx [jsxexpr]"
+ },
+ {
+  "id": 468,
+  "text": "Added!",
+  "ctx": "sidebar/BlocksTab.tsx [jsxexpr]"
+ },
+ {
+  "id": 469,
+  "text": "Failed",
+  "ctx": "sidebar/BlocksTab.tsx [jsxexpr]"
+ },
+ {
+  "id": 470,
+  "text": "Add",
+  "ctx": "sidebar/BlocksTab.tsx [jsxexpr]; panels/SlideshowSubPanels.tsx [jsxtext]"
+ },
+ {
+  "id": 471,
+  "text": "Generate a prompt to paste into your AI agent",
+  "ctx": "sidebar/BlocksTab.tsx [attr:title]"
+ },
+ {
+  "id": 472,
+  "text": "Ask agent",
+  "ctx": "sidebar/BlocksTab.tsx [jsxtext]; sidebar/PromptPreviewModal.tsx [jsxtext]"
+ },
+ {
+  "id": 473,
+  "text": "WebGL",
+  "ctx": "sidebar/BlocksTab.tsx [jsxtext]"
+ },
+ {
+  "id": 474,
+  "text": "Open composition ${name}",
+  "ctx": "sidebar/CompositionsTab.tsx [attr:aria-label]"
+ },
+ {
+  "id": 475,
+  "text": "Preview unavailable",
+  "ctx": "sidebar/CompositionsTab.tsx [jsxtext]; editor/useColorGradingController.ts [prop:message]"
+ },
+ {
+  "id": 476,
+  "text": "${name} preview",
+  "ctx": "sidebar/CompositionsTab.tsx [attr:title]"
+ },
+ {
+  "id": 477,
+  "text": "Root composition — opens automatically on load",
+  "ctx": "sidebar/CompositionsTab.tsx [attr:aria-label]; sidebar/CompositionsTab.tsx [attr:title]"
+ },
+ {
+  "id": 478,
+  "text": "Root",
+  "ctx": "sidebar/CompositionsTab.tsx [jsxtext]"
+ },
+ {
+  "id": 479,
+  "text": "${lintInfo.count} lint finding${lintInfo.count === 1 ? \"\" : \"s\"}",
+  "ctx": "sidebar/CompositionsTab.tsx [attr:aria-label]"
+ },
+ {
+  "id": 480,
+  "text": "Add ${name} to timeline at playhead",
+  "ctx": "sidebar/CompositionsTab.tsx [attr:title]; sidebar/CompositionsTab.tsx [attr:aria-label]"
+ },
+ {
+  "id": 481,
+  "text": "Render ${name}",
+  "ctx": "sidebar/CompositionsTab.tsx [attr:label]; sidebar/CompositionsTab.tsx [attr:aria-label]"
+ },
+ {
+  "id": 482,
+  "text": "No compositions found",
+  "ctx": "sidebar/CompositionsTab.tsx [jsxtext]"
+ },
+ {
+  "id": 483,
+  "text": "Loading global assets…",
+  "ctx": "sidebar/GlobalAssetsView.tsx [jsxtext]"
+ },
+ {
+  "id": 484,
+  "text": "No assets in the global cache yet. Resolved media is promoted to",
+  "ctx": "sidebar/GlobalAssetsView.tsx [jsxtext]"
+ },
+ {
+  "id": 485,
+  "text": "~/.media",
+  "ctx": "sidebar/GlobalAssetsView.tsx [jsxtext]"
+ },
+ {
+  "id": 486,
+  "text": "and\n        becomes reusable across projects.",
+  "ctx": "sidebar/GlobalAssetsView.tsx [jsxtext]"
+ },
+ {
+  "id": 487,
+  "text": "reusable across all projects",
+  "ctx": "sidebar/GlobalAssetsView.tsx [jsxtext]"
+ },
+ {
+  "id": 488,
+  "text": "${row.id} · ${row.type}",
+  "ctx": "sidebar/GlobalAssetsView.tsx [attr:title]"
+ },
+ {
+  "id": 489,
+  "text": "Ask agent — ${title}",
+  "ctx": "sidebar/PromptPreviewModal.tsx [attr:aria-label]"
+ },
+ {
+  "id": 490,
+  "text": "Edit the prompt below, then copy and paste into your AI agent",
+  "ctx": "sidebar/PromptPreviewModal.tsx [jsxtext]"
+ },
+ {
+  "id": 491,
+  "text": "Linting…",
+  "ctx": "sidebar/SidebarLintButton.tsx [jsxexpr]"
+ },
+ {
+  "id": 492,
+  "text": "Lint",
+  "ctx": "sidebar/SidebarLintButton.tsx [jsxexpr]"
+ },
+ {
+  "id": 493,
+  "text": " lint findings, including errors",
+  "ctx": "sidebar/SidebarLintButton.tsx [jsxexpr]"
+ },
+ {
+  "id": 494,
+  "text": " lint findings, warnings only",
+  "ctx": "sidebar/SidebarLintButton.tsx [jsxexpr]"
+ },
+ {
+  "id": 495,
+  "text": "FFmpeg not found",
+  "ctx": "renders/FfmpegRequiredNotice.tsx [jsxexpr]"
+ },
+ {
+  "id": 496,
+  "text": "FFmpeg is required to encode video.",
+  "ctx": "renders/FfmpegRequiredNotice.tsx [jsxexpr]"
+ },
+ {
+  "id": 497,
+  "text": "Checking…",
+  "ctx": "renders/FfmpegRequiredNotice.tsx [jsxexpr]"
+ },
+ {
+  "id": 498,
+  "text": "Recheck",
+  "ctx": "renders/FfmpegRequiredNotice.tsx [jsxexpr]"
+ },
+ {
+  "id": 499,
+  "text": "Other install options",
+  "ctx": "renders/FfmpegRequiredNotice.tsx [jsxtext]"
+ },
+ {
+  "id": 500,
+  "text": "Still not found",
+  "ctx": "renders/FfmpegRequiredNotice.tsx [jsxexpr]"
+ },
+ {
+  "id": 501,
+  "text": "MP4",
+  "ctx": "renders/RenderQueue.tsx [prop:label]; renders/RenderQueue.tsx [prop:label]"
+ },
+ {
+  "id": 502,
+  "text": "MOV (ProRes 4444)",
+  "ctx": "renders/RenderQueue.tsx [prop:label]"
+ },
+ {
+  "id": 503,
+  "text": "WebM (VP9)",
+  "ctx": "renders/RenderQueue.tsx [prop:label]"
+ },
+ {
+  "id": 504,
+  "text": "About video formats",
+  "ctx": "renders/RenderQueue.tsx [attr:aria-label]"
+ },
+ {
+  "id": 505,
+  "text": "MOV (ProRes)",
+  "ctx": "renders/RenderQueue.tsx [prop:label]"
+ },
+ {
+  "id": 506,
+  "text": "WebM",
+  "ctx": "renders/RenderQueue.tsx [prop:label]; editor/propertyPanelFlatMediaSection.tsx [jsxexpr]"
+ },
+ {
+  "id": 507,
+  "text": "Draft",
+  "ctx": "renders/RenderQueue.tsx [prop:label]"
+ },
+ {
+  "id": 508,
+  "text": "Standard",
+  "ctx": "renders/RenderQueue.tsx [prop:label]"
+ },
+ {
+  "id": 509,
+  "text": "High Quality",
+  "ctx": "renders/RenderQueue.tsx [prop:label]"
+ },
+ {
+  "id": 510,
+  "text": "24 fps",
+  "ctx": "renders/RenderQueue.tsx [prop:label]"
+ },
+ {
+  "id": 511,
+  "text": "30 fps",
+  "ctx": "renders/RenderQueue.tsx [prop:label]"
+ },
+ {
+  "id": 512,
+  "text": "60 fps",
+  "ctx": "renders/RenderQueue.tsx [prop:label]"
+ },
+ {
+  "id": 513,
+  "text": "Format",
+  "ctx": "renders/RenderQueue.tsx [jsxtext]; renders/RenderQueue.tsx [attr:label]"
+ },
+ {
+  "id": 514,
+  "text": "Resolution",
+  "ctx": "renders/RenderQueue.tsx [jsxtext]; renders/RenderQueue.tsx [attr:label]"
+ },
+ {
+  "id": 515,
+  "text": "Frame rate",
+  "ctx": "renders/RenderQueue.tsx [jsxtext]; renders/RenderQueue.tsx [attr:label]"
+ },
+ {
+  "id": 516,
+  "text": "Quality",
+  "ctx": "renders/RenderQueue.tsx [jsxtext]; renders/RenderQueue.tsx [attr:label]"
+ },
+ {
+  "id": 517,
+  "text": "Install FFmpeg to export. See the note above.",
+  "ctx": "renders/RenderQueue.tsx [attr:title]"
+ },
+ {
+  "id": 518,
+  "text": "Last render took",
+  "ctx": "renders/RenderQueue.tsx [jsxtext]"
+ },
+ {
+  "id": 519,
+  "text": "Dismiss error",
+  "ctx": "renders/RenderQueue.tsx [attr:aria-label]"
+ },
+ {
+  "id": 520,
+  "text": "Retry",
+  "ctx": "renders/RenderQueue.tsx [jsxtext]; panels/SlideshowPanel.tsx [jsxexpr]"
+ },
+ {
+  "id": 521,
+  "text": "No renders yet",
+  "ctx": "renders/RenderQueue.tsx [jsxtext]"
+ }
+]

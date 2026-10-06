@@ -109,7 +109,7 @@ export function ContextMenu({
       <div
         ref={menuRef}
         role="menu"
-        aria-label={`Actions for ${filename(asset)}`}
+        aria-label={`${filename(asset)} 的操作`}
         className={`${menuClasses.panel} absolute min-w-[160px] text-xs`}
         style={{ left: pos.x, top: pos.y }}
         onClick={(e) => e.stopPropagation()}
@@ -125,7 +125,7 @@ export function ContextMenu({
                 }}
                 className={itemCls}
               >
-                Add at playhead
+                添加到播放头处
               </button>
             )}
             <button
@@ -136,11 +136,11 @@ export function ContextMenu({
               }}
               className={itemCls}
             >
-              Copy path
+              复制路径
             </button>
             {onRename && (
               <button role="menuitem" onClick={() => setMode("rename")} className={itemCls}>
-                Rename
+                重命名
               </button>
             )}
             {onDelete && (
@@ -149,7 +149,7 @@ export function ContextMenu({
                 onClick={() => setMode("confirm-delete")}
                 className={`${menuClasses.row} ${menuClasses.rowDanger} active:bg-neutral-700/70 transition-colors`}
               >
-                Delete
+                删除
               </button>
             )}
           </>
@@ -180,7 +180,7 @@ export function ContextMenu({
                   setMode("menu");
                 }
               }}
-              aria-label={`Rename ${filename(asset)}`}
+              aria-label={`重命名 ${filename(asset)}`}
               className="w-full bg-neutral-800 border border-neutral-600 rounded-sm px-1.5 py-1 text-[11px] text-text-0 focus:border-studio-accent/60 focus:outline-hidden"
             />
             {renameError && <span className="text-[10px] text-danger-ink">{renameError}</span>}
@@ -189,13 +189,13 @@ export function ContextMenu({
                 onClick={() => setMode("menu")}
                 className="px-2 py-0.5 text-[10px] rounded-sm text-neutral-400 hover:text-neutral-200 transition-colors"
               >
-                Cancel
+                取消
               </button>
               <button
                 onClick={commitRename}
                 className="px-2 py-0.5 text-[10px] rounded-sm bg-accent hover:bg-accent-hover text-on-accent transition-colors"
               >
-                Rename
+                重命名
               </button>
             </div>
           </div>
@@ -216,19 +216,19 @@ function DeleteConfirm({
 }) {
   return (
     <div className="px-2 py-1.5 bg-danger/15 border-l-2 border-red-500 flex items-center justify-between gap-2">
-      <span className="text-[10px] text-danger-ink truncate">Delete {name}?</span>
+      <span className="text-[10px] text-danger-ink truncate">删除 {name}?</span>
       <div className="flex items-center gap-1 shrink-0">
         <button
           onClick={onConfirm}
           className="px-2 py-0.5 text-[10px] rounded-sm bg-danger text-on-danger hover:brightness-95 active:brightness-90 transition-colors"
         >
-          Delete
+          删除
         </button>
         <button
           onClick={onCancel}
           className="px-2 py-0.5 text-[10px] rounded-sm text-neutral-400 hover:text-neutral-200 transition-colors"
         >
-          Cancel
+          取消
         </button>
       </div>
     </div>

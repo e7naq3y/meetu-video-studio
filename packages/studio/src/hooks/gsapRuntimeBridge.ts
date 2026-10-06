@@ -288,7 +288,7 @@ export async function tryGsapDragIntercept(
           targetSelector: selector,
           keepAnimationId: keeper.id,
         },
-        { label: "Consolidate position writes", skipReload: true },
+        { label: "合并位置写入", skipReload: true },
       );
       workingAnimations = await fetchFallbackAnimations();
     } else {
@@ -486,7 +486,7 @@ export async function tryGsapRotationIntercept(
     { rotation: newRotation },
     iframe,
     { commitMutation, fetchAnimations: fetchFallbackAnimations },
-    { label: "Rotate", backfill: { rotation: newRotation }, holdFromStart: true },
+    { label: "旋转", backfill: { rotation: newRotation }, holdFromStart: true },
   );
 }
 

@@ -98,11 +98,11 @@ function AnimationPhase({
 
   return (
     <Section label={label}>
-      <Row label="Preset">
+      <Row label="预设">
         <select
           value={preset}
           disabled={disabled}
-          aria-label={`${label} preset`}
+          aria-label={`${label}预设`}
           onChange={(e) => onChange({ preset: e.target.value })}
           className={inputCls}
         >
@@ -114,23 +114,23 @@ function AnimationPhase({
         </select>
       </Row>
 
-      <Row label="Duration">
+      <Row label="时长">
         <NumberField
           value={duration}
           step={0.05}
           min={0}
           max={2}
           disabled={disabled}
-          ariaLabel={`${label} duration`}
+          ariaLabel={`${label}时长`}
           onCommit={(v) => onChange({ duration: v })}
         />
       </Row>
 
-      <Row label="Ease">
+      <Row label="缓动">
         <select
           value={ease}
           disabled={disabled}
-          aria-label={`${label} ease`}
+          aria-label={`${label}缓动`}
           onChange={(e) => onChange({ ease: e.target.value })}
           className={inputCls}
         >
@@ -142,20 +142,20 @@ function AnimationPhase({
         </select>
       </Row>
 
-      <Row label="Stagger">
+      <Row label="错开">
         <NumberField
           value={stagger}
           step={0.02}
           min={0}
           max={0.5}
           disabled={disabled}
-          ariaLabel={`${label} stagger`}
+          ariaLabel={`${label}错开`}
           onCommit={(v) => onChange({ stagger: v })}
         />
       </Row>
 
       {showIntensity && (
-        <Row label="Intensity">
+        <Row label="强度">
           <div className="flex items-center gap-2">
             <input
               type="range"
@@ -164,7 +164,7 @@ function AnimationPhase({
               step={0.01}
               value={intensity}
               disabled={disabled}
-              aria-label={`${label} intensity`}
+              aria-label={`${label}强度`}
               onChange={(e) => {
                 const v = Number(e.target.value);
                 if (Number.isFinite(v)) onChange({ intensity: v });
@@ -239,7 +239,7 @@ export const CaptionAnimationPanel = memo(function CaptionAnimationPanel() {
   if (!group || !resolvedGroupId || !animation) {
     return (
       <div className="flex items-center justify-center h-full px-4 text-center">
-        <p className="text-xs text-neutral-500">Select a caption word to edit animations</p>
+        <p className="text-xs text-neutral-500">选择一个字幕词来编辑动画</p>
       </div>
     );
   }
@@ -251,8 +251,7 @@ export const CaptionAnimationPanel = memo(function CaptionAnimationPanel() {
       {gated && (
         <div className="shrink-0 mx-3 mt-2 px-2 py-1.5 rounded-sm border border-amber-500/30 bg-amber-500/10">
           <p className="text-2xs text-warning-ink leading-snug">
-            Animation editing isn&apos;t applied to playback or saved yet, so these controls are
-            disabled.
+            动画编辑暂未应用到播放，也还不能保存，所以这些控件已禁用。
           </p>
         </div>
       )}
@@ -260,7 +259,7 @@ export const CaptionAnimationPanel = memo(function CaptionAnimationPanel() {
       {/* Scrollable content */}
       <div className="flex-1 overflow-y-auto px-3 py-2">
         <AnimationPhase
-          label="Entrance"
+          label="入场"
           presets={ENTRANCE_PRESETS}
           animation={animation.entrance}
           disabled={gated}
@@ -268,7 +267,7 @@ export const CaptionAnimationPanel = memo(function CaptionAnimationPanel() {
         />
 
         <AnimationPhase
-          label="Highlight"
+          label="高亮"
           presets={HIGHLIGHT_PRESETS}
           animation={animation.highlight}
           showIntensity
@@ -277,7 +276,7 @@ export const CaptionAnimationPanel = memo(function CaptionAnimationPanel() {
         />
 
         <AnimationPhase
-          label="Exit"
+          label="退出"
           presets={EXIT_PRESETS}
           animation={animation.exit}
           disabled={gated}
@@ -291,10 +290,10 @@ export const CaptionAnimationPanel = memo(function CaptionAnimationPanel() {
           type="button"
           onClick={handleApplyToAll}
           disabled={gated}
-          title={gated ? "Disabled until animation editing is applied to playback" : undefined}
+          title={gated ? "在动画编辑应用到播放之前不可用" : undefined}
           className="w-full py-1.5 rounded-sm border border-neutral-700 text-2xs text-neutral-300 hover:border-studio-accent/50 hover:text-accent-ink transition-colors disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:border-neutral-700 disabled:hover:text-neutral-300"
         >
-          Apply to all groups
+          应用到所有分组
         </button>
       </div>
     </div>

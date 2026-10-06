@@ -123,7 +123,7 @@ export function ImageFillField({
     <div className="space-y-4">
       <div className="grid min-w-0 gap-1.5">
         <div className="flex min-w-0 flex-wrap items-center justify-between gap-2">
-          <span className={LABEL}>Project asset</span>
+          <span className={LABEL}>项目素材</span>
           <button
             type="button"
             disabled={disabled || uploading}
@@ -135,13 +135,13 @@ export function ImageFillField({
             }`}
           >
             <Plus size={12} className="shrink-0" />
-            <span className="truncate">{uploading ? "Uploading…" : "Upload image"}</span>
+            <span className="truncate">{uploading ? "正在上传…" : "上传图片"}</span>
           </button>
           <input
             ref={fileInputRef}
             type="file"
             accept="image/*"
-            aria-label="Upload image asset"
+            aria-label="上传图片素材"
             disabled={disabled || uploading}
             className="hidden"
             onChange={async (event) => {
@@ -181,7 +181,7 @@ export function ImageFillField({
                 }}
                 className="min-w-0 w-full appearance-none bg-transparent text-[11px] font-medium text-neutral-100 outline-hidden disabled:cursor-not-allowed disabled:text-neutral-600"
               >
-                <option value="">None</option>
+                <option value="">无</option>
                 {imageAssets.map((asset) => (
                   <option key={asset} value={asset}>
                     {asset}
@@ -192,13 +192,13 @@ export function ImageFillField({
           </div>
         ) : (
           <div className="rounded-xl border border-dashed border-neutral-800 bg-neutral-900/50 px-3 py-3 text-[11px] leading-5 text-neutral-500">
-            No image assets yet. Upload one here and Studio will also add it to the Assets tab.
+            还没有图片素材。在这里上传后，视频工作室也会把它加到「素材」标签页。
           </div>
         )}
       </div>
 
       <DetailField
-        label="External URL"
+        label="外部 URL"
         value={externalUrlValue}
         disabled={disabled}
         onCommit={(next) => onCommit(next.trim() ? `url("${next.trim()}")` : "none")}
@@ -275,7 +275,7 @@ export function GradientField({
               key={`stop-preview-${index}`}
               role="slider"
               tabIndex={disabled ? -1 : 0}
-              aria-label={`Stop ${index + 1} position`}
+              aria-label={`色标 ${index + 1} 位置`}
               aria-valuenow={Math.round(stop.position)}
               aria-valuemin={0}
               aria-valuemax={100}
@@ -326,9 +326,9 @@ export function GradientField({
             value={parsed.kind}
             onChange={(next) => patch({ kind: next as GradientModel["kind"] })}
             options={[
-              { label: "Linear", value: "linear" },
-              { label: "Radial", value: "radial" },
-              { label: "Conic", value: "conic" },
+              { label: "线性", value: "linear" },
+              { label: "径向", value: "radial" },
+              { label: "角度", value: "conic" },
             ]}
           />
           <label className="flex items-center gap-2 text-[11px] font-medium text-neutral-400">
@@ -342,7 +342,7 @@ export function GradientField({
               }}
               className="h-4 w-4 rounded-sm border-neutral-700 bg-neutral-950 text-accent-ink focus:ring-panel-accent"
             />
-            Repeat
+            重复
           </label>
           <button
             type="button"
@@ -360,14 +360,14 @@ export function GradientField({
             className="inline-flex h-7 items-center gap-1.5 rounded-lg border border-neutral-700 bg-neutral-950 px-2.5 text-[11px] font-medium text-neutral-300 transition-colors hover:border-neutral-600 hover:text-text-0 disabled:cursor-not-allowed disabled:text-neutral-600"
           >
             <ReverseGradientIcon size={16} />
-            Reverse
+            反向
           </button>
         </div>
       </div>
 
       {(parsed.kind === "linear" || parsed.kind === "conic") && (
         <div className="grid gap-1.5">
-          <span className={LABEL}>{parsed.kind === "linear" ? "Angle" : "Start angle"}</span>
+          <span className={LABEL}>{parsed.kind === "linear" ? "角度" : "起始角度"}</span>
           <SliderControl
             trackName={parsed.kind === "linear" ? "Angle" : "Start angle"}
             value={parsed.angle}
@@ -385,14 +385,14 @@ export function GradientField({
       {parsed.kind === "radial" && (
         <div className={RESPONSIVE_GRID}>
           <SelectField
-            label="Shape"
+            label="形状"
             value={parsed.shape}
             disabled={disabled}
             onChange={(next) => patch({ shape: next as GradientModel["shape"] })}
             options={["ellipse", "circle"]}
           />
           <SelectField
-            label="Size"
+            label="尺寸"
             value={parsed.radialSize}
             disabled={disabled}
             onChange={(next) => patch({ radialSize: next as GradientModel["radialSize"] })}
@@ -404,7 +404,7 @@ export function GradientField({
       {(parsed.kind === "radial" || parsed.kind === "conic") && (
         <div className={RESPONSIVE_GRID}>
           <div className="grid min-w-0 gap-1.5">
-            <span className={LABEL}>Center X</span>
+            <span className={LABEL}>中心 X</span>
             <SliderControl
               trackName="Center X"
               value={parsed.centerX}
@@ -418,7 +418,7 @@ export function GradientField({
             />
           </div>
           <div className="grid min-w-0 gap-1.5">
-            <span className={LABEL}>Center Y</span>
+            <span className={LABEL}>中心 Y</span>
             <SliderControl
               trackName="Center Y"
               value={parsed.centerY}
@@ -436,16 +436,16 @@ export function GradientField({
 
       <div className="space-y-3">
         <div className="flex items-center justify-between">
-          <span className={LABEL}>Stops</span>
+          <span className={LABEL}>色标</span>
           <button
             type="button"
             disabled={disabled || parsed.stops.length >= 6}
             onClick={() => addStop()}
-            title={parsed.stops.length >= 6 ? "Maximum 6 stops" : "Add a gradient stop"}
+            title={parsed.stops.length >= 6 ? "最多 6 个色标" : "添加渐变色标"}
             className="inline-flex h-7 items-center gap-1.5 rounded-lg border border-neutral-700 bg-neutral-950 px-2.5 text-[11px] font-medium text-neutral-300 transition-colors hover:border-neutral-600 hover:text-text-0 active:scale-[0.98] disabled:cursor-not-allowed disabled:text-neutral-600"
           >
             <Plus size={12} />
-            Add stop
+            添加色标
           </button>
         </div>
         <div className="space-y-3">
@@ -455,13 +455,13 @@ export function GradientField({
               className="grid min-w-0 grid-cols-[minmax(0,1fr)_68px_28px] gap-2"
             >
               <ColorField
-                label={`Stop ${index + 1}`}
+                label={`色标 ${index + 1}`}
                 value={stop.color}
                 disabled={disabled}
                 onCommit={(next) => updateStop(index, { color: next })}
               />
               <DetailField
-                label="Pos"
+                label="位置"
                 value={`${Math.round(stop.position)}%`}
                 disabled={disabled}
                 onCommit={(next) =>
@@ -475,7 +475,7 @@ export function GradientField({
                 disabled={disabled || parsed.stops.length <= 2}
                 onClick={() => removeStop(index)}
                 className="mt-[22px] flex h-10 items-center justify-center rounded-lg border border-neutral-700 bg-neutral-950 text-neutral-400 transition-colors hover:border-neutral-600 hover:text-text-0 disabled:cursor-not-allowed disabled:text-text-off"
-                aria-label={`Remove stop ${index + 1}`}
+                aria-label={`移除色标 ${index + 1}`}
               >
                 <X size={12} />
               </button>

@@ -1,0 +1,1287 @@
+[
+ {
+  "id": 1044,
+  "text": "Reset color grading",
+  "ctx": "editor/propertyPanelColorGradingSection.tsx [attr:title]; editor/propertyPanelFlatColorGradingAccessory.tsx [attr:title]"
+ },
+ {
+  "id": 1045,
+  "text": "Choose where to copy these color grading settings",
+  "ctx": "editor/propertyPanelColorGradingSection.tsx [attr:title]"
+ },
+ {
+  "id": 1046,
+  "text": "Current file media",
+  "ctx": "editor/propertyPanelColorGradingSection.tsx [jsxtext]; editor/propertyPanelFlatColorGradingSection.tsx [jsxtext]"
+ },
+ {
+  "id": 1047,
+  "text": "All project media",
+  "ctx": "editor/propertyPanelColorGradingSection.tsx [jsxtext]; editor/propertyPanelFlatColorGradingSection.tsx [jsxtext]"
+ },
+ {
+  "id": 1048,
+  "text": "Copy these color grading settings to the selected scope",
+  "ctx": "editor/propertyPanelColorGradingSection.tsx [attr:title]"
+ },
+ {
+  "id": 1049,
+  "text": "Applying",
+  "ctx": "editor/propertyPanelColorGradingSection.tsx [jsxexpr]; editor/propertyPanelFlatColorGradingSection.tsx [jsxexpr]"
+ },
+ {
+  "id": 1050,
+  "text": "Apply",
+  "ctx": "editor/propertyPanelColorGradingSection.tsx [jsxexpr]; editor/propertyPanelFlatColorGradingSection.tsx [jsxexpr]"
+ },
+ {
+  "id": 1051,
+  "text": "Reset ${label}",
+  "ctx": "editor/propertyPanelColorGradingSlider.tsx [attr:aria-label]; editor/propertyPanelColorGradingSlider.tsx [attr:title]"
+ },
+ {
+  "id": 1052,
+  "text": "Decrease ${label}",
+  "ctx": "editor/propertyPanelColorGradingSlider.tsx [attr:aria-label]; editor/propertyPanelColorGradingSlider.tsx [attr:title]"
+ },
+ {
+  "id": 1053,
+  "text": "Increase ${label}",
+  "ctx": "editor/propertyPanelColorGradingSlider.tsx [attr:aria-label]; editor/propertyPanelColorGradingSlider.tsx [attr:title]"
+ },
+ {
+  "id": 1054,
+  "text": "Histogram",
+  "ctx": "editor/propertyPanelColorScopes.tsx [prop:label]"
+ },
+ {
+  "id": 1055,
+  "text": "Waveform",
+  "ctx": "editor/propertyPanelColorScopes.tsx [prop:label]"
+ },
+ {
+  "id": 1056,
+  "text": "RGB Parade",
+  "ctx": "editor/propertyPanelColorScopes.tsx [prop:label]"
+ },
+ {
+  "id": 1057,
+  "text": "Vectorscope",
+  "ctx": "editor/propertyPanelColorScopes.tsx [prop:label]"
+ },
+ {
+  "id": 1058,
+  "text": "Scopes",
+  "ctx": "editor/propertyPanelColorScopes.tsx [jsxtext]"
+ },
+ {
+  "id": 1059,
+  "text": "Off",
+  "ctx": "editor/propertyPanelColorScopes.tsx [jsxexpr]; editor/propertyPanelFxCarveModule.tsx [jsxexpr]"
+ },
+ {
+  "id": 1060,
+  "text": "Refresh scopes",
+  "ctx": "editor/propertyPanelColorScopes.tsx [attr:aria-label]; editor/propertyPanelColorScopes.tsx [attr:title]"
+ },
+ {
+  "id": 1061,
+  "text": "${MODES.find((candidate) => candidate.id === mode)?.label ?? mode} scope, ${status}",
+  "ctx": "editor/propertyPanelColorScopes.tsx [attr:aria-label]"
+ },
+ {
+  "id": 1062,
+  "text": "Add secondary color selection",
+  "ctx": "editor/propertyPanelColorSecondary.tsx [attr:aria-label]; editor/propertyPanelColorSecondary.tsx [attr:title]"
+ },
+ {
+  "id": 1063,
+  "text": "Remove selected secondary",
+  "ctx": "editor/propertyPanelColorSecondary.tsx [attr:aria-label]; editor/propertyPanelColorSecondary.tsx [attr:title]"
+ },
+ {
+  "id": 1064,
+  "text": "Add color selection",
+  "ctx": "editor/propertyPanelColorSecondary.tsx [attr:title]"
+ },
+ {
+  "id": 1065,
+  "text": "Add a color selection",
+  "ctx": "editor/propertyPanelColorSecondary.tsx [jsxtext]"
+ },
+ {
+  "id": 1066,
+  "text": "Selection enabled",
+  "ctx": "editor/propertyPanelColorSecondary.tsx [attr:label]"
+ },
+ {
+  "id": 1067,
+  "text": "Sample color from frame",
+  "ctx": "editor/propertyPanelColorSecondary.tsx [jsxexpr]"
+ },
+ {
+  "id": 1068,
+  "text": "Source",
+  "ctx": "editor/propertyPanelColorSecondary.tsx [jsxtext]; editor/propertyPanelMediaSection.tsx [jsxtext]"
+ },
+ {
+  "id": 1069,
+  "text": "Selection matte",
+  "ctx": "editor/propertyPanelColorSecondary.tsx [jsxtext]"
+ },
+ {
+  "id": 1070,
+  "text": "Selected color matte",
+  "ctx": "editor/propertyPanelColorSecondary.tsx [attr:aria-label]"
+ },
+ {
+  "id": 1071,
+  "text": "Click a color to initialize this selection",
+  "ctx": "editor/propertyPanelColorSecondary.tsx [attr:title]"
+ },
+ {
+  "id": 1072,
+  "text": "Sample color from captured frame",
+  "ctx": "editor/propertyPanelColorSecondary.tsx [attr:aria-label]"
+ },
+ {
+  "id": 1073,
+  "text": "Qualifier",
+  "ctx": "editor/propertyPanelColorSecondary.tsx [jsxtext]"
+ },
+ {
+  "id": 1074,
+  "text": "Hue range",
+  "ctx": "editor/propertyPanelColorSecondary.tsx [attr:label]"
+ },
+ {
+  "id": 1075,
+  "text": "Hue softness",
+  "ctx": "editor/propertyPanelColorSecondary.tsx [attr:label]"
+ },
+ {
+  "id": 1076,
+  "text": "${label} min",
+  "ctx": "editor/propertyPanelColorSecondary.tsx [attr:label]"
+ },
+ {
+  "id": 1077,
+  "text": "${label} max",
+  "ctx": "editor/propertyPanelColorSecondary.tsx [attr:label]"
+ },
+ {
+  "id": 1078,
+  "text": "${label} softness",
+  "ctx": "editor/propertyPanelColorSecondary.tsx [attr:label]"
+ },
+ {
+  "id": 1079,
+  "text": "Correction",
+  "ctx": "editor/propertyPanelColorSecondary.tsx [jsxtext]"
+ },
+ {
+  "id": 1080,
+  "text": "Midtones",
+  "ctx": "editor/propertyPanelColorWheels.tsx [prop:label]"
+ },
+ {
+  "id": 1081,
+  "text": "${label} color",
+  "ctx": "editor/propertyPanelColorWheels.tsx [attr:aria-label]"
+ },
+ {
+  "id": 1082,
+  "text": "${label} level",
+  "ctx": "editor/propertyPanelColorWheels.tsx [attr:aria-label]"
+ },
+ {
+  "id": 1083,
+  "text": "Amount",
+  "ctx": "editor/propertyPanelColorWheels.tsx [attr:label]; editor/propertyPanelFlatColorGradingSection.tsx [attr:label]"
+ },
+ {
+  "id": 1084,
+  "text": "Level",
+  "ctx": "editor/propertyPanelColorWheels.tsx [attr:label]"
+ },
+ {
+  "id": 1085,
+  "text": "Scroll or use Arrow keys to adjust",
+  "ctx": "editor/propertyPanelCommitField.tsx [attr:title]"
+ },
+ {
+  "id": 1086,
+  "text": "Project asset",
+  "ctx": "editor/propertyPanelFill.tsx [jsxtext]"
+ },
+ {
+  "id": 1087,
+  "text": "Uploading…",
+  "ctx": "editor/propertyPanelFill.tsx [jsxexpr]"
+ },
+ {
+  "id": 1088,
+  "text": "Upload image",
+  "ctx": "editor/propertyPanelFill.tsx [jsxexpr]"
+ },
+ {
+  "id": 1089,
+  "text": "Upload image asset",
+  "ctx": "editor/propertyPanelFill.tsx [attr:aria-label]"
+ },
+ {
+  "id": 1090,
+  "text": "No image assets yet. Upload one here and Studio will also add it to the Assets tab.",
+  "ctx": "editor/propertyPanelFill.tsx [jsxtext]"
+ },
+ {
+  "id": 1091,
+  "text": "External URL",
+  "ctx": "editor/propertyPanelFill.tsx [attr:label]"
+ },
+ {
+  "id": 1092,
+  "text": "Stop ${index + 1} position",
+  "ctx": "editor/propertyPanelFill.tsx [attr:aria-label]"
+ },
+ {
+  "id": 1093,
+  "text": "Radial",
+  "ctx": "editor/propertyPanelFill.tsx [prop:label]"
+ },
+ {
+  "id": 1094,
+  "text": "Conic",
+  "ctx": "editor/propertyPanelFill.tsx [prop:label]"
+ },
+ {
+  "id": 1095,
+  "text": "Repeat",
+  "ctx": "editor/propertyPanelFill.tsx [jsxtext]"
+ },
+ {
+  "id": 1096,
+  "text": "Reverse",
+  "ctx": "editor/propertyPanelFill.tsx [jsxtext]"
+ },
+ {
+  "id": 1097,
+  "text": "Angle",
+  "ctx": "editor/propertyPanelFill.tsx [jsxexpr]; editor/propertyPanelFlatLayoutSection.tsx [attr:label]"
+ },
+ {
+  "id": 1098,
+  "text": "Start angle",
+  "ctx": "editor/propertyPanelFill.tsx [jsxexpr]"
+ },
+ {
+  "id": 1099,
+  "text": "Size",
+  "ctx": "editor/propertyPanelFill.tsx [attr:label]; editor/propertyPanelFlatTextSection.tsx [attr:label]"
+ },
+ {
+  "id": 1100,
+  "text": "Center X",
+  "ctx": "editor/propertyPanelFill.tsx [jsxtext]"
+ },
+ {
+  "id": 1101,
+  "text": "Center Y",
+  "ctx": "editor/propertyPanelFill.tsx [jsxtext]"
+ },
+ {
+  "id": 1102,
+  "text": "Stops",
+  "ctx": "editor/propertyPanelFill.tsx [jsxtext]"
+ },
+ {
+  "id": 1103,
+  "text": "Maximum 6 stops",
+  "ctx": "editor/propertyPanelFill.tsx [attr:title]"
+ },
+ {
+  "id": 1104,
+  "text": "Add a gradient stop",
+  "ctx": "editor/propertyPanelFill.tsx [attr:title]"
+ },
+ {
+  "id": 1105,
+  "text": "Add stop",
+  "ctx": "editor/propertyPanelFill.tsx [jsxtext]"
+ },
+ {
+  "id": 1106,
+  "text": "Stop ${index + 1}",
+  "ctx": "editor/propertyPanelFill.tsx [attr:label]"
+ },
+ {
+  "id": 1107,
+  "text": "Pos",
+  "ctx": "editor/propertyPanelFill.tsx [attr:label]"
+ },
+ {
+  "id": 1108,
+  "text": "Remove stop ${index + 1}",
+  "ctx": "editor/propertyPanelFill.tsx [attr:aria-label]"
+ },
+ {
+  "id": 1109,
+  "text": "Retry look previews",
+  "ctx": "editor/propertyPanelFlatColorGradingSection.tsx [jsxtext]"
+ },
+ {
+  "id": 1110,
+  "text": "Primary",
+  "ctx": "editor/propertyPanelFlatColorGradingSection.tsx [jsxtext]"
+ },
+ {
+  "id": 1111,
+  "text": "Color wheels",
+  "ctx": "editor/propertyPanelFlatColorGradingSection.tsx [jsxtext]"
+ },
+ {
+  "id": 1112,
+  "text": "Curves",
+  "ctx": "editor/propertyPanelFlatColorGradingSection.tsx [jsxtext]"
+ },
+ {
+  "id": 1113,
+  "text": "Secondary color",
+  "ctx": "editor/propertyPanelFlatColorGradingSection.tsx [jsxtext]"
+ },
+ {
+  "id": 1114,
+  "text": "LUT strength",
+  "ctx": "editor/propertyPanelFlatColorGradingSection.tsx [attr:label]"
+ },
+ {
+  "id": 1115,
+  "text": "Finish",
+  "ctx": "editor/propertyPanelFlatColorGradingSection.tsx [jsxtext]"
+ },
+ {
+  "id": 1116,
+  "text": "Copy grade to",
+  "ctx": "editor/propertyPanelFlatColorGradingSection.tsx [jsxtext]; editor/propertyPanelFlatColorGradingSection.tsx [attr:aria-label]"
+ },
+ {
+  "id": 1117,
+  "text": "Reset effects",
+  "ctx": "editor/propertyPanelFlatEffectsSection.tsx [attr:title]"
+ },
+ {
+  "id": 1118,
+  "text": "${preset.group}: ${preset.label}",
+  "ctx": "editor/propertyPanelFlatEffectsSection.tsx [attr:title]"
+ },
+ {
+  "id": 1119,
+  "text": "Custom palette",
+  "ctx": "editor/propertyPanelFlatEffectsSection.tsx [jsxtext]; editor/propertyPanelFlatEffectsSection.tsx [jsxtext]"
+ },
+ {
+  "id": 1120,
+  "text": "Use default palette",
+  "ctx": "editor/propertyPanelFlatEffectsSection.tsx [attr:title]"
+ },
+ {
+  "id": 1121,
+  "text": "Palette color ${index + 1}",
+  "ctx": "editor/propertyPanelFlatEffectsSection.tsx [attr:aria-label]"
+ },
+ {
+  "id": 1122,
+  "text": "Remove palette color ${index + 1}",
+  "ctx": "editor/propertyPanelFlatEffectsSection.tsx [attr:aria-label]"
+ },
+ {
+  "id": 1123,
+  "text": "Add palette color",
+  "ctx": "editor/propertyPanelFlatEffectsSection.tsx [attr:aria-label]"
+ },
+ {
+  "id": 1124,
+  "text": "Active",
+  "ctx": "editor/propertyPanelFlatEffectsSection.tsx [jsxexpr]"
+ },
+ {
+  "id": 1125,
+  "text": "Reset ${selectedEffect.label}",
+  "ctx": "editor/propertyPanelFlatEffectsSection.tsx [attr:title]"
+ },
+ {
+  "id": 1126,
+  "text": "Remove ${selectedEffect.label}",
+  "ctx": "editor/propertyPanelFlatEffectsSection.tsx [attr:title]"
+ },
+ {
+  "id": 1127,
+  "text": "Mix",
+  "ctx": "editor/propertyPanelFlatEffectsSection.tsx [attr:label]"
+ },
+ {
+  "id": 1128,
+  "text": "Add effect",
+  "ctx": "editor/propertyPanelFlatEffectsSection.tsx [jsxtext]"
+ },
+ {
+  "id": 1129,
+  "text": "Effect families",
+  "ctx": "editor/propertyPanelFlatEffectsSection.tsx [attr:aria-label]"
+ },
+ {
+  "id": 1130,
+  "text": "Preview ${effect.label}",
+  "ctx": "editor/propertyPanelFlatEffectsSection.tsx [attr:title]"
+ },
+ {
+  "id": 1131,
+  "text": "Flex",
+  "ctx": "editor/propertyPanelFlatLayoutSection.tsx [jsxtext]; editor/propertyPanelStyleSections.tsx [attr:title]"
+ },
+ {
+  "id": 1132,
+  "text": "Direction",
+  "ctx": "editor/propertyPanelFlatLayoutSection.tsx [attr:label]"
+ },
+ {
+  "id": 1133,
+  "text": "Row",
+  "ctx": "editor/propertyPanelFlatLayoutSection.tsx [prop:label]"
+ },
+ {
+  "id": 1134,
+  "text": "Column",
+  "ctx": "editor/propertyPanelFlatLayoutSection.tsx [prop:label]"
+ },
+ {
+  "id": 1135,
+  "text": "Justify",
+  "ctx": "editor/propertyPanelFlatLayoutSection.tsx [attr:label]; editor/propertyPanelStyleSections.tsx [attr:label]"
+ },
+ {
+  "id": 1136,
+  "text": "Align",
+  "ctx": "editor/propertyPanelFlatLayoutSection.tsx [attr:label]; editor/propertyPanelFlatTextSection.tsx [attr:label]"
+ },
+ {
+  "id": 1137,
+  "text": "Gap",
+  "ctx": "editor/propertyPanelFlatLayoutSection.tsx [attr:label]; editor/propertyPanelStyleSections.tsx [attr:label]"
+ },
+ {
+  "id": 1138,
+  "text": "Mask inset",
+  "ctx": "editor/propertyPanelFlatMaskInsetRows.tsx [attr:label]; editor/propertyPanelStyleSections.tsx [jsxtext]"
+ },
+ {
+  "id": 1139,
+  "text": "Cutout",
+  "ctx": "editor/propertyPanelFlatMediaSection.tsx [jsxtext]; editor/propertyPanelMediaSection.tsx [jsxtext]"
+ },
+ {
+  "id": 1140,
+  "text": "PNG",
+  "ctx": "editor/propertyPanelFlatMediaSection.tsx [jsxexpr]"
+ },
+ {
+  "id": 1141,
+  "text": "Remove background and save a transparent asset",
+  "ctx": "editor/propertyPanelFlatMediaSection.tsx [attr:title]; editor/propertyPanelMediaSection.tsx [attr:title]"
+ },
+ {
+  "id": 1142,
+  "text": "Select a project-local image or video asset",
+  "ctx": "editor/propertyPanelFlatMediaSection.tsx [attr:title]; editor/propertyPanelMediaSection.tsx [attr:title]"
+ },
+ {
+  "id": 1143,
+  "text": "Working",
+  "ctx": "editor/propertyPanelFlatMediaSection.tsx [jsxexpr]; editor/propertyPanelMediaSection.tsx [jsxexpr]"
+ },
+ {
+  "id": 1144,
+  "text": "Remove BG",
+  "ctx": "editor/propertyPanelFlatMediaSection.tsx [jsxexpr]; editor/propertyPanelMediaSection.tsx [jsxexpr]"
+ },
+ {
+  "id": 1145,
+  "text": "BG plate",
+  "ctx": "editor/propertyPanelFlatMediaSection.tsx [attr:label]; editor/propertyPanelMediaSection.tsx [jsxtext]"
+ },
+ {
+  "id": 1146,
+  "text": "Processing",
+  "ctx": "editor/propertyPanelFlatMediaSection.tsx [jsxexpr]; editor/propertyPanelMediaSection.tsx [jsxexpr]"
+ },
+ {
+  "id": 1147,
+  "text": "Speed preset",
+  "ctx": "editor/propertyPanelFlatMediaSection.tsx [attr:label]"
+ },
+ {
+  "id": 1148,
+  "text": "Choose…",
+  "ctx": "editor/propertyPanelFlatMediaSection.tsx [prop:label]"
+ },
+ {
+  "id": 1149,
+  "text": "Media start",
+  "ctx": "editor/propertyPanelFlatMediaSection.tsx [attr:label]; editor/propertyPanelMediaSection.tsx [jsxtext]"
+ },
+ {
+  "id": 1150,
+  "text": "Loop",
+  "ctx": "editor/propertyPanelFlatMediaSection.tsx [attr:label]; editor/propertyPanelMediaSection.tsx [jsxtext]"
+ },
+ {
+  "id": 1151,
+  "text": "Muted",
+  "ctx": "editor/propertyPanelFlatMediaSection.tsx [attr:label]; editor/propertyPanelMediaSection.tsx [jsxtext]"
+ },
+ {
+  "id": 1152,
+  "text": "Has audio track",
+  "ctx": "editor/propertyPanelFlatMediaSection.tsx [attr:label]; editor/propertyPanelMediaSection.tsx [jsxtext]"
+ },
+ {
+  "id": 1153,
+  "text": "Fade ${edge}",
+  "ctx": "editor/propertyPanelFlatMediaSection.tsx [attr:label]"
+ },
+ {
+  "id": 1154,
+  "text": "Inferred from this element's animation — edit to pin an explicit clip range.",
+  "ctx": "editor/propertyPanelFlatMotionSection.tsx [jsxtext]"
+ },
+ {
+  "id": 1155,
+  "text": "This file has multiple GSAP timelines. Animation editing is disabled to prevent data\n              loss — consolidate into a single timeline to enable editing.",
+  "ctx": "editor/propertyPanelFlatMotionSection.tsx [jsxtext]"
+ },
+ {
+  "id": 1156,
+  "text": "This timeline uses a computed key the editor can&apos;t resolve statically.",
+  "ctx": "editor/propertyPanelFlatMotionSection.tsx [jsxtext]"
+ },
+ {
+  "id": 1157,
+  "text": "Timing",
+  "ctx": "editor/propertyPanelFlatMotionSection.tsx [prop:title]; editor/propertyPanelTimingSection.tsx [attr:title]"
+ },
+ {
+  "id": 1158,
+  "text": "Motion",
+  "ctx": "editor/propertyPanelFlatMotionSection.tsx [prop:title]"
+ },
+ {
+  "id": 1159,
+  "text": "Loading overlays…",
+  "ctx": "editor/propertyPanelFlatOverlaysSection.tsx [jsxtext]"
+ },
+ {
+  "id": 1160,
+  "text": "Add ${overlay.title}",
+  "ctx": "editor/propertyPanelFlatOverlaysSection.tsx [attr:aria-label]"
+ },
+ {
+  "id": 1161,
+  "text": "Remove — fall back to default",
+  "ctx": "editor/propertyPanelFlatPrimitives.tsx [attr:title]; editor/propertyPanelFlatPrimitives.tsx [attr:title]"
+ },
+ {
+  "id": 1162,
+  "text": "Collapse",
+  "ctx": "editor/propertyPanelFlatPrimitives.tsx [attr:title]"
+ },
+ {
+  "id": 1163,
+  "text": "Click to type a value",
+  "ctx": "editor/propertyPanelFlatSliderReadout.tsx [attr:title]"
+ },
+ {
+  "id": 1164,
+  "text": "Fill",
+  "ctx": "editor/propertyPanelFlatStyleSections.tsx [attr:label]; editor/propertyPanelStyleSections.tsx [attr:title]"
+ },
+ {
+  "id": 1165,
+  "text": "Solid",
+  "ctx": "editor/propertyPanelFlatStyleSections.tsx [prop:label]; editor/propertyPanelStyleSections.tsx [prop:label]"
+ },
+ {
+  "id": 1166,
+  "text": "Gradient",
+  "ctx": "editor/propertyPanelFlatStyleSections.tsx [prop:label]; editor/propertyPanelStyleSections.tsx [prop:label]"
+ },
+ {
+  "id": 1167,
+  "text": "Image",
+  "ctx": "editor/propertyPanelFlatStyleSections.tsx [prop:label]; editor/propertyPanelStyleSections.tsx [prop:label]"
+ },
+ {
+  "id": 1168,
+  "text": "Stroke width",
+  "ctx": "editor/propertyPanelFlatStyleSections.tsx [attr:label]"
+ },
+ {
+  "id": 1169,
+  "text": "Stroke style",
+  "ctx": "editor/propertyPanelFlatStyleSections.tsx [attr:label]"
+ },
+ {
+  "id": 1170,
+  "text": "Stroke color",
+  "ctx": "editor/propertyPanelFlatStyleSections.tsx [attr:label]; editor/propertyPanelStyleSections.tsx [attr:label]"
+ },
+ {
+  "id": 1171,
+  "text": "Shadow",
+  "ctx": "editor/propertyPanelFlatStyleSections.tsx [attr:label]; editor/propertyPanelStyleSections.tsx [attr:label]"
+ },
+ {
+  "id": 1172,
+  "text": "Blend",
+  "ctx": "editor/propertyPanelFlatStyleSections.tsx [attr:label]"
+ },
+ {
+  "id": 1173,
+  "text": "Layer blur",
+  "ctx": "editor/propertyPanelFlatStyleSections.tsx [attr:label]; editor/propertyPanelStyleSections.tsx [jsxtext]"
+ },
+ {
+  "id": 1174,
+  "text": "Backdrop",
+  "ctx": "editor/propertyPanelFlatStyleSections.tsx [attr:label]; editor/propertyPanelStyleSections.tsx [jsxtext]"
+ },
+ {
+  "id": 1175,
+  "text": "Overflow",
+  "ctx": "editor/propertyPanelFlatStyleSections.tsx [attr:label]; editor/propertyPanelStyleSections.tsx [attr:label]"
+ },
+ {
+  "id": 1176,
+  "text": "Mask",
+  "ctx": "editor/propertyPanelFlatStyleSections.tsx [attr:label]; editor/propertyPanelStyleSections.tsx [attr:label]"
+ },
+ {
+  "id": 1177,
+  "text": "Opacity",
+  "ctx": "editor/propertyPanelFlatStyleSections.tsx [attr:label]"
+ },
+ {
+  "id": 1178,
+  "text": "Content",
+  "ctx": "editor/propertyPanelFlatTextSection.tsx [attr:label]; editor/propertyPanelSections.tsx [attr:label]"
+ },
+ {
+  "id": 1179,
+  "text": "Weight",
+  "ctx": "editor/propertyPanelFlatTextSection.tsx [jsxtext]; editor/propertyPanelSections.tsx [jsxtext]"
+ },
+ {
+  "id": 1180,
+  "text": "Letter spacing",
+  "ctx": "editor/propertyPanelFlatTextSection.tsx [attr:label]"
+ },
+ {
+  "id": 1181,
+  "text": "Line height",
+  "ctx": "editor/propertyPanelFlatTextSection.tsx [attr:label]"
+ },
+ {
+  "id": 1182,
+  "text": "Case · Style",
+  "ctx": "editor/propertyPanelFlatTextSection.tsx [attr:label]"
+ },
+ {
+  "id": 1183,
+  "text": "Add text field",
+  "ctx": "editor/propertyPanelFlatTextSection.tsx [jsxtext]; editor/propertyPanelFlatTextSection.tsx [jsxtext]"
+ },
+ {
+  "id": 1184,
+  "text": "Text layers",
+  "ctx": "editor/propertyPanelFlatTextSection.tsx [jsxtext]; editor/propertyPanelSections.tsx [jsxtext]"
+ },
+ {
+  "id": 1185,
+  "text": "Text ${index + 1}",
+  "ctx": "editor/propertyPanelFlatTextSection.tsx [jsxexpr]; editor/propertyPanelSections.tsx [jsxexpr]"
+ },
+ {
+  "id": 1186,
+  "text": "Remove text field",
+  "ctx": "editor/propertyPanelFlatTextSection.tsx [attr:aria-label]"
+ },
+ {
+  "id": 1187,
+  "text": "Search fonts",
+  "ctx": "editor/propertyPanelFont.tsx [attr:placeholder]"
+ },
+ {
+  "id": 1188,
+  "text": "Loading Google Fonts...",
+  "ctx": "editor/propertyPanelFont.tsx [attr:placeholder]"
+ },
+ {
+  "id": 1189,
+  "text": "Local",
+  "ctx": "editor/propertyPanelFont.tsx [jsxexpr]"
+ },
+ {
+  "id": 1190,
+  "text": "Import",
+  "ctx": "editor/propertyPanelFont.tsx [jsxexpr]"
+ },
+ {
+  "id": 1191,
+  "text": "Import local font files",
+  "ctx": "editor/propertyPanelFont.tsx [attr:aria-label]"
+ },
+ {
+  "id": 1192,
+  "text": "No fonts found.",
+  "ctx": "editor/propertyPanelFont.tsx [jsxtext]"
+ },
+ {
+  "id": 1193,
+  "text": "Font family",
+  "ctx": "editor/propertyPanelFont.tsx [jsxtext]"
+ },
+ {
+  "id": 1194,
+  "text": "Tone",
+  "ctx": "editor/propertyPanelFxAddMenu.tsx [jsxtext]; editor/propertyPanelFxEqModule.tsx [jsxtext]"
+ },
+ {
+  "id": 1195,
+  "text": "Listen to this track and even out its loud and quiet parts.",
+  "ctx": "editor/propertyPanelFxAddMenu.tsx [attr:title]"
+ },
+ {
+  "id": 1196,
+  "text": "Remove levelling",
+  "ctx": "editor/propertyPanelFxAddMenu.tsx [jsxexpr]"
+ },
+ {
+  "id": 1197,
+  "text": "Even Out Levels",
+  "ctx": "editor/propertyPanelFxAddMenu.tsx [jsxexpr]"
+ },
+ {
+  "id": 1198,
+  "text": "Bass, middle and treble on one set of faders.",
+  "ctx": "editor/propertyPanelFxAddMenu.tsx [attr:title]"
+ },
+ {
+  "id": 1199,
+  "text": "Tone (EQ)",
+  "ctx": "editor/propertyPanelFxAddMenu.tsx [jsxtext]"
+ },
+ {
+  "id": 1200,
+  "text": "${EFFECT_COPY[d.id]?.does} (${d.label})",
+  "ctx": "editor/propertyPanelFxAddMenu.tsx [attr:title]"
+ },
+ {
+  "id": 1201,
+  "text": "${range.name} — ${range.says}",
+  "ctx": "editor/propertyPanelFxBandRuler.tsx [attr:title]"
+ },
+ {
+  "id": 1202,
+  "text": "Voiceover carve",
+  "ctx": "editor/propertyPanelFxCarveModule.tsx [attr:title]; editor/propertyPanelFxCarveModule.tsx [jsxtext]"
+ },
+ {
+  "id": 1203,
+  "text": "Switch the carve off",
+  "ctx": "editor/propertyPanelFxCarveModule.tsx [attr:title]"
+ },
+ {
+  "id": 1204,
+  "text": "Switch the carve on",
+  "ctx": "editor/propertyPanelFxCarveModule.tsx [attr:title]"
+ },
+ {
+  "id": 1205,
+  "text": "On",
+  "ctx": "editor/propertyPanelFxCarveModule.tsx [jsxexpr]; editor/propertyPanelFxNodeRow.tsx [jsxexpr]"
+ },
+ {
+  "id": 1206,
+  "text": "Strength",
+  "ctx": "editor/propertyPanelFxCarveModule.tsx [prop:label]"
+ },
+ {
+  "id": 1207,
+  "text": "How hard to carve: deeper cuts, in more bands, and more room made by dropping the bed's level under the voice. At 0 it carves frequencies only. Moving this re-runs the analysis on what is already here.",
+  "ctx": "editor/propertyPanelFxCarveModule.tsx [prop:hint]"
+ },
+ {
+  "id": 1208,
+  "text": "Listen to",
+  "ctx": "editor/propertyPanelFxCarveModule.tsx [jsxtext]"
+ },
+ {
+  "id": 1209,
+  "text": "Make room for ${o.label}",
+  "ctx": "editor/propertyPanelFxCarveModule.tsx [attr:title]"
+ },
+ {
+  "id": 1210,
+  "text": "Analysing…",
+  "ctx": "editor/propertyPanelFxCarveModule.tsx [jsxtext]"
+ },
+ {
+  "id": 1211,
+  "text": "Nothing analysed yet.",
+  "ctx": "editor/propertyPanelFxCarveModule.tsx [jsxexpr]"
+ },
+ {
+  "id": 1212,
+  "text": "Pick the voices this bed should make room for.",
+  "ctx": "editor/propertyPanelFxCarveModule.tsx [jsxexpr]"
+ },
+ {
+  "id": 1213,
+  "text": "Automated",
+  "ctx": "editor/propertyPanelFxControls.tsx [attr:label]"
+ },
+ {
+  "id": 1214,
+  "text": "Automate",
+  "ctx": "editor/propertyPanelFxControls.tsx [attr:label]"
+ },
+ {
+  "id": 1215,
+  "text": "Automate ${label}",
+  "ctx": "editor/propertyPanelFxControls.tsx [attr:aria-label]"
+ },
+ {
+  "id": 1216,
+  "text": "${band.name} ${shown(value)} dB",
+  "ctx": "editor/propertyPanelFxEqModule.tsx [attr:aria-label]"
+ },
+ {
+  "id": 1217,
+  "text": "-band",
+  "ctx": "editor/propertyPanelFxEqModule.tsx [jsxtext]"
+ },
+ {
+  "id": 1218,
+  "text": "Remove Tone",
+  "ctx": "editor/propertyPanelFxEqModule.tsx [attr:aria-label]"
+ },
+ {
+  "id": 1219,
+  "text": "CUT",
+  "ctx": "editor/propertyPanelFxEqModule.tsx [jsxtext]"
+ },
+ {
+  "id": 1220,
+  "text": "BOOST",
+  "ctx": "editor/propertyPanelFxEqModule.tsx [jsxtext]"
+ },
+ {
+  "id": 1221,
+  "text": "Details —",
+  "ctx": "editor/propertyPanelFxNodeOpenBody.tsx [jsxtext]; editor/propertyPanelFxNodeOpenBody.tsx [jsxtext]"
+ },
+ {
+  "id": 1222,
+  "text": "Sets ${profile.derives.length} settings at once. Open Details to see where they land.",
+  "ctx": "editor/propertyPanelFxNodeRow.tsx [prop:hint]"
+ },
+ {
+  "id": 1223,
+  "text": "Enable",
+  "ctx": "editor/propertyPanelFxNodeRow.tsx [attr:title]"
+ },
+ {
+  "id": 1224,
+  "text": "Bypass",
+  "ctx": "editor/propertyPanelFxNodeRow.tsx [attr:title]"
+ },
+ {
+  "id": 1225,
+  "text": "&times;",
+  "ctx": "editor/propertyPanelFxNodeRow.tsx [jsxtext]; editor/propertyPanelFxPresetRun.tsx [jsxtext]"
+ },
+ {
+  "id": 1226,
+  "text": "${preset.description} (${preset.nodes.length} effect${\n                preset.nodes.length === 1 ? \"\" : \"s\"\n              })",
+  "ctx": "editor/propertyPanelFxPresetMenu.tsx [attr:title]"
+ },
+ {
+  "id": 1227,
+  "text": "How much of this preset is applied. Automate it to bring the whole preset in or out over time.",
+  "ctx": "editor/propertyPanelFxPresetRun.tsx [prop:hint]"
+ },
+ {
+  "id": 1228,
+  "text": "Show what ${preset.label} contains",
+  "ctx": "editor/propertyPanelFxPresetRun.tsx [attr:title]"
+ },
+ {
+  "id": 1229,
+  "text": "Hide ${preset.label}'s effects",
+  "ctx": "editor/propertyPanelFxPresetRun.tsx [attr:title]"
+ },
+ {
+  "id": 1230,
+  "text": "Switch ${preset.label} off",
+  "ctx": "editor/propertyPanelFxPresetRun.tsx [attr:title]"
+ },
+ {
+  "id": 1231,
+  "text": "Switch ${preset.label} back on",
+  "ctx": "editor/propertyPanelFxPresetRun.tsx [attr:title]"
+ },
+ {
+  "id": 1232,
+  "text": "Remove ${preset.label}",
+  "ctx": "editor/propertyPanelFxPresetRun.tsx [attr:title]"
+ },
+ {
+  "id": 1233,
+  "text": "In",
+  "ctx": "editor/propertyPanelFxRackChain.tsx [jsxtext]"
+ },
+ {
+  "id": 1234,
+  "text": "No other effects on this ${signalPath.subject}.",
+  "ctx": "editor/propertyPanelFxRackChain.tsx [jsxexpr]"
+ },
+ {
+  "id": 1235,
+  "text": "No effects on this ${signalPath.subject}.",
+  "ctx": "editor/propertyPanelFxRackChain.tsx [jsxexpr]"
+ },
+ {
+  "id": 1236,
+  "text": "Out",
+  "ctx": "editor/propertyPanelFxRackChain.tsx [jsxtext]"
+ },
+ {
+  "id": 1237,
+  "text": "Presets",
+  "ctx": "editor/propertyPanelFxSection.tsx [jsxexpr]"
+ },
+ {
+  "id": 1238,
+  "text": "Create transparent",
+  "ctx": "editor/propertyPanelMediaSection.tsx [jsxtext]"
+ },
+ {
+  "id": 1239,
+  "text": "WebM video",
+  "ctx": "editor/propertyPanelMediaSection.tsx [jsxexpr]"
+ },
+ {
+  "id": 1240,
+  "text": "PNG image",
+  "ctx": "editor/propertyPanelMediaSection.tsx [jsxexpr]"
+ },
+ {
+  "id": 1241,
+  "text": "Optional hole-cut background copy.",
+  "ctx": "editor/propertyPanelMediaSection.tsx [jsxtext]"
+ },
+ {
+  "id": 1242,
+  "text": "Applied",
+  "ctx": "editor/propertyPanelMediaSection.tsx [jsxtext]"
+ },
+ {
+  "id": 1243,
+  "text": "Playback rate",
+  "ctx": "editor/propertyPanelMediaSection.tsx [jsxtext]"
+ },
+ {
+  "id": 1244,
+  "text": "Yes",
+  "ctx": "editor/propertyPanelMediaSection.tsx [prop:label]"
+ },
+ {
+  "id": 1245,
+  "text": "No",
+  "ctx": "editor/propertyPanelMediaSection.tsx [prop:label]"
+ },
+ {
+  "id": 1246,
+  "text": "Line",
+  "ctx": "editor/propertyPanelSections.tsx [attr:label]"
+ },
+ {
+  "id": 1247,
+  "text": "Track",
+  "ctx": "editor/propertyPanelSections.tsx [attr:label]"
+ },
+ {
+  "id": 1248,
+  "text": "Case",
+  "ctx": "editor/propertyPanelSections.tsx [attr:label]"
+ },
+ {
+  "id": 1249,
+  "text": "Add text",
+  "ctx": "editor/propertyPanelSections.tsx [jsxtext]"
+ },
+ {
+  "id": 1250,
+  "text": "→ Row",
+  "ctx": "editor/propertyPanelStyleSections.tsx [prop:label]"
+ },
+ {
+  "id": 1251,
+  "text": "↓ Column",
+  "ctx": "editor/propertyPanelStyleSections.tsx [prop:label]"
+ },
+ {
+  "id": 1252,
+  "text": "Stroke",
+  "ctx": "editor/propertyPanelStyleSections.tsx [attr:title]"
+ },
+ {
+  "id": 1253,
+  "text": "Width",
+  "ctx": "editor/propertyPanelStyleSections.tsx [attr:label]"
+ },
+ {
+  "id": 1254,
+  "text": "Clip",
+  "ctx": "editor/propertyPanelStyleSections.tsx [attr:title]"
+ },
+ {
+  "id": 1255,
+  "text": "Transparency",
+  "ctx": "editor/propertyPanelStyleSections.tsx [attr:title]"
+ },
+ {
+  "id": 1256,
+  "text": "Mode",
+  "ctx": "editor/propertyPanelStyleSections.tsx [attr:label]"
+ },
+ {
+  "id": 1257,
+  "text": "Fill color",
+  "ctx": "editor/propertyPanelStyleSections.tsx [attr:label]"
+ },
+ {
+  "id": 1258,
+  "text": "Start",
+  "ctx": "editor/propertyPanelTimingSection.tsx [attr:label]"
+ },
+ {
+  "id": 1259,
+  "text": "End",
+  "ctx": "editor/propertyPanelTimingSection.tsx [attr:label]"
+ },
+ {
+  "id": 1260,
+  "text": "Duration",
+  "ctx": "editor/propertyPanelTimingSection.tsx [attr:label]; captions/components/CaptionAnimationPanel.tsx [attr:label]"
+ },
+ {
+  "id": 1261,
+  "text": "Inferred from this element’s animation — edit to pin an explicit clip range.",
+  "ctx": "editor/propertyPanelTimingSection.tsx [jsxtext]"
+ },
+ {
+  "id": 1262,
+  "text": "Preview",
+  "ctx": "dock/panelRegistry.ts [prop:title]"
+ },
+ {
+  "id": 1263,
+  "text": "Timeline",
+  "ctx": "dock/panelRegistry.ts [prop:title]"
+ },
+ {
+  "id": 1264,
+  "text": "Compositions",
+  "ctx": "dock/panelRegistry.ts [prop:title]"
+ },
+ {
+  "id": 1265,
+  "text": "Assets",
+  "ctx": "dock/panelRegistry.ts [prop:title]"
+ },
+ {
+  "id": 1266,
+  "text": "Code",
+  "ctx": "dock/panelRegistry.ts [prop:title]"
+ },
+ {
+  "id": 1267,
+  "text": "Catalog",
+  "ctx": "dock/panelRegistry.ts [prop:title]"
+ },
+ {
+  "id": 1268,
+  "text": "Design",
+  "ctx": "dock/panelRegistry.ts [prop:title]"
+ },
+ {
+  "id": 1269,
+  "text": "Layers",
+  "ctx": "dock/panelRegistry.ts [prop:title]"
+ },
+ {
+  "id": 1270,
+  "text": "Renders",
+  "ctx": "dock/panelRegistry.ts [prop:title]"
+ },
+ {
+  "id": 1271,
+  "text": "Slideshow",
+  "ctx": "dock/panelRegistry.ts [prop:title]"
+ },
+ {
+  "id": 1272,
+  "text": "Window",
+  "ctx": "dock/Dock.tsx [jsxtext]"
+ },
+ {
+  "id": 1273,
+  "text": "Reset layout",
+  "ctx": "dock/Dock.tsx [jsxtext]; dock/DockStripActions.tsx [jsxtext]"
+ },
+ {
+  "id": 1274,
+  "text": "Panel menu",
+  "ctx": "dock/DockStripActions.tsx [attr:aria-label]; dock/DockStripActions.tsx [attr:aria-label]"
+ },
+ {
+  "id": 1275,
+  "text": "Restore panel",
+  "ctx": "dock/DockStripActions.tsx [attr:aria-label]"
+ },
+ {
+  "id": 1276,
+  "text": "Maximize panel",
+  "ctx": "dock/DockStripActions.tsx [attr:aria-label]"
+ },
+ {
+  "id": 1277,
+  "text": "Close group",
+  "ctx": "dock/DockStripActions.tsx [attr:aria-label]"
+ },
+ {
+  "id": 1278,
+  "text": "Close ${title}",
+  "ctx": "dock/DockTab.tsx [attr:aria-label]"
+ },
+ {
+  "id": 1279,
+  "text": "${label} preset",
+  "ctx": "captions/components/CaptionAnimationPanel.tsx [attr:aria-label]"
+ },
+ {
+  "id": 1280,
+  "text": "${label} duration",
+  "ctx": "captions/components/CaptionAnimationPanel.tsx [attr:ariaLabel]"
+ },
+ {
+  "id": 1281,
+  "text": "Ease",
+  "ctx": "captions/components/CaptionAnimationPanel.tsx [attr:label]"
+ },
+ {
+  "id": 1282,
+  "text": "${label} ease",
+  "ctx": "captions/components/CaptionAnimationPanel.tsx [attr:aria-label]"
+ },
+ {
+  "id": 1283,
+  "text": "Stagger",
+  "ctx": "captions/components/CaptionAnimationPanel.tsx [attr:label]"
+ },
+ {
+  "id": 1284,
+  "text": "${label} stagger",
+  "ctx": "captions/components/CaptionAnimationPanel.tsx [attr:ariaLabel]"
+ },
+ {
+  "id": 1285,
+  "text": "Intensity",
+  "ctx": "captions/components/CaptionAnimationPanel.tsx [attr:label]"
+ },
+ {
+  "id": 1286,
+  "text": "${label} intensity",
+  "ctx": "captions/components/CaptionAnimationPanel.tsx [attr:aria-label]"
+ },
+ {
+  "id": 1287,
+  "text": "Select a caption word to edit animations",
+  "ctx": "captions/components/CaptionAnimationPanel.tsx [jsxtext]"
+ },
+ {
+  "id": 1288,
+  "text": "Animation editing isn&apos;t applied to playback or saved yet, so these controls are\n            disabled.",
+  "ctx": "captions/components/CaptionAnimationPanel.tsx [jsxtext]"
+ },
+ {
+  "id": 1289,
+  "text": "Entrance",
+  "ctx": "captions/components/CaptionAnimationPanel.tsx [attr:label]"
+ },
+ {
+  "id": 1290,
+  "text": "Highlight",
+  "ctx": "captions/components/CaptionAnimationPanel.tsx [attr:label]"
+ },
+ {
+  "id": 1291,
+  "text": "Disabled until animation editing is applied to playback",
+  "ctx": "captions/components/CaptionAnimationPanel.tsx [attr:title]"
+ },
+ {
+  "id": 1292,
+  "text": "Apply to all groups",
+  "ctx": "captions/components/CaptionAnimationPanel.tsx [jsxtext]"
+ },
+ {
+  "id": 1293,
+  "text": "No captions visible at this frame — scrub to a caption, or select one in the track below",
+  "ctx": "captions/components/CaptionOverlay.tsx [jsxtext]"
+ },
+ {
+  "id": 1294,
+  "text": "Select caption words to edit their style",
+  "ctx": "captions/components/CaptionPropertyPanel.tsx [jsxtext]"
+ },
+ {
+  "id": 1295,
+  "text": "Caption editing tabs",
+  "ctx": "captions/components/CaptionPropertyPanel.tsx [attr:aria-label]"
+ },
+ {
+  "id": 1296,
+  "text": "X position",
+  "ctx": "captions/components/CaptionPropertyPanel.tsx [attr:ariaLabel]"
+ },
+ {
+  "id": 1297,
+  "text": "Y position",
+  "ctx": "captions/components/CaptionPropertyPanel.tsx [attr:ariaLabel]"
+ },
+ {
+  "id": 1298,
+  "text": "Transform",
+  "ctx": "captions/components/CaptionPropertyPanel.tsx [attr:label]"
+ },
+ {
+  "id": 1299,
+  "text": "Rotation",
+  "ctx": "captions/components/CaptionPropertyPanel.tsx [attr:label]; captions/components/CaptionPropertyPanel.tsx [attr:ariaLabel]"
+ },
+ {
+  "id": 1300,
+  "text": "Caption word \"${seg.text}\"",
+  "ctx": "captions/components/CaptionTimeline.tsx [attr:aria-label]"
+ }
+]

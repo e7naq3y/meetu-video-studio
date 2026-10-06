@@ -100,7 +100,7 @@ function VariableRow({
         {unused && (
           <span
             className="rounded-sm bg-amber-500/15 px-1 py-px text-[8px] text-warning-ink"
-            title="No script reads this variable"
+            title="没有脚本读取此变量"
           >
             unused
           </span>
@@ -109,13 +109,13 @@ function VariableRow({
         <span className="ml-auto flex items-center gap-1">
           {overridden && isScalar(value) && (
             <RowAction
-              label="Set default"
-              title="Persist this value as the declared default"
+              label="设为默认"
+              title="将此值保存为声明的默认值"
               onClick={() => onSetDefault(value)}
             />
           )}
-          <RowAction label="Edit" title="Edit declaration" onClick={onToggleEdit} />
-          <RowAction label="✕" title="Remove declaration" danger onClick={onRemove} />
+          <RowAction label="编辑" title="编辑声明" onClick={onToggleEdit} />
+          <RowAction label="✕" title="移除声明" danger onClick={onRemove} />
         </span>
       </div>
       {decl.description && <p className="text-[9px] text-neutral-500">{decl.description}</p>}
@@ -144,14 +144,14 @@ function UndeclaredReads({
   return (
     <div className="space-y-1 rounded-lg border border-neutral-800/70 bg-neutral-900/40 p-2">
       <p className="text-[9px] font-medium uppercase tracking-wider text-neutral-500">
-        Read by scripts, not declared
+        脚本有读取，但未声明
       </p>
       {usage.undeclaredReads.map((id) => (
         <div key={id} className="flex items-center gap-2">
           <code className="font-mono text-[10px] text-neutral-400">{id}</code>
           <RowAction
-            label="Declare"
-            title="Declare as a string variable"
+            label="声明"
+            title="声明为字符串变量"
             onClick={() => onDeclare(id)}
           />
         </div>
@@ -172,13 +172,13 @@ function PreviewModeHeader({
   return (
     <div className="flex items-center justify-between border-b border-neutral-800 px-3 py-2">
       <div className="flex items-center gap-2">
-        <span className="text-[11px] font-semibold text-neutral-200">Variables</span>
+        <span className="text-[11px] font-semibold text-neutral-200">变量</span>
         <span
           className={`rounded-full px-2 py-0.5 text-[9px] font-medium ${
             hasOverrides ? "bg-studio-accent/20 text-accent-ink" : "bg-neutral-800 text-neutral-500"
           }`}
         >
-          {hasOverrides ? `Previewing ${overrideCount} custom` : "Previewing defaults"}
+          {hasOverrides ? `正在预览 ${overrideCount} 项自定义值` : "正在预览默认值"}
         </span>
       </div>
       {hasOverrides && (
@@ -187,7 +187,7 @@ function PreviewModeHeader({
           onClick={onReset}
           className="h-6 rounded-sm px-2 text-[10px] text-neutral-400 hover:text-neutral-200"
         >
-          Reset
+          重置
         </button>
       )}
     </div>
@@ -212,20 +212,20 @@ function HandoffFooter({
   return (
     <div className="space-y-1.5 rounded-lg border border-neutral-800/70 bg-neutral-900/40 p-2">
       <p className="text-[9px] font-medium uppercase tracking-wider text-neutral-500">
-        Use this template
+        使用此模板
       </p>
       <code className="block truncate font-mono text-[9px] text-neutral-500" title={command}>
         {command}
       </code>
       <div className="flex items-center gap-2">
         <RowAction
-          label="Copy render command"
-          title="CLI command rendering exactly what the preview shows"
+          label="复制渲染命令"
+          title="可精确渲染出当前预览画面的命令行指令"
           onClick={() => onCopy(command, "Render command")}
         />
         <RowAction
-          label="Copy values JSON"
-          title="Effective values (defaults merged with preview overrides)"
+          label="复制取值 JSON"
+          title="实际生效的值（默认值合并预览中的覆盖值）"
           onClick={() => onCopy(json, "Values JSON")}
         />
       </div>
@@ -235,9 +235,8 @@ function HandoffFooter({
 
 const EMPTY_STATE = (
   <p className="text-[10px] leading-relaxed text-neutral-500">
-    No variables declared. Variables make parts of this composition dynamic — declare them here (or
-    in <code className="font-mono">data-composition-variables</code>), read them with{" "}
-    <code className="font-mono">getVariables()</code>, and pass values at render time with{" "}
+    尚未声明变量。变量能让合成中的部分内容动态变化——在这里声明（或写在 <code className="font-mono">data-composition-variables</code>），用{" "}
+    <code className="font-mono">getVariables()</code>读取，并在渲染时通过{" "}
     <code className="font-mono">--variables</code>.
   </p>
 );
@@ -460,7 +459,7 @@ export const VariablesPanel = memo(function VariablesPanel({
   if (!sdkSession) {
     return (
       <div className="flex h-full items-center justify-center px-6 text-center">
-        <p className="text-xs text-neutral-500">Open a composition to manage its variables.</p>
+        <p className="text-xs text-neutral-500">打开一个合成来管理它的变量。</p>
       </div>
     );
   }
@@ -508,7 +507,7 @@ export const VariablesPanel = memo(function VariablesPanel({
         />
         {usage?.scanIncomplete && (
           <p className="text-[9px] text-neutral-600">
-            Scripts access variables dynamically — usage info may be incomplete.
+            脚本会动态访问变量——使用情况可能不完整。
           </p>
         )}
         {declarations.length > 0 && (
@@ -531,7 +530,7 @@ export const VariablesPanel = memo(function VariablesPanel({
             onClick={() => setAddOpen(true)}
             className="h-7 w-full rounded-lg border border-dashed border-neutral-800 text-[10px] font-medium text-neutral-500 transition-colors hover:border-neutral-700 hover:text-neutral-300"
           >
-            + Add variable
+            + 添加变量
           </button>
         )}
         <VariablesOtherCompositions

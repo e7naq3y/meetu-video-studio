@@ -145,8 +145,8 @@ export function PropertyPanelColorSecondary({
         <span className="flex items-center gap-2">
           <button
             type="button"
-            aria-label="Add secondary color selection"
-            title="Add secondary color selection"
+            aria-label="添加二级调色选区"
+            title="添加二级调色选区"
             disabled={secondaries.length >= SECONDARY_CAPABILITIES.max}
             onClick={addSecondary}
             className="text-panel-text-3 hover:text-panel-text-1 disabled:opacity-35"
@@ -155,8 +155,8 @@ export function PropertyPanelColorSecondary({
           </button>
           <button
             type="button"
-            aria-label="Remove selected secondary"
-            title="Remove selected secondary"
+            aria-label="移除所选二级调色"
+            title="移除所选二级调色"
             disabled={!selected}
             onClick={removeSelected}
             className="text-panel-text-3 hover:text-panel-text-1 disabled:opacity-35"
@@ -169,16 +169,16 @@ export function PropertyPanelColorSecondary({
       {!selected ? (
         <button
           type="button"
-          title="Add color selection"
+          title="添加颜色选区"
           onClick={addSecondary}
           className="w-full border border-dashed border-panel-border-input px-2 py-2 text-[10px] text-panel-text-4 hover:border-panel-accent/50 hover:text-panel-text-2"
         >
-          Add a color selection
+          添加一个颜色选区
         </button>
       ) : (
         <>
           <FlatToggle
-            label="Selection enabled"
+            label="启用选区"
             checked={selected.enabled}
             onChange={(enabled) => replaceSelected({ ...selected, enabled })}
           />
@@ -207,7 +207,7 @@ export function PropertyPanelColorSecondary({
             className="flex min-h-7 items-center gap-1.5 text-[10px] font-medium text-accent-ink hover:text-accent-ink/80 disabled:opacity-50"
           >
             <Eyedropper size={12} />
-            {sampling ? "Capturing frame" : "Sample color from frame"}
+            {sampling ? "正在采集帧" : "从画面中取色"}
           </button>
           {captureError && (
             <p role="alert" className="text-[9px] leading-4 text-danger-ink">
@@ -223,7 +223,7 @@ export function PropertyPanelColorSecondary({
                   onClick={() => setShowMatte(false)}
                   className={!showMatte ? "text-accent-ink" : "text-panel-text-4"}
                 >
-                  Source
+                  来源
                 </button>
                 <button
                   type="button"
@@ -231,7 +231,7 @@ export function PropertyPanelColorSecondary({
                   onClick={() => setShowMatte(true)}
                   className={showMatte ? "text-accent-ink" : "text-panel-text-4"}
                 >
-                  Selection matte
+                  选区蒙版
                 </button>
               </div>
               {showMatte ? (
@@ -240,15 +240,15 @@ export function PropertyPanelColorSecondary({
                   width={sampleFrame.width}
                   height={sampleFrame.height}
                   role="img"
-                  aria-label="Selected color matte"
+                  aria-label="所选颜色蒙版"
                   className="block h-auto w-full border border-panel-hairline bg-black"
                 />
               ) : (
                 <button
                   type="button"
                   className="block w-full overflow-hidden border border-panel-hairline bg-black"
-                  title="Click a color to initialize this selection"
-                  aria-label="Sample color from captured frame"
+                  title="点击一种颜色来初始化此选区"
+                  aria-label="从采集的画面中取色"
                   onClick={(event) => {
                     const pointer: [] | [number, number] =
                       event.detail === 0 ? [] : [event.clientX, event.clientY];
@@ -275,10 +275,10 @@ export function PropertyPanelColorSecondary({
           )}
 
           <div className="text-[9px] font-semibold uppercase tracking-[0.12em] text-panel-text-5">
-            Qualifier
+            限定器
           </div>
           <FlatSlider
-            label="Hue"
+            label="色相"
             value={selected.key.hue.center}
             min={SECONDARY_CAPABILITIES.hue.center.min}
             max={HUE_CENTER_MAX}
@@ -296,7 +296,7 @@ export function PropertyPanelColorSecondary({
             }
           />
           <FlatSlider
-            label="Hue range"
+            label="色相范围"
             value={selected.key.hue.range}
             min={SECONDARY_CAPABILITIES.hue.range.min}
             max={SECONDARY_CAPABILITIES.hue.range.max}
@@ -320,7 +320,7 @@ export function PropertyPanelColorSecondary({
             }
           />
           <FlatSlider
-            label="Hue softness"
+            label="色相柔和度"
             value={selected.key.hue.softness}
             min={SECONDARY_CAPABILITIES.hue.softness.min}
             max={Math.min(
@@ -343,7 +343,7 @@ export function PropertyPanelColorSecondary({
             return [
               <FlatSlider
                 key={`${key}-min`}
-                label={`${label} min`}
+                label={`${label}最小值`}
                 value={range.min * PERCENT_SCALE}
                 min={capability.min.min * PERCENT_SCALE}
                 max={capability.min.max * PERCENT_SCALE}
@@ -367,7 +367,7 @@ export function PropertyPanelColorSecondary({
               />,
               <FlatSlider
                 key={`${key}-max`}
-                label={`${label} max`}
+                label={`${label}最大值`}
                 value={range.max * PERCENT_SCALE}
                 min={capability.max.min * PERCENT_SCALE}
                 max={capability.max.max * PERCENT_SCALE}
@@ -391,7 +391,7 @@ export function PropertyPanelColorSecondary({
               />,
               <FlatSlider
                 key={`${key}-softness`}
-                label={`${label} softness`}
+                label={`${label}柔和度`}
                 value={range.softness * PERCENT_SCALE}
                 min={capability.softness.min * PERCENT_SCALE}
                 max={capability.softness.max * PERCENT_SCALE}
@@ -411,7 +411,7 @@ export function PropertyPanelColorSecondary({
           })}
 
           <div className="pt-1 text-[9px] font-semibold uppercase tracking-[0.12em] text-panel-text-5">
-            Correction
+            校正
           </div>
           {CORRECTION_CONTROLS.map(([key, label, scale, suffix]) => {
             const limit = SECONDARY_CAPABILITIES.correction[key];

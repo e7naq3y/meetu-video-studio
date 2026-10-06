@@ -33,8 +33,8 @@ export function LaneToggleButton({
       tabIndex={-1}
       aria-expanded={isExpanded}
       aria-controls={lanesId}
-      aria-label={`${isExpanded ? "Hide" : "Show"} ${name} lanes`}
-      title={`${isExpanded ? "Hide" : "Show"} lanes`}
+      aria-label={`${isExpanded ? "隐藏" : "显示"} ${name} 轨道行`}
+      title={`${isExpanded ? "隐藏" : "显示"}轨道行`}
       // h-6 w-6 = the 24x24 WCAG 2.2 minimum target. The glyph stays 11px;
       // only the hit box grows.
       className={`ml-auto flex h-6 w-6 shrink-0 items-center justify-center rounded border-0 bg-transparent p-0 text-[11px] leading-none focus-visible:outline-solid focus-visible:outline-1 focus-visible:outline-[var(--timeline-accent)] ${

@@ -100,30 +100,30 @@ const SCREEN_SHAPES = enumOptions("monoScreenShape", [
 
 export const EFFECT_GROUPS: readonly EffectGroup[] = [
   {
-    label: "Essentials",
+    label: "基础",
     effects: [
       {
         key: "blur",
-        label: "Blur",
+        label: "模糊",
         masterLabel: "Radius",
         masterFormat: (value) => `${(0.75 + Math.pow(value, 1.35) * 32).toFixed(1)}px`,
       },
       {
         key: "pixelate",
-        label: "Pixelate",
+        label: "像素化",
         masterLabel: "Cell Size",
         masterFormat: (value) => `${Math.round(1 + value * 47)}px`,
       },
       {
         key: "bloom",
-        label: "Bloom",
+        label: "泛光",
         masterLabel: "Intensity",
         max: controlRange("bloom", 100).max,
         settings: [
           {
             kind: "slider",
             key: "bloomRadius",
-            label: "Radius",
+            label: "圆角",
             ...controlRange("bloomRadius", 1),
             unit: "px",
           },
@@ -132,13 +132,13 @@ export const EFFECT_GROUPS: readonly EffectGroup[] = [
     ],
   },
   {
-    label: "Retro & Glitch",
+    label: "复古与故障",
     presets: ["creator-camcorder", "vhs-playback", "home-movie-8mm"],
     effects: [
-      { key: "chromaBleed", label: "Chroma Softening", masterLabel: "Smear" },
+      { key: "chromaBleed", label: "色度柔化", masterLabel: "Smear" },
       {
         key: "tapeDamage",
-        label: "Tape Damage",
+        label: "磁带损伤",
         showMaster: false,
         settings: [
           percent("tapeTracking", "Tracking"),
@@ -146,10 +146,10 @@ export const EFFECT_GROUPS: readonly EffectGroup[] = [
           percent("tapeSpeed", "Speed"),
         ],
       },
-      { key: "filmArtifacts", label: "Film Artifacts", masterLabel: "Density" },
+      { key: "filmArtifacts", label: "胶片瑕疵", masterLabel: "Density" },
       {
         key: "scanlines",
-        label: "Scanlines",
+        label: "扫描线",
         masterLabel: "Opacity",
         settings: [
           {
@@ -159,16 +159,16 @@ export const EFFECT_GROUPS: readonly EffectGroup[] = [
           percent("scanlineSoftness", "Softness"),
         ],
       },
-      { key: "crtCurvature", label: "CRT Curvature", masterLabel: "Curvature" },
+      { key: "crtCurvature", label: "CRT 曲面", masterLabel: "Curvature" },
       {
         key: "chromaticAberration",
-        label: "Channel Separation",
+        label: "通道分离",
         masterLabel: "Separation",
         settings: [degrees("chromaticAngle", "Angle", 360)],
       },
       {
         key: "digitalGlitch",
-        label: "Digital Glitch",
+        label: "数字故障",
         showMaster: false,
         settings: [
           percent("digitalGlitchColorSplit", "Color Split"),
@@ -183,24 +183,24 @@ export const EFFECT_GROUPS: readonly EffectGroup[] = [
     ],
   },
   {
-    label: "Print",
+    label: "印刷",
     presets: ["editorial-halftone", "two-ink-print"],
     effects: [
       {
         key: "halftone",
-        label: "Halftone",
+        label: "半色调",
         showMaster: false,
         settings: [percent("halftoneSize", "Dot Size")],
       },
       {
         key: "twoInkPrint",
-        label: "Two-Ink Print",
+        label: "双色印刷",
         showMaster: false,
         settings: [percent("twoInkPrintSize", "Dot Size")],
       },
       {
         key: "dither",
-        label: "Ordered Dither",
+        label: "有序抖动",
         showMaster: false,
         palette: "mono",
         settings: [
@@ -212,7 +212,7 @@ export const EFFECT_GROUPS: readonly EffectGroup[] = [
       },
       {
         key: "monoScreen",
-        label: "Mono Screen",
+        label: "单色屏幕",
         showMaster: false,
         palette: "mono",
         settings: [
@@ -222,14 +222,14 @@ export const EFFECT_GROUPS: readonly EffectGroup[] = [
           },
           degrees("monoScreenAngle", "Angle", 90),
           percent("monoScreenSpread", "Spread"),
-          { kind: "select", key: "monoScreenShape", label: "Shape", options: SCREEN_SHAPES },
-          { kind: "toggle", key: "monoScreenInvert", label: "Invert" },
+          { kind: "select", key: "monoScreenShape", label: "形状", options: SCREEN_SHAPES },
+          { kind: "toggle", key: "monoScreenInvert", label: "反相" },
         ],
       },
     ],
   },
   {
-    label: "Art",
+    label: "艺术",
     effects: [
       {
         key: "ascii",
@@ -241,15 +241,15 @@ export const EFFECT_GROUPS: readonly EffectGroup[] = [
             ...percent("asciiSize", "Character Size"),
             format: (value) => `${Math.round(4 + value * 76)}px`,
           },
-          { kind: "select", key: "asciiStyle", label: "Style", options: ASCII_STYLES },
-          { kind: "toggle", key: "asciiInvert", label: "Invert" },
-          { kind: "toggle", key: "asciiColor", label: "Use Source Color" },
+          { kind: "select", key: "asciiStyle", label: "样式", options: ASCII_STYLES },
+          { kind: "toggle", key: "asciiInvert", label: "反相" },
+          { kind: "toggle", key: "asciiColor", label: "使用原色" },
           percent("asciiRotation", "Edge Rotation"),
         ],
       },
       {
         key: "engraving",
-        label: "Engraving",
+        label: "雕版",
         showMaster: false,
         palette: "art",
         settings: [
@@ -265,7 +265,7 @@ export const EFFECT_GROUPS: readonly EffectGroup[] = [
       },
       {
         key: "crosshatch",
-        label: "Crosshatch",
+        label: "交叉排线",
         showMaster: false,
         palette: "art",
         settings: [
@@ -281,7 +281,7 @@ export const EFFECT_GROUPS: readonly EffectGroup[] = [
       },
       {
         key: "kuwahara",
-        label: "Kuwahara Paint",
+        label: "油画（Kuwahara）",
         showMaster: false,
         settings: [
           {

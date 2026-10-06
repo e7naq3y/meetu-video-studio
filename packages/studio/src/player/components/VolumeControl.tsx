@@ -49,7 +49,7 @@ export const VolumeControl = memo(function VolumeControl({
 }: VolumeControlProps) {
   const percentage = Math.round(audioVolume * 100);
   const silent = audioMuted || audioVolume === 0;
-  const muteLabel = silent ? "Unmute audio" : "Mute audio";
+  const muteLabel = silent ? "取消静音" : "静音";
 
   return (
     <div className="group flex shrink-0 items-center">
@@ -68,9 +68,9 @@ export const VolumeControl = memo(function VolumeControl({
             step="1"
             value={percentage}
             disabled={disabled}
-            aria-label="Preview volume"
+            aria-label="预览音量"
             aria-valuetext={`${percentage}%`}
-            title={`Preview volume: ${percentage}%`}
+            title={`预览音量：${percentage}%`}
             onChange={(event) => {
               const volume = Number(event.currentTarget.value) / 100;
               setAudioVolume(volume);

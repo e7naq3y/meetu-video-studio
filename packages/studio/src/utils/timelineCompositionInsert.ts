@@ -70,7 +70,7 @@ export async function commitTimelineCompositionInsertion(input: {
     input.observeVersion?.(input.targetPath, result.version);
     try {
       await input.recordEdit({
-        label: "Add composition to timeline",
+        label: "将合成添加到时间线",
         files: { [input.targetPath]: { before: result.before, after: result.after } },
       });
     } catch (error) {

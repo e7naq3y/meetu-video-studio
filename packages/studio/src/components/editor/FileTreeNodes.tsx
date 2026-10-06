@@ -118,7 +118,7 @@ export function ContextMenu({
             }}
           >
             <FilePlus size={12} weight="duotone" className="text-neutral-500" />
-            New File
+            新建文件
           </button>
           <button
             role="menuitem"
@@ -129,7 +129,7 @@ export function ContextMenu({
             }}
           >
             <FolderSimplePlus size={12} weight="duotone" className="text-neutral-500" />
-            New Folder
+            新建文件夹
           </button>
           <div className={menuClasses.divider} />
         </>
@@ -145,7 +145,7 @@ export function ContextMenu({
             }}
           >
             <FilePlus size={12} weight="duotone" className="text-neutral-500" />
-            New File
+            新建文件
           </button>
           <div className={menuClasses.divider} />
         </>
@@ -159,7 +159,7 @@ export function ContextMenu({
         }}
       >
         <PencilSimple size={12} weight="duotone" className="text-neutral-500" />
-        Rename
+        重命名
       </button>
       {!state.targetIsFolder && (
         <button
@@ -171,7 +171,7 @@ export function ContextMenu({
           }}
         >
           <Copy size={12} weight="duotone" className="text-neutral-500" />
-          Duplicate
+          复制一份
         </button>
       )}
       <div className={menuClasses.divider} />
@@ -184,7 +184,7 @@ export function ContextMenu({
         }}
       >
         <Trash size={12} weight="duotone" />
-        Delete
+        删除
       </button>
     </div>
   );
@@ -336,12 +336,11 @@ export function DeleteConfirm({
       <p className="text-neutral-300 mb-2">
         {isFolder ? (
           <>
-            Delete folder <span className="font-medium text-neutral-100">{name}</span> and
-            everything inside it?
+            删除文件夹 <span className="font-medium text-neutral-100">{name}</span> 及其中的所有内容？
           </>
         ) : (
           <>
-            Delete <span className="font-medium text-neutral-100">{name}</span>?
+            删除 <span className="font-medium text-neutral-100">{name}</span>?
           </>
         )}
       </p>
@@ -350,13 +349,13 @@ export function DeleteConfirm({
           onClick={onCancel}
           className="flex-1 px-2 py-1 rounded-sm bg-hover text-neutral-300 hover:bg-press transition-colors"
         >
-          Cancel
+          取消
         </button>
         <button
           onClick={onConfirm}
           className="flex-1 px-2 py-1 rounded-sm bg-danger/15 text-danger-ink hover:bg-danger/25 transition-colors"
         >
-          Delete
+          删除
         </button>
       </div>
     </div>

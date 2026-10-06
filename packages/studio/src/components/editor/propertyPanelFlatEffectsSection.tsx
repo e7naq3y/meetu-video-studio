@@ -42,7 +42,7 @@ export function FlatEffectsAccessory({
     <button
       type="button"
       data-flat-effects-reset="true"
-      title="Reset effects"
+      title="重置特效"
       onClick={(event) => {
         event.stopPropagation();
         track("button", "Reset effects");
@@ -155,7 +155,7 @@ export function FlatEffectsSection({
               <button
                 key={preset.id}
                 type="button"
-                title={`${preset.group}: ${preset.label}`}
+                title={`${preset.group}：${preset.label}`}
                 data-flat-effects-palette-preset={preset.id}
                 aria-pressed={selected}
                 onClick={() => {
@@ -188,15 +188,15 @@ export function FlatEffectsSection({
             }}
             className="flex min-h-[28px] items-center gap-1 text-[10px] font-medium text-accent-ink hover:text-accent-ink/80"
           >
-            <Plus size={11} /> Custom palette
+            <Plus size={11} /> 自定义调色板
           </button>
         ) : (
           <>
             <div className="flex items-center justify-between">
-              <span className="text-[11px] text-panel-text-3">Custom palette</span>
+              <span className="text-[11px] text-panel-text-3">自定义调色板</span>
               <button
                 type="button"
-                title="Use default palette"
+                title="使用默认调色板"
                 onClick={() => onCommitColorGrading({ ...grading, palette: null })}
                 className="text-panel-text-4 hover:text-panel-text-1"
               >
@@ -208,7 +208,7 @@ export function FlatEffectsSection({
                 <span key={`${index}-${color}`} className="group/swatch relative">
                   <input
                     type="color"
-                    aria-label={`Palette color ${index + 1}`}
+                    aria-label={`调色板颜色 ${index + 1}`}
                     value={color}
                     onChange={(event) => {
                       const nextPalette = [...palette];
@@ -220,7 +220,7 @@ export function FlatEffectsSection({
                   {palette.length > 2 && (
                     <button
                       type="button"
-                      aria-label={`Remove palette color ${index + 1}`}
+                      aria-label={`移除调色板颜色 ${index + 1}`}
                       onClick={() =>
                         onCommitColorGrading({
                           ...grading,
@@ -237,7 +237,7 @@ export function FlatEffectsSection({
               {palette.length < 6 && (
                 <button
                   type="button"
-                  aria-label="Add palette color"
+                  aria-label="添加调色板颜色"
                   onClick={() =>
                     onCommitColorGrading({
                       ...grading,
@@ -277,7 +277,7 @@ export function FlatEffectsSection({
               >
                 <span>{effect.label}</span>
                 <span className="text-[9px] text-panel-text-5">
-                  {selected ? "Editing" : "Active"}
+                  {selected ? "编辑" : "已启用"}
                 </span>
               </button>
             );
@@ -297,7 +297,7 @@ export function FlatEffectsSection({
             <span className="flex items-center gap-2">
               <button
                 type="button"
-                title={`Reset ${selectedEffect.label}`}
+                title={`重置${selectedEffect.label}`}
                 onClick={() => applyEffect(selectedEffect)}
                 className="text-panel-text-4 hover:text-panel-text-1"
               >
@@ -305,7 +305,7 @@ export function FlatEffectsSection({
               </button>
               <button
                 type="button"
-                title={`Remove ${selectedEffect.label}`}
+                title={`移除${selectedEffect.label}`}
                 onClick={() => removeEffect(selectedEffect)}
                 className="text-panel-text-4 hover:text-danger-ink"
               >
@@ -315,7 +315,7 @@ export function FlatEffectsSection({
           </div>
           {selectedEffect.showMaster !== false && (
             <FlatSlider
-              label={selectedEffect.masterLabel ?? "Mix"}
+              label={selectedEffect.masterLabel ?? "混合比例"}
               value={grading.effects[selectedEffect.key] * 100}
               min={0}
               max={selectedEffect.max ?? 100}
@@ -354,14 +354,14 @@ export function FlatEffectsSection({
         onClick={() => setCatalogOpen((open) => !open)}
         className="flex min-h-[30px] items-center gap-1 text-[10px] font-medium text-accent-ink hover:text-accent-ink/80"
       >
-        <Plus size={11} /> Add effect
+        <Plus size={11} /> 添加特效
       </button>
 
       {catalogOpen && (
         <div data-flat-effects-catalog="true" className="space-y-2">
           <div
             role="tablist"
-            aria-label="Effect families"
+            aria-label="特效分类"
             className="grid grid-cols-4 gap-px overflow-hidden border border-panel-hairline bg-panel-hairline"
           >
             {EFFECT_GROUPS.map((group) => (
@@ -446,7 +446,7 @@ export function FlatEffectsSection({
                       type="button"
                       data-flat-effect-option={effect.key}
                       aria-pressed={active}
-                      title={`Preview ${effect.label}`}
+                      title={`预览${effect.label}`}
                       onPointerEnter={() =>
                         onPreviewColorGrading(resolveEffect(effect), {
                           animatedPreview: { kind: "effects", id: effect.key },

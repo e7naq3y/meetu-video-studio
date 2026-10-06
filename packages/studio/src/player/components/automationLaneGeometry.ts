@@ -74,7 +74,7 @@ export interface AutomationTargetOption {
  */
 export function automationTargets(chain: HfAudioFxChain | null): AutomationTargetOption[] {
   const out: AutomationTargetOption[] = [
-    { target: VOLUME_TARGET, label: "Volume", range: VOLUME_RANGE },
+    { target: VOLUME_TARGET, label: "音量", range: VOLUME_RANGE },
   ];
   for (const node of chain?.nodes ?? []) {
     out.push(...nodeTargets(node, chain));

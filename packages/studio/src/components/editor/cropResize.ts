@@ -108,7 +108,7 @@ export async function saveCropResize(
   if (!crop) return;
   try {
     return await commit(selection, [crop.patch], {
-      label: "Resize layer",
+      label: "调整图层尺寸",
       coalesceKey,
       coalesceMs: Number.POSITIVE_INFINITY,
     });

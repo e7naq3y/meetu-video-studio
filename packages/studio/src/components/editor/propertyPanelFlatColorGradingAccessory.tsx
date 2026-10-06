@@ -37,7 +37,7 @@ export function FlatColorGradingAccessory({
       <button
         type="button"
         aria-pressed={compareEnabled}
-        aria-label="Hold to show original"
+        aria-label="按住显示原图"
         disabled={!gradingActive}
         onPointerDown={(e) => {
           if (!gradingActive) return;
@@ -73,7 +73,7 @@ export function FlatColorGradingAccessory({
           e.preventDefault();
           commitCompare(false);
         }}
-        title="Hold to show original"
+        title="按住显示原图"
         className="shrink-0 text-panel-text-3 hover:text-panel-text-1 disabled:cursor-not-allowed disabled:opacity-40"
       >
         <Compare size={12} />
@@ -94,7 +94,7 @@ export function FlatColorGradingAccessory({
       <button
         type="button"
         data-flat-grade-reset="true"
-        title="Reset color grading"
+        title="重置调色"
         onClick={(e) => {
           e.stopPropagation();
           track("button", "Reset color grading");

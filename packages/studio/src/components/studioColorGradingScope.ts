@@ -72,7 +72,7 @@ export async function applyColorGradingScopeUpdate({
   const paths = colorGradingScopePaths(scope, selectedSourceFile, compositionPaths);
   const changedPaths = await saveProjectFilesWithHistory({
     projectId,
-    label: value ? "Apply color grading" : "Clear color grading",
+    label: value ? "应用调色" : "清除调色",
     files: Object.fromEntries(paths.map((path) => [path, patchGrading])),
     readFile: readProjectFile,
     writeFile: writeProjectFile,

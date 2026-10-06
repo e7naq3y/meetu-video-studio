@@ -24,14 +24,14 @@ export const SpeedMenu = memo(function SpeedMenu({
 
   return (
     <div ref={speedMenuContainerRef} className="relative shrink-0">
-      <Tooltip label="Playback speed">
+      <Tooltip label="播放速度">
         <button
           type="button"
           onClick={() => setShowSpeedMenu((v) => !v)}
           disabled={disabled}
           aria-haspopup="menu"
           aria-expanded={showSpeedMenu}
-          aria-label="Playback speed"
+          aria-label="播放速度"
           className="h-7 w-8 rounded-md font-mono text-[10px] tabular-nums text-neutral-500 transition-colors hover:text-neutral-200 disabled:opacity-30"
         >
           {playbackRate === 1 ? "1x" : `${playbackRate}x`}
@@ -40,7 +40,7 @@ export const SpeedMenu = memo(function SpeedMenu({
       {showSpeedMenu && (
         <div
           role="menu"
-          aria-label="Playback speed options"
+          aria-label="播放速度选项"
           className="absolute bottom-full right-0 mb-1.5 rounded-lg shadow-xl z-50 min-w-[56px] overflow-hidden"
           style={{ background: "#161618", border: "1px solid rgba(255,255,255,0.08)" }}
         >

@@ -105,7 +105,7 @@ export async function commitDomStyles(
     },
     persist: () =>
       persistDomEditOperations(selection, operations, {
-        label: "Edit layer style",
+        label: "编辑图层样式",
         // Inline styles are already live, so a reload would only blank the preview.
         skipRefresh: true,
         importedFont: importedFont ?? undefined,

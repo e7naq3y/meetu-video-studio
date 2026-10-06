@@ -208,7 +208,7 @@ export async function toggleTimelineTrackHidden({
   );
   const trackElements = timelineElements.filter((element) => element.track === track);
   const hiddenBefore = !hidden;
-  const label = `${hiddenToggleVerb(isAudioOnlyTrack(trackElements), hiddenBefore)} track${suffix}`;
+  const label = `${hiddenToggleVerb(isAudioOnlyTrack(trackElements), hiddenBefore)}轨道${suffix}`;
   return setElementsHidden({
     projectId,
     activeCompPath,
@@ -242,7 +242,7 @@ export async function toggleTimelineElementHidden({
     activeCompPath,
     elements,
     hidden,
-    label: elements.length > 1 ? `${verb} ${elements.length} elements` : `${verb} element`,
+    label: elements.length > 1 ? `${verb} ${elements.length} 个元素` : `${verb}元素`,
     previewIframe,
     writeProjectFile,
     recordEdit,

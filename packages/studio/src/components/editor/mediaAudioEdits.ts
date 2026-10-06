@@ -249,12 +249,12 @@ export async function commitMutedToggle(ctx: MediaEditContext, nextMuted: boolea
       ? await resolveAssetHasAudio(ctx.projectId, ctx.projectSrc)
       : null;
   await ctx.commit(ctx.element, mutedToggleOps({ isVideo, nextMuted, probedHasAudio }), {
-    label: "Edit muted",
+    label: "修改静音",
   });
 }
 
 export async function commitHasAudioToggle(ctx: MediaEditContext, next: boolean): Promise<void> {
-  await ctx.commit(ctx.element, hasAudioToggleOps(next), { label: "Edit has audio" });
+  await ctx.commit(ctx.element, hasAudioToggleOps(next), { label: "修改是否含音频" });
 }
 
 export async function commitCutout(

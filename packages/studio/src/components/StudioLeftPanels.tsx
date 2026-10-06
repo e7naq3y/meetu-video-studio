@@ -175,7 +175,7 @@ function CodeBody({
   if (!editingFile) {
     return (
       <div className="flex items-center justify-center h-full text-neutral-600 text-sm">
-        Select a file to edit
+        选择要编辑的文件
       </div>
     );
   }
@@ -187,7 +187,7 @@ function CodeBody({
   if (editingFile.content == null) {
     return (
       <div className="flex h-full items-center justify-center text-[11px] text-neutral-600">
-        Loading {editingFile.path}…
+        加载中 {editingFile.path}…
       </div>
     );
   }

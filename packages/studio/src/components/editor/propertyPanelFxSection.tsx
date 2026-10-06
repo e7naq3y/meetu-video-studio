@@ -572,7 +572,7 @@ export function FxSection({
             setAdding(false);
           }}
         >
-          {picking ? "Close" : "Presets"}
+          {picking ? "关闭" : "预设"}
         </button>
         <button
           type="button"
@@ -588,7 +588,7 @@ export function FxSection({
             setPicking(false);
           }}
         >
-          {adding ? "Close" : "+ effect"}
+          {adding ? "关闭" : "+ 效果"}
         </button>
       </div>
     </div>

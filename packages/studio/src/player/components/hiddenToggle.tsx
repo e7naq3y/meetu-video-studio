@@ -2,8 +2,8 @@ import { Eye, EyeSlash, SpeakerHigh, SpeakerSlash } from "@phosphor-icons/react"
 
 /** The action a hide toggle offers from the current `hidden` state; on audio `data-hidden` is a mute. */
 export function hiddenToggleVerb(asMute: boolean, hidden: boolean): string {
-  if (asMute) return hidden ? "Unmute" : "Mute";
-  return hidden ? "Show" : "Hide";
+  if (asMute) return hidden ? "取消静音" : "静音";
+  return hidden ? "显示" : "隐藏";
 }
 
 export function HiddenToggleIcon({

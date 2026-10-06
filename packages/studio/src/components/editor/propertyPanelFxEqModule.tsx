@@ -155,13 +155,13 @@ export function FxEqModule({
           aria-expanded={open}
           onClick={onToggleOpen}
         >
-          Tone
+          音色
         </button>
-        <span className="font-mono text-[9px] text-panel-text-2">{bands.length}-band</span>
+        <span className="font-mono text-[9px] text-panel-text-2">{bands.length} 段</span>
         <button
           type="button"
           className="hf-fx-remove px-1 text-[11px] text-panel-text-2 hover:text-danger-ink"
-          aria-label="Remove Tone"
+          aria-label="移除音色"
           disabled={disabled}
           onClick={onRemove}
         >
@@ -183,8 +183,8 @@ export function FxEqModule({
             ))}
           </div>
           <div className="mt-1.5 flex justify-between font-mono text-[8px] tracking-wide text-panel-text-2">
-            <span>CUT</span>
-            <span>BOOST</span>
+            <span>衰减</span>
+            <span>增强</span>
           </div>
         </div>
       ) : (

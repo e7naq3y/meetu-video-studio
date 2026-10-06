@@ -20,10 +20,10 @@ type DialogMode = AudioGainMode | "loudness";
 const PEAK_MODES: ReadonlySet<DialogMode> = new Set(["normalize-max", "normalize-all"]);
 
 const ROWS: ReadonlyArray<{ mode: AudioGainMode; label: string }> = [
-  { mode: "set", label: "Set Gain to" },
-  { mode: "adjust", label: "Adjust Gain by" },
-  { mode: "normalize-max", label: "Normalize Max Peak to" },
-  { mode: "normalize-all", label: "Normalize All Peaks to" },
+  { mode: "set", label: "将增益设为" },
+  { mode: "adjust", label: "增益调整量" },
+  { mode: "normalize-max", label: "将最大峰值标准化为" },
+  { mode: "normalize-all", label: "将所有峰值标准化为" },
 ];
 
 const keyOf = (el: TimelineElement) => el.key ?? el.id;
@@ -180,21 +180,21 @@ export function AudioGainDialog({
           </Row>
         ))}
         <Row
-          label="Normalize loudness to −16 LUFS"
+          label="将响度标准化为 −16 LUFS"
           checked={mode === "loudness"}
           onSelect={() => setMode("loudness")}
         />
         <div className="mt-3 text-neutral-400" data-testid="audio-gain-peak">
-          Peak Amplitude: {peaks === null ? "measuring…" : peakDb === null ? "—" : dbText(peakDb)}
+          峰值振幅： {peaks === null ? "测量中…" : peakDb === null ? "—" : dbText(peakDb)}
         </div>
-        {outOfRange && <div className="mt-1 text-red-400">Peak targets must be 0 dB or lower.</div>}
+        {outOfRange && <div className="mt-1 text-red-400">峰值目标必须为 0 dB 或更低。</div>}
         <div className="mt-4 flex justify-end gap-2">
           <button
             type="button"
             className="rounded px-3 py-1 text-neutral-300 hover:bg-neutral-800"
             onClick={onClose}
           >
-            Cancel
+            取消
           </button>
           <button
             type="button"
@@ -203,7 +203,7 @@ export function AudioGainDialog({
             className="rounded bg-blue-500 px-3 py-1 text-white disabled:opacity-40"
             onClick={() => void apply()}
           >
-            OK
+            确定
           </button>
         </div>
       </div>

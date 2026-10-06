@@ -270,7 +270,7 @@ export function useGsapAwareEditing({
       };
       await runGestureTransaction({
         element: selection.element,
-        label: "Resize layer",
+        label: "调整图层尺寸",
         draw: writes.drawKeepingUndone,
         settle: () => {
           // Scale resize settles its center-scale residual after the scale commit
@@ -493,7 +493,7 @@ export function useGsapAwareEditing({
   const handleUnroll = useCallback(() => {
     void commitMutation(
       { type: "unroll-timeline" },
-      { label: "Unroll to literal tweens", softReload: true },
+      { label: "展开为普通补间", softReload: true },
     );
   }, [commitMutation]);
 

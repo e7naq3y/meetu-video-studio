@@ -82,7 +82,7 @@ export function EaseModeToggle({
     <div
       className="mb-2 grid grid-cols-3 rounded-md bg-press p-0.5"
       role="radiogroup"
-      aria-label="Ease editor mode"
+      aria-label="缓动编辑模式"
     >
       {EASE_MODES.map((candidateMode) => {
         const active = candidateMode === mode;

@@ -70,21 +70,21 @@ export function TimingSection({
   };
 
   return (
-    <Section title="Timing" icon={<Clock size={15} />}>
+    <Section title="时间" icon={<Clock size={15} />}>
       <div className={RESPONSIVE_GRID}>
-        <MetricField label="Start" value={formatTimingValue(start)} onCommit={commitStart} />
-        <MetricField label="End" value={formatTimingValue(end)} onCommit={commitEnd} />
+        <MetricField label="开始" value={formatTimingValue(start)} onCommit={commitStart} />
+        <MetricField label="结束" value={formatTimingValue(end)} onCommit={commitEnd} />
       </div>
       <div className="mt-3">
         <MetricField
-          label="Duration"
+          label="时长"
           value={formatTimingValue(duration)}
           onCommit={commitDuration}
         />
       </div>
       {derived && (
         <p className="mt-2 text-[10px] leading-snug text-neutral-500">
-          Inferred from this element’s animation — edit to pin an explicit clip range.
+          根据该元素的动画推算 — 修改后会固定为明确的片段范围。
         </p>
       )}
     </Section>

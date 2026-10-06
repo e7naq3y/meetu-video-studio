@@ -92,13 +92,13 @@ export function PreviewOverlays({
         {/* Mode indicator + explicit exit */}
         <div className="pointer-events-auto absolute top-2 left-1/2 -translate-x-1/2 z-60 flex items-center gap-2 rounded-full border border-studio-accent/40 bg-black/70 px-2.5 py-1">
           <span className="h-1.5 w-1.5 rounded-full bg-studio-accent" aria-hidden="true" />
-          <span className="text-2xs text-neutral-200">Editing captions</span>
+          <span className="text-2xs text-neutral-200">正在编辑字幕</span>
           <button
             type="button"
             onClick={exitCaptionMode}
             className="rounded-sm text-2xs text-neutral-400 underline underline-offset-2 hover:text-neutral-100 focus-visible:outline-solid focus-visible:outline-1 focus-visible:outline-studio-accent"
           >
-            Exit
+            退出
           </button>
         </div>
         {captionSyncError && (
@@ -112,12 +112,12 @@ export function PreviewOverlays({
               onClick={() => useCaptionStore.getState().retrySave?.()}
               className="rounded-sm text-2xs text-red-100 underline underline-offset-2 hover:text-white"
             >
-              Retry
+              重试
             </button>
             <button
               type="button"
               onClick={() => useCaptionStore.getState().setSyncError(null)}
-              aria-label="Dismiss"
+              aria-label="关闭"
               className="rounded-sm px-0.5 text-2xs text-red-300/70 hover:text-red-100"
             >
               ✕
@@ -154,7 +154,7 @@ export function PreviewOverlays({
           onClick={enterCaptionMode}
           className="pointer-events-auto absolute top-2 left-1/2 -translate-x-1/2 z-60 rounded-full border border-neutral-700 bg-black/60 px-2.5 py-1 text-2xs text-neutral-300 transition-colors hover:border-studio-accent/50 hover:text-accent-ink focus-visible:outline-solid focus-visible:outline-1 focus-visible:outline-studio-accent"
         >
-          Edit captions
+          编辑字幕
         </button>
       )}
     </>

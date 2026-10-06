@@ -19,7 +19,7 @@ function decorateSashes(root: HTMLElement) {
     sash.tabIndex = 0;
     sash.setAttribute("role", "separator");
     sash.setAttribute("aria-orientation", axis === "horizontal" ? "vertical" : "horizontal");
-    sash.setAttribute("aria-label", axis === "horizontal" ? "Resize columns" : "Resize rows");
+    sash.setAttribute("aria-label", axis === "horizontal" ? "调整列宽" : "调整行高");
   }
 }
 

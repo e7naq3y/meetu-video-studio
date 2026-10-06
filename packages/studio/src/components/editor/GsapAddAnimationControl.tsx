@@ -50,7 +50,7 @@ export function GsapAddAnimationControl({
             </button>
           ))}
           <button type="button" onClick={() => setOpen(false)} className={styles.cancel}>
-            Cancel
+            取消
           </button>
         </div>
       ) : (
@@ -58,9 +58,9 @@ export function GsapAddAnimationControl({
           type="button"
           onClick={() => setOpen(true)}
           className={styles.trigger}
-          title="Add a new animation effect to this element"
+          title="为此元素添加新的动画效果"
         >
-          + Add effect
+          + 添加效果
         </button>
       )}
     </div>

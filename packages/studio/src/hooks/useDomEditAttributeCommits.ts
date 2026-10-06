@@ -327,7 +327,7 @@ export function useDomEditAttributeCommits({
           value,
         })),
         {
-          label: "Edit timing",
+          label: "编辑时间",
           coalescePrefix: "attrs",
           skipRefresh: false,
           refreshAfter: true,
@@ -353,7 +353,7 @@ export function useDomEditAttributeCommits({
   const handleDomAttributeCommit = useCallback(
     async (attr: string, value: string) => {
       await commitDataAttribute(attr, value, {
-        label: `Edit ${attr.replace(/-/g, " ")}`,
+        label: `编辑 ${attr.replace(/-/g, " ")}`,
         coalescePrefix: "attr",
         skipRefresh: false,
         refreshAfter: true,
@@ -370,7 +370,7 @@ export function useDomEditAttributeCommits({
       live?: { previewOnly?: boolean },
     ) => {
       await commitDataAttribute(attr, value, {
-        label: `Edit ${attr.replace(/^(data-)?/, "").replace(/-/g, " ")}`,
+        label: `编辑 ${attr.replace(/^(data-)?/, "").replace(/-/g, " ")}`,
         coalescePrefix: "attr-live",
         skipRefresh: true,
         onSettled,
@@ -392,7 +392,7 @@ export function useDomEditAttributeCommits({
   const handleDomAttributeQuietCommit = useCallback(
     async (attr: string, value: string | null) => {
       await commitDataAttribute(attr, value, {
-        label: `Edit ${attr.replace(/^(data-)?/, "").replace(/-/g, " ")}`,
+        label: `编辑 ${attr.replace(/^(data-)?/, "").replace(/-/g, " ")}`,
         coalescePrefix: "attr-quiet",
         skipRefresh: true,
         refreshAfter: true,
@@ -436,7 +436,7 @@ export function useDomEditAttributeCommits({
         },
         persist: () =>
           persistDomEditOperations(domEditSelection, [op], {
-            label: `Edit ${attr}`,
+            label: `编辑 ${attr}`,
             coalesceKey: commitKey,
             skipRefresh: false,
           }),

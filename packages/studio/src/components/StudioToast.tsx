@@ -26,7 +26,7 @@ export function StudioToast({ message, tone, leaving, onDismiss }: StudioToastPr
             type="button"
             onClick={onDismiss}
             className="flex h-5 w-5 shrink-0 items-center justify-center rounded-md text-neutral-500 transition-colors hover:bg-hover hover:text-neutral-300"
-            aria-label="Dismiss"
+            aria-label="关闭"
           >
             <svg
               width="10"

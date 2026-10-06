@@ -53,7 +53,7 @@ const iconProps = {
 
 export function ThemeToggle() {
   const isDark = useShownStudioTheme() === "dark";
-  const label = `Switch to ${isDark ? "light" : "dark"} theme`;
+  const label = `切换到${isDark ? "浅色" : "深色"}主题`;
 
   function toggle(e: React.MouseEvent<HTMLButtonElement>) {
     const apply = () => setStudioTheme(isDark ? "light" : "dark");

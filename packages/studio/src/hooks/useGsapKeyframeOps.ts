@@ -136,7 +136,7 @@ export function useGsapKeyframeOps({
               sdkSession,
               sdkDeps,
               {
-                label: `Add keyframe at ${percentage}%`,
+                label: `在 ${percentage}% 处添加关键帧`,
                 coalesceKey: `gsap:${animationId}:kf:${percentage}`,
               },
             );
@@ -146,7 +146,7 @@ export function useGsapKeyframeOps({
             }
           }
           await commitMutation(selection, mutation, {
-            label: `Add keyframe at ${percentage}%`,
+            label: `在 ${percentage}% 处添加关键帧`,
             keyframeProperty: property,
             softReload: true,
           });
@@ -187,7 +187,7 @@ export function useGsapKeyframeOps({
         selection,
         { type: "add-keyframe", animationId, percentage, properties },
         {
-          label: `Add keyframe at ${percentage}%`,
+          label: `在 ${percentage}% 处添加关键帧`,
           softReload: true,
           ...commitOverrides,
         },
@@ -259,7 +259,7 @@ export function useGsapKeyframeOps({
       try {
         let changed = false;
         await commitMutation(selection, mutation, {
-          label: `Move keyframe to ${toPercentage}%`,
+          label: `将关键帧移到 ${toPercentage}%`,
           softReload: true,
           onResult: (result) => {
             changed = result.changed !== false;
@@ -295,7 +295,7 @@ export function useGsapKeyframeOps({
       try {
         let changed = false;
         await commitMutation(selection, mutation, {
-          label: "Retime keyframe (resize tween)",
+          label: "调整关键帧时间（改变补间长度）",
           softReload: true,
           onResult: (result) => {
             changed = result.changed !== false;
@@ -339,7 +339,7 @@ export function useGsapKeyframeOps({
         // `duration` only applies when the target is a static `set` (which has
         // none) — it spans the converted keyframes across the element's clip.
         { type: "convert-to-keyframes", animationId, resolvedFromValues, duration },
-        { label: "Convert to keyframes", ...commitOverrides },
+        { label: "转换为关键帧", ...commitOverrides },
       );
     },
     [commitMutation, activeCompPath, sdkSession, sdkDeps],
@@ -365,7 +365,7 @@ export function useGsapKeyframeOps({
           animationId,
           sdkSession,
           sdkDeps,
-          { label: "Remove all keyframes" },
+          { label: "移除所有关键帧" },
         );
         if (cutoverCommittedOrThrow(handled)) {
           clearCache();
@@ -379,7 +379,7 @@ export function useGsapKeyframeOps({
         selection,
         { type: "remove-all-keyframes", animationId },
         {
-          label: "Remove all keyframes",
+          label: "移除所有关键帧",
           keyframeAction: action,
           keyframeTelemetry: telemetry,
           softReload: true,

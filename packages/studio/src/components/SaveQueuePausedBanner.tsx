@@ -17,7 +17,7 @@ export function SaveQueuePausedBanner({ message, onRetry }: SaveQueuePausedBanne
         onClick={onRetry}
         className="rounded-sm border border-red-300/20 px-2 py-1 text-[11px] text-red-100 transition-colors hover:bg-red-400/10 active:scale-[0.98]"
       >
-        Retry saving
+        重试保存
       </button>
     </div>
   );

@@ -101,13 +101,13 @@ export function FxAddMenu({
     >
       <div className="hf-fx-add-group flex flex-wrap items-center gap-1">
         <span className="hf-fx-add-group-label w-full font-mono text-[9px] uppercase tracking-wide text-panel-text-2">
-          Tone
+          音色
         </span>
         {onLevel ? (
           <button
             type="button"
             className="hf-fx-add-composite rounded-[3px] bg-panel-surface px-1.5 py-0.5 text-[10px] text-panel-text-1 hover:text-panel-text-0"
-            title="Listen to this track and even out its loud and quiet parts."
+            title="分析这条轨道，让忽大忽小的声音变得均匀。"
             disabled={disabled || analysing}
             onClick={() => {
               if (levelled) {
@@ -136,8 +136,8 @@ export function FxAddMenu({
             }
             onFocus={levelled ? undefined : () => onAuditionLevel?.(true)}
           >
-            {levelled ? "Remove levelling" : "Even Out Levels"}
-            {auditioningLevel ? <span className="hf-fx-add-working"> measuring…</span> : null}
+            {levelled ? "移除音量均衡" : "均衡音量"}
+            {auditioningLevel ? <span className="hf-fx-add-working"> 测量中…</span> : null}
           </button>
         ) : null}
         <button
@@ -146,7 +146,7 @@ export function FxAddMenu({
           // an entry in the effect registry, and a count of the registry must
           // not include it.
           className="hf-fx-add-composite rounded-[3px] bg-panel-surface px-1.5 py-0.5 text-[10px] text-panel-text-1 hover:text-panel-text-0"
-          title="Bass, middle and treble on one set of faders."
+          title="用一组推子调节低音、中音和高音。"
           // No audition of its own: a Tone module arrives with every band at
           // 0 dB, so there is nothing to hear until a fader moves, and a hover
           // that changes nothing teaches that hovering does nothing. It still
@@ -157,7 +157,7 @@ export function FxAddMenu({
           }}
           onClick={onEq}
         >
-          Tone (EQ)
+          音色（均衡器）
         </button>
       </div>
       {GROUPED.map(({ group, defs, jobs }) => (
@@ -194,7 +194,7 @@ export function FxAddMenu({
               // "Remove Rumble" appears. The registry's own description stays
               // as the tooltip beside the plain one: the mechanism is taught
               // here rather than withheld.
-              title={EFFECT_COPY[d.id] ? `${EFFECT_COPY[d.id]?.does} (${d.label})` : d.description}
+              title={EFFECT_COPY[d.id] ? `${EFFECT_COPY[d.id]?.does}（${d.label}）` : d.description}
               onClick={() => onEffect(d.id)}
               // Cancels the levelling audition as well as starting its own.
               // The shelf's leave handler only fires on the way OUT of the

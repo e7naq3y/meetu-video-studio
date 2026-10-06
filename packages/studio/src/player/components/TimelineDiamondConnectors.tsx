@@ -195,8 +195,8 @@ function SegmentEaseControl({
         data-keyframe-ease-button=""
         data-timeline-focus-id={focusId}
         tabIndex={focusId === rovingTargetId ? 0 : -1}
-        aria-label={`Edit ${ease} easing after ${afterLabel}`}
-        title={`Edit ${ease} easing`}
+        aria-label={`编辑 ${afterLabel} 之后的${ease}缓动`}
+        title={`编辑${ease}缓动`}
         // A visible 24x24 badge would collide with the diamonds either side, so
         // the WCAG 2.2 (2.5.8) target is met with a centered transparent
         // ::before overlay; the box stays 16x16. Where the segment is too narrow

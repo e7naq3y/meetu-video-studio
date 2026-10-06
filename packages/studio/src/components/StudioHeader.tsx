@@ -64,7 +64,7 @@ export const StudioHeader = memo(function StudioHeader({
       {/* Right: toolbar buttons */}
       <div className="flex items-center gap-3">
         <div className="flex h-ctl items-center divide-x divide-border-strong overflow-hidden rounded-md border border-border-strong bg-bg-2">
-          <Tooltip label={capturing ? "Capturing frame…" : "Capture current frame"} side="bottom">
+          <Tooltip label={capturing ? "正在采集帧…" : "采集当前帧"} side="bottom">
             {/* A real download link, so it wears Button's recipe rather than being
               one: `download` on an <a> is what saves the frame, and no <button>
               can do that. `enabled:` never matches a link, so the ghost
@@ -92,7 +92,7 @@ export const StudioHeader = memo(function StudioHeader({
                   ? "text-text-4 cursor-default"
                   : "hover:bg-hover hover:text-text-0 active:scale-[0.98]",
               )}
-              aria-label={capturing ? "Capturing frame" : "Capture current frame"}
+              aria-label={capturing ? "正在采集帧" : "采集当前帧"}
             >
               {capturing ? (
                 <svg
@@ -118,13 +118,13 @@ export const StudioHeader = memo(function StudioHeader({
               ) : (
                 <Camera size={14} />
               )}
-              <span className="max-[1000px]:hidden">{capturing ? "Capturing…" : "Capture"}</span>
+              <span className="max-[1000px]:hidden">{capturing ? "采集中…" : "采集"}</span>
             </a>
           </Tooltip>
-          <Tooltip label="Inspector" side="bottom">
+          <Tooltip label="检查器" side="bottom">
             <Button
               variant="ghost"
-              aria-label="Inspector"
+              aria-label="检查器"
               aria-pressed={inspectorButtonActive}
               className={cn(
                 "h-full rounded-none",
@@ -145,7 +145,7 @@ export const StudioHeader = memo(function StudioHeader({
                 setRightCollapsed(true);
               }}
             >
-              Inspector
+              检查器
             </Button>
           </Tooltip>
         </div>
@@ -154,10 +154,10 @@ export const StudioHeader = memo(function StudioHeader({
         <Tooltip
           label={
             ffmpegMissing
-              ? "FFmpeg is not installed. Opens the Renders panel with the install command."
+              ? "未安装 FFmpeg。点击打开渲染记录面板查看安装命令。"
               : isRendering
-                ? "A render is already in progress"
-                : "Render and export this composition"
+                ? "已有渲染任务在进行中"
+                : "渲染并导出此合成"
           }
           side="bottom"
         >
@@ -178,7 +178,7 @@ export const StudioHeader = memo(function StudioHeader({
               onExport?.();
             }}
           >
-            {isRendering ? "Rendering…" : "Export"}
+            {isRendering ? "渲染中…" : "导出"}
           </Button>
         </Tooltip>
       </div>

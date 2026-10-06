@@ -185,7 +185,7 @@ export function useDomEditTextCommits({
         },
         persist: () =>
           persistDomEditOperations(selection, textCommit.operations, {
-            label: "Edit text",
+            label: "编辑文字",
             skipRefresh: true,
             shouldSave: isLatestTextCommit,
           }),
@@ -282,7 +282,7 @@ export function useDomEditTextCommits({
         },
         persist: async () => {
           const result = await persistDomEditOperations(selection, operations, {
-            label: "Edit text",
+            label: "编辑文字",
             skipRefresh: true,
             shouldSave: isLatestTextCommit,
           });
@@ -359,7 +359,7 @@ export function useDomEditTextCommits({
         },
         persist: async () => {
           await persistDomEditOperations(selection, textCommit.operations, {
-            label: "Edit text",
+            label: "编辑文字",
             skipRefresh: true,
             importedFont: importedFont ?? undefined,
           });

@@ -85,15 +85,15 @@ export function LintModal({
             <div>
               <h2 className="text-sm font-semibold text-neutral-200">
                 {hasIssues
-                  ? `${errors.length} error${errors.length !== 1 ? "s" : ""}, ${warnings.length} warning${warnings.length !== 1 ? "s" : ""}`
-                  : "All checks passed"}
+                  ? `${errors.length} 个错误${errors.length !== 1 ? "" : ""}，${warnings.length} 个警告${warnings.length !== 1 ? "" : ""}`
+                  : "全部检查通过"}
               </h2>
               <p className="text-xs text-neutral-500">{title}</p>
             </div>
           </div>
           <button
             onClick={onClose}
-            aria-label="Close"
+            aria-label="关闭"
             className="p-1.5 rounded-lg text-neutral-500 hover:text-neutral-200 hover:bg-neutral-800 transition-colors active:scale-[0.98]"
           >
             <XIcon size={16} />
@@ -114,17 +114,17 @@ export function LintModal({
               }`}
             >
               {copied
-                ? "Copied!"
+                ? "已复制！"
                 : copyFailed
-                  ? "Copy failed — check permissions"
-                  : "Copy to Agent"}
+                  ? "复制失败，请检查权限"
+                  : "复制给 AI 助手"}
             </button>
           </div>
         )}
         <div className="flex-1 overflow-y-auto px-5 py-3">
           {!hasIssues && (
             <div className="py-8 text-center text-neutral-500 text-sm">
-              No errors or warnings found. Your composition looks good!
+              没有发现错误或警告，合成一切正常！
             </div>
           )}
           {errors.map((f, i) => (

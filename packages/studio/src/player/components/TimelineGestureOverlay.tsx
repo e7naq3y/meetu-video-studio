@@ -100,7 +100,7 @@ export const TimelineGestureOverlay = memo(function TimelineGestureOverlay({
                 zIndex: 25,
               }}
             >
-              + New track<span className="sr-only">, before track {insertRow + 1}</span>
+              + 新建轨道<span className="sr-only">，位于轨道 {insertRow + 1}</span>
             </span>
           )}
           <TimelineClip

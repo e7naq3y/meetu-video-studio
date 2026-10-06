@@ -179,7 +179,7 @@ function Cube3dControl({
           keyframed={keyframed}
         />
         <p className="mt-1 text-center text-[9px] leading-snug text-neutral-600">
-          Drag to tilt · Shift-drag to roll · Scroll for depth
+          拖动倾斜 · Shift+拖动滚转 · 滚轮调景深
         </p>
       </div>
     </div>
@@ -325,7 +325,7 @@ export function PropertyPanel3dTransform({
         aria-expanded={!collapsed}
         className="mb-2 flex w-full items-center justify-between text-[10px] font-medium uppercase tracking-wider text-neutral-600 hover:text-neutral-400 active:scale-[0.99]"
       >
-        <span>3D Transform</span>
+        <span>3D 变换</span>
         <svg
           width="9"
           height="9"
@@ -371,7 +371,7 @@ export function PropertyPanel3dTransform({
             />
             <Transform3dField
               ctx={ctx}
-              label="Scale"
+              label="缩放"
               prop="scale"
               scrub
               format={(v) => String(v)}
@@ -380,7 +380,7 @@ export function PropertyPanel3dTransform({
             />
             <Transform3dField
               ctx={ctx}
-              label="RotX"
+              label="X 旋转"
               prop="rotationX"
               format={(v) => `${v}°`}
               parse={parseDeg}
@@ -388,7 +388,7 @@ export function PropertyPanel3dTransform({
             />
             <Transform3dField
               ctx={ctx}
-              label="RotY"
+              label="Y 旋转"
               prop="rotationY"
               format={(v) => `${v}°`}
               parse={parseDeg}
@@ -396,7 +396,7 @@ export function PropertyPanel3dTransform({
             />
             <Transform3dField
               ctx={ctx}
-              label="RotZ"
+              label="Z 旋转"
               prop="rotationZ"
               format={(v) => `${v}°`}
               parse={parseDeg}
@@ -404,7 +404,7 @@ export function PropertyPanel3dTransform({
             />
             <Transform3dField
               ctx={ctx}
-              label="Perspective"
+              label="透视"
               prop="transformPerspective"
               scrub
               format={formatPxMetricValue}

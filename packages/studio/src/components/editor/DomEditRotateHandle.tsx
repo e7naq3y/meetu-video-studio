@@ -34,8 +34,8 @@ export function DomEditRotateHandle({
         // Closed-hand grab cursor: this handle is grabbed and dragged to rotate.
         cursor: "grabbing",
       }}
-      title="Rotate"
-      aria-label="Rotate selection"
+      title="旋转"
+      aria-label="旋转选中内容"
       onPointerDown={onStartRotate}
     >
       <span className="pointer-events-none flex h-[18px] w-[18px] items-center justify-center rounded-full border border-studio-accent/70 bg-studio-surface text-accent-ink shadow-[0_0_3px_rgba(0,0,0,0.45)]">

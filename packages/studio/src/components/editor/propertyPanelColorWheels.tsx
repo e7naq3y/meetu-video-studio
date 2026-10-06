@@ -10,9 +10,9 @@ import { GradingNumberField } from "./propertyPanelGradingNumberField";
 import { useInspectorGestureDraft } from "./useInspectorGestureTransaction";
 
 const WHEELS: ReadonlyArray<{ key: HfColorGradingWheelKey; label: string }> = [
-  { key: "shadows", label: "Shadows" },
-  { key: "midtones", label: "Midtones" },
-  { key: "highlights", label: "Highlights" },
+  { key: "shadows", label: "阴影" },
+  { key: "midtones", label: "中间调" },
+  { key: "highlights", label: "高光" },
 ];
 type NormalizedTonalWheel = NormalizedHfColorGradingWheels[HfColorGradingWheelKey];
 
@@ -147,8 +147,8 @@ function TonalWheel({
         <span className="truncate text-[10px] font-medium text-panel-text-2">{label}</span>
         <button
           type="button"
-          aria-label={`Reset ${label}`}
-          title={`Reset ${label}`}
+          aria-label={`重置${label}`}
+          title={`重置${label}`}
           disabled={disabled}
           onClick={onReset}
           className="text-panel-text-4 hover:text-panel-text-1 disabled:opacity-40"
@@ -159,7 +159,7 @@ function TonalWheel({
       <div
         role="slider"
         tabIndex={disabled ? -1 : 0}
-        aria-label={`${label} color`}
+        aria-label={`${label}颜色`}
         aria-valuemin={WHEEL_CONTROLS.amount.min * PERCENT_SCALE}
         aria-valuemax={WHEEL_CONTROLS.amount.max * PERCENT_SCALE}
         aria-valuenow={Math.round(wheel.amount * PERCENT_SCALE)}
@@ -218,7 +218,7 @@ function TonalWheel({
       </div>
       <input
         type="range"
-        aria-label={`${label} level`}
+        aria-label={`${label}强度`}
         min={WHEEL_CONTROLS.level.min}
         max={WHEEL_CONTROLS.level.max}
         step={0.01}
@@ -242,7 +242,7 @@ function TonalWheel({
       />
       <div className="grid grid-cols-3 gap-1">
         <GradingNumberField
-          label="Hue"
+          label="色相"
           value={wheel.hue}
           min={WHEEL_CONTROLS.hue.min}
           max={HUE_MAX}
@@ -255,7 +255,7 @@ function TonalWheel({
           onCancel={onCancel}
         />
         <GradingNumberField
-          label="Amount"
+          label="数量"
           value={wheel.amount * PERCENT_SCALE}
           min={WHEEL_CONTROLS.amount.min * PERCENT_SCALE}
           max={WHEEL_CONTROLS.amount.max * PERCENT_SCALE}
@@ -268,7 +268,7 @@ function TonalWheel({
           onCancel={onCancel}
         />
         <GradingNumberField
-          label="Level"
+          label="强度"
           value={wheel.level * PERCENT_SCALE}
           min={WHEEL_CONTROLS.level.min * PERCENT_SCALE}
           max={WHEEL_CONTROLS.level.max * PERCENT_SCALE}

@@ -1,3 +1,4 @@
+import { groupDisplayName } from "./trackHeaderLaneValues";
 import { memo, useEffect, useRef, useState } from "react";
 import { BEAT_BAND_H } from "./BeatStrip";
 import { TimelineDiamondConnectors } from "./TimelineDiamondConnectors";
@@ -348,7 +349,7 @@ export const TimelineDiamondLane = memo(function TimelineDiamondLane({
             aria-current={atPlayhead ? "time" : undefined}
             data-keyframe-outside-clip={boundary ?? undefined}
             tabIndex={focusId === rovingTargetId ? 0 : -1}
-            aria-label={`${kf.propertyGroup ?? "Motion"} keyframe at ${keyframeTimeLabel(clipStart, clipDuration, kf.percentage)}${boundary ? ` (${boundary} clip)` : ""}`}
+            aria-label={`${groupDisplayName(kf.propertyGroup) ?? "动效"}关键帧，位于 ${keyframeTimeLabel(clipStart, clipDuration, kf.percentage)}${boundary ? `（片段${boundary === "before" ? "开始前" : "结束后"}）` : ""}`}
             aria-pressed={isKfSelected}
             style={{
               left: leftPx,
@@ -393,7 +394,7 @@ export const TimelineDiamondLane = memo(function TimelineDiamondLane({
               e.stopPropagation();
               onContextMenuKeyframe?.(e, target);
             }}
-            title={`${roundPct(kf.percentage)}%${boundary ? ` · ${boundary} clip` : ""}`}
+            title={`${roundPct(kf.percentage)}%${boundary ? ` · 片段${boundary === "before" ? "开始前" : "结束后"}` : ""}`}
           >
             <svg
               width={marker.visualSize}

@@ -217,8 +217,8 @@ export async function createAudioGroupAndAssignMembers({
     const changedPaths = await saveProjectFilesWithHistory({
       projectId,
       label: groupLabel
-        ? `Group ${elements.length} clips as ${groupLabel}`
-        : `Group ${elements.length} voice clips`,
+        ? `将 ${elements.length} 个片段编组为 ${groupLabel}`
+        : `将 ${elements.length} 个人声片段编组`,
       files,
       readFile: (path) => readFileContent(projectId, path),
       writeFile: writeProjectFile,

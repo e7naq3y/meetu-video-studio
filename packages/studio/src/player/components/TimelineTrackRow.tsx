@@ -94,7 +94,7 @@ export function TimelineTrackRow({
               aria-colindex={2}
               aria-owns={timelineLogicalRowCellId(lanesId, row.id, "content")}
             >
-              {keyframeCount} keyframes, {easeCount} ease controls
+              {keyframeCount} 个关键帧， {easeCount} 个缓动控制点
             </div>
           </div>
         );

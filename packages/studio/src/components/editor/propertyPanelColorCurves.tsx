@@ -126,8 +126,8 @@ export function ColorCurves({
         {selectedPoint ? (
           <>
             <GradingNumberField
-              label={tab.kind === "rgb" ? "Input" : "Hue"}
-              ariaLabel={`Curve point ${tab.kind === "rgb" ? "input" : "hue"}`}
+              label={tab.kind === "rgb" ? "输入" : "色相"}
+              ariaLabel={`曲线点${tab.kind === "rgb" ? "输入" : "色相"}`}
               value={formatPointValue(selectedPoint[0], tab, "input")}
               min={0}
               max={tab.kind === "rgb" ? 1 : 359.999}
@@ -141,8 +141,8 @@ export function ColorCurves({
               onCancel={transaction.cancel}
             />
             <GradingNumberField
-              label="Output"
-              ariaLabel="Curve point output"
+              label="输出"
+              ariaLabel="曲线点输出"
               value={formatPointValue(selectedPoint[1], tab, "output")}
               min={tab.min}
               max={tab.max}
@@ -161,18 +161,18 @@ export function ColorCurves({
               onClick={deleteSelected}
               className="pb-0.5 text-[9px] text-panel-text-4 hover:text-panel-text-1 disabled:opacity-30"
             >
-              Delete
+              删除
             </button>
           </>
         ) : (
           <span className="flex-1 text-[9px] text-panel-text-5">
-            Click the graph or press Enter to add a point
+            点击图表或按 Enter 添加控制点
           </span>
         )}
         <button
           type="button"
-          aria-label={`Reset ${tab.label} curve`}
-          title={`Reset ${tab.label} curve`}
+          aria-label={`重置${tab.label}曲线`}
+          title={`重置${tab.label}曲线`}
           disabled={disabled}
           onClick={resetActive}
           className="pb-0.5 text-panel-text-4 hover:text-panel-text-1 disabled:opacity-40"

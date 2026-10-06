@@ -133,13 +133,27 @@ export function valuesBefore(
   return values;
 }
 
+// Meet U 汉化：分组名原本由内部键首字母大写生成，这里改为查中文对照表
+const GROUP_ZH: Record<PropertyGroupName, string> = {
+  position: "位置",
+  scale: "缩放",
+  size: "尺寸",
+  rotation: "旋转",
+  visual: "可见性",
+  other: "其他",
+};
+
+export function groupDisplayName(group: string | undefined): string | undefined {
+  return group && group in GROUP_ZH ? GROUP_ZH[group as PropertyGroupName] : group;
+}
+
 export function groupLabel(group: PropertyGroupName, properties: LaneValues): string {
   if (group === "visual" && ("opacity" in properties || "autoAlpha" in properties)) {
-    return "Opacity";
+    return "不透明度";
   }
-  if (group !== "other") return `${group[0]?.toUpperCase() ?? ""}${group.slice(1)}`;
+  if (group !== "other") return GROUP_ZH[group];
   const property = Object.keys(properties)[0];
-  return property ? `${property[0]?.toUpperCase() ?? ""}${property.slice(1)}` : "Other";
+  return property ? `${property[0]?.toUpperCase() ?? ""}${property.slice(1)}` : "其他";
 }
 
 function defaultValueReadout(values: LaneValues): string {

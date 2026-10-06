@@ -237,7 +237,7 @@ export async function addBlockToProject(
     };
     await saveProjectFilesWithHistory({
       projectId,
-      label: `Add ${isBlock ? "block" : "component"}: ${block.title}`,
+      label: `添加${isBlock ? "模块" : "组件"}：${block.title}`,
       files: { [targetPath]: insertHost },
       readFile: readProjectFile,
       writeFile: writeProjectFile,

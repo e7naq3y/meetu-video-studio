@@ -250,7 +250,7 @@ function ClipLight({ clip }: { clip: RefObject<ClipLatch> }) {
       type="button"
       data-testid="meter-clip-light"
       data-lit="false"
-      title="Lights when the preview reaches −1 dBFS, the export ceiling. Click to reset."
+      title="预览电平达到 −1 dBFS（导出上限）时亮起。点击重置。"
       ref={(el) => {
         clip.current.light = el;
         paintClipLight(el, clip.current.lit);
@@ -261,7 +261,7 @@ function ClipLight({ clip }: { clip: RefObject<ClipLatch> }) {
       }}
       className="rounded-[2px] px-1 font-mono text-[9px] leading-[14px] font-bold tracking-wide"
     >
-      CLIP
+      过载
     </button>
   );
 }
@@ -356,7 +356,7 @@ function Fader({
       role="slider"
       tabIndex={0}
       aria-label={label}
-      title={`${title}: ${readout}`}
+      title={`${title}：${readout}`}
       aria-orientation="vertical"
       aria-valuemin={AUDIO_GAIN_FADER_MIN}
       aria-valuemax={maxPosition}
@@ -422,11 +422,11 @@ function MeterStrip({
       {clipLight}
       <div
         className="flex min-h-0 flex-1 items-stretch gap-1.5"
-        aria-label={`${strip.label} level`}
+        aria-label={`${strip.label} 电平`}
       >
         <Fader
-          label={`${strip.label} volume`}
-          title={strip.id === null ? "Preview monitor volume" : `${strip.label} volume`}
+          label={`${strip.label} 音量`}
+          title={strip.id === null ? "预览监听音量" : `${strip.label} 音量`}
           volume={strip.volume}
           maxPosition={strip.id === null ? audioGainToFaderPosition(1) : AUDIO_GAIN_FADER_MAX}
           onLive={(v) => onLive(strip.id, v)}

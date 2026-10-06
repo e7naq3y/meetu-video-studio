@@ -20,7 +20,7 @@ export function presetPreviewHandlers({
   onTrack: (label: string) => void;
 }) {
   return {
-    title: `Preview ${label}`,
+    title: `预览${label}`,
     onPointerEnter: () =>
       onPreview(resolve(), {
         animatedPreview: { kind: "presets" as const, id },

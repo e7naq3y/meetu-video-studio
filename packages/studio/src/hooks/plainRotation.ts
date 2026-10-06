@@ -35,7 +35,7 @@ export function savePlainRotation(
   patches.push(...drawn);
   const turn = drawn.at(-1)!;
   return commitPositionPatchToHtml(selection, patches, {
-    label: "Rotate layer",
+    label: "旋转图层",
     coalesceKey: `rotate:${++plainRotateCounter}`,
     coalesceMs: Number.POSITIVE_INFINITY,
   }).catch((error) => {

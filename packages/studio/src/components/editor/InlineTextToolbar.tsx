@@ -81,7 +81,7 @@ export function InlineTextToolbar({
     <div
       data-inline-text-toolbar="true"
       role="toolbar"
-      aria-label="Text formatting"
+      aria-label="文本格式"
       className="pointer-events-auto fixed z-200 flex items-center gap-1 rounded-lg border border-border bg-raised p-1 shadow-[0_8px_24px_rgba(0,0,0,0.55)]"
       style={{
         left: placement.left,
@@ -104,7 +104,7 @@ export function InlineTextToolbar({
     >
       <label
         className="group relative flex h-6 w-6 cursor-pointer items-center justify-center rounded-md hover:bg-hover"
-        title="Text colour"
+        title="文字颜色"
       >
         <span
           aria-hidden="true"
@@ -125,28 +125,28 @@ export function InlineTextToolbar({
             bold then opened the colour picker. The size is pinned instead. */}
         <input
           type="color"
-          aria-label="Text colour"
+          aria-label="文字颜色"
           className="absolute inset-0 h-full w-full min-w-0 cursor-pointer opacity-0"
           value={placement.pickerColour}
           onChange={(event) => apply({ color: event.target.value })}
         />
       </label>
       <ToolbarToggle
-        label="Bold"
+        label="粗体"
         glyph="B"
         bold
         on={isBold(styles["font-weight"])}
         onToggle={(on) => apply({ "font-weight": on ? "700" : null })}
       />
       <ToolbarToggle
-        label="Italic"
+        label="斜体"
         glyph="I"
         italic
         on={styles["font-style"] === "italic"}
         onToggle={(on) => apply({ "font-style": on ? "italic" : null })}
       />
       <ToolbarToggle
-        label="Underline"
+        label="下划线"
         glyph="U"
         underline
         on={styles["text-decoration-line"] === "underline"}

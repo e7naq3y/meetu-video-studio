@@ -146,7 +146,7 @@ export function TimelineLanes({
   return (
     <div
       role="treegrid"
-      aria-label="Timeline tracks"
+      aria-label="时间线轨道"
       aria-rowcount={logicalRows.length}
       aria-colcount={2}
       onFocus={keyboard.onFocus}

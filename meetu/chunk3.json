@@ -1,0 +1,1307 @@
+[
+ {
+  "id": 783,
+  "text": "Radius",
+  "ctx": "editor/propertyPanelFlatEffectSpecs.ts [prop:label]; editor/propertyPanelStyleSections.tsx [attr:title]"
+ },
+ {
+  "id": 784,
+  "text": "Retro & Glitch",
+  "ctx": "editor/propertyPanelFlatEffectSpecs.ts [prop:label]"
+ },
+ {
+  "id": 785,
+  "text": "Chroma Softening",
+  "ctx": "editor/propertyPanelFlatEffectSpecs.ts [prop:label]"
+ },
+ {
+  "id": 786,
+  "text": "Tape Damage",
+  "ctx": "editor/propertyPanelFlatEffectSpecs.ts [prop:label]"
+ },
+ {
+  "id": 787,
+  "text": "Film Artifacts",
+  "ctx": "editor/propertyPanelFlatEffectSpecs.ts [prop:label]"
+ },
+ {
+  "id": 788,
+  "text": "Scanlines",
+  "ctx": "editor/propertyPanelFlatEffectSpecs.ts [prop:label]"
+ },
+ {
+  "id": 789,
+  "text": "CRT Curvature",
+  "ctx": "editor/propertyPanelFlatEffectSpecs.ts [prop:label]"
+ },
+ {
+  "id": 790,
+  "text": "Channel Separation",
+  "ctx": "editor/propertyPanelFlatEffectSpecs.ts [prop:label]"
+ },
+ {
+  "id": 791,
+  "text": "Digital Glitch",
+  "ctx": "editor/propertyPanelFlatEffectSpecs.ts [prop:label]"
+ },
+ {
+  "id": 792,
+  "text": "Print",
+  "ctx": "editor/propertyPanelFlatEffectSpecs.ts [prop:label]"
+ },
+ {
+  "id": 793,
+  "text": "Halftone",
+  "ctx": "editor/propertyPanelFlatEffectSpecs.ts [prop:label]"
+ },
+ {
+  "id": 794,
+  "text": "Two-Ink Print",
+  "ctx": "editor/propertyPanelFlatEffectSpecs.ts [prop:label]"
+ },
+ {
+  "id": 795,
+  "text": "Ordered Dither",
+  "ctx": "editor/propertyPanelFlatEffectSpecs.ts [prop:label]"
+ },
+ {
+  "id": 796,
+  "text": "Mono Screen",
+  "ctx": "editor/propertyPanelFlatEffectSpecs.ts [prop:label]"
+ },
+ {
+  "id": 797,
+  "text": "Shape",
+  "ctx": "editor/propertyPanelFlatEffectSpecs.ts [prop:label]; editor/propertyPanelFill.tsx [attr:label]"
+ },
+ {
+  "id": 798,
+  "text": "Invert",
+  "ctx": "editor/propertyPanelFlatEffectSpecs.ts [prop:label]; editor/propertyPanelFlatEffectSpecs.ts [prop:label]"
+ },
+ {
+  "id": 799,
+  "text": "Art",
+  "ctx": "editor/propertyPanelFlatEffectSpecs.ts [prop:label]"
+ },
+ {
+  "id": 800,
+  "text": "ASCII",
+  "ctx": "editor/propertyPanelFlatEffectSpecs.ts [prop:label]"
+ },
+ {
+  "id": 801,
+  "text": "Style",
+  "ctx": "editor/propertyPanelFlatEffectSpecs.ts [prop:label]; editor/PropertyPanelFlat.tsx [prop:title]"
+ },
+ {
+  "id": 802,
+  "text": "Use Source Color",
+  "ctx": "editor/propertyPanelFlatEffectSpecs.ts [prop:label]"
+ },
+ {
+  "id": 803,
+  "text": "Engraving",
+  "ctx": "editor/propertyPanelFlatEffectSpecs.ts [prop:label]"
+ },
+ {
+  "id": 804,
+  "text": "Crosshatch",
+  "ctx": "editor/propertyPanelFlatEffectSpecs.ts [prop:label]"
+ },
+ {
+  "id": 805,
+  "text": "Kuwahara Paint",
+  "ctx": "editor/propertyPanelFlatEffectSpecs.ts [prop:label]"
+ },
+ {
+  "id": 806,
+  "text": "Preview ${label}",
+  "ctx": "editor/propertyPanelPresetPreview.ts [prop:title]"
+ },
+ {
+  "id": 807,
+  "text": "Waiting for runtime",
+  "ctx": "editor/useColorGradingController.ts [prop:message]; editor/useColorGradingController.ts [prop:message]"
+ },
+ {
+  "id": 808,
+  "text": "Save failed — reverted",
+  "ctx": "editor/useColorGradingController.ts [prop:message]"
+ },
+ {
+  "id": 809,
+  "text": "Updating shader",
+  "ctx": "editor/useColorGradingController.ts [prop:message]"
+ },
+ {
+  "id": 810,
+  "text": "${group.label} (${members.length})",
+  "ctx": "editor/useFxCarveGrouping.ts [prop:label]"
+ },
+ {
+  "id": 811,
+  "text": "Position",
+  "ctx": "editor/AnimationCard.tsx [jsxtext]; editor/propertyPanelFlatMediaSection.tsx [attr:label]"
+ },
+ {
+  "id": 812,
+  "text": "drag to move",
+  "ctx": "editor/AnimationCard.tsx [jsxtext]"
+ },
+ {
+  "id": 813,
+  "text": "When this effect plays",
+  "ctx": "editor/AnimationCard.tsx [attr:title]"
+ },
+ {
+  "id": 814,
+  "text": "${parseFloat(animation.position.toFixed(3))}s",
+  "ctx": "editor/AnimationCard.tsx [jsxexpr]"
+ },
+ {
+  "id": 815,
+  "text": "${parseFloat(endTime.toFixed(3))}s",
+  "ctx": "editor/AnimationCard.tsx [jsxexpr]"
+ },
+ {
+  "id": 816,
+  "text": "Mixed",
+  "ctx": "editor/AnimationCard.tsx [attr:title]; editor/propertyPanelColor.tsx [jsxtext]"
+ },
+ {
+  "id": 817,
+  "text": "Keyframed — click a segment below to edit its curve",
+  "ctx": "editor/AnimationCard.tsx [jsxtext]"
+ },
+ {
+  "id": 818,
+  "text": "Run ease:",
+  "ctx": "editor/AnimationCard.tsx [jsxtext]"
+ },
+ {
+  "id": 819,
+  "text": "Copy description to clipboard — paste into agent prompts",
+  "ctx": "editor/AnimationCard.tsx [attr:title]"
+ },
+ {
+  "id": 820,
+  "text": "Length",
+  "ctx": "editor/AnimationCard.tsx [attr:label]"
+ },
+ {
+  "id": 821,
+  "text": "How long this effect lasts",
+  "ctx": "editor/AnimationCard.tsx [attr:tooltip]"
+ },
+ {
+  "id": 822,
+  "text": "Starts at",
+  "ctx": "editor/AnimationCard.tsx [attr:label]"
+ },
+ {
+  "id": 823,
+  "text": "When this effect begins on the timeline",
+  "ctx": "editor/AnimationCard.tsx [attr:tooltip]"
+ },
+ {
+  "id": 824,
+  "text": "Speed",
+  "ctx": "editor/AnimationCard.tsx [attr:label]; editor/propertyPanelFlatMediaSection.tsx [attr:label]"
+ },
+ {
+  "id": 825,
+  "text": "From",
+  "ctx": "editor/AnimationCard.tsx [jsxtext]"
+ },
+ {
+  "id": 826,
+  "text": "To",
+  "ctx": "editor/AnimationCard.tsx [jsxtext]"
+ },
+ {
+  "id": 827,
+  "text": "Remove this animation",
+  "ctx": "editor/AnimationCard.tsx [attr:title]"
+ },
+ {
+  "id": 828,
+  "text": "Remove",
+  "ctx": "editor/AnimationCard.tsx [jsxtext]; editor/propertyPanelFxNodeRow.tsx [attr:title]"
+ },
+ {
+  "id": 829,
+  "text": "Bright",
+  "ctx": "editor/AnimationCardParts.tsx [prop:label]"
+ },
+ {
+  "id": 830,
+  "text": "Gray",
+  "ctx": "editor/AnimationCardParts.tsx [prop:label]"
+ },
+ {
+  "id": 831,
+  "text": "None",
+  "ctx": "editor/AnimationCardParts.tsx [prop:label]; editor/AnimationCardParts.tsx [prop:label]"
+ },
+ {
+  "id": 832,
+  "text": "Circle",
+  "ctx": "editor/AnimationCardParts.tsx [prop:label]"
+ },
+ {
+  "id": 833,
+  "text": "Inset",
+  "ctx": "editor/AnimationCardParts.tsx [prop:label]"
+ },
+ {
+  "id": 834,
+  "text": "Visible — click to hide",
+  "ctx": "editor/AnimationCardParts.tsx [attr:title]"
+ },
+ {
+  "id": 835,
+  "text": "Hidden — click to show",
+  "ctx": "editor/AnimationCardParts.tsx [attr:title]"
+ },
+ {
+  "id": 836,
+  "text": "Choose property…",
+  "ctx": "editor/AnimationCardParts.tsx [jsxtext]"
+ },
+ {
+  "id": 837,
+  "text": "Add at least 2 position keyframes to enable arc motion.",
+  "ctx": "editor/ArcPathControls.tsx [jsxtext]"
+ },
+ {
+  "id": 838,
+  "text": "Arc Motion",
+  "ctx": "editor/ArcPathControls.tsx [jsxtext]"
+ },
+ {
+  "id": 839,
+  "text": "Arc motion",
+  "ctx": "editor/ArcPathControls.tsx [attr:aria-label]"
+ },
+ {
+  "id": 840,
+  "text": "Disable arc motion",
+  "ctx": "editor/ArcPathControls.tsx [attr:title]"
+ },
+ {
+  "id": 841,
+  "text": "Enable arc motion",
+  "ctx": "editor/ArcPathControls.tsx [attr:title]"
+ },
+ {
+  "id": 842,
+  "text": "Auto-Rotate",
+  "ctx": "editor/ArcPathControls.tsx [jsxtext]"
+ },
+ {
+  "id": 843,
+  "text": "Auto-rotate along path",
+  "ctx": "editor/ArcPathControls.tsx [attr:aria-label]"
+ },
+ {
+  "id": 844,
+  "text": "Disable auto-rotate along path",
+  "ctx": "editor/ArcPathControls.tsx [attr:title]"
+ },
+ {
+  "id": 845,
+  "text": "Rotate element to follow path tangent",
+  "ctx": "editor/ArcPathControls.tsx [attr:title]"
+ },
+ {
+  "id": 846,
+  "text": "Curviness",
+  "ctx": "editor/ArcPathControls.tsx [jsxexpr]"
+ },
+ {
+  "id": 847,
+  "text": "Segment ${i + 1}",
+  "ctx": "editor/ArcPathControls.tsx [jsxexpr]"
+ },
+ {
+  "id": 848,
+  "text": "Reset to auto-generated control points",
+  "ctx": "editor/ArcPathControls.tsx [attr:title]"
+ },
+ {
+  "id": 849,
+  "text": "Couldn't find the current value in ${compositionPath} — it may have been edited by hand.",
+  "ctx": "editor/BlockParamsPanel.tsx [prop:message]"
+ },
+ {
+  "id": 850,
+  "text": "\"${previous}\" appears ${matches}× in ${compositionPath} — the panel can't tell which one belongs to this parameter, so it won't risk changing unrelated content. Edit the file directly to disambiguate.",
+  "ctx": "editor/BlockParamsPanel.tsx [prop:message]"
+ },
+ {
+  "id": 851,
+  "text": "Couldn't save the block file. Retry?",
+  "ctx": "editor/BlockParamsPanel.tsx [prop:message]"
+ },
+ {
+  "id": 852,
+  "text": "Close block parameters",
+  "ctx": "editor/BlockParamsPanel.tsx [attr:aria-label]"
+ },
+ {
+  "id": 853,
+  "text": "Parameters",
+  "ctx": "editor/BlockParamsPanel.tsx [jsxtext]"
+ },
+ {
+  "id": 854,
+  "text": "This block has no editable parameters.",
+  "ctx": "editor/BlockParamsPanel.tsx [jsxtext]"
+ },
+ {
+  "id": 855,
+  "text": "Block params can't be edited here — no project file access.",
+  "ctx": "editor/BlockParamsPanel.tsx [jsxtext]"
+ },
+ {
+  "id": 856,
+  "text": "Saving…",
+  "ctx": "editor/BlockParamsPanel.tsx [jsxtext]"
+ },
+ {
+  "id": 857,
+  "text": "Saved to",
+  "ctx": "editor/BlockParamsPanel.tsx [jsxtext]"
+ },
+ {
+  "id": 858,
+  "text": "${param.label} color",
+  "ctx": "editor/BlockParamsPanel.tsx [attr:aria-label]"
+ },
+ {
+  "id": 859,
+  "text": "${param.label} value",
+  "ctx": "editor/BlockParamsPanel.tsx [attr:aria-label]"
+ },
+ {
+  "id": 860,
+  "text": "Unlink corners",
+  "ctx": "editor/BorderRadiusEditor.tsx [attr:title]"
+ },
+ {
+  "id": 861,
+  "text": "Link all corners",
+  "ctx": "editor/BorderRadiusEditor.tsx [attr:title]"
+ },
+ {
+  "id": 862,
+  "text": "TL",
+  "ctx": "editor/BorderRadiusEditor.tsx [attr:label]"
+ },
+ {
+  "id": 863,
+  "text": "TR",
+  "ctx": "editor/BorderRadiusEditor.tsx [attr:label]"
+ },
+ {
+  "id": 864,
+  "text": "BL",
+  "ctx": "editor/BorderRadiusEditor.tsx [attr:label]"
+ },
+ {
+  "id": 865,
+  "text": "BR",
+  "ctx": "editor/BorderRadiusEditor.tsx [attr:label]"
+ },
+ {
+  "id": 866,
+  "text": "Bring to front",
+  "ctx": "editor/CanvasContextMenu.tsx [prop:label]"
+ },
+ {
+  "id": 867,
+  "text": "Bring forward",
+  "ctx": "editor/CanvasContextMenu.tsx [prop:label]"
+ },
+ {
+  "id": 868,
+  "text": "Send backward",
+  "ctx": "editor/CanvasContextMenu.tsx [prop:label]"
+ },
+ {
+  "id": 869,
+  "text": "Send to back",
+  "ctx": "editor/CanvasContextMenu.tsx [prop:label]"
+ },
+ {
+  "id": 870,
+  "text": "Computed value — edit it in the Code tab.",
+  "ctx": "editor/ComputedTweenNotice.tsx [jsxtext]"
+ },
+ {
+  "id": 871,
+  "text": "Generated by",
+  "ctx": "editor/ComputedTweenNotice.tsx [jsxtext]"
+ },
+ {
+  "id": 872,
+  "text": "— not directly editable.",
+  "ctx": "editor/ComputedTweenNotice.tsx [jsxtext]"
+ },
+ {
+  "id": 873,
+  "text": "Rewrite the helper/loop into explicit tweens so this keyframe edits directly",
+  "ctx": "editor/ComputedTweenNotice.tsx [attr:title]"
+ },
+ {
+  "id": 874,
+  "text": "Unroll to edit",
+  "ctx": "editor/ComputedTweenNotice.tsx [jsxtext]"
+ },
+ {
+  "id": 875,
+  "text": "Crop presets",
+  "ctx": "editor/CropPresetBar.tsx [attr:aria-label]"
+ },
+ {
+  "id": 876,
+  "text": "Drag the edges freely",
+  "ctx": "editor/CropPresetBar.tsx [attr:title]"
+ },
+ {
+  "id": 877,
+  "text": "Free",
+  "ctx": "editor/CropPresetBar.tsx [jsxtext]"
+ },
+ {
+  "id": 878,
+  "text": "Done",
+  "ctx": "editor/CropPresetBar.tsx [jsxtext]"
+ },
+ {
+  "id": 879,
+  "text": "Reposition crop",
+  "ctx": "editor/DomEditCropHandles.tsx [attr:aria-label]; editor/DomEditCropHandles.tsx [attr:title]"
+ },
+ {
+  "id": 880,
+  "text": "Crop ${edge}",
+  "ctx": "editor/DomEditCropHandles.tsx [attr:aria-label]"
+ },
+ {
+  "id": 881,
+  "text": "Composition canvas",
+  "ctx": "editor/DomEditOverlay.tsx [attr:aria-label]"
+ },
+ {
+  "id": 882,
+  "text": "Rotate selection",
+  "ctx": "editor/DomEditRotateHandle.tsx [attr:aria-label]"
+ },
+ {
+  "id": 883,
+  "text": "${MODE_LABELS[kind]} ease presets",
+  "ctx": "editor/EaseCurveSection.tsx [attr:aria-label]"
+ },
+ {
+  "id": 884,
+  "text": "Applies to",
+  "ctx": "editor/EaseCurveSection.tsx [jsxtext]"
+ },
+ {
+  "id": 885,
+  "text": "ease editor selected",
+  "ctx": "editor/EaseCurveSection.tsx [jsxtext]"
+ },
+ {
+  "id": 886,
+  "text": "${key === \"p1\" ? \"First\" : \"Second\"} bezier control point",
+  "ctx": "editor/EaseCurveSection.tsx [attr:aria-label]"
+ },
+ {
+  "id": 887,
+  "text": "preset: switch to Curve, Spring, or Wiggle above to shape it by hand.",
+  "ctx": "editor/EaseCurveSection.tsx [jsxtext]"
+ },
+ {
+  "id": 888,
+  "text": "Ease editor mode",
+  "ctx": "editor/EaseModeControls.tsx [attr:aria-label]"
+ },
+ {
+  "id": 889,
+  "text": "Cubic bezier control points",
+  "ctx": "editor/EaseParamFields.tsx [attr:aria-label]"
+ },
+ {
+  "id": 890,
+  "text": "Valid bezier values",
+  "ctx": "editor/EaseParamFields.tsx [jsxexpr]"
+ },
+ {
+  "id": 891,
+  "text": "Bounce",
+  "ctx": "editor/EaseParamFields.tsx [jsxtext]"
+ },
+ {
+  "id": 892,
+  "text": "Spring bounce",
+  "ctx": "editor/EaseParamFields.tsx [attr:label]"
+ },
+ {
+  "id": 893,
+  "text": "Count",
+  "ctx": "editor/EaseParamFields.tsx [jsxtext]"
+ },
+ {
+  "id": 894,
+  "text": "Wiggle count",
+  "ctx": "editor/EaseParamFields.tsx [attr:label]"
+ },
+ {
+  "id": 895,
+  "text": "Wiggle type",
+  "ctx": "editor/EaseParamFields.tsx [attr:aria-label]"
+ },
+ {
+  "id": 896,
+  "text": "Amplitude",
+  "ctx": "editor/EaseParamFields.tsx [jsxtext]"
+ },
+ {
+  "id": 897,
+  "text": "Wiggle amplitude",
+  "ctx": "editor/EaseParamFields.tsx [attr:label]"
+ },
+ {
+  "id": 898,
+  "text": "Files",
+  "ctx": "editor/FileTree.tsx [jsxtext]"
+ },
+ {
+  "id": 899,
+  "text": "New File",
+  "ctx": "editor/FileTree.tsx [attr:title]; editor/FileTree.tsx [attr:aria-label]"
+ },
+ {
+  "id": 900,
+  "text": "New Folder",
+  "ctx": "editor/FileTree.tsx [attr:title]; editor/FileTree.tsx [attr:aria-label]"
+ },
+ {
+  "id": 901,
+  "text": "No files yet",
+  "ctx": "editor/FileTree.tsx [jsxtext]"
+ },
+ {
+  "id": 902,
+  "text": " — use + above to create one",
+  "ctx": "editor/FileTree.tsx [jsxexpr]"
+ },
+ {
+  "id": 903,
+  "text": "Delete folder",
+  "ctx": "editor/FileTreeNodes.tsx [jsxtext]"
+ },
+ {
+  "id": 904,
+  "text": "and\n            everything inside it?",
+  "ctx": "editor/FileTreeNodes.tsx [jsxtext]"
+ },
+ {
+  "id": 905,
+  "text": "Stop recording ${(recordingDuration ?? 0).toFixed(1)}s -- press R",
+  "ctx": "editor/GestureRecordControl.tsx [jsxexpr]"
+ },
+ {
+  "id": 906,
+  "text": "Record gesture (R) -- move pointer to capture motion",
+  "ctx": "editor/GestureRecordControl.tsx [jsxexpr]"
+ },
+ {
+  "id": 907,
+  "text": "Add a new animation effect to this element",
+  "ctx": "editor/GsapAddAnimationControl.tsx [attr:title]"
+ },
+ {
+  "id": 908,
+  "text": "+ Add effect",
+  "ctx": "editor/GsapAddAnimationControl.tsx [jsxtext]"
+ },
+ {
+  "id": 909,
+  "text": "No animations on this element yet — add an effect below to animate it.",
+  "ctx": "editor/GsapAnimationList.tsx [jsxtext]"
+ },
+ {
+  "id": 910,
+  "text": "Animation",
+  "ctx": "editor/GsapAnimationSection.tsx [attr:title]; captions/components/CaptionPropertyPanel.tsx [jsxtext]"
+ },
+ {
+  "id": 911,
+  "text": "This file has multiple GSAP timelines. Animation editing is disabled to prevent data loss\n          — consolidate into a single timeline to enable editing.",
+  "ctx": "editor/GsapAnimationSection.tsx [jsxtext]"
+ },
+ {
+  "id": 912,
+  "text": "This timeline uses a computed key (window.__timelines[variable]) the editor can&apos;t\n          resolve statically. Use a string-literal key (window.__timelines[&quot;id&quot;]) or a\n          variable declaration (const tl = gsap.timeline()) to enable editing.",
+  "ctx": "editor/GsapAnimationSection.tsx [jsxtext]"
+ },
+ {
+  "id": 913,
+  "text": "Text formatting",
+  "ctx": "editor/InlineTextToolbar.tsx [attr:aria-label]"
+ },
+ {
+  "id": 914,
+  "text": "Text colour",
+  "ctx": "editor/InlineTextToolbar.tsx [attr:title]; editor/InlineTextToolbar.tsx [attr:aria-label]"
+ },
+ {
+  "id": 915,
+  "text": "Bold",
+  "ctx": "editor/InlineTextToolbar.tsx [attr:label]"
+ },
+ {
+  "id": 916,
+  "text": "Italic",
+  "ctx": "editor/InlineTextToolbar.tsx [attr:label]"
+ },
+ {
+  "id": 917,
+  "text": "Underline",
+  "ctx": "editor/InlineTextToolbar.tsx [attr:label]"
+ },
+ {
+  "id": 918,
+  "text": "Ungroup (⌘⇧G)",
+  "ctx": "editor/InspectorHeaderActions.tsx [attr:title]; editor/PropertyPanelFlatHeader.tsx [attr:title]"
+ },
+ {
+  "id": 919,
+  "text": "Copy element info to clipboard",
+  "ctx": "editor/InspectorHeaderActions.tsx [attr:title]; editor/PropertyPanelFlatHeader.tsx [attr:aria-label]"
+ },
+ {
+  "id": 920,
+  "text": "Clear selection",
+  "ctx": "editor/InspectorHeaderActions.tsx [attr:aria-label]; editor/PropertyPanelEmptyState.tsx [attr:aria-label]"
+ },
+ {
+  "id": 921,
+  "text": "Per-keyframe easing",
+  "ctx": "editor/KeyframeEaseList.tsx [jsxtext]"
+ },
+ {
+  "id": 922,
+  "text": "Apply one ease to all segments",
+  "ctx": "editor/KeyframeEaseList.tsx [attr:aria-label]"
+ },
+ {
+  "id": 923,
+  "text": "Apply one ease to every segment (clears per-segment overrides)",
+  "ctx": "editor/KeyframeEaseList.tsx [attr:title]"
+ },
+ {
+  "id": 924,
+  "text": "Set all…",
+  "ctx": "editor/KeyframeEaseList.tsx [jsxtext]"
+ },
+ {
+  "id": 925,
+  "text": "Previous keyframe",
+  "ctx": "editor/KeyframeNavigation.tsx [attr:title]"
+ },
+ {
+  "id": 926,
+  "text": "Previous ${property} keyframe",
+  "ctx": "editor/KeyframeNavigation.tsx [attr:aria-label]"
+ },
+ {
+  "id": 927,
+  "text": "Convert ${property} to keyframes",
+  "ctx": "editor/KeyframeNavigation.tsx [attr:title]"
+ },
+ {
+  "id": 928,
+  "text": "Remove ${property} keyframe",
+  "ctx": "editor/KeyframeNavigation.tsx [attr:title]"
+ },
+ {
+  "id": 929,
+  "text": "Add ${property} keyframe",
+  "ctx": "editor/KeyframeNavigation.tsx [attr:title]"
+ },
+ {
+  "id": 930,
+  "text": "Next keyframe",
+  "ctx": "editor/KeyframeNavigation.tsx [attr:title]"
+ },
+ {
+  "id": 931,
+  "text": "Next ${property} keyframe",
+  "ctx": "editor/KeyframeNavigation.tsx [attr:aria-label]"
+ },
+ {
+  "id": 932,
+  "text": "No layers",
+  "ctx": "editor/LayersPanel.tsx [jsxtext]"
+ },
+ {
+  "id": 933,
+  "text": "Load a composition to see its element tree",
+  "ctx": "editor/LayersPanel.tsx [jsxtext]"
+ },
+ {
+  "id": 934,
+  "text": "Expand children",
+  "ctx": "editor/LayersPanel.tsx [attr:aria-label]"
+ },
+ {
+  "id": 935,
+  "text": "Collapse children",
+  "ctx": "editor/LayersPanel.tsx [attr:aria-label]"
+ },
+ {
+  "id": 936,
+  "text": "${kindName} · ${hint}",
+  "ctx": "editor/LayersPanel.tsx [attr:title]"
+ },
+ {
+  "id": 937,
+  "text": "Select off-canvas element ${r.key}",
+  "ctx": "editor/OffCanvasIndicators.tsx [attr:aria-label]"
+ },
+ {
+  "id": 938,
+  "text": "Off-canvas: ${r.key} — click to select",
+  "ctx": "editor/OffCanvasIndicators.tsx [attr:title]"
+ },
+ {
+  "id": 939,
+  "text": "Bound to variable \"${promote.boundId}\"",
+  "ctx": "editor/PromotableControl.tsx [attr:title]"
+ },
+ {
+  "id": 940,
+  "text": "Make this a variable",
+  "ctx": "editor/PromotableControl.tsx [attr:title]"
+ },
+ {
+  "id": 941,
+  "text": "◇ var",
+  "ctx": "editor/PromotableControl.tsx [jsxtext]"
+ },
+ {
+  "id": 942,
+  "text": "Layout",
+  "ctx": "editor/PropertyPanel.tsx [attr:title]; editor/PropertyPanelFlat.tsx [prop:title]"
+ },
+ {
+  "id": 943,
+  "text": "Stacking",
+  "ctx": "editor/PropertyPanel.tsx [jsxtext]"
+ },
+ {
+  "id": 944,
+  "text": "Z-index",
+  "ctx": "editor/PropertyPanel.tsx [attr:label]; editor/propertyPanelFlatLayoutSection.tsx [attr:label]"
+ },
+ {
+  "id": 945,
+  "text": "Nothing selected",
+  "ctx": "editor/PropertyPanelEmptyState.tsx [jsxtext]"
+ },
+ {
+  "id": 946,
+  "text": "Click any element on the canvas to edit it, or drag to select several.",
+  "ctx": "editor/PropertyPanelEmptyState.tsx [jsxtext]"
+ },
+ {
+  "id": 947,
+  "text": "Record a gesture",
+  "ctx": "editor/PropertyPanelEmptyState.tsx [jsxtext]"
+ },
+ {
+  "id": 948,
+  "text": "Describe a change to the agent",
+  "ctx": "editor/PropertyPanelEmptyState.tsx [jsxtext]"
+ },
+ {
+  "id": 949,
+  "text": "elements selected",
+  "ctx": "editor/PropertyPanelEmptyState.tsx [jsxtext]; editor/PropertyPanelEmptyState.tsx [jsxtext]"
+ },
+ {
+  "id": 950,
+  "text": "shift-click to add or remove",
+  "ctx": "editor/PropertyPanelEmptyState.tsx [jsxtext]"
+ },
+ {
+  "id": 951,
+  "text": "#${element.id}",
+  "ctx": "editor/PropertyPanelEmptyState.tsx [jsxexpr]"
+ },
+ {
+  "id": 952,
+  "text": "Group selection",
+  "ctx": "editor/PropertyPanelEmptyState.tsx [jsxtext]"
+ },
+ {
+  "id": 953,
+  "text": "Hide all",
+  "ctx": "editor/PropertyPanelEmptyState.tsx [jsxtext]"
+ },
+ {
+  "id": 954,
+  "text": "Select a single element to edit its properties",
+  "ctx": "editor/PropertyPanelEmptyState.tsx [jsxtext]"
+ },
+ {
+  "id": 955,
+  "text": "Select a single element to edit its properties. Click an element in the preview or use\n              the timeline layer panel.",
+  "ctx": "editor/PropertyPanelEmptyState.tsx [jsxtext]"
+ },
+ {
+  "id": 956,
+  "text": "Select an element in the preview.",
+  "ctx": "editor/PropertyPanelEmptyState.tsx [jsxtext]"
+ },
+ {
+  "id": 957,
+  "text": "The inspector is tuned for element edits with safer geometry controls, color picking,\n              and cleaner grouped layer controls.",
+  "ctx": "editor/PropertyPanelEmptyState.tsx [jsxtext]"
+ },
+ {
+  "id": 958,
+  "text": "Grade",
+  "ctx": "editor/PropertyPanelFlat.tsx [prop:title]"
+ },
+ {
+  "id": 959,
+  "text": "Overlays",
+  "ctx": "editor/PropertyPanelFlat.tsx [prop:title]"
+ },
+ {
+  "id": 960,
+  "text": "Audio FX",
+  "ctx": "editor/PropertyPanelFlat.tsx [prop:title]"
+ },
+ {
+  "id": 961,
+  "text": "Media",
+  "ctx": "editor/PropertyPanelFlat.tsx [prop:title]"
+ },
+ {
+  "id": 962,
+  "text": "Ask agent about this element",
+  "ctx": "editor/PropertyPanelFlatFooter.tsx [jsxtext]"
+ },
+ {
+  "id": 963,
+  "text": "text-accent-ink",
+  "ctx": "editor/PropertyPanelFlatHeader.tsx [prop:text]"
+ },
+ {
+  "id": 964,
+  "text": "Copy element info for any AI agent",
+  "ctx": "editor/PropertyPanelFlatHeader.tsx [attr:title]"
+ },
+ {
+  "id": 965,
+  "text": "Click the canvas to set the destination",
+  "ctx": "editor/SnapToolbar.tsx [attr:title]"
+ },
+ {
+  "id": 966,
+  "text": "Set motion destination",
+  "ctx": "editor/SnapToolbar.tsx [attr:title]; editor/SnapToolbar.tsx [attr:aria-label]"
+ },
+ {
+  "id": 967,
+  "text": "${label} ${visible ? \"on\" : \"off\"}",
+  "ctx": "editor/SnapToolbar.tsx [attr:title]"
+ },
+ {
+  "id": 968,
+  "text": "Toggle ${label.toLowerCase()}",
+  "ctx": "editor/SnapToolbar.tsx [attr:aria-label]"
+ },
+ {
+  "id": 969,
+  "text": "Snap enabled (S)",
+  "ctx": "editor/SnapToolbar.tsx [attr:title]"
+ },
+ {
+  "id": 970,
+  "text": "Snap disabled (S)",
+  "ctx": "editor/SnapToolbar.tsx [attr:title]"
+ },
+ {
+  "id": 971,
+  "text": "Toggle snap",
+  "ctx": "editor/SnapToolbar.tsx [attr:aria-label]"
+ },
+ {
+  "id": 972,
+  "text": "Grid visible (G) — right-click for spacing options",
+  "ctx": "editor/SnapToolbar.tsx [attr:title]"
+ },
+ {
+  "id": 973,
+  "text": "Grid hidden (G) — right-click for spacing options",
+  "ctx": "editor/SnapToolbar.tsx [attr:title]"
+ },
+ {
+  "id": 974,
+  "text": "Toggle grid",
+  "ctx": "editor/SnapToolbar.tsx [attr:aria-label]"
+ },
+ {
+  "id": 975,
+  "text": "Grid options",
+  "ctx": "editor/SnapToolbar.tsx [attr:title]; editor/SnapToolbar.tsx [attr:aria-label]"
+ },
+ {
+  "id": 976,
+  "text": "Grid spacing",
+  "ctx": "editor/SnapToolbar.tsx [jsxtext]"
+ },
+ {
+  "id": 977,
+  "text": "Snap to grid",
+  "ctx": "editor/SnapToolbar.tsx [jsxtext]"
+ },
+ {
+  "id": 978,
+  "text": "+ effect",
+  "ctx": "editor/TimelineFxPopover.tsx [jsxtext]; editor/propertyPanelFxSection.tsx [jsxexpr]"
+ },
+ {
+  "id": 979,
+  "text": "Open rack ›",
+  "ctx": "editor/TimelineFxPopover.tsx [jsxtext]"
+ },
+ {
+  "id": 980,
+  "text": "3D rotation. Arrow keys rotate X/Y, Shift+arrows roll Z, Alt for fine steps; drag to rotate, scroll to change depth",
+  "ctx": "editor/Transform3DCube.tsx [attr:aria-label]"
+ },
+ {
+  "id": 981,
+  "text": "Reset 3D orientation",
+  "ctx": "editor/Transform3DCube.tsx [attr:title]; editor/Transform3DCube.tsx [attr:aria-label]"
+ },
+ {
+  "id": 982,
+  "text": "3D transform is keyframed — click a field diamond to add keyframes",
+  "ctx": "editor/Transform3DCube.tsx [attr:title]"
+ },
+ {
+  "id": 983,
+  "text": "Keyframe the 3D transform (animate it over time)",
+  "ctx": "editor/Transform3DCube.tsx [attr:title]"
+ },
+ {
+  "id": 984,
+  "text": "Drag to tilt · Shift-drag to roll · Scroll for depth",
+  "ctx": "editor/propertyPanel3dTransform.tsx [jsxtext]"
+ },
+ {
+  "id": 985,
+  "text": "3D Transform",
+  "ctx": "editor/propertyPanel3dTransform.tsx [jsxtext]; editor/propertyPanelFlatLayoutSection.tsx [jsxtext]"
+ },
+ {
+  "id": 986,
+  "text": "Scale",
+  "ctx": "editor/propertyPanel3dTransform.tsx [attr:label]; captions/components/CaptionPropertyPanel.tsx [attr:label]"
+ },
+ {
+  "id": 987,
+  "text": "RotX",
+  "ctx": "editor/propertyPanel3dTransform.tsx [attr:label]"
+ },
+ {
+  "id": 988,
+  "text": "RotY",
+  "ctx": "editor/propertyPanel3dTransform.tsx [attr:label]"
+ },
+ {
+  "id": 989,
+  "text": "RotZ",
+  "ctx": "editor/propertyPanel3dTransform.tsx [attr:label]"
+ },
+ {
+  "id": 990,
+  "text": "Perspective",
+  "ctx": "editor/propertyPanel3dTransform.tsx [attr:label]"
+ },
+ {
+  "id": 991,
+  "text": "${label} color picker",
+  "ctx": "editor/propertyPanelColor.tsx [attr:aria-label]"
+ },
+ {
+  "id": 992,
+  "text": "Color",
+  "ctx": "editor/propertyPanelColor.tsx [jsxtext]; editor/propertyPanelFlatStyleSections.tsx [attr:label]"
+ },
+ {
+  "id": 993,
+  "text": "Close color picker",
+  "ctx": "editor/propertyPanelColor.tsx [attr:aria-label]"
+ },
+ {
+  "id": 994,
+  "text": "Hue",
+  "ctx": "editor/propertyPanelColor.tsx [attr:label]; editor/propertyPanelColorCurves.tsx [attr:label]"
+ },
+ {
+  "id": 995,
+  "text": "Alpha",
+  "ctx": "editor/propertyPanelColor.tsx [attr:label]"
+ },
+ {
+  "id": 996,
+  "text": "Hex",
+  "ctx": "editor/propertyPanelColor.tsx [jsxtext]"
+ },
+ {
+  "id": 997,
+  "text": "Pick ${label.toLowerCase()} color",
+  "ctx": "editor/propertyPanelColor.tsx [attr:aria-label]; editor/propertyPanelColor.tsx [attr:aria-label]"
+ },
+ {
+  "id": 998,
+  "text": "Hue/Hue",
+  "ctx": "editor/propertyPanelColorCurveGraph.tsx [prop:label]"
+ },
+ {
+  "id": 999,
+  "text": "Hue/Sat",
+  "ctx": "editor/propertyPanelColorCurveGraph.tsx [prop:label]"
+ },
+ {
+  "id": 1000,
+  "text": "Hue/Luma",
+  "ctx": "editor/propertyPanelColorCurveGraph.tsx [prop:label]"
+ },
+ {
+  "id": 1001,
+  "text": "${tab.label} curve",
+  "ctx": "editor/propertyPanelColorCurveGraph.tsx [attr:aria-label]"
+ },
+ {
+  "id": 1002,
+  "text": "Input",
+  "ctx": "editor/propertyPanelColorCurves.tsx [attr:label]"
+ },
+ {
+  "id": 1003,
+  "text": "Curve point ${tab.kind === \"rgb\" ? \"input\" : \"hue\"}",
+  "ctx": "editor/propertyPanelColorCurves.tsx [attr:ariaLabel]"
+ },
+ {
+  "id": 1004,
+  "text": "Output",
+  "ctx": "editor/propertyPanelColorCurves.tsx [attr:label]"
+ },
+ {
+  "id": 1005,
+  "text": "Curve point output",
+  "ctx": "editor/propertyPanelColorCurves.tsx [attr:ariaLabel]"
+ },
+ {
+  "id": 1006,
+  "text": "Click the graph or press Enter to add a point",
+  "ctx": "editor/propertyPanelColorCurves.tsx [jsxtext]"
+ },
+ {
+  "id": 1007,
+  "text": "Reset ${tab.label} curve",
+  "ctx": "editor/propertyPanelColorCurves.tsx [attr:aria-label]; editor/propertyPanelColorCurves.tsx [attr:title]"
+ },
+ {
+  "id": 1008,
+  "text": "Exposure",
+  "ctx": "editor/propertyPanelColorGradingControls.tsx [prop:label]"
+ },
+ {
+  "id": 1009,
+  "text": "Contrast",
+  "ctx": "editor/propertyPanelColorGradingControls.tsx [prop:label]"
+ },
+ {
+  "id": 1010,
+  "text": "Highlights",
+  "ctx": "editor/propertyPanelColorGradingControls.tsx [prop:label]; editor/propertyPanelColorWheels.tsx [prop:label]"
+ },
+ {
+  "id": 1011,
+  "text": "Shadows",
+  "ctx": "editor/propertyPanelColorGradingControls.tsx [prop:label]; editor/propertyPanelColorWheels.tsx [prop:label]"
+ },
+ {
+  "id": 1012,
+  "text": "White Point",
+  "ctx": "editor/propertyPanelColorGradingControls.tsx [prop:label]"
+ },
+ {
+  "id": 1013,
+  "text": "Black Point",
+  "ctx": "editor/propertyPanelColorGradingControls.tsx [prop:label]"
+ },
+ {
+  "id": 1014,
+  "text": "Warmth",
+  "ctx": "editor/propertyPanelColorGradingControls.tsx [prop:label]"
+ },
+ {
+  "id": 1015,
+  "text": "Tint",
+  "ctx": "editor/propertyPanelColorGradingControls.tsx [prop:label]"
+ },
+ {
+  "id": 1016,
+  "text": "Vibrance",
+  "ctx": "editor/propertyPanelColorGradingControls.tsx [prop:label]"
+ },
+ {
+  "id": 1017,
+  "text": "Saturation",
+  "ctx": "editor/propertyPanelColorGradingControls.tsx [prop:label]"
+ },
+ {
+  "id": 1018,
+  "text": "Vignette",
+  "ctx": "editor/propertyPanelColorGradingControls.tsx [prop:label]"
+ },
+ {
+  "id": 1019,
+  "text": "Midpoint",
+  "ctx": "editor/propertyPanelColorGradingControls.tsx [prop:label]"
+ },
+ {
+  "id": 1020,
+  "text": "Roundness",
+  "ctx": "editor/propertyPanelColorGradingControls.tsx [prop:label]"
+ },
+ {
+  "id": 1021,
+  "text": "Feather",
+  "ctx": "editor/propertyPanelColorGradingControls.tsx [prop:label]"
+ },
+ {
+  "id": 1022,
+  "text": "Grain",
+  "ctx": "editor/propertyPanelColorGradingControls.tsx [prop:label]"
+ },
+ {
+  "id": 1023,
+  "text": "Grain Size",
+  "ctx": "editor/propertyPanelColorGradingControls.tsx [prop:label]"
+ },
+ {
+  "id": 1024,
+  "text": "Roughness",
+  "ctx": "editor/propertyPanelColorGradingControls.tsx [prop:label]"
+ },
+ {
+  "id": 1025,
+  "text": "Preset",
+  "ctx": "editor/propertyPanelColorGradingControls.tsx [jsxtext]; captions/components/CaptionAnimationPanel.tsx [attr:label]"
+ },
+ {
+  "id": 1026,
+  "text": "Preset strength",
+  "ctx": "editor/propertyPanelColorGradingControls.tsx [attr:label]"
+ },
+ {
+  "id": 1027,
+  "text": "Custom LUT",
+  "ctx": "editor/propertyPanelColorGradingControls.tsx [jsxtext]; editor/propertyPanelFlatColorGradingSection.tsx [jsxtext]"
+ },
+ {
+  "id": 1028,
+  "text": "Uploaded .cube LUT",
+  "ctx": "editor/propertyPanelColorGradingControls.tsx [attr:title]"
+ },
+ {
+  "id": 1029,
+  "text": "Uploaded LUTs",
+  "ctx": "editor/propertyPanelColorGradingControls.tsx [attr:label]"
+ },
+ {
+  "id": 1030,
+  "text": "Import .cube LUT",
+  "ctx": "editor/propertyPanelColorGradingControls.tsx [attr:title]; editor/propertyPanelColorGradingControls.tsx [attr:aria-label]"
+ },
+ {
+  "id": 1031,
+  "text": "Uploaded LUT",
+  "ctx": "editor/propertyPanelColorGradingControls.tsx [jsxtext]"
+ },
+ {
+  "id": 1032,
+  "text": " · ${selectedProjectLut}",
+  "ctx": "editor/propertyPanelColorGradingControls.tsx [jsxexpr]"
+ },
+ {
+  "id": 1033,
+  "text": "LUT Strength",
+  "ctx": "editor/propertyPanelColorGradingControls.tsx [attr:label]"
+ },
+ {
+  "id": 1034,
+  "text": "Adjust",
+  "ctx": "editor/propertyPanelColorGradingControls.tsx [jsxtext]"
+ },
+ {
+  "id": 1035,
+  "text": "Finishing",
+  "ctx": "editor/propertyPanelColorGradingControls.tsx [jsxtext]"
+ },
+ {
+  "id": 1036,
+  "text": "${slider.label} settings",
+  "ctx": "editor/propertyPanelColorGradingControls.tsx [prop:label]"
+ },
+ {
+  "id": 1037,
+  "text": "Vignette settings",
+  "ctx": "editor/propertyPanelColorGradingControls.tsx [jsxexpr]; editor/propertyPanelFlatColorGradingSection.tsx [attr:title]"
+ },
+ {
+  "id": 1038,
+  "text": "Grain settings",
+  "ctx": "editor/propertyPanelColorGradingControls.tsx [jsxexpr]; editor/propertyPanelFlatColorGradingSection.tsx [attr:title]"
+ },
+ {
+  "id": 1039,
+  "text": "Close settings",
+  "ctx": "editor/propertyPanelColorGradingControls.tsx [attr:aria-label]; editor/propertyPanelColorGradingControls.tsx [attr:title]"
+ },
+ {
+  "id": 1040,
+  "text": "SDR preview",
+  "ctx": "editor/propertyPanelColorGradingSection.tsx [jsxtext]; editor/propertyPanelFlatColorGradingSection.tsx [jsxtext]"
+ },
+ {
+  "id": 1041,
+  "text": "These controls use the current SDR shader preview path. Render may stay HDR-tagged, but this\n        is not true HDR color grading yet.",
+  "ctx": "editor/propertyPanelColorGradingSection.tsx [jsxtext]; editor/propertyPanelFlatColorGradingSection.tsx [jsxtext]"
+ },
+ {
+  "id": 1042,
+  "text": "Hold to show original",
+  "ctx": "editor/propertyPanelColorGradingSection.tsx [attr:aria-label]; editor/propertyPanelColorGradingSection.tsx [attr:title]"
+ },
+ {
+  "id": 1043,
+  "text": "Color grading",
+  "ctx": "editor/propertyPanelColorGradingSection.tsx [attr:title]"
+ }
+]

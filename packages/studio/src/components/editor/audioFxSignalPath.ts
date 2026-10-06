@@ -30,7 +30,7 @@ export interface AudioFxSignalPath {
 export const CLIP_SIGNAL_PATH: AudioFxSignalPath = {
   inLabel: "this track",
   outLabel: "to mix",
-  subject: "track",
+  subject: "轨道",
 };
 
 /**
@@ -61,7 +61,7 @@ export function audioFxSignalPath(
       // chain cannot do, and it says it without "sum" or "bus".
       inLabel: members.length > 0 ? `${joinNatural(members)}, together` : "nothing yet",
       outLabel: "to mix",
-      subject: "group",
+      subject: "编组",
     };
   }
   const owner = elementId ? groups.find((g) => g.memberIds.includes(elementId)) : undefined;

@@ -268,7 +268,7 @@ export const AudioWaveform = memo(function AudioWaveform({
               }}
             />
             <span className="relative rounded-sm bg-black/50 px-1 text-[8px] text-neutral-500">
-              waveform unavailable
+              波形不可用
             </span>
           </div>
         )}

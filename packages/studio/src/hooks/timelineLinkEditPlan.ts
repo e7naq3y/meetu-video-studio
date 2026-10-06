@@ -58,7 +58,7 @@ function planSyncEdit(edit: SyncEdit): LinkEditPlan | null {
   if (edit.kind === "move-into-sync") {
     const value = formatTimelineMediaOffset(toAuthoredStart(edit.element, edit.start));
     return {
-      label: "Move into Sync",
+      label: "移动以同步",
       anchor: edit.element,
       transform: (s) => {
         const moved = applyPatchByTarget(s, target, {
@@ -73,7 +73,7 @@ function planSyncEdit(edit: SyncEdit): LinkEditPlan | null {
   const property = edit.element.playbackStartAttr ?? "media-start";
   const value = formatTimelineMediaOffset(edit.mediaStart);
   return {
-    label: "Slip into Sync",
+    label: "滑移以同步",
     anchor: edit.element,
     transform: (s) => applyPatchByTarget(s, target, { type: "attribute", property, value }),
   };
@@ -89,14 +89,14 @@ export function planLinkEdit(
       const targets = targetsOf(members);
       const anchor = members[0];
       if (!targets || !anchor) return null;
-      return { label: "Unlink clips", anchor, transform: (s) => setLinkInSource(s, targets, null) };
+      return { label: "取消链接片段", anchor, transform: (s) => setLinkInSource(s, targets, null) };
     }
     case "link": {
       const targets = targetsOf(edit.elements);
       const anchor = edit.elements[0];
       if (!targets || !anchor) return null;
       return {
-        label: "Link clips",
+        label: "链接片段",
         anchor,
         transform: (s) => linkInSource(s, targets, { syncOrigin: sharesSourceFile(edit.elements) }),
       };
@@ -106,7 +106,7 @@ export function planLinkEdit(
       if (!target) return null;
       const track = pickDetachedAudioTrack(elements, edit.element);
       return {
-        label: "Detach audio",
+        label: "分离音频",
         anchor: edit.element,
         transform: (s) =>
           detachAudioInSource(s, { target, videoId: edit.element.domId ?? null, track })?.html ??
@@ -121,7 +121,7 @@ export function planLinkEdit(
       const audioTarget = buildPatchTarget(edit.audio);
       if (!videoTarget || !audioTarget) return null;
       return {
-        label: "Merge audio back into video",
+        label: "将音频合并回视频",
         anchor: edit.video,
         transform: (s) => mergeAudioInSource(s, { videoTarget, audioTarget }),
       };

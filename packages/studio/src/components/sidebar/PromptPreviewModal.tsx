@@ -55,18 +55,18 @@ export function PromptPreviewModal({
         ref={containerRef}
         role="dialog"
         aria-modal="true"
-        aria-label={`Ask agent — ${title}`}
+        aria-label={`问 AI 助手 — ${title}`}
         tabIndex={-1}
         className="w-[560px] max-h-[80vh] flex flex-col rounded-2xl border border-neutral-800 bg-neutral-950 shadow-2xl outline-hidden"
         onClick={(e) => e.stopPropagation()}
       >
         <div className="flex items-center justify-between px-5 py-4 border-b border-neutral-800/60">
           <div>
-            <h3 className="text-sm font-medium text-neutral-200">Ask agent</h3>
+            <h3 className="text-sm font-medium text-neutral-200">问 AI 助手</h3>
             <p className="text-xs text-neutral-500 mt-0.5">{title}</p>
           </div>
           <button
-            aria-label="Close"
+            aria-label="关闭"
             className="p-1 rounded-md text-neutral-500 hover:text-neutral-300 hover:bg-neutral-800/50 active:scale-[0.95]"
             onClick={onClose}
           >
@@ -87,7 +87,7 @@ export function PromptPreviewModal({
         </div>
         <div className="flex-1 overflow-y-auto px-5 py-4">
           <p className="text-[11px] text-neutral-500 mb-2">
-            Edit the prompt below, then copy and paste into your AI agent
+            在下方编辑提示词，然后复制并粘贴到你的 AI 助手中
           </p>
           <textarea
             ref={textareaRef}
@@ -101,7 +101,7 @@ export function PromptPreviewModal({
         </div>
         <div className="flex items-center justify-between px-5 py-3 border-t border-neutral-800/60">
           <span className="text-[11px] text-neutral-600">
-            {navigator.platform.includes("Mac") ? "⌘" : "Ctrl"}+Enter to copy
+            {navigator.platform.includes("Mac") ? "⌘" : "Ctrl"}+Enter 复制
           </span>
           <button
             className={`px-4 py-1.5 rounded-lg text-xs font-medium transition-colors active:scale-[0.97] ${
@@ -114,10 +114,10 @@ export function PromptPreviewModal({
             onClick={handleCopy}
           >
             {copyState === "copied"
-              ? "Copied!"
+              ? "已复制！"
               : copyState === "failed"
-                ? "Copy failed"
-                : "Copy prompt"}
+                ? "复制失败"
+                : "复制提示词"}
           </button>
         </div>
       </div>

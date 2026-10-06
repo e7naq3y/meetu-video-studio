@@ -84,7 +84,7 @@ export function SlideList({
           >
             <input
               type="checkbox"
-              aria-label={`Include ${scene.label} as main-line slide`}
+              aria-label={`将 ${scene.label} 设为主线幻灯片`}
               checked={isSlide}
               onChange={() => onToggle(scene.id)}
               onClick={(e) => e.stopPropagation()}
@@ -95,8 +95,8 @@ export function SlideList({
               <span className="flex gap-0.5 shrink-0">
                 <button
                   type="button"
-                  aria-label="Move slide up"
-                  title="Move up"
+                  aria-label="上移幻灯片"
+                  title="上移"
                   disabled={slideIndex <= 0}
                   className="px-1 py-0.5 text-[10px] text-neutral-400 enabled:hover:text-text-0 enabled:active:scale-[0.95] disabled:opacity-30 disabled:cursor-not-allowed"
                   onClick={(e) => {
@@ -108,8 +108,8 @@ export function SlideList({
                 </button>
                 <button
                   type="button"
-                  aria-label="Move slide down"
-                  title="Move down"
+                  aria-label="下移幻灯片"
+                  title="下移"
                   disabled={slideIndex === slides.length - 1}
                   className="px-1 py-0.5 text-[10px] text-neutral-400 enabled:hover:text-text-0 enabled:active:scale-[0.95] disabled:opacity-30 disabled:cursor-not-allowed"
                   onClick={(e) => {
@@ -125,7 +125,7 @@ export function SlideList({
         );
       })}
       {scenes.length === 0 && (
-        <p className="px-3 py-2 text-[11px] text-neutral-500 italic">No scenes found</p>
+        <p className="px-3 py-2 text-[11px] text-neutral-500 italic">未找到场景</p>
       )}
     </div>
   );
@@ -155,28 +155,28 @@ export function SlideInspector({
   return (
     <div className="flex flex-col gap-3 px-3 py-2">
       <p className="text-[10px] text-neutral-500 font-medium uppercase tracking-wide truncate">
-        Scene: {sceneId}
+        场景： {sceneId}
       </p>
       <div className="flex flex-col gap-1">
-        <label className="text-[11px] text-neutral-400">Notes</label>
+        <label className="text-[11px] text-neutral-400">备注</label>
         <textarea
           className="bg-neutral-800 border border-neutral-700 rounded-sm px-2 py-1.5 text-[11px] text-text-0 resize-none placeholder-neutral-600 focus:border-studio-accent/60 focus:outline-hidden"
           rows={3}
-          placeholder="Speaker notes or script..."
+          placeholder="演讲备注或脚本…"
           value={slide?.notes ?? ""}
           onChange={(e) => onSetNotes(e.target.value)}
         />
       </div>
       <div className="flex flex-col gap-1.5">
         <div className="flex items-center justify-between">
-          <span className="text-[11px] text-neutral-400">Fragment hold-points</span>
+          <span className="text-[11px] text-neutral-400">分步停顿点</span>
           <button
             type="button"
             className="text-[10px] px-2 py-0.5 rounded-sm bg-hover hover:bg-press text-neutral-200 transition-colors"
             onClick={onMarkFragment}
-            title={`Mark ${currentTime.toFixed(2)}s as hold-point`}
+            title={`将 ${currentTime.toFixed(2)}s 标记为停顿点`}
           >
-            Mark {currentTime.toFixed(2)}s
+            标记 {currentTime.toFixed(2)}s
           </button>
         </div>
         {fragments.length > 0 ? (
@@ -189,7 +189,7 @@ export function SlideInspector({
                 {t.toFixed(2)}s
                 <button
                   type="button"
-                  aria-label={`Remove fragment at ${t.toFixed(2)}s`}
+                  aria-label={`移除 ${t.toFixed(2)}s 处的停顿点`}
                   className="text-neutral-400 hover:text-danger-ink transition-colors"
                   onClick={() => onRemoveFragment(t)}
                 >
@@ -199,7 +199,7 @@ export function SlideInspector({
             ))}
           </div>
         ) : (
-          <p className="text-[10px] text-neutral-600 italic">No hold-points yet</p>
+          <p className="text-[10px] text-neutral-600 italic">还没有停顿点</p>
         )}
       </div>
     </div>
@@ -248,25 +248,25 @@ export function BranchTree({
           id={inputId}
           type="text"
           className="flex-1 bg-neutral-800 border border-neutral-700 rounded-sm px-2 py-1 text-[11px] text-text-0 placeholder-neutral-600 focus:border-studio-accent/60 focus:outline-hidden"
-          placeholder="New branch name..."
+          placeholder="新分支名称…"
           value={newLabel}
           onChange={(e) => setNewLabel(e.target.value)}
           onKeyDown={(e) => {
             if (e.key === "Enter") handleCreate();
           }}
-          aria-label="New branch sequence name"
+          aria-label="新分支序列名称"
         />
         <button
           type="button"
           className="px-2 py-1 rounded-sm bg-hover hover:bg-press text-[11px] text-neutral-200 transition-colors shrink-0"
           onClick={handleCreate}
         >
-          Add
+          添加
         </button>
       </div>
 
       {sequences.length === 0 ? (
-        <p className="text-[10px] text-neutral-600 italic">No branches yet</p>
+        <p className="text-[10px] text-neutral-600 italic">还没有分支</p>
       ) : (
         <div className="flex flex-col gap-3">
           {sequences.map((seq) => (
@@ -333,14 +333,14 @@ function BranchItem({
               if (e.key === "Enter") commitRename();
               if (e.key === "Escape") setEditing(false);
             }}
-            aria-label={`Rename branch ${seq.label}`}
+            aria-label={`重命名分支 ${seq.label}`}
           />
         ) : (
           <span
             role="button"
             tabIndex={0}
             className="flex-1 text-[11px] text-text-0 font-medium truncate cursor-pointer hover:text-neutral-300"
-            title="Click to rename"
+            title="点击重命名"
             onClick={() => setEditing(true)}
             onKeyDown={(e) => {
               if (e.key === "Enter" || e.key === " ") {
@@ -354,7 +354,7 @@ function BranchItem({
         )}
         <button
           type="button"
-          aria-label={`Delete branch ${seq.label}`}
+          aria-label={`删除分支 ${seq.label}`}
           className="text-[10px] text-neutral-500 hover:text-danger-ink active:scale-[0.95] transition-colors px-1"
           onClick={() => setConfirmingDelete(true)}
         >
@@ -364,11 +364,11 @@ function BranchItem({
       {confirmingDelete && (
         <div className="px-2 py-1.5 bg-danger/15 border-l-2 border-red-500 flex flex-col gap-1 rounded-xs">
           <span className="text-[10px] text-danger-ink">
-            Delete branch &ldquo;{seq.label}&rdquo;
+            删除分支“{seq.label}&rdquo;
             {seq.slides.length > 0
-              ? ` and its ${seq.slides.length} slide${seq.slides.length === 1 ? "" : "s"}`
+              ? `及其 ${seq.slides.length} 张幻灯片${seq.slides.length === 1 ? "" : ""}`
               : ""}
-            ? Hotspots pointing to it will no longer resolve.
+            ？指向它的热点将失效。
           </span>
           <div className="flex items-center justify-end gap-1">
             <button
@@ -379,14 +379,14 @@ function BranchItem({
               }}
               className="px-2 py-0.5 text-[10px] rounded-sm bg-danger text-on-danger hover:brightness-95 active:brightness-90 transition-colors"
             >
-              Delete
+              删除
             </button>
             <button
               type="button"
               onClick={() => setConfirmingDelete(false)}
               className="px-2 py-0.5 text-[10px] rounded-sm text-neutral-400 hover:text-neutral-200 transition-colors"
             >
-              Cancel
+              取消
             </button>
           </div>
         </div>
@@ -402,7 +402,7 @@ function BranchItem({
             >
               <input
                 type="checkbox"
-                aria-label={`Assign ${scene.label || scene.id} to branch ${seq.label}`}
+                aria-label={`将 ${scene.label || scene.id} 分配到分支 ${seq.label}`}
                 checked={assigned}
                 onChange={(e) => onAssign(seq.id, scene.id, e.target.checked)}
                 className="accent-studio-accent shrink-0"
@@ -424,7 +424,7 @@ function BranchItem({
             </div>
           );
         })}
-        {scenes.length === 0 && <p className="text-[10px] text-neutral-600 italic">No scenes</p>}
+        {scenes.length === 0 && <p className="text-[10px] text-neutral-600 italic">没有场景</p>}
       </div>
     </div>
   );
@@ -470,7 +470,7 @@ export function HotspotTool({
   if (!selectedSceneId) {
     return (
       <div className="px-3 py-2">
-        <p className="text-[11px] text-neutral-500 italic">Select a scene in the Slides list</p>
+        <p className="text-[11px] text-neutral-500 italic">在幻灯片列表中选择一个场景</p>
       </div>
     );
   }
@@ -479,36 +479,36 @@ export function HotspotTool({
     <div className="flex flex-col gap-3 px-3 py-2">
       <div className="flex flex-col gap-1.5">
         <p className="text-[11px] text-neutral-400">
-          Selected element:{" "}
+          已选元素：{" "}
           <span className="text-neutral-200 font-mono">{elementKey ?? "none"}</span>
         </p>
         {!elementKey && (
           <p className="text-[10px] text-neutral-500 italic">
-            Click an element on the canvas to choose the hotspot target.
+            点击画布上的元素，作为热点目标。
           </p>
         )}
         {sequences.length === 0 && (
           <p className="text-[10px] text-neutral-500 italic">
-            Create a branch in the Branches section first — hotspots jump to a branch.
+            请先在「分支」区域创建分支——热点会跳转到分支。
           </p>
         )}
-        <label className="text-[11px] text-neutral-400">Hotspot label</label>
+        <label className="text-[11px] text-neutral-400">热点标签</label>
         <input
           type="text"
           className="bg-neutral-800 border border-neutral-700 rounded-sm px-2 py-1 text-[11px] text-text-0 placeholder-neutral-600 focus:border-studio-accent/60 focus:outline-hidden"
-          placeholder="Button label..."
+          placeholder="按钮文字…"
           value={hotspotLabel}
           onChange={(e) => setHotspotLabel(e.target.value)}
-          aria-label="Hotspot label"
+          aria-label="热点标签"
         />
-        <label className="text-[11px] text-neutral-400">Target branch</label>
+        <label className="text-[11px] text-neutral-400">目标分支</label>
         <select
           className="bg-neutral-800 border border-neutral-700 rounded-sm px-2 py-1 text-[11px] text-text-0 focus:border-studio-accent/60 focus:outline-hidden"
           value={targetSequenceId}
           onChange={(e) => setTargetSequenceId(e.target.value)}
-          aria-label="Target branch sequence"
+          aria-label="目标分支序列"
         >
-          <option value="">— select branch —</option>
+          <option value="">— 选择分支 —</option>
           {sequences.map((seq) => (
             <option key={seq.id} value={seq.id}>
               {seq.label}
@@ -520,21 +520,21 @@ export function HotspotTool({
           disabled={!elementKey || !targetSequenceId}
           title={
             !elementKey
-              ? "Select an element on the canvas first"
+              ? "请先在画布上选择一个元素"
               : !targetSequenceId
-                ? "Choose a target branch first"
+                ? "请先选择目标分支"
                 : undefined
           }
           className="px-3 py-1.5 rounded-sm bg-accent enabled:hover:bg-accent-hover enabled:active:scale-[0.98] text-on-accent text-[11px] font-medium transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
           onClick={handleMakeHotspot}
         >
-          Make hotspot
+          创建热点
         </button>
       </div>
 
       {hotspots.length > 0 && (
         <div className="flex flex-col gap-1.5">
-          <p className="text-[11px] text-neutral-400 font-medium">Hotspots on this slide</p>
+          <p className="text-[11px] text-neutral-400 font-medium">本页幻灯片上的热点</p>
           {hotspots.map((h) => {
             const seqLabel = sequences.find((s) => s.id === h.target)?.label ?? h.target;
             return (
@@ -547,7 +547,7 @@ export function HotspotTool({
                 </span>
                 <button
                   type="button"
-                  aria-label={`Remove hotspot ${h.label}`}
+                  aria-label={`移除热点 ${h.label}`}
                   className="text-[10px] text-neutral-500 hover:text-danger-ink transition-colors"
                   onClick={() => onRemoveHotspot(selectedSceneId, h.id)}
                 >

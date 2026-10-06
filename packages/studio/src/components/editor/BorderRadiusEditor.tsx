@@ -88,7 +88,7 @@ export function BorderRadiusEditor({
           className="flex h-7 w-7 items-center justify-center rounded-md text-neutral-500 transition-colors hover:bg-neutral-800 hover:text-neutral-300"
           onClick={handleToggleLinked}
           disabled={disabled}
-          title={linked ? "Unlink corners" : "Link all corners"}
+          title={linked ? "取消四角联动" : "四角联动"}
         >
           {linked ? (
             <svg
@@ -118,7 +118,7 @@ export function BorderRadiusEditor({
 
       {linked ? (
         <MetricField
-          label="All"
+          label="全部"
           value={formatNumericValue(tl)}
           disabled={disabled}
           liveCommit
@@ -127,28 +127,28 @@ export function BorderRadiusEditor({
       ) : (
         <div className={RESPONSIVE_GRID}>
           <MetricField
-            label="TL"
+            label="左上"
             value={formatNumericValue(tl)}
             disabled={disabled}
             liveCommit
             onCommit={(next) => handleCornerCommit("tl", next)}
           />
           <MetricField
-            label="TR"
+            label="右上"
             value={formatNumericValue(tr)}
             disabled={disabled}
             liveCommit
             onCommit={(next) => handleCornerCommit("tr", next)}
           />
           <MetricField
-            label="BL"
+            label="左下"
             value={formatNumericValue(bl)}
             disabled={disabled}
             liveCommit
             onCommit={(next) => handleCornerCommit("bl", next)}
           />
           <MetricField
-            label="BR"
+            label="右下"
             value={formatNumericValue(br)}
             disabled={disabled}
             liveCommit

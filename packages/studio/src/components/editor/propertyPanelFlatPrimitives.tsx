@@ -72,7 +72,7 @@ export function FlatRow({
           <button
             type="button"
             data-flat-row-reset="true"
-            title="Remove — fall back to default"
+            title="移除 — 恢复为默认值"
             onClick={() => {
               track("button", `Reset ${label}`);
               onReset();
@@ -230,7 +230,7 @@ export function FlatGroupHeader({
       <span className="text-[12px] font-semibold text-panel-text-0">{title}</span>
       <span className="flex items-center gap-2.5 text-panel-text-5">
         {accessory}
-        <button type="button" onClick={onToggleOpen} title="Collapse" className="text-panel-text-3">
+        <button type="button" onClick={onToggleOpen} title="收起" className="text-panel-text-3">
           <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor">
             <path d="M2 4l4 4 4-4z" />
           </svg>
@@ -556,7 +556,7 @@ export function FlatSlider({
             <button
               type="button"
               data-flat-slider-reset="true"
-              title="Remove — fall back to default"
+              title="移除 — 恢复为默认值"
               disabled={disabled}
               onClick={() => {
                 track("button", `Reset ${label}`);

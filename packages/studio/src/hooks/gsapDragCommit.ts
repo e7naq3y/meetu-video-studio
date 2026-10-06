@@ -89,12 +89,12 @@ async function replaceKeyframedPositionHold(
         properties,
         global: true,
       },
-      { label: "Move layer", skipReload: true },
+      { label: "移动图层", skipReload: true },
     );
     await commit(
       selection,
       { type: "delete", animationId: existingSet.id },
-      { label: "Move layer", softReload: true },
+      { label: "移动图层", softReload: true },
     );
   };
 
@@ -104,7 +104,7 @@ async function replaceKeyframedPositionHold(
   }
   await runGestureTransaction({
     element: selection.element,
-    label: "Move layer",
+    label: "移动图层",
     settle: () => undefined,
     persist: async (commit) => persist(commit(commitMutation)),
     restore: () => undefined,
@@ -202,7 +202,7 @@ export async function commitStaticGsapPosition(
     } as const;
     const global = !!existingSet.global;
     await callbacks.commitMutation(selection, mutation, {
-      label: "Move layer",
+      label: "移动图层",
       softReload: true,
       instantPatch: {
         selector,
@@ -228,7 +228,7 @@ export async function commitStaticGsapPosition(
       global: true,
     },
     {
-      label: "Move layer",
+      label: "移动图层",
       softReload: true,
       instantPatch: {
         selector: target,
@@ -264,7 +264,7 @@ export async function commitStaticGsapRotation(
       value: newRotation,
     } as const;
     await callbacks.commitMutation(selection, rotationMutation, {
-      label: "Rotate layer",
+      label: "旋转图层",
       softReload: true,
       // Value-only rotation set — patch the runtime in place (off-timeline gsap.set
       // applies to the element directly; on-timeline tl.set patches its tween).
@@ -286,7 +286,7 @@ export async function commitStaticGsapRotation(
       global: true,
     },
     {
-      label: "Rotate layer",
+      label: "旋转图层",
       softReload: true,
       instantPatch: {
         selector: target,
@@ -318,7 +318,7 @@ export async function commitStaticGsapSize(
         animationId: existingSet.id,
         properties: { width, height },
       },
-      { label: "Resize layer", softReload: true },
+      { label: "调整图层尺寸", softReload: true },
     );
     return;
   }
@@ -333,7 +333,7 @@ export async function commitStaticGsapSize(
       position: 0,
       properties: { width, height },
     },
-    { label: "Resize layer", softReload: true },
+    { label: "调整图层尺寸", softReload: true },
   );
 }
 
@@ -416,6 +416,6 @@ export async function commitWholePathOffset(
       keyframes: shifted,
       ...keyframeEases(effectiveAnim),
     },
-    { label: "Move animation path", softReload: true, beforeReload: restoreOffset },
+    { label: "移动动画路径", softReload: true, beforeReload: restoreOffset },
   );
 }

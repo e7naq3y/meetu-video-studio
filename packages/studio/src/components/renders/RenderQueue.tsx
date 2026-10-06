@@ -204,7 +204,7 @@ function FormatInfoTooltip({ format }: { format: "mp4" | "webm" | "mov" }) {
     <div ref={triggerRef} className="relative" onPointerEnter={show} onPointerLeave={hide}>
       <button
         type="button"
-        aria-label="About video formats"
+        aria-label="关于视频格式"
         aria-expanded={open}
         aria-describedby={open ? panelId : undefined}
         onFocus={show}
@@ -265,9 +265,9 @@ const FORMAT_OPTIONS: SelectOption[] = [
 ];
 
 const QUALITY_OPTIONS: SelectOption[] = [
-  { value: "draft", label: "Draft" },
-  { value: "standard", label: "Standard" },
-  { value: "high", label: "High Quality" },
+  { value: "draft", label: "草稿" },
+  { value: "standard", label: "标准" },
+  { value: "high", label: "高画质" },
 ];
 
 const FPS_OPTIONS: SelectOption[] = [
@@ -325,11 +325,11 @@ function FormatExportButton({
       <div className="grid grid-cols-2 gap-2">
         <div className="flex flex-col gap-1">
           <div className="flex items-center gap-1">
-            <span className="text-step-10 text-text-4">Format</span>
+            <span className="text-step-10 text-text-4">格式</span>
             <FormatInfoTooltip format={format} />
           </div>
           <Select
-            label="Format"
+            label="格式"
             value={format}
             options={FORMAT_OPTIONS}
             disabled={isRendering}
@@ -341,9 +341,9 @@ function FormatExportButton({
           />
         </div>
         <div className="flex flex-col gap-1">
-          <span className="text-step-10 text-text-4">Resolution</span>
+          <span className="text-step-10 text-text-4">分辨率</span>
           <Select
-            label="Resolution"
+            label="分辨率"
             value={resolution}
             options={SCALE_OPTION_ORDER.map((value) => ({
               value,
@@ -355,9 +355,9 @@ function FormatExportButton({
           />
         </div>
         <div className="flex flex-col gap-1">
-          <span className="text-step-10 text-text-4">Frame rate</span>
+          <span className="text-step-10 text-text-4">帧率</span>
           <Select
-            label="Frame rate"
+            label="帧率"
             value={String(fps)}
             options={FPS_OPTIONS}
             disabled={isRendering}
@@ -370,9 +370,9 @@ function FormatExportButton({
         </div>
         {showQuality && (
           <div className="flex flex-col gap-1">
-            <span className="text-step-10 text-text-4">Quality</span>
+            <span className="text-step-10 text-text-4">画质</span>
             <Select
-              label="Quality"
+              label="画质"
               value={quality}
               options={QUALITY_OPTIONS}
               disabled={isRendering}
@@ -391,7 +391,7 @@ function FormatExportButton({
         data-testid="renders-export"
         loading={isRendering}
         disabled={missingFfmpeg !== null}
-        title={missingFfmpeg ? "Install FFmpeg to export. See the note above." : undefined}
+        title={missingFfmpeg ? "需安装 FFmpeg 才能导出，请看上方说明。" : undefined}
         onClick={() => {
           // loading already disables the button; this guard also stops a
           // double-click in the same frame from enqueueing two renders.
@@ -405,11 +405,11 @@ function FormatExportButton({
         // (AE3), which is exactly what it used to do.
         className="w-full"
       >
-        {isRendering ? "Rendering…" : "Export"}
+        {isRendering ? "渲染中…" : "导出"}
       </Button>
       {lastRenderDurationMs !== undefined && !isRendering && (
         <p className="text-step-9 text-text-5 text-center -mt-1.5">
-          Last render took {formatEta(lastRenderDurationMs)}
+          上次渲染耗时 {formatEta(lastRenderDurationMs)}
         </p>
       )}
     </div>
@@ -472,7 +472,7 @@ export const RenderQueue = memo(function RenderQueue({
             <IconButton
               size="sm"
               onClick={onDismissActionError}
-              aria-label="Dismiss error"
+              aria-label="关闭错误提示"
               className="shrink-0"
               icon={
                 <svg
@@ -500,7 +500,7 @@ export const RenderQueue = memo(function RenderQueue({
             <p className="text-step-10 text-danger-ink text-center">{loadError}</p>
             {onRetryLoad && (
               <Button size="sm" variant="secondary" onClick={onRetryLoad}>
-                Retry
+                重试
               </Button>
             )}
           </div>
@@ -531,7 +531,7 @@ export const RenderQueue = memo(function RenderQueue({
                 strokeLinejoin="round"
               />
             </svg>
-            <p className="text-step-10 text-text-5 text-center">No renders yet</p>
+            <p className="text-step-10 text-text-5 text-center">还没有渲染记录</p>
           </div>
         ) : (
           <div>
@@ -542,9 +542,9 @@ export const RenderQueue = memo(function RenderQueue({
                 </span>
                 {/* "Hide", not "Clear": files stay on disk (delete is per-row
                     and confirmed); hidden rows don't resurrect on reload. */}
-                <Tooltip label="Hide finished renders from this list (files stay on disk)">
+                <Tooltip label="在列表中隐藏已完成的渲染（文件仍保留在磁盘上）">
                   <Button size="sm" variant="ghost" onClick={onClearCompleted}>
-                    Hide finished
+                    隐藏已完成
                   </Button>
                 </Tooltip>
               </div>

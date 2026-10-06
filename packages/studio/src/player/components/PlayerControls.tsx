@@ -67,7 +67,7 @@ const LoopButton = memo(function LoopButton({
   setLoopEnabled: (v: boolean) => void;
 }) {
   return (
-    <Tooltip label="Loop playback">
+    <Tooltip label="循环播放">
       <button
         type="button"
         onClick={() => {
@@ -78,7 +78,7 @@ const LoopButton = memo(function LoopButton({
         className={`flex h-7 w-7 items-center justify-center rounded-md transition-colors disabled:opacity-30 ${
           loopEnabled ? "text-accent-ink" : "text-neutral-500 hover:text-neutral-200"
         }`}
-        aria-label={loopEnabled ? "Disable loop playback" : "Enable loop playback"}
+        aria-label={loopEnabled ? "关闭循环播放" : "开启循环播放"}
         aria-pressed={loopEnabled}
       >
         <svg
@@ -110,7 +110,7 @@ const FullscreenButton = memo(function FullscreenButton({
   onToggleFullscreen: () => void;
 }) {
   return (
-    <Tooltip label={isFullscreen ? "Exit fullscreen (F)" : "Enter fullscreen (F)"}>
+    <Tooltip label={isFullscreen ? "退出全屏 (F)" : "进入全屏 (F)"}>
       <button
         type="button"
         onClick={() => {
@@ -120,7 +120,7 @@ const FullscreenButton = memo(function FullscreenButton({
         className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-md transition-colors ${
           isFullscreen ? "text-accent-ink" : "text-neutral-500 hover:text-neutral-200"
         }`}
-        aria-label={isFullscreen ? "Exit fullscreen" : "Enter fullscreen"}
+        aria-label={isFullscreen ? "退出全屏" : "进入全屏"}
       >
         <svg
           width="13"
@@ -230,7 +230,7 @@ export const PlayerControls = memo(function PlayerControls({
         }}
       >
         <Tooltip
-          label={timeDisplayMode === "time" ? "Switch to frame display" : "Switch to time display"}
+          label={timeDisplayMode === "time" ? "切换为帧数显示" : "切换为时间显示"}
         >
           <button
             type="button"
@@ -248,10 +248,10 @@ export const PlayerControls = memo(function PlayerControls({
           </button>
         </Tooltip>
 
-        <Tooltip label={isPlaying ? "Pause" : "Play"}>
+        <Tooltip label={isPlaying ? "暂停" : "播放"}>
           <button
             type="button"
-            aria-label={isPlaying ? "Pause" : "Play"}
+            aria-label={isPlaying ? "暂停" : "播放"}
             onClick={() => {
               trackStudioEvent("playback", { action: isPlaying ? "pause" : "play" });
               onTogglePlay();

@@ -166,7 +166,7 @@ export function EditPopover({ rangeStart, rangeEnd, anchorX, anchorY, onClose }:
                 handleCopy();
               }
             }}
-            placeholder="What should change?"
+            placeholder="需要改什么？"
             rows={2}
             className="w-full px-3 py-2 text-xs bg-neutral-800/60 border border-neutral-700/40 rounded-lg text-neutral-200 placeholder:text-neutral-600 resize-none focus:outline-hidden focus:border-studio-accent/40 transition-colors"
           />
@@ -175,7 +175,7 @@ export function EditPopover({ rangeStart, rangeEnd, anchorX, anchorY, onClose }:
         {/* Action */}
         {copyError && (
           <p className="px-3 pb-2 text-[10px] text-danger-ink" role="alert">
-            Copy failed — check clipboard permissions and try again.
+            复制失败，请检查剪贴板权限后重试。
           </p>
         )}
         <div className="grid grid-cols-2 gap-2 px-3 pb-3">
@@ -188,7 +188,7 @@ export function EditPopover({ rangeStart, rangeEnd, anchorX, anchorY, onClose }:
                 : "bg-neutral-800/70 text-neutral-200 border-neutral-700/50 hover:bg-neutral-800"
             } disabled:opacity-50 disabled:cursor-not-allowed`}
           >
-            {copiedPromptOnly ? "Prompt Copied!" : "Copy Prompt"}
+            {copiedPromptOnly ? "提示词已复制！" : "复制提示词"}
           </button>
           <button
             onClick={handleCopy}
@@ -198,7 +198,7 @@ export function EditPopover({ rangeStart, rangeEnd, anchorX, anchorY, onClose }:
                 : "bg-studio-accent/15 text-accent-ink border border-studio-accent/25 hover:bg-studio-accent/25"
             }`}
           >
-            {copiedAgentPrompt ? "Copied!" : "Copy to Agent"}
+            {copiedAgentPrompt ? "已复制！" : "复制给 AI 助手"}
             {!copiedAgentPrompt && (
               <span className="text-[9px] text-text-muted ml-1.5">Cmd+Enter</span>
             )}

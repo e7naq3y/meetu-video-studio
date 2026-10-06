@@ -173,7 +173,7 @@ export function LayoutGeometryRows({
         suffix={<KeyframeGutter property="height" displayValue={displayH} {...gutterProps} />}
       />
       <FlatRow
-        label="Angle"
+        label="角度"
         value={`${displayR}°`}
         tier="default"
         disabled={manualRotationEditingDisabled}
@@ -218,19 +218,19 @@ export function LayoutFlexBlock({
   return (
     <div className="border-l-2 border-panel-border-input py-0.5 pl-[10px]">
       <div className="mb-[3px] text-[9px] font-semibold uppercase tracking-[0.12em] text-panel-text-5">
-        Flex
+        弹性布局
       </div>
       <FlatSegmentedRow
-        label="Direction"
+        label="方向"
         options={[
-          { key: "row", node: "→ Row", label: "Row", active: direction === "row" },
-          { key: "column", node: "Column", label: "Column", active: direction === "column" },
+          { key: "row", node: "→ Row", label: "横向", active: direction === "row" },
+          { key: "column", node: "Column", label: "纵向", active: direction === "column" },
         ]}
         disabled={disabled}
         onChange={(next) => void onSetStyle("flex-direction", next)}
       />
       <FlatSelectRow
-        label="Justify"
+        label="主轴对齐"
         value={styles["justify-content"] || "flex-start"}
         tier={resolveValueTier(styles["justify-content"], "flex-start")}
         disabled={disabled}
@@ -245,7 +245,7 @@ export function LayoutFlexBlock({
         onChange={(next) => void onSetStyle("justify-content", next)}
       />
       <FlatSelectRow
-        label="Align"
+        label="对齐"
         value={styles["align-items"] || "stretch"}
         tier={resolveValueTier(styles["align-items"], "stretch")}
         disabled={disabled}
@@ -253,7 +253,7 @@ export function LayoutFlexBlock({
         onChange={(next) => void onSetStyle("align-items", next)}
       />
       <FlatRow
-        label="Gap"
+        label="间距"
         value={styles.gap ?? "0px"}
         tier={resolveValueTier(styles.gap, "0px")}
         disabled={disabled}
@@ -308,7 +308,7 @@ export function LayoutTransform3DBlock({
   return (
     <div className="border-t border-panel-hairline pt-2.5">
       <div className="mb-[3px] text-[9px] font-semibold uppercase tracking-[0.12em] text-panel-text-5">
-        3D Transform
+        3D 变换
       </div>
       <PropertyPanel3dTransform
         gsapRuntimeValues={gsapRuntimeValues}

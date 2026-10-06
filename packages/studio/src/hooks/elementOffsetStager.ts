@@ -69,7 +69,7 @@ function stagePlainTranslate(
     if (el.style.getPropertyValue("translate") === written) restoreStudioPathOffset(el, before);
   };
   const key = coalesceKey ?? `move:${++plainMoveCounter}`;
-  const options = { label: "Move layer", coalesceKey: key, coalesceMs: Number.POSITIVE_INFINITY };
+  const options = { label: "移动图层", coalesceKey: key, coalesceMs: Number.POSITIVE_INFINITY };
   const save = () =>
     commitPositionPatchToHtml(selection, patches, options).catch((error) => {
       rollback();
@@ -107,7 +107,7 @@ export function stageElementOffset(
   };
   const save = () =>
     commitPositionPatchToHtml(selection, result, {
-      label: "Move layer",
+      label: "移动图层",
       coalesceKey: coalesceKey ?? `element-offset:${getDomEditTargetKey(selection)}`,
       ...(coalesceKey && { coalesceMs: Number.POSITIVE_INFINITY }),
     }).catch((error) => {

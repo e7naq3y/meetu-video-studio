@@ -65,7 +65,7 @@ export function TimelineGroupLaneLabels({
             data-group-lane-label={lane.target}
             aria-label={
               onReveal
-                ? `Show ${groupLabel} ${parts.name}${parts.param ? ` ${parts.param}` : ""} in the effect rack`
+                ? `在效果架中显示 ${groupLabel} ${parts.name}${parts.param ? ` ${parts.param}` : ""}`
                 : undefined
             }
             disabled={!onReveal}

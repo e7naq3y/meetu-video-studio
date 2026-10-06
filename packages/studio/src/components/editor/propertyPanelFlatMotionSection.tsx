@@ -100,7 +100,7 @@ export function FlatTimingRow({
       {cell("Duration", formatTimingValue(duration), commitDuration)}
       {derived && (
         <p className="col-span-3 mt-1 text-[10px] leading-snug text-panel-text-3">
-          Inferred from this element's animation — edit to pin an explicit clip range.
+          根据该元素的动画推算 — 修改后会固定为明确的片段范围。
         </p>
       )}
     </div>
@@ -149,13 +149,12 @@ export function FlatMotionSection({
         <>
           {multipleTimelines && (
             <p className="rounded-lg bg-amber-500/10 px-3 py-2 text-[11px] leading-relaxed text-warning-ink">
-              This file has multiple GSAP timelines. Animation editing is disabled to prevent data
-              loss — consolidate into a single timeline to enable editing.
+              此文件有多条 GSAP 时间线。为防止数据丢失，已禁用动画编辑 — 合并为一条时间线后即可编辑。
             </p>
           )}
           {unsupportedTimelinePattern && (
             <p className="rounded-lg bg-amber-500/10 px-3 py-2 text-[11px] leading-relaxed text-warning-ink">
-              This timeline uses a computed key the editor can&apos;t resolve statically.
+              此时间线使用了编辑器无法静态解析的计算键。
             </p>
           )}
           {!multipleTimelines && !unsupportedTimelinePattern && (
@@ -194,12 +193,12 @@ export function motionSectionLabel(args: {
 }): { title: string; summary: string } {
   if (args.timingOnly) {
     return {
-      title: "Timing",
+      title: "时间",
       summary: `${formatTimingValue(args.start)} – ${formatTimingValue(args.start + args.duration)}`,
     };
   }
   return {
-    title: "Motion",
+    title: "动效",
     summary: `${args.effectCount} effect${args.effectCount === 1 ? "" : "s"}`,
   };
 }

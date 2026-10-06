@@ -133,7 +133,7 @@ export function AssetPreviewOverlay() {
       className="absolute inset-0 z-50 flex flex-col items-center justify-center bg-black/20"
       onClick={clearPreviewAsset}
       role="dialog"
-      aria-label={`Preview: ${name}`}
+      aria-label={`预览：${name}`}
     >
       {/* Floating preview card — compact, canvas stays visible around it */}
       <div
@@ -147,7 +147,7 @@ export function AssetPreviewOverlay() {
             e.stopPropagation();
             clearPreviewAsset();
           }}
-          aria-label="Close preview"
+          aria-label="关闭预览"
         >
           <svg
             width="12"

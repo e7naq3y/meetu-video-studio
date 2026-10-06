@@ -27,7 +27,7 @@ export function usePanelHiddenToggle({
           audioGroupId,
           "data-hidden",
           hidden ? null : "",
-          `${hiddenToggleVerb(true, hidden)} element`,
+          `${hiddenToggleVerb(true, hidden)}元素`,
         ))
     : selectedElementId && onToggleElementHidden
       ? () => onToggleElementHidden(selectedElementId, !hidden)

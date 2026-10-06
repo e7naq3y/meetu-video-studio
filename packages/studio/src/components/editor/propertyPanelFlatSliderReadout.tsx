@@ -55,7 +55,7 @@ export function FlatSliderReadout({
       <input
         ref={inputRef}
         data-flat-slider-input="true"
-        aria-label={`${label} value`}
+        aria-label={`${label}数值`}
         aria-invalid={invalid || undefined}
         value={text}
         spellCheck={false}
@@ -87,7 +87,7 @@ export function FlatSliderReadout({
       data-flat-slider-value="true"
       role={editable ? "button" : undefined}
       tabIndex={editable ? 0 : undefined}
-      title={editable ? "Click to type a value" : undefined}
+      title={editable ? "点击输入数值" : undefined}
       onClick={begin}
       onKeyDown={(e) => {
         if (!editable) return;

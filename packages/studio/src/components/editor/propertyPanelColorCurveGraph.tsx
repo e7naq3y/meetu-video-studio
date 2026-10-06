@@ -36,13 +36,13 @@ type HueTab = {
 export type CurveTab = RgbTab | HueTab;
 
 export const TABS: readonly CurveTab[] = [
-  { kind: "rgb", key: "master", label: "Master", color: "#e5e7eb", min: 0, max: 1 },
+  { kind: "rgb", key: "master", label: "主控", color: "#e5e7eb", min: 0, max: 1 },
   { kind: "rgb", key: "red", label: "R", color: "#fb7185", min: 0, max: 1 },
   { kind: "rgb", key: "green", label: "G", color: "#4ade80", min: 0, max: 1 },
   { kind: "rgb", key: "blue", label: "B", color: "#60a5fa", min: 0, max: 1 },
-  { kind: "hue", key: "hueVsHue", label: "Hue/Hue", color: "#f0abfc", min: -180, max: 180 },
-  { kind: "hue", key: "hueVsSaturation", label: "Hue/Sat", color: "#facc15", min: -1, max: 1 },
-  { kind: "hue", key: "hueVsLuma", label: "Hue/Luma", color: "#f8fafc", min: -1, max: 1 },
+  { kind: "hue", key: "hueVsHue", label: "色相/色相", color: "#f0abfc", min: -180, max: 180 },
+  { kind: "hue", key: "hueVsSaturation", label: "色相/饱和度", color: "#facc15", min: -1, max: 1 },
+  { kind: "hue", key: "hueVsLuma", label: "色相/亮度", color: "#f8fafc", min: -1, max: 1 },
 ];
 
 export const RGB_IDENTITY: readonly HfColorCurvePoint[] = [
@@ -424,7 +424,7 @@ export function CurveGraph({
     <svg
       viewBox={`0 0 ${GRAPH_SIZE} ${GRAPH_SIZE}`}
       role="application"
-      aria-label={`${tab.label} curve`}
+      aria-label={`${tab.label}曲线`}
       aria-keyshortcuts="Enter Space ArrowLeft ArrowRight ArrowUp ArrowDown PageUp PageDown Home End Delete"
       tabIndex={disabled ? -1 : 0}
       data-color-curve-graph={tab.key}

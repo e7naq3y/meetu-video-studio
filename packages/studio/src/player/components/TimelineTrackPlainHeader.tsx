@@ -22,7 +22,7 @@ export function VisibilityButton({
   // Display number in the text, real key in the callback. The two must not be
   // conflated in either direction.
   const suffix = trackDisplaySuffix(trackDisplayNumber);
-  const label = `${hiddenToggleVerb(asMute, hidden)} track${suffix}`;
+  const label = `${hiddenToggleVerb(asMute, hidden)}轨道${suffix}`;
   return (
     <button
       type="button"

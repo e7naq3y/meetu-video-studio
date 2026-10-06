@@ -66,12 +66,12 @@ export function KeyframeEaseList({
     <div className="space-y-1">
       <div className="flex items-center gap-2">
         <p className="text-[9px] font-semibold uppercase tracking-wider text-neutral-500">
-          Per-keyframe easing
+          逐关键帧缓动
         </p>
         {onApplyAll && (
           <select
-            aria-label="Apply one ease to all segments"
-            title="Apply one ease to every segment (clears per-segment overrides)"
+            aria-label="所有分段使用同一缓动"
+            title="所有分段使用同一缓动（清除各分段的单独设置）"
             value=""
             onChange={(e) => {
               const next = e.target.value;
@@ -80,7 +80,7 @@ export function KeyframeEaseList({
             className="ml-auto cursor-pointer rounded-sm bg-neutral-800 px-1.5 py-0.5 text-[9px] text-neutral-300 outline-hidden hover:bg-neutral-700 focus:ring-1 focus:ring-panel-accent/40"
           >
             <option value="" disabled>
-              Set all…
+              全部设为…
             </option>
             {APPLY_ALL_EASES.map((name) => (
               <option key={name} value={name}>

@@ -325,8 +325,8 @@ export function DomEditCropHandles({
         {hasCrop && repositionSize > 0 && (
           <button
             type="button"
-            aria-label="Reposition crop"
-            title="Reposition crop"
+            aria-label="调整裁剪位置"
+            title="调整裁剪位置"
             data-dom-edit-crop-handle="true"
             className="pointer-events-auto absolute rounded-full border-2 border-studio-accent bg-studio-accent/30 shadow-[0_0_0_1px_rgba(0,0,0,0.4)]"
             style={{
@@ -357,8 +357,8 @@ export function DomEditCropHandles({
             <button
               key={edge}
               type="button"
-              aria-label={`Crop ${edge}`}
-              title="Crop"
+              aria-label={`裁剪${edge}`}
+              title="裁剪"
               data-dom-edit-crop-handle="true"
               className="pointer-events-auto absolute flex items-center justify-center border-0 bg-transparent p-0"
               style={{

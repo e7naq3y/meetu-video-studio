@@ -44,7 +44,7 @@ export function AutomationValueInput({
       onChange={(e) => onChange(e.target.value)}
       onBlur={onCommit}
       value={text}
-      aria-label={`${label} value`}
+      aria-label={`${label}数值`}
       autoFocus
     />
   );

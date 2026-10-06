@@ -48,7 +48,7 @@ const pasteWords = (payload: ClipboardPayload) =>
         label: clipLabel("Paste", payload.clips.length),
         toast: clipToast("Pasted", payload.clips.length),
       }
-    : { label: "Paste element", toast: "Pasted element" };
+    : { label: "粘贴元素", toast: "Pasted element" };
 
 interface RecordEditInput {
   label: string;

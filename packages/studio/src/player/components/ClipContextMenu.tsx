@@ -132,16 +132,16 @@ export const ClipContextMenu = memo(function ClipContextMenu({
     <div
       ref={menuRef}
       role="menu"
-      aria-label="Clip actions"
+      aria-label="片段操作"
       className={`${menuClasses.panel} fixed z-200 min-w-[180px]`}
       style={{ left: adjustedX, top: adjustedY }}
     >
       {hostItems.length > 0 && (
-        <div role="group" aria-label="Host" className={menuClasses.group}>
+        <div role="group" aria-label="宿主" className={menuClasses.group}>
           <HostItems items={hostItems} onClose={onClose} />
         </div>
       )}
-      <div role="group" aria-label="Time" className={menuClasses.group}>
+      <div role="group" aria-label="时间" className={menuClasses.group}>
         {splitLabel && (
           <button
             type="button"
@@ -173,7 +173,7 @@ export const ClipContextMenu = memo(function ClipContextMenu({
         )}
       </div>
 
-      <div role="group" aria-label="Sound" className={menuClasses.group}>
+      <div role="group" aria-label="声音" className={menuClasses.group}>
         {tools && (
           <>
             <ClipMenuAudioItems part="gain" element={element} onClose={onClose} />
@@ -189,7 +189,7 @@ export const ClipContextMenu = memo(function ClipContextMenu({
         )}
       </div>
 
-      <div role="group" aria-label="Picture" className={menuClasses.group}>
+      <div role="group" aria-label="画面" className={menuClasses.group}>
         {tools && (
           <ClipMenuToolItems
             group="picture"
@@ -200,7 +200,7 @@ export const ClipContextMenu = memo(function ClipContextMenu({
         )}
       </div>
 
-      <div role="group" aria-label="Clipboard" className={menuClasses.group}>
+      <div role="group" aria-label="剪贴板" className={menuClasses.group}>
         {onCopy && (
           <button
             type="button"
@@ -211,7 +211,7 @@ export const ClipContextMenu = memo(function ClipContextMenu({
               onClose();
             }}
           >
-            <span>{selectionSize > 1 ? `Copy ${selectionSize} clips` : "Copy"}</span>
+            <span>{selectionSize > 1 ? `复制 ${selectionSize} 个片段` : "复制"}</span>
             <span className="text-neutral-500 text-[10px] ml-3">⌘C</span>
           </button>
         )}
@@ -227,7 +227,7 @@ export const ClipContextMenu = memo(function ClipContextMenu({
               onClose();
             }}
           >
-            <span>Paste</span>
+            <span>粘贴</span>
             <span className="text-neutral-500 text-[10px] ml-3">⌘V</span>
           </button>
         )}
@@ -241,13 +241,13 @@ export const ClipContextMenu = memo(function ClipContextMenu({
               onClose();
             }}
           >
-            <span>{selectionSize > 1 ? `Duplicate ${selectionSize} clips` : "Duplicate"}</span>
+            <span>{selectionSize > 1 ? `复制一份 ${selectionSize} 个片段` : "复制一份"}</span>
             <span className="text-neutral-500 text-[10px] ml-3">⌘D</span>
           </button>
         )}
       </div>
 
-      <div role="group" aria-label="Delete">
+      <div role="group" aria-label="删除">
         <button
           type="button"
           role="menuitem"
@@ -257,7 +257,7 @@ export const ClipContextMenu = memo(function ClipContextMenu({
             onClose();
           }}
         >
-          <span>Delete</span>
+          <span>删除</span>
           <span className="text-neutral-500 text-[10px] ml-3">⌫</span>
         </button>
         {tools && <ClipMenuLinkItems part="delete" element={element} onClose={onClose} />}

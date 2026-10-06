@@ -29,7 +29,7 @@ export async function commitKeyframeAtTimeImpl(
       await commitMutation(
         selection,
         { type: "convert-to-keyframes", animationId: tween.id },
-        { label: "Convert to keyframes", keyframeTelemetry: false, skipReload: true },
+        { label: "转换为关键帧", keyframeTelemetry: false, skipReload: true },
       );
     }
 
@@ -48,7 +48,7 @@ export async function commitKeyframeAtTimeImpl(
         backfillDefaults,
       },
       {
-        label: `Add keyframe at ${roundToCenti(absoluteTime)}s`,
+        label: `在 ${roundToCenti(absoluteTime)}s 处添加关键帧`,
         coalesceKey: `keyframe:${tween.id}:${pct}`,
         softReload: true,
       },
@@ -74,7 +74,7 @@ export async function commitKeyframeAtTimeImpl(
         ],
       },
       {
-        label: `New animation at ${roundToCenti(absoluteTime)}s`,
+        label: `在 ${roundToCenti(absoluteTime)}s 处新建动画`,
         softReload: true,
       },
     );

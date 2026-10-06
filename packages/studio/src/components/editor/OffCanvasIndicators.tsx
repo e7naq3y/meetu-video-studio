@@ -124,10 +124,10 @@ export function OffCanvasIndicators({
               <div
                 role="button"
                 tabIndex={0}
-                aria-label={`Select off-canvas element ${r.key}`}
+                aria-label={`选择画布外元素 ${r.key}`}
                 className="pointer-events-auto absolute inset-0 border-2 border-dashed border-studio-accent/10 rounded-md cursor-pointer hover:border-studio-accent hover:bg-studio-accent/10 transition-colors"
                 style={clipOutside ? { clipPath: clipOutside } : undefined}
-                title={`Off-canvas: ${r.key} — click to select`}
+                title={`画布外：${r.key}，点击选择`}
                 onClick={handleClick}
                 onKeyDown={(e) => {
                   if (e.key === "Enter" || e.key === " ") {

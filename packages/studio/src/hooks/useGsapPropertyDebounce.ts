@@ -176,14 +176,14 @@ export function useGsapPropertyDebounce(
           },
           sdkSession,
           sdkDeps,
-          { label: `Add GSAP ${property}` },
+          { label: `添加 GSAP ${property}` },
         );
         if (cutoverCommittedOrThrow(handled)) return;
       }
       commitMutationSafely(
         selection,
         { type: "add-property", animationId, property, defaultValue },
-        { label: `Add GSAP ${property}` },
+        { label: `添加 GSAP ${property}` },
       );
     },
     [commitMutationSafely],
@@ -201,7 +201,7 @@ export function useGsapPropertyDebounce(
           from,
           sdkSession,
           sdkDeps,
-          { label: `Remove GSAP ${from ? `from-${property}` : property}` },
+          { label: `移除 GSAP ${from ? `from-${property}` : property}` },
         );
         if (cutoverCommittedOrThrow(handled)) return;
       }
@@ -210,7 +210,7 @@ export function useGsapPropertyDebounce(
           selection,
           { type: "remove-from-property", animationId, property },
           {
-            label: `Remove GSAP from-${property}`,
+            label: `移除 GSAP from-${property}`,
           },
         );
       } else {
@@ -218,7 +218,7 @@ export function useGsapPropertyDebounce(
           selection,
           { type: "remove-property", animationId, property },
           {
-            label: `Remove GSAP ${property}`,
+            label: `移除 GSAP ${property}`,
           },
         );
       }
@@ -259,7 +259,7 @@ export function useGsapPropertyDebounce(
           sdkSession,
           sdkDeps,
           {
-            label: `Edit GSAP from-${property}`,
+            label: `编辑 GSAP from-${property}`,
             coalesceKey: `gsap:${animationId}:from:${property}`,
           },
         );
@@ -269,7 +269,7 @@ export function useGsapPropertyDebounce(
         selection,
         { type: "update-from-property", animationId, property, value },
         {
-          label: `Edit GSAP from-${property}`,
+          label: `编辑 GSAP from-${property}`,
           coalesceKey: `gsap:${animationId}:from:${property}`,
         },
       );
@@ -299,14 +299,14 @@ export function useGsapPropertyDebounce(
           },
           sdkSession,
           sdkDeps,
-          { label: `Add GSAP from-${property}` },
+          { label: `添加 GSAP from-${property}` },
         );
         if (cutoverCommittedOrThrow(handled)) return;
       }
       commitMutationSafely(
         selection,
         { type: "add-from-property", animationId, property, defaultValue },
-        { label: `Add GSAP from-${property}` },
+        { label: `添加 GSAP from-${property}` },
       );
     },
     [commitMutationSafely],

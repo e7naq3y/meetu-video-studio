@@ -115,9 +115,9 @@ export function FxPresetMenu({
               // The description says what it does; the count is doing real work
               // — it tells the author a preset IS a chain they can open and
               // edit, rather than an opaque setting they cannot follow.
-              title={`${preset.description} (${preset.nodes.length} effect${
-                preset.nodes.length === 1 ? "" : "s"
-              })`}
+              title={`${preset.description}（${preset.nodes.length} 个特效${
+                preset.nodes.length === 1 ? "" : ""
+              }）`}
               onClick={() => onPick(preset.id)}
               onMouseEnter={() => {
                 reportAudition(preset.id);

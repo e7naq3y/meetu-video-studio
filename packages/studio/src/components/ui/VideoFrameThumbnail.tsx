@@ -63,7 +63,7 @@ export function VideoFrameThumbnail({
   if (failed && !frame) {
     return (
       <div className="w-full h-full bg-neutral-800 flex items-center justify-center">
-        <span className="text-[9px] font-medium text-neutral-600">{fallbackLabel ?? "VIDEO"}</span>
+        <span className="text-[9px] font-medium text-neutral-600">{fallbackLabel ?? "视频"}</span>
       </div>
     );
   }

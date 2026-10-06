@@ -341,7 +341,7 @@ function EditorShellBody({
                 <div className="border-t border-neutral-800/30 shrink-0" style={{ height: 60 }}>
                   <div className="flex items-center gap-1.5 px-2 py-0.5">
                     <span className="text-[9px] font-medium text-neutral-500 uppercase tracking-wider">
-                      Captions
+                      字幕
                     </span>
                   </div>
                   <CaptionTimeline pixelsPerSecond={100} onSeek={seekCaptionTime} />

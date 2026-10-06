@@ -270,7 +270,7 @@ function CompCard({
       role="button"
       tabIndex={0}
       draggable
-      aria-label={`Open composition ${name}`}
+      aria-label={`打开合成 ${name}`}
       aria-pressed={isActive}
       onDragStart={(event) => {
         draggedRef.current = true;
@@ -308,7 +308,7 @@ function CompCard({
       >
         {thumbnailFailed ? (
           <div className="absolute inset-0 flex items-center justify-center px-1 text-center text-[8px] leading-tight text-neutral-600">
-            Preview unavailable
+            无法预览
           </div>
         ) : !frameUrl ? null : (
           <img
@@ -350,7 +350,7 @@ function CompCard({
                 setStageSize(DEFAULT_PREVIEW_STAGE);
               }
             }}
-            title={`${name} preview`}
+            title={`${name} 预览`}
             tabIndex={-1}
           />
         )}
@@ -363,16 +363,16 @@ function CompCard({
           <span className="text-[11px] font-medium text-neutral-300 truncate">{name}</span>
           {isRoot && (
             <span
-              aria-label="Root composition — opens automatically on load"
-              title="Root composition — opens automatically on load"
+              aria-label="根合成 — 加载时自动打开"
+              title="根合成 — 加载时自动打开"
               className="flex-shrink-0 rounded-full bg-neutral-700/60 px-1.5 py-px text-[8px] font-bold uppercase tracking-wide text-neutral-300"
             >
-              Root
+              根合成
             </span>
           )}
           {lintInfo && lintInfo.count > 0 && (
             <span
-              aria-label={`${lintInfo.count} lint finding${lintInfo.count === 1 ? "" : "s"}`}
+              aria-label={`${lintInfo.count} 条检查结果${lintInfo.count === 1 ? "" : ""}`}
               className="shrink-0 min-w-[16px] text-center rounded-full bg-amber-500/20 px-1 text-[8px] font-bold text-warning-ink"
             >
               {lintInfo.count}
@@ -384,8 +384,8 @@ function CompCard({
       {onAddToTimeline && (
         <button
           type="button"
-          title={`Add ${name} to timeline at playhead`}
-          aria-label={`Add ${name} to timeline at playhead`}
+          title={`将 ${name} 添加到时间线播放头处`}
+          aria-label={`将 ${name} 添加到时间线播放头处`}
           onClick={(event) => {
             event.stopPropagation();
             onAddToTimeline();
@@ -396,10 +396,10 @@ function CompCard({
         </button>
       )}
       {onRender && (
-        <Tooltip label={isRendering ? "A render is already in progress" : `Render ${name}`}>
+        <Tooltip label={isRendering ? "已有渲染任务在进行中" : `渲染 ${name}`}>
           <button
             type="button"
-            aria-label={isRendering ? "A render is already in progress" : `Render ${name}`}
+            aria-label={isRendering ? "已有渲染任务在进行中" : `渲染 ${name}`}
             disabled={isRendering}
             onClick={(e) => {
               e.stopPropagation();
@@ -452,7 +452,7 @@ export const CompositionsTab = memo(function CompositionsTab({
   if (compositions.length === 0) {
     return (
       <div className="flex-1 flex items-center justify-center px-4">
-        <p className="text-xs text-neutral-600 text-center">No compositions found</p>
+        <p className="text-xs text-neutral-600 text-center">没有找到合成</p>
       </div>
     );
   }

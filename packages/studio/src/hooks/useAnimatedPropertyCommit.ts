@@ -102,7 +102,7 @@ async function maybeAutoKeyframeSet(
       animationId: setAnim.id,
       duration: animatedTween.duration ?? 1,
     },
-    { label: "Keyframe 3D transform", softReload: true },
+    { label: "为 3D 变换添加关键帧", softReload: true },
   );
 }
 
@@ -335,7 +335,7 @@ async function commitKeyframeProps(
     await commit(
       selection,
       { type: "convert-to-keyframes", animationId: anim.id },
-      { label: "Convert to keyframes", keyframeTelemetry: false, skipReload: true },
+      { label: "转换为关键帧", keyframeTelemetry: false, skipReload: true },
     );
   }
   const ct = usePlayerStore.getState().currentTime;
@@ -391,7 +391,7 @@ async function commitKeyframeProps(
         keyframes: remapped,
         ...keyframeEases(anim),
       },
-      { label: `Edit ${primaryProp} (extended keyframe)`, keyframeAction: "add", softReload: true },
+      { label: `编辑 ${primaryProp}（延伸关键帧）`, keyframeAction: "add", softReload: true },
     );
     return;
   }
@@ -420,7 +420,7 @@ async function commitKeyframeProps(
           backfillDefaults,
         },
     {
-      label: `Edit ${primaryProp} (keyframe ${pct}%)`,
+      label: `编辑 ${primaryProp}（关键帧 ${pct}%）`,
       softReload: true,
       ...(instantPatch ? { instantPatch } : {}),
     },
@@ -575,7 +575,7 @@ export function useAnimatedPropertyCommit(deps: CommitAnimatedPropertyDeps) {
               duration: roundTo3(tDur),
               keyframes,
             },
-            { label: `Add ${primaryProp} keyframe`, softReload: true },
+            { label: `添加 ${primaryProp} 关键帧`, softReload: true },
           );
           return;
         }

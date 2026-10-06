@@ -225,11 +225,11 @@ export const TimelineToolbar = memo(function TimelineToolbar({
           {/* Divider: tool-mode | editing-actions */}
           <div aria-hidden="true" className="mx-1 h-4 w-px bg-neutral-800" />
           <LinkedSelectionToggle />
-          <Tooltip label={timelineSnapEnabled ? "Snapping on (N)" : "Snapping off (N)"}>
+          <Tooltip label={timelineSnapEnabled ? "吸附已开启（N）" : "吸附已关闭（N）"}>
             <button
               type="button"
               onClick={() => setTimelineSnapEnabled(!timelineSnapEnabled)}
-              aria-label="Toggle timeline snapping"
+              aria-label="切换时间线吸附"
               aria-pressed={timelineSnapEnabled}
               className={timelineSnapEnabled ? flatActive : flatIdle}
             >
@@ -239,14 +239,14 @@ export const TimelineToolbar = memo(function TimelineToolbar({
           <Tooltip
             label={
               rippleEditEnabled
-                ? "Ripple on — keeps the main track gapless"
-                : "Ripple off — deleting a main-track clip leaves a gap"
+                ? "波纹已开启 — 主轨道保持无空隙"
+                : "波纹已关闭 — 删除主轨道片段会留下空隙"
             }
           >
             <button
               type="button"
               onClick={() => setRippleEditEnabled(!rippleEditEnabled)}
-              aria-label="Toggle ripple edit"
+              aria-label="切换波纹编辑"
               aria-pressed={rippleEditEnabled}
               className={rippleEditEnabled ? flatActive : flatIdle}
             >
@@ -254,11 +254,11 @@ export const TimelineToolbar = memo(function TimelineToolbar({
             </button>
           </Tooltip>
           {projectHasAudio && (
-            <Tooltip label={audioMetersVisible ? "Hide audio meters" : "Show audio meters"}>
+            <Tooltip label={audioMetersVisible ? "隐藏音量表" : "显示音量表"}>
               <button
                 type="button"
                 onClick={() => setAudioMetersVisible(!audioMetersVisible)}
-                aria-label="Toggle audio meters"
+                aria-label="切换音量表"
                 aria-pressed={audioMetersVisible}
                 className={audioMetersVisible ? flatActive : flatIdle}
               >
@@ -273,22 +273,22 @@ export const TimelineToolbar = memo(function TimelineToolbar({
               <Tooltip
                 label={
                   keyframePathEndpoint
-                    ? "Motion path endpoints cannot be removed"
+                    ? "运动路径的端点无法移除"
                     : !onToggleKeyframe
-                      ? "Select an animated element to add keyframes"
+                      ? "选择一个带动画的元素来添加关键帧"
                       : keyframeIsMotionPath
                         ? keyframeWillExtend
-                          ? "Extend motion path to playhead (K)"
+                          ? "将运动路径延伸到播放头（K）"
                           : keyframeState === "active"
-                            ? "Remove waypoint from motion path (K)"
-                            : "Add waypoint to motion path (K)"
+                            ? "从运动路径移除路径点（K）"
+                            : "在运动路径上添加路径点（K）"
                         : keyframeState === "active"
-                          ? "Remove keyframe at playhead (K)"
+                          ? "移除播放头处的关键帧（K）"
                           : keyframeState === "inactive"
                             ? keyframeWillExtend
-                              ? "Add keyframe at playhead, extends animation (K)"
-                              : "Add keyframe at playhead (K)"
-                            : "Add keyframe (K)"
+                              ? "在播放头处添加关键帧，延长动画（K）"
+                              : "在播放头处添加关键帧（K）"
+                            : "添加关键帧（K）"
                 }
               >
                 <button
@@ -297,16 +297,16 @@ export const TimelineToolbar = memo(function TimelineToolbar({
                   onClick={onToggleKeyframe}
                   aria-label={
                     keyframePathEndpoint
-                      ? "Motion path endpoint"
+                      ? "运动路径端点"
                       : keyframeIsMotionPath
                         ? keyframeState === "active"
-                          ? "Remove motion path waypoint"
+                          ? "移除运动路径点"
                           : keyframeWillExtend
-                            ? "Extend motion path to playhead"
-                            : "Add motion path waypoint"
+                            ? "将运动路径延伸到播放头"
+                            : "添加运动路径点"
                         : keyframeState === "active"
-                          ? "Remove keyframe at playhead"
-                          : "Add keyframe at playhead"
+                          ? "移除播放头处的关键帧"
+                          : "在播放头处添加关键帧"
                   }
                   className={
                     !onToggleKeyframe
@@ -337,14 +337,14 @@ export const TimelineToolbar = memo(function TimelineToolbar({
               <Tooltip
                 label={
                   autoKeyframeEnabled
-                    ? "Auto-record manual edits as keyframes (click to turn off)"
-                    : "Manual edits will not be recorded as keyframes (click to turn on)"
+                    ? "自动将手动修改记录为关键帧（点击关闭）"
+                    : "手动修改不会记录为关键帧（点击开启）"
                 }
               >
                 <button
                   type="button"
                   onClick={() => setAutoKeyframeEnabled(!autoKeyframeEnabled)}
-                  aria-label="Auto-record manual edits as keyframes"
+                  aria-label="自动将手动修改记录为关键帧"
                   aria-pressed={autoKeyframeEnabled}
                   className={`${flatBtn} active:scale-[0.98] hover:bg-hover ${
                     autoKeyframeEnabled
@@ -385,16 +385,16 @@ export const TimelineToolbar = memo(function TimelineToolbar({
                 <Tooltip
                   label={
                     canSplit
-                      ? `Split at playhead (${splitShortcut})`
+                      ? `在播放头处分割（${splitShortcut}）`
                       : splittable
-                        ? "Move the playhead inside the clip to split"
-                        : "Select a clip to split"
+                        ? "将播放头移到片段内才能分割"
+                        : "选择要分割的片段"
                   }
                 >
                   <button
                     type="button"
                     disabled={!canSplit}
-                    aria-label="Split at playhead"
+                    aria-label="在播放头处分割"
                     onClick={() => {
                       if (canSplit && el) onSplitElement(el, currentTime);
                     }}
@@ -431,16 +431,16 @@ export const TimelineToolbar = memo(function TimelineToolbar({
               <Tooltip
                 label={
                   !beatAnalysisReady
-                    ? "Add a music track with beat analysis to place beats"
+                    ? "先添加带节拍分析的音乐轨道，才能放置节拍"
                     : canAdd
-                      ? "Add beat at playhead"
-                      : "A beat already exists at the playhead"
+                      ? "在播放头处添加节拍"
+                      : "播放头处已有节拍"
                 }
               >
                 <button
                   type="button"
                   disabled={!canAdd}
-                  aria-label="Add beat at playhead"
+                  aria-label="在播放头处添加节拍"
                   onClick={() => {
                     if (canAdd) addBeatAtCompositionTime(currentTime);
                   }}
@@ -469,16 +469,16 @@ export const TimelineToolbar = memo(function TimelineToolbar({
           <Tooltip
             label={
               thumbnailsVisible
-                ? "Hide thumbnails — labels only"
-                : "Show thumbnails — posters stay visible; richer previews appear on interaction"
+                ? "隐藏缩略图 — 只显示名称"
+                : "显示缩略图 — 始终显示封面，操作时显示更丰富的预览"
             }
           >
             <button
               type="button"
               aria-label={
                 thumbnailsVisible
-                  ? "Hide thumbnails — labels only"
-                  : "Show thumbnails — posters stay visible; richer previews appear on interaction"
+                  ? "隐藏缩略图 — 只显示名称"
+                  : "显示缩略图 — 始终显示封面，操作时显示更丰富的预览"
               }
               aria-pressed={thumbnailsVisible}
               onClick={() => setThumbnailMode(thumbnailsVisible ? "hidden" : "adaptive")}
@@ -491,11 +491,11 @@ export const TimelineToolbar = memo(function TimelineToolbar({
               <Image size={16} aria-hidden="true" />
             </button>
           </Tooltip>
-          <Tooltip label="Fit timeline to width">
+          <Tooltip label="时间线适应宽度">
             <button
               type="button"
               onClick={() => setZoomMode("fit")}
-              aria-label="Fit timeline to width"
+              aria-label="时间线适应宽度"
               aria-pressed={zoomMode === "fit"}
               className={`h-7 px-2 rounded-md text-[11px] font-medium transition-colors ${
                 zoomMode === "fit"
@@ -506,10 +506,10 @@ export const TimelineToolbar = memo(function TimelineToolbar({
               <ArrowsOutLineHorizontal size={16} aria-hidden="true" />
             </button>
           </Tooltip>
-          <Tooltip label="Zoom out">
+          <Tooltip label="缩小">
             <button
               type="button"
-              aria-label="Zoom out"
+              aria-label="缩小"
               onClick={() => {
                 setZoomMode("manual");
                 setManualZoomPercent(
@@ -527,7 +527,7 @@ export const TimelineToolbar = memo(function TimelineToolbar({
             max="100"
             value={timelineZoomPercentToSlider(displayedTimelineZoomPercent, timelineFitPps)}
             title={`${displayedTimelineZoomPercent}%`}
-            aria-label="Timeline zoom"
+            aria-label="时间线缩放"
             onChange={(e) => {
               setZoomMode("manual");
               setManualZoomPercent(
@@ -538,10 +538,10 @@ export const TimelineToolbar = memo(function TimelineToolbar({
             // track stays 2px and the thumb 10px, only the pointer box grows.
             className="mx-1 h-6 w-[96px] cursor-pointer appearance-none bg-transparent [&::-webkit-slider-runnable-track]:h-[2px] [&::-webkit-slider-runnable-track]:rounded-full [&::-webkit-slider-runnable-track]:bg-neutral-700 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-[10px] [&::-webkit-slider-thumb]:h-[10px] [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-text-0 [&::-webkit-slider-thumb]:-mt-1 [&::-webkit-slider-thumb]:shadow-[0_0_0_2px_#0a0a0a,0_1px_3px_rgba(0,0,0,0.5)] [&::-webkit-slider-thumb]:cursor-grab [&::-webkit-slider-thumb:active]:cursor-grabbing"
           />
-          <Tooltip label="Zoom in">
+          <Tooltip label="放大">
             <button
               type="button"
-              aria-label="Zoom in"
+              aria-label="放大"
               onClick={() => {
                 setZoomMode("manual");
                 setManualZoomPercent(
@@ -556,9 +556,9 @@ export const TimelineToolbar = memo(function TimelineToolbar({
           {/* Numeric zoom readout (main-parity): "Fit" in fit mode, N% in manual. */}
           <span
             className="ml-1 w-[38px] text-right font-mono text-[11px] tabular-nums text-neutral-500 select-none"
-            aria-label="Timeline zoom level"
+            aria-label="时间线缩放比例"
           >
-            {zoomMode === "fit" ? "Fit" : `${displayedTimelineZoomPercent}%`}
+            {zoomMode === "fit" ? "适应窗口" : `${displayedTimelineZoomPercent}%`}
           </span>
         </div>
       </div>

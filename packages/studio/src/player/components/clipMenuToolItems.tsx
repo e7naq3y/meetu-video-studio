@@ -214,7 +214,7 @@ function ChoiceSubmenu({
 
 const VOICE_SECTIONS: readonly ChoiceSection[] = [
   { choices: VOICE_CHOICES },
-  { heading: "Character", choices: CHARACTER_CHOICES },
+  { heading: "角色音", choices: CHARACTER_CHOICES },
 ];
 const LOOK_SECTIONS: readonly ChoiceSection[] = [{ choices: LOOK_CHOICES }];
 
@@ -237,7 +237,7 @@ function FreezeFrameItem({ element, currentTime, onClose }: Omit<ClipMenuToolIte
         onClose();
       }}
     >
-      <span>{inside ? "Freeze frame" : "Freeze frame (move playhead inside clip)"}</span>
+      <span>{inside ? "定格帧" : "定格帧（请把播放头移到片段内）"}</span>
     </button>
   );
 }
@@ -265,7 +265,7 @@ function ClipMenuAttributeItems({ group, element, onClose }: ClipMenuToolItemsPr
     return (
       <>
         <ChoiceSubmenu
-          label="Voice"
+          label="声音"
           sections={VOICE_SECTIONS}
           activeId={activeVoicePreset(state.fxChain)}
           onPick={(id) =>
@@ -288,7 +288,7 @@ function ClipMenuAttributeItems({ group, element, onClose }: ClipMenuToolItemsPr
   return (
     <>
       <ChoiceSubmenu
-        label="Look"
+        label="风格"
         sections={LOOK_SECTIONS}
         activeId={activeLook(state.colorGrading)}
         onPick={(id) => write(HF_COLOR_GRADING_ATTR, lookAttrValue(id), "Look")}
@@ -303,7 +303,7 @@ function ClipMenuAttributeItems({ group, element, onClose }: ClipMenuToolItemsPr
           onClose();
         }}
       >
-        <span>Crop</span>
+        <span>裁剪</span>
       </button>
     </>
   );

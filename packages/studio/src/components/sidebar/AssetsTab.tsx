@@ -139,7 +139,7 @@ function ImportButton({ importing, onClick }: { importing: boolean; onClick: () 
           <path d="M12 5v14M5 12h14" />
         </svg>
       )}
-      {importing ? "Importing…" : "Import media"}
+      {importing ? "导入中…" : "导入媒体"}
     </button>
   );
 }
@@ -157,14 +157,14 @@ function EmptyState({
     return (
       <div className="flex flex-col items-center justify-center h-full px-4 gap-2">
         <p className="text-[11px] text-neutral-500 text-center">
-          No assets match &ldquo;{searchQuery}&rdquo;
+          没有素材匹配&ldquo;{searchQuery}&rdquo;
         </p>
         <button
           type="button"
           onClick={onClearSearch}
           className="px-2.5 py-1 text-[11px] font-medium rounded-md bg-panel-input text-panel-text-3 hover:text-panel-text-1 active:scale-[0.98] transition-colors"
         >
-          Clear search
+          清除搜索
         </button>
       </div>
     );
@@ -188,7 +188,7 @@ function EmptyState({
         <polyline points="17 8 12 3 7 8" strokeLinecap="round" strokeLinejoin="round" />
         <line x1="12" y1="3" x2="12" y2="15" strokeLinecap="round" />
       </svg>
-      <p className="text-[10px] text-neutral-600 text-center">Drop media files here</p>
+      <p className="text-[10px] text-neutral-600 text-center">将媒体文件拖到这里</p>
     </div>
   );
 }
@@ -354,7 +354,7 @@ export const AssetsTab = memo(function AssetsTab({
                   : "text-panel-text-3 hover:text-panel-text-1"
               }`}
             >
-              {m === "local" ? "This project" : "All projects"}
+              {m === "local" ? "当前项目" : "所有项目"}
             </button>
           ))}
         </div>
@@ -383,8 +383,8 @@ export const AssetsTab = memo(function AssetsTab({
           <SearchInput
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            placeholder="Search assets..."
-            aria-label="Search assets"
+            placeholder="搜索素材…"
+            aria-label="搜索素材"
             className="mb-2"
           />
         )}
@@ -401,7 +401,7 @@ export const AssetsTab = memo(function AssetsTab({
                   : "bg-panel-input text-panel-text-3 hover:text-panel-text-1"
               }`}
             >
-              All {counts.all}
+              全部 {counts.all}
             </button>
             {FILTER_ORDER.map((cat) =>
               counts[cat] > 0 ? (
@@ -430,7 +430,7 @@ export const AssetsTab = memo(function AssetsTab({
                       : "bg-panel-input text-panel-text-3 hover:text-panel-text-1"
                   }`}
                 >
-                  In use {usageCounts.used}
+                  使用中 {usageCounts.used}
                 </button>
                 <button
                   onClick={() => setUsageFilter(usageFilter === "unused" ? "all" : "unused")}
@@ -440,7 +440,7 @@ export const AssetsTab = memo(function AssetsTab({
                       : "bg-panel-input text-panel-text-3 hover:text-panel-text-1"
                   }`}
                 >
-                  Unused {usageCounts.unused}
+                  未使用 {usageCounts.unused}
                 </button>
               </>
             )}

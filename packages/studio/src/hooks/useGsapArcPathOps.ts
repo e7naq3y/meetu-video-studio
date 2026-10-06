@@ -20,7 +20,7 @@ export function useGsapArcPathOps(commitMutationSafely: SafeGsapCommitMutation) 
       commitMutationSafely(
         selection,
         { type: "set-arc-path" as const, animationId, ...config },
-        { label: config.enabled ? "Enable arc path" : "Disable arc path", softReload: true },
+        { label: config.enabled ? "启用弧线路径" : "停用弧线路径", softReload: true },
       );
     },
     [commitMutationSafely],
@@ -40,7 +40,7 @@ export function useGsapArcPathOps(commitMutationSafely: SafeGsapCommitMutation) 
       commitMutationSafely(
         selection,
         { type: "update-arc-segment" as const, animationId, segmentIndex, ...update },
-        { label: "Update arc segment", softReload: true },
+        { label: "更新弧线段", softReload: true },
       );
     },
     [commitMutationSafely],
@@ -51,7 +51,7 @@ export function useGsapArcPathOps(commitMutationSafely: SafeGsapCommitMutation) 
       commitMutationSafely(
         selection,
         { type: "remove-arc-path" as const, animationId },
-        { label: "Remove arc path", softReload: true },
+        { label: "移除弧线路径", softReload: true },
       );
     },
     [commitMutationSafely],

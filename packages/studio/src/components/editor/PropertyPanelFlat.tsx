@@ -320,7 +320,7 @@ export function PropertyPanelFlat({
   if (isTextEditable) {
     groups.push({
       id: "text",
-      title: "Text",
+      title: "文字",
       summary: formatTextFieldPreview(element.textFields[0]?.value ?? ""),
       content: (
         <FlatTextSection
@@ -342,7 +342,7 @@ export function PropertyPanelFlat({
     const opacityPct = Math.round((Number.isFinite(opacityValue) ? opacityValue : 1) * 100);
     groups.push({
       id: "style",
-      title: "Style",
+      title: "样式",
       summary: `fill ${styles["background-image"] && styles["background-image"] !== "none" ? "image/gradient" : styles["background-color"] ? "set" : "none"} · ${opacityPct}%`,
       content: (
         <FlatStyleSection
@@ -361,7 +361,7 @@ export function PropertyPanelFlat({
   if (sections.layout) {
     groups.push({
       id: "layout",
-      title: "Layout",
+      title: "布局",
       summary: `${formatPxMetricValue(displayX)},${formatPxMetricValue(displayY)} · ${Math.round(displayW)}×${Math.round(displayH)}`,
       content: (
         <FlatLayoutSection
@@ -427,7 +427,7 @@ export function PropertyPanelFlat({
   if (sections.colorGrading) {
     groups.push({
       id: "grade",
-      title: "Grade",
+      title: "调色",
       accessory: <FlatColorGradingAccessory state={colorGradingController} />,
       summary: `${colorGradingController.grading.preset ?? "neutral"} · ${Math.round(colorGradingController.grading.intensity * 100)}%`,
       content: (
@@ -456,7 +456,7 @@ export function PropertyPanelFlat({
     };
     groups.push({
       id: "effects",
-      title: "Effects",
+      title: "特效",
       accessory: <FlatEffectsAccessory {...effectsProps} />,
       summary: activeEffects ? `${activeEffects} active` : "none",
       content: (
@@ -473,7 +473,7 @@ export function PropertyPanelFlat({
     if (onAddMediaOverlay) {
       groups.push({
         id: "overlays",
-        title: "Overlays",
+        title: "叠加层",
         summary: "add layer",
         content: (
           <FlatOverlaysSection
@@ -491,7 +491,7 @@ export function PropertyPanelFlat({
   if (sections.audioFx) {
     groups.push({
       id: "audio-fx",
-      title: "Audio FX",
+      title: "音频效果",
       summary: audioFxSummary(element, audioGroupLabel),
       content: (
         <AudioFxGroup
@@ -506,7 +506,7 @@ export function PropertyPanelFlat({
   if (sections.media) {
     groups.push({
       id: "media",
-      title: "Media",
+      title: "媒体",
       summary: element.tagName,
       content: (
         <FlatMediaSection

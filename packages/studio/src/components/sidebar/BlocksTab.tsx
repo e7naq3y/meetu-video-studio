@@ -33,7 +33,7 @@ export const BlocksTab = memo(function BlocksTab({ onAddBlock, onPreviewBlock }:
   if (loading) {
     return (
       <div className="flex flex-1 items-center justify-center text-neutral-600 text-xs">
-        Loading blocks…
+        正在加载模块…
       </div>
     );
   }
@@ -53,15 +53,15 @@ export const BlocksTab = memo(function BlocksTab({ onAddBlock, onPreviewBlock }:
         <SearchInput
           value={search}
           onChange={(e) => setSearch(e.target.value)}
-          placeholder="Search by name, category, or tag…"
-          aria-label="Search blocks"
+          placeholder="按名称、分类或标签搜索…"
+          aria-label="搜索模块"
         />
       </div>
 
       {/* Category pills */}
       <div className="px-3 pt-1 pb-2 shrink-0 overflow-x-auto">
         <div className="flex gap-1">
-          <CategoryPill label="All" active={category === null} onClick={() => setCategory(null)} />
+          <CategoryPill label="全部" active={category === null} onClick={() => setCategory(null)} />
           {BLOCK_CATEGORIES.map((cat) => (
             <CategoryPill
               key={cat.id}
@@ -78,14 +78,13 @@ export const BlocksTab = memo(function BlocksTab({ onAddBlock, onPreviewBlock }:
       <div className="flex-1 overflow-y-auto min-h-0 px-2 pb-2">
         {category === "vfx" && (
           <div className="mb-2 px-2 py-1.5 rounded-md bg-purple-500/10 border border-purple-500/20 text-[9px] text-text-2 leading-relaxed">
-            VFX blocks use WebGL via HTML-in-Canvas. Enable{" "}
-            <span className="font-mono text-text-0">chrome://flags/#html-in-canvas</span> for
-            preview.
+            视觉特效模块通过 HTML-in-Canvas 使用 WebGL。请启用{" "}
+            <span className="font-mono text-text-0">chrome://flags/#html-in-canvas</span> 以便预览。
           </div>
         )}
         {filteredBlocks.length === 0 ? (
           <div className="flex items-center justify-center h-32 text-neutral-600 text-xs">
-            No blocks match your search
+            没有符合搜索条件的模块
           </div>
         ) : (
           <div
@@ -420,7 +419,7 @@ function BlockCard({
             <button
               type="button"
               onClick={handleAdd}
-              title="Add to composition at current time"
+              title="在当前时间添加到合成"
               className={`flex items-center gap-1 px-3 py-1.5 rounded-md text-[10px] font-semibold transition-colors active:scale-[0.97] ${
                 addState === "failed"
                   ? "bg-danger text-on-danger"
@@ -438,18 +437,18 @@ function BlockCard({
                 <path d="M12 5v14M5 12h14" />
               </svg>
               {addState === "adding"
-                ? "Adding…"
+                ? "添加中…"
                 : addState === "added"
-                  ? "Added!"
+                  ? "已添加！"
                   : addState === "failed"
-                    ? "Failed"
-                    : "Add"}
+                    ? "失败"
+                    : "添加"}
             </button>
           )}
           <button
             type="button"
             onClick={handleShowPrompt}
-            title="Generate a prompt to paste into your AI agent"
+            title="生成提示词，粘贴到你的 AI 助手中"
             className={`flex items-center gap-1.5 px-3 ${onAdd ? "py-1" : "py-1.5"} rounded-md transition-colors active:scale-[0.97] ${
               onAdd
                 ? "bg-white/15 text-white/90 hover:bg-white/25 text-[9px]"
@@ -467,7 +466,7 @@ function BlockCard({
               <rect x="9" y="9" width="13" height="13" rx="2" />
               <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
             </svg>
-            Ask agent
+            问 AI 助手
           </button>
         </div>
 

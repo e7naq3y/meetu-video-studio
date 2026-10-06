@@ -109,7 +109,7 @@ export function useFreezeFrame(options: UseFreezeFrameOptions) {
       await serializeStudioFileMutations(opts.writeProjectFile, [path], async () => {
         const result = await requestFreezeFrame({ projectId, path, element, playhead });
         await opts.recordEdit({
-          label: "Freeze frame",
+          label: "定格帧",
           files: { [path]: { before: result.before, after: result.after } },
           created: [result.stillPath],
         });

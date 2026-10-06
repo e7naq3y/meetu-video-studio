@@ -44,7 +44,7 @@ export function PropertyPanelFlatFooter({
         >
           <path d="M8 1l1.4 4.6L14 7l-4.6 1.4L8 13l-1.4-4.6L2 7l4.6-1.4z" />
         </svg>
-        Ask agent about this element
+        向 AI 助手询问此元素
       </button>
       {onToggleRecording && (
         <button

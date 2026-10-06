@@ -170,7 +170,7 @@ export function StyleSections({
   return (
     <>
       {isFlex && !hideFlex && (
-        <Section title="Flex" icon={<Layers size={15} />} defaultCollapsed>
+        <Section title="弹性布局" icon={<Layers size={15} />} defaultCollapsed>
           <div className="space-y-4">
             <SegmentedControl
               trackName="Flex direction"
@@ -178,13 +178,13 @@ export function StyleSections({
               value={styles["flex-direction"] || "row"}
               onChange={(next) => onSetStyle("flex-direction", next)}
               options={[
-                { label: "→ Row", value: "row" },
-                { label: "↓ Column", value: "column" },
+                { label: "→ 横向", value: "row" },
+                { label: "↓ 纵向", value: "column" },
               ]}
             />
             <div className={RESPONSIVE_GRID}>
               <SelectField
-                label="Justify"
+                label="主轴对齐"
                 value={styles["justify-content"] || "flex-start"}
                 disabled={styleEditingDisabled}
                 onChange={(next) => onSetStyle("justify-content", next)}
@@ -198,7 +198,7 @@ export function StyleSections({
                 ]}
               />
               <SelectField
-                label="Align"
+                label="对齐"
                 value={styles["align-items"] || "stretch"}
                 disabled={styleEditingDisabled}
                 onChange={(next) => onSetStyle("align-items", next)}
@@ -206,7 +206,7 @@ export function StyleSections({
               />
             </div>
             <DetailField
-              label="Gap"
+              label="间距"
               value={styles.gap ?? "0px"}
               disabled={styleEditingDisabled}
               onCommit={(next) => onSetStyle("gap", next.endsWith("px") ? next : `${next}px`)}
@@ -216,7 +216,7 @@ export function StyleSections({
       )}
 
       {hasVisualBackground && (
-        <Section title="Radius" icon={<Settings size={15} />} defaultCollapsed>
+        <Section title="圆角" icon={<Settings size={15} />} defaultCollapsed>
           <BorderRadiusEditor
             tl={radiusTL}
             tr={radiusTR}
@@ -241,11 +241,11 @@ export function StyleSections({
         </Section>
       )}
 
-      <Section title="Stroke" icon={<Square size={15} />} defaultCollapsed>
+      <Section title="描边" icon={<Square size={15} />} defaultCollapsed>
         <div className="space-y-4">
           <div className={RESPONSIVE_GRID}>
             <MetricField
-              label="Width"
+              label="宽度"
               value={formatPxMetricValue(borderWidthValue)}
               disabled={styleEditingDisabled}
               liveCommit
@@ -265,7 +265,7 @@ export function StyleSections({
               }}
             />
             <SelectField
-              label="Style"
+              label="样式"
               value={borderStyleValue}
               disabled={styleEditingDisabled}
               onChange={async (next) => {
@@ -291,7 +291,7 @@ export function StyleSections({
             />
           </div>
           <ColorField
-            label="Stroke color"
+            label="描边颜色"
             value={borderColorValue}
             disabled={styleEditingDisabled}
             onCommit={(next) => onSetStyle("border-color", next)}
@@ -299,10 +299,10 @@ export function StyleSections({
         </div>
       </Section>
 
-      <Section title="Effects" icon={<Zap size={15} />} defaultCollapsed>
+      <Section title="特效" icon={<Zap size={15} />} defaultCollapsed>
         <div className="space-y-4">
           <SelectField
-            label="Shadow"
+            label="阴影"
             value={boxShadowPreset}
             disabled={styleEditingDisabled}
             onChange={(next) => {
@@ -316,7 +316,7 @@ export function StyleSections({
           />
           <div className={RESPONSIVE_GRID}>
             <div className="grid min-w-0 gap-1.5">
-              <span className={LABEL}>Layer blur</span>
+              <span className={LABEL}>图层模糊</span>
               <SliderControl
                 trackName="Layer blur"
                 value={filterBlurValue}
@@ -332,7 +332,7 @@ export function StyleSections({
               />
             </div>
             <div className="grid min-w-0 gap-1.5">
-              <span className={LABEL}>Backdrop</span>
+              <span className={LABEL}>背景模糊</span>
               <SliderControl
                 trackName="Backdrop blur"
                 value={backdropBlurValue}
@@ -354,18 +354,18 @@ export function StyleSections({
         </div>
       </Section>
 
-      <Section title="Clip" icon={<Layers size={15} />} defaultCollapsed>
+      <Section title="裁切" icon={<Layers size={15} />} defaultCollapsed>
         <div className="space-y-4">
           <div className={RESPONSIVE_GRID}>
             <SelectField
-              label="Overflow"
+              label="溢出"
               value={styles.overflow || "visible"}
               disabled={styleEditingDisabled}
               onChange={(next) => onSetStyle("overflow", next)}
               options={["visible", "hidden", "clip", "auto", "scroll"]}
             />
             <SelectField
-              label="Mask"
+              label="遮罩"
               value={clipPathPreset}
               disabled={styleEditingDisabled}
               onChange={(next) => {
@@ -383,7 +383,7 @@ export function StyleSections({
             />
           </div>
           <div className="grid min-w-0 gap-1.5">
-            <span className={LABEL}>Mask inset</span>
+            <span className={LABEL}>遮罩内缩</span>
             <SliderControl
               trackName="Mask inset"
               value={clipInsetValue}
@@ -431,7 +431,7 @@ export function StyleSections({
         </div>
       </Section>
 
-      <Section title="Transparency" icon={<Eye size={15} />} defaultCollapsed>
+      <Section title="透明度" icon={<Eye size={15} />} defaultCollapsed>
         <div className="space-y-4">
           <SliderControl
             trackName="Opacity"
@@ -445,7 +445,7 @@ export function StyleSections({
             onCommit={(next) => onSetStyle("opacity", formatNumericValue(next / 100))}
           />
           <SelectField
-            label="Mode"
+            label="模式"
             value={styles["mix-blend-mode"] || "normal"}
             disabled={styleEditingDisabled}
             onChange={(next) => onSetStyle("mix-blend-mode", next)}
@@ -454,7 +454,7 @@ export function StyleSections({
         </div>
       </Section>
 
-      <Section title="Fill" icon={<Palette size={15} />}>
+      <Section title="填充" icon={<Palette size={15} />}>
         <div className="space-y-4">
           <SegmentedControl
             trackName="Fill type"
@@ -462,14 +462,14 @@ export function StyleSections({
             value={preferredFillMode}
             onChange={handleFillModeChange}
             options={[
-              { label: "Solid", value: "Solid" },
-              { label: "Gradient", value: "Gradient" },
-              { label: "Image", value: "Image" },
+              { label: "纯色", value: "Solid" },
+              { label: "渐变", value: "Gradient" },
+              { label: "图片", value: "Image" },
             ]}
           />
           {preferredFillMode === "Solid" ? (
             <ColorField
-              label="Fill color"
+              label="填充颜色"
               value={styles["background-color"] ?? "transparent"}
               disabled={styleEditingDisabled}
               onCommit={(next) => onSetStyle("background-color", next)}
@@ -498,7 +498,7 @@ export function StyleSections({
           )}
           {!hasTextControls && (
             <ColorField
-              label="Text color"
+              label="文字颜色"
               value={styles.color ?? "rgb(0, 0, 0)"}
               disabled={styleEditingDisabled}
               onCommit={(next) => onSetStyle("color", next)}

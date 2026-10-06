@@ -417,8 +417,8 @@ export const LayersPanel = memo(function LayersPanel({ host }: { host?: LayersPa
     return (
       <div className="flex h-full flex-col items-center justify-center bg-panel-bg px-6 text-center">
         <Layers size={18} className="mb-3 text-panel-text-5" />
-        <p className="text-sm font-medium text-panel-text-1">No layers</p>
-        <p className="mt-1 text-xs text-neutral-500">Load a composition to see its element tree</p>
+        <p className="text-sm font-medium text-panel-text-1">没有图层</p>
+        <p className="mt-1 text-xs text-neutral-500">载入合成后可查看其元素树</p>
       </div>
     );
   }
@@ -446,7 +446,7 @@ export const LayersPanel = memo(function LayersPanel({ host }: { host?: LayersPa
           >
             <span aria-hidden="true">←</span>
             <span className="truncate">
-              {activeGroupElement.getAttribute("data-hf-group") || "Group"}
+              {activeGroupElement.getAttribute("data-hf-group") || "编组"}
             </span>
           </button>
         )}
@@ -497,7 +497,7 @@ export const LayersPanel = memo(function LayersPanel({ host }: { host?: LayersPa
                   type="button"
                   onClick={(e) => toggleCollapse(layer.key, e)}
                   aria-expanded={!isCollapsed}
-                  aria-label={isCollapsed ? "Expand children" : "Collapse children"}
+                  aria-label={isCollapsed ? "展开子项" : "折叠子项"}
                   className="relative flex h-4 w-4 shrink-0 items-center justify-center rounded-sm text-neutral-500 hover:text-neutral-300 before:absolute before:-inset-1.5 before:content-['']"
                 >
                   <svg

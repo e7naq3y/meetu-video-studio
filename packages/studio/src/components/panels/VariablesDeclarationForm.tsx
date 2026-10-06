@@ -236,18 +236,18 @@ export function DeclarationForm({
             className={`${VARIABLES_INPUT_CLASS} font-mono disabled:opacity-50`}
           />
         </Field>
-        <Field label="Label">
+        <Field label="标签">
           <input
             type="text"
             value={draft.label}
             onChange={(e) => set({ label: e.target.value })}
-            placeholder="Title"
+            placeholder="标题"
             className={VARIABLES_INPUT_CLASS}
           />
         </Field>
       </div>
       <div className="grid grid-cols-2 gap-2">
-        <Field label="Type">
+        <Field label="类型">
           <select
             value={draft.type}
             onChange={(e) => {
@@ -263,7 +263,7 @@ export function DeclarationForm({
             ))}
           </select>
         </Field>
-        <Field label="Default">
+        <Field label="默认值">
           <DefaultField draft={draft} onChange={(defaultRaw) => set({ defaultRaw })} />
         </Field>
       </div>
@@ -282,7 +282,7 @@ export function DeclarationForm({
         </div>
       )}
       {draft.type === "enum" && (
-        <Field label="Options (one per line, value:Label)">
+        <Field label="选项（每行一个，格式为 值:标签）">
           <textarea
             value={draft.optionsRaw}
             onChange={(e) => set({ optionsRaw: e.target.value })}
@@ -291,7 +291,7 @@ export function DeclarationForm({
           />
         </Field>
       )}
-      <Field label="Description (optional)">
+      <Field label="说明（可选）">
         <input
           type="text"
           value={draft.description}
@@ -306,7 +306,7 @@ export function DeclarationForm({
           onClick={onCancel}
           className="h-6 rounded-sm px-2 text-[10px] text-neutral-500 hover:text-neutral-300"
         >
-          Cancel
+          取消
         </button>
         <button
           type="button"

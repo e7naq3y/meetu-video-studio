@@ -173,7 +173,7 @@ export function useTimelineClipTimingEditing({
             projectId: projectIdRef.current,
             targetPath,
             domId: element.domId,
-            label: "Move timeline clip",
+            label: "移动时间线片段",
             coalesceKey: step.coalesceKey,
             recordEdit,
             writeProjectFile,
@@ -203,7 +203,7 @@ export function useTimelineClipTimingEditing({
                   readProjectFile: (path) => readFileContent(projectIdRef.current ?? "", path),
                   publishSession: publishSdkSession,
                 },
-                { label: "Move timeline clip", ...step, skipRefresh: true },
+                { label: "移动时间线片段", ...step, skipRefresh: true },
               ).then((result) => {
                 if (!cutoverCommittedOrThrow(result)) return moveFallback();
                 return finishMoveGsapSync(sdkTimingGsapSync(result));
@@ -279,7 +279,7 @@ export function useTimelineClipTimingEditing({
           projectId: projectIdRef.current,
           targetPath,
           domId: element.domId,
-          label: "Resize timeline clip",
+          label: "调整时间线片段长度",
           coalesceKey: step.coalesceKey,
           recordEdit,
           writeProjectFile,
@@ -311,7 +311,7 @@ export function useTimelineClipTimingEditing({
                 readProjectFile: (path) => readFileContent(projectIdRef.current ?? "", path),
                 publishSession: publishSdkSession,
               },
-              { label: "Resize timeline clip", ...step, skipRefresh: true },
+              { label: "调整时间线片段长度", ...step, skipRefresh: true },
             ).then((result) => {
               if (!cutoverCommittedOrThrow(result)) return resizeFallback();
               return finishResizeGsapSync(sdkTimingGsapSync(result));

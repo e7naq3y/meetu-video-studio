@@ -42,7 +42,7 @@ export function FlatOverlaysSection({
   const [previewing, setPreviewing] = useState<string | null>(null);
 
   if (loading) {
-    return <div className="py-4 text-center text-[10px] text-panel-text-4">Loading overlays…</div>;
+    return <div className="py-4 text-center text-[10px] text-panel-text-4">正在加载叠加层…</div>;
   }
   if (error) {
     return <div className="py-4 text-center text-[10px] text-danger-ink">{error}</div>;
@@ -56,7 +56,7 @@ export function FlatOverlaysSection({
           key={overlay.name}
           type="button"
           data-flat-overlay={overlay.name}
-          aria-label={`Add ${overlay.title}`}
+          aria-label={`添加${overlay.title}`}
           disabled={busy}
           title={overlay.description}
           onPointerEnter={() => setPreviewing(overlay.name)}
@@ -99,7 +99,7 @@ export function FlatOverlaysSection({
             />
           </span>
           <span className="block truncate px-2 py-1.5 text-[10px] text-panel-text-2">
-            {adding === overlay.name ? "Adding…" : overlay.title}
+            {adding === overlay.name ? "添加中…" : overlay.title}
           </span>
         </button>
       ))}

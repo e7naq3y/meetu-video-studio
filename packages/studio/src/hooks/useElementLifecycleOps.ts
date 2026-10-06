@@ -153,7 +153,7 @@ export function useElementLifecycleOps({
         const deleted = await saveServerRewriteWithHistory({
           projectId: pid,
           path: targetPath,
-          label: "Delete element",
+          label: "删除元素",
           writeFile: writeProjectFile,
           recordEdit: editHistory.recordEdit,
           rewrite: async (originalContent) => {
@@ -357,7 +357,7 @@ export function useElementLifecycleOps({
           // server reports an unmatched patch target (live DOM ≠ disk).
           try {
             const result = await commitDomEditPatchBatches(batches, {
-              label: "Reorder layers",
+              label: "调整图层顺序",
               coalesceKey,
               // Unbounded window: every key this commit records under is unique per
               // gesture (zReorderCoalesceKey's gesture seq, or the lane drag's

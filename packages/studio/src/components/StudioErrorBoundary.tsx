@@ -32,7 +32,7 @@ export class StudioErrorBoundary extends Component<Props, State> {
 
     return (
       <div className="fixed inset-0 flex flex-col items-center justify-center gap-4 bg-neutral-950 font-sans text-neutral-200">
-        <div className="text-lg font-semibold">Something went wrong</div>
+        <div className="text-lg font-semibold">出错了</div>
         <div className="max-w-[480px] text-center text-[13px] text-neutral-500">
           {this.state.error.message}
         </div>
@@ -41,7 +41,7 @@ export class StudioErrorBoundary extends Component<Props, State> {
             onClick={() => this.setState({ error: null })}
             className="rounded-md bg-accent px-5 py-2 text-sm font-medium text-on-accent transition-colors hover:bg-accent-hover active:scale-[0.98]"
           >
-            Try again
+            重试
           </button>
           {/* If the error recurs immediately, "Try again" loops — a full reload
               is the recovery path that always works. */}
@@ -49,7 +49,7 @@ export class StudioErrorBoundary extends Component<Props, State> {
             onClick={() => window.location.reload()}
             className="rounded-md border border-neutral-700 px-5 py-2 text-sm font-medium text-neutral-300 transition-colors hover:bg-neutral-800 active:scale-[0.98]"
           >
-            Reload Studio
+            重新加载视频工作室
           </button>
         </div>
         {/* The crash report tells us what broke; only the user can tell us what

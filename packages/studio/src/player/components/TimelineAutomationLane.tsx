@@ -462,7 +462,7 @@ export function TimelineAutomationLane({
         onDoubleClick={gestures.onDoubleClick}
         onContextMenu={onSvgContextMenu}
         role="group"
-        aria-label={`${range.label} automation`}
+        aria-label={`${range.label}自动化`}
       >
         <title>{laneTitle(readOnly)}</title>
         {/* No plate behind the envelope: the lane used to darken its clip's width,

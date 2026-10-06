@@ -28,13 +28,13 @@ import { FxNodeRow } from "./propertyPanelFxNodeRow.js";
 const PRESET_AMOUNT_PARAM: HfAudioFxParam = {
   kind: "number",
   key: "amount",
-  label: "Amount",
+  label: "数量",
   unit: "",
   min: 0,
   max: 1,
   step: 0.01,
   default: 1,
-  hint: "How much of this preset is applied. Automate it to bring the whole preset in or out over time.",
+  hint: "此预设的应用程度。可以对它做自动化，让整个预设随时间渐入或渐出。",
 };
 
 export interface FxPresetRunProps {
@@ -160,7 +160,7 @@ export function FxPresetRun({
           }}
           aria-expanded={!collapsed}
           title={
-            collapsed ? `Show what ${preset.label} contains` : `Hide ${preset.label}'s effects`
+            collapsed ? `查看${preset.label}包含的内容` : `隐藏${preset.label}的特效`
           }
           onClick={onToggleCollapse}
         >
@@ -183,19 +183,19 @@ export function FxPresetRun({
           type="button"
           className="hf-fx-preset-run-toggle rounded-[3px] border border-panel-border-input px-1.5 py-0.5 font-mono text-[9px] text-panel-text-2 hover:text-panel-text-0 disabled:opacity-40"
           aria-pressed={runOn}
-          title={runOn ? `Switch ${preset.label} off` : `Switch ${preset.label} back on`}
+          title={runOn ? `关闭${preset.label}` : `重新开启${preset.label}`}
           disabled={disabled}
           onClick={() => {
             onSetAmount(runOn ? 0 : 1);
             trackInput("toggle", "preset-amount");
           }}
         >
-          {runOn ? "On" : "Off"}
+          {runOn ? "开" : "关"}
         </button>
         <button
           type="button"
           className="hf-fx-preset-run-remove px-1 font-mono text-[11px] text-panel-text-2 hover:text-danger-ink disabled:opacity-40"
-          title={`Remove ${preset.label}`}
+          title={`移除${preset.label}`}
           disabled={disabled}
           onClick={onRemoveRun}
         >

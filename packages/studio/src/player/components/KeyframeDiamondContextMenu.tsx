@@ -94,7 +94,7 @@ export function KeyframeDiamondContextMenu({
     <div
       ref={menuRef}
       role="menu"
-      aria-label="Keyframe actions"
+      aria-label="关键帧操作"
       className={`${menuClasses.panel} fixed z-200 min-w-[180px] overflow-y-auto`}
       style={{ left: adjustedX, top: adjustedY, maxHeight: `calc(100vh - ${adjustedY + 8}px)` }}
     >
@@ -111,7 +111,7 @@ export function KeyframeDiamondContextMenu({
             onClose();
           }}
         >
-          Move to Playhead
+          移到播放头
         </button>
       )}
 
@@ -125,7 +125,7 @@ export function KeyframeDiamondContextMenu({
             onClose();
           }}
         >
-          <span>Edit Ease…</span>
+          <span>编辑缓动…</span>
           <span className="text-[10px] text-neutral-500">{state.currentEase ?? "default"}</span>
         </button>
       )}
@@ -140,10 +140,10 @@ export function KeyframeDiamondContextMenu({
           }}
         >
           {copyStatus === "copied"
-            ? "Copied!"
+            ? "已复制！"
             : copyStatus === "failed"
-              ? "Copy failed — check permissions"
-              : "Copy Properties"}
+              ? "复制失败，请检查权限"
+              : "复制属性"}
         </button>
       )}
 
@@ -158,7 +158,7 @@ export function KeyframeDiamondContextMenu({
             onClose();
           }}
         >
-          Delete Keyframe
+          删除关键帧
         </button>
       )}
 
@@ -177,7 +177,7 @@ export function KeyframeDiamondContextMenu({
           onClose();
         }}
       >
-        Delete All Keyframes
+        删除所有关键帧
       </button>
     </div>,
     document.body,

@@ -65,8 +65,8 @@ export function useGsapAwareGroupMove({
           return;
         }
         await writer.batch(calls, {
-          ...(calls.at(-1)?.options ?? { label: "Move animated layer (group)" }),
-          label: "Move animated layer (group)",
+          ...(calls.at(-1)?.options ?? { label: "移动动画图层（编组）" }),
+          label: "移动动画图层（编组）",
         });
       };
       const coalescedCommit: typeof gsapCommitMutation = (selection, mutation, options) => {

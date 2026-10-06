@@ -77,7 +77,7 @@ export const RenderQueueItem = memo(function RenderQueueItem({
           type="button"
           onClick={isComplete ? handleOpen : undefined}
           disabled={!isComplete}
-          aria-label={isComplete ? `Open ${job.filename} in a new tab` : undefined}
+          aria-label={isComplete ? `在新标签页中打开 ${job.filename}` : undefined}
           className={[
             "w-20 h-[45px] rounded-md overflow-hidden bg-input shrink-0 relative",
             "outline-hidden focus-visible:outline-solid focus-visible:outline-2 focus-visible:outline-accent",
@@ -139,7 +139,7 @@ export const RenderQueueItem = memo(function RenderQueueItem({
           {isRendering && (
             <div className="mt-1">
               <div className="flex items-center justify-between mb-0.5">
-                <span className="text-step-9 text-text-4">{job.stage || "Rendering"}</span>
+                <span className="text-step-9 text-text-4">{job.stage || "渲染中"}</span>
                 <span className="text-step-9 font-mono text-accent-ink">{job.progress}%</span>
               </div>
               <div
@@ -148,7 +148,7 @@ export const RenderQueueItem = memo(function RenderQueueItem({
                 aria-valuenow={job.progress}
                 aria-valuemin={0}
                 aria-valuemax={100}
-                aria-label={`Render progress: ${job.progress}%`}
+                aria-label={`渲染进度：${job.progress}%`}
               >
                 <div
                   className="h-full bg-accent rounded-full transition-all duration-300"
@@ -162,7 +162,7 @@ export const RenderQueueItem = memo(function RenderQueueItem({
             <span className="text-step-9 text-danger-ink mt-0.5 block">{job.error}</span>
           )}
           {job.status === "cancelled" && (
-            <span className="text-step-9 text-text-4 mt-0.5 block">Cancelled</span>
+            <span className="text-step-9 text-text-4 mt-0.5 block">已取消</span>
           )}
 
           {!isRendering && (
@@ -181,7 +181,7 @@ export const RenderQueueItem = memo(function RenderQueueItem({
                 onCancel();
               }}
             >
-              Cancel
+              取消
             </Button>
           ) : confirmingDelete ? (
             <>
@@ -194,7 +194,7 @@ export const RenderQueueItem = memo(function RenderQueueItem({
                   onDelete();
                 }}
               >
-                Delete?
+                确定删除？
               </Button>
               <Button
                 size="sm"
@@ -204,7 +204,7 @@ export const RenderQueueItem = memo(function RenderQueueItem({
                   setConfirmingDelete(false);
                 }}
               >
-                Keep
+                保留
               </Button>
             </>
           ) : (
@@ -212,12 +212,12 @@ export const RenderQueueItem = memo(function RenderQueueItem({
               {/* The tooltip explains the control whether or not it is
                   reachable; `disabled:` on the shared Button keeps pointer
                   events alive precisely so a disabled one can still say why. */}
-              <Tooltip label={isComplete ? "Download" : "Available when the render finishes"}>
+              <Tooltip label={isComplete ? "下载" : "渲染完成后可用"}>
                 <IconButton
                   size="sm"
                   onClick={handleDownload}
                   disabled={!isComplete}
-                  aria-label={`Download ${job.filename}`}
+                  aria-label={`下载 ${job.filename}`}
                   icon={
                     <svg
                       width="12"
@@ -237,14 +237,14 @@ export const RenderQueueItem = memo(function RenderQueueItem({
                   }
                 />
               </Tooltip>
-              <Tooltip label="Delete render file">
+              <Tooltip label="删除渲染文件">
                 <IconButton
                   size="sm"
                   onClick={(e) => {
                     e.stopPropagation();
                     setConfirmingDelete(true);
                   }}
-                  aria-label={`Delete ${job.filename}`}
+                  aria-label={`删除 ${job.filename}`}
                   icon={
                     <svg
                       width="12"

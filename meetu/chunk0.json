@@ -1,0 +1,1307 @@
+[
+ {
+  "id": 0,
+  "text": "text-[light-dark(oklch(0.48_0.12_255),var(--color-blue-400))]",
+  "ctx": "utils/blockCategories.ts [prop:text]"
+ },
+ {
+  "id": 1,
+  "text": "text-[light-dark(oklch(0.48_0.12_305),var(--color-purple-400))]",
+  "ctx": "utils/blockCategories.ts [prop:text]"
+ },
+ {
+  "id": 2,
+  "text": "text-[light-dark(oklch(0.48_0.12_350),var(--color-pink-400))]",
+  "ctx": "utils/blockCategories.ts [prop:text]"
+ },
+ {
+  "id": 3,
+  "text": "text-[light-dark(oklch(0.48_0.12_152),var(--color-green-400))]",
+  "ctx": "utils/blockCategories.ts [prop:text]"
+ },
+ {
+  "id": 4,
+  "text": "text-warning-ink",
+  "ctx": "utils/blockCategories.ts [prop:text]"
+ },
+ {
+  "id": 5,
+  "text": "text-[light-dark(oklch(0.48_0.12_212),var(--color-cyan-400))]",
+  "ctx": "utils/blockCategories.ts [prop:text]"
+ },
+ {
+  "id": 6,
+  "text": "text-[light-dark(oklch(0.48_0.12_13),var(--color-rose-400))]",
+  "ctx": "utils/blockCategories.ts [prop:text]"
+ },
+ {
+  "id": 7,
+  "text": "text-[light-dark(oklch(0.48_0.12_294),var(--color-violet-400))]",
+  "ctx": "utils/blockCategories.ts [prop:text]"
+ },
+ {
+  "id": 8,
+  "text": "text-[light-dark(oklch(0.48_0.12_163),var(--color-emerald-400))]",
+  "ctx": "utils/blockCategories.ts [prop:text]"
+ },
+ {
+  "id": 9,
+  "text": "Add ${isBlock ? \"block\" : \"component\"}: ${block.title}",
+  "ctx": "utils/blockInstaller.ts [prop:label]"
+ },
+ {
+  "id": 10,
+  "text": "Delete element",
+  "ctx": "utils/sdkCutover.ts [prop:label]; hooks/useElementLifecycleOps.ts [prop:label]"
+ },
+ {
+  "id": 11,
+  "text": "Edit layer",
+  "ctx": "utils/sdkEditTransaction.ts [prop:label]; hooks/useDomEditPersist.ts [prop:label]"
+ },
+ {
+  "id": 12,
+  "text": "Edit slideshow",
+  "ctx": "utils/setSlideshowManifest.ts [prop:label]"
+ },
+ {
+  "id": 13,
+  "text": "Add composition to timeline",
+  "ctx": "utils/timelineCompositionInsert.ts [prop:label]"
+ },
+ {
+  "id": 14,
+  "text": "${name}${detailFor(properties)}",
+  "ctx": "telemetry/breadcrumbs.ts [prop:label]"
+ },
+ {
+  "id": 15,
+  "text": "Fixture ${index + 1}",
+  "ctx": "player/lib/timelinePerformanceFixture.ts [prop:label]"
+ },
+ {
+  "id": 16,
+  "text": "${group.indices.length} points ${dt >= 0 ? \"+\" : \"\"}${dt.toFixed(2)}s",
+  "ctx": "player/components/automationLaneDragMath.ts [prop:hint]"
+ },
+ {
+  "id": 17,
+  "text": "Volume",
+  "ctx": "player/components/automationLaneGeometry.ts [prop:label]; editor/propertyPanelFlatMediaSection.tsx [attr:label]"
+ },
+ {
+  "id": 18,
+  "text": "Ramp up",
+  "ctx": "player/components/automationShapes.ts [prop:label]"
+ },
+ {
+  "id": 19,
+  "text": "Ramp down",
+  "ctx": "player/components/automationShapes.ts [prop:label]"
+ },
+ {
+  "id": 20,
+  "text": "Swell",
+  "ctx": "player/components/automationShapes.ts [prop:label]"
+ },
+ {
+  "id": 21,
+  "text": "Dip",
+  "ctx": "player/components/automationShapes.ts [prop:label]"
+ },
+ {
+  "id": 22,
+  "text": "Clean",
+  "ctx": "player/components/clipToolAttrs.ts [prop:label]"
+ },
+ {
+  "id": 23,
+  "text": "Broadcast",
+  "ctx": "player/components/clipToolAttrs.ts [prop:label]"
+ },
+ {
+  "id": 24,
+  "text": "Warm",
+  "ctx": "player/components/clipToolAttrs.ts [prop:label]"
+ },
+ {
+  "id": 25,
+  "text": "Telephone",
+  "ctx": "player/components/clipToolAttrs.ts [prop:label]"
+ },
+ {
+  "id": 26,
+  "text": "AM Radio",
+  "ctx": "player/components/clipToolAttrs.ts [prop:label]"
+ },
+ {
+  "id": 27,
+  "text": "Megaphone",
+  "ctx": "player/components/clipToolAttrs.ts [prop:label]"
+ },
+ {
+  "id": 28,
+  "text": "Warm daylight",
+  "ctx": "player/components/clipToolAttrs.ts [prop:label]"
+ },
+ {
+  "id": 29,
+  "text": "Clean studio",
+  "ctx": "player/components/clipToolAttrs.ts [prop:label]"
+ },
+ {
+  "id": 30,
+  "text": "Vintage wash",
+  "ctx": "player/components/clipToolAttrs.ts [prop:label]"
+ },
+ {
+  "id": 31,
+  "text": "Mono",
+  "ctx": "player/components/clipToolAttrs.ts [prop:label]"
+ },
+ {
+  "id": 32,
+  "text": "Deep contrast",
+  "ctx": "player/components/clipToolAttrs.ts [prop:label]"
+ },
+ {
+  "id": 33,
+  "text": "Home movie",
+  "ctx": "player/components/clipToolAttrs.ts [prop:label]"
+ },
+ {
+  "id": 34,
+  "text": "Playback",
+  "ctx": "player/components/studioShortcuts.ts [prop:title]"
+ },
+ {
+  "id": 35,
+  "text": "Play / Pause",
+  "ctx": "player/components/studioShortcuts.ts [prop:label]"
+ },
+ {
+  "id": 36,
+  "text": "Play backward",
+  "ctx": "player/components/studioShortcuts.ts [prop:label]"
+ },
+ {
+  "id": 37,
+  "text": "Stop",
+  "ctx": "player/components/studioShortcuts.ts [prop:label]"
+ },
+ {
+  "id": 38,
+  "text": "Play forward",
+  "ctx": "player/components/studioShortcuts.ts [prop:label]"
+ },
+ {
+  "id": 39,
+  "text": "Toggle mute",
+  "ctx": "player/components/studioShortcuts.ts [prop:label]"
+ },
+ {
+  "id": 40,
+  "text": "Toggle loop",
+  "ctx": "player/components/studioShortcuts.ts [prop:label]"
+ },
+ {
+  "id": 41,
+  "text": "Step 1 frame",
+  "ctx": "player/components/studioShortcuts.ts [prop:label]"
+ },
+ {
+  "id": 42,
+  "text": "Step 10 frames",
+  "ctx": "player/components/studioShortcuts.ts [prop:label]"
+ },
+ {
+  "id": 43,
+  "text": "Toggle fullscreen",
+  "ctx": "player/components/studioShortcuts.ts [prop:label]"
+ },
+ {
+  "id": 44,
+  "text": "Keyframes (when an element is selected)",
+  "ctx": "player/components/studioShortcuts.ts [prop:title]"
+ },
+ {
+  "id": 45,
+  "text": "Add / remove keyframe at playhead",
+  "ctx": "player/components/studioShortcuts.ts [prop:label]"
+ },
+ {
+  "id": 46,
+  "text": "Delete selected keyframe",
+  "ctx": "player/components/studioShortcuts.ts [prop:label]"
+ },
+ {
+  "id": 47,
+  "text": "Record gesture",
+  "ctx": "player/components/studioShortcuts.ts [prop:label]"
+ },
+ {
+  "id": 48,
+  "text": "Editing",
+  "ctx": "player/components/studioShortcuts.ts [prop:title]; editor/propertyPanelFlatEffectsSection.tsx [jsxexpr]"
+ },
+ {
+  "id": 49,
+  "text": "Undo",
+  "ctx": "player/components/studioShortcuts.ts [prop:label]; TimelineHistoryButtons.tsx [attr:aria-label]"
+ },
+ {
+  "id": 50,
+  "text": "Redo",
+  "ctx": "player/components/studioShortcuts.ts [prop:label]; TimelineHistoryButtons.tsx [attr:aria-label]"
+ },
+ {
+  "id": 51,
+  "text": "Copy element",
+  "ctx": "player/components/studioShortcuts.ts [prop:label]"
+ },
+ {
+  "id": 52,
+  "text": "Paste element",
+  "ctx": "player/components/studioShortcuts.ts [prop:label]; hooks/useClipboard.ts [prop:label]"
+ },
+ {
+  "id": 53,
+  "text": "Cut element",
+  "ctx": "player/components/studioShortcuts.ts [prop:label]"
+ },
+ {
+  "id": 54,
+  "text": "Split clip at playhead",
+  "ctx": "player/components/studioShortcuts.ts [prop:label]"
+ },
+ {
+  "id": 55,
+  "text": "Audio Gain for clips with sound",
+  "ctx": "player/components/studioShortcuts.ts [prop:label]"
+ },
+ {
+  "id": 56,
+  "text": "Razor tool: split all tracks",
+  "ctx": "player/components/studioShortcuts.ts [prop:label]"
+ },
+ {
+  "id": 57,
+  "text": "Select clips starting before the playhead",
+  "ctx": "player/components/studioShortcuts.ts [prop:label]"
+ },
+ {
+  "id": 58,
+  "text": "Select clips running at or after the playhead",
+  "ctx": "player/components/studioShortcuts.ts [prop:label]"
+ },
+ {
+  "id": 59,
+  "text": "Group elements",
+  "ctx": "player/components/studioShortcuts.ts [prop:label]"
+ },
+ {
+  "id": 60,
+  "text": "Ungroup",
+  "ctx": "player/components/studioShortcuts.ts [prop:label]; editor/InspectorHeaderActions.tsx [jsxtext]"
+ },
+ {
+  "id": 61,
+  "text": "Delete selected element (no keyframe selected)",
+  "ctx": "player/components/studioShortcuts.ts [prop:label]"
+ },
+ {
+  "id": 62,
+  "text": "Gesture recording modifiers",
+  "ctx": "player/components/studioShortcuts.ts [prop:title]"
+ },
+ {
+  "id": 63,
+  "text": "Record x / y position",
+  "ctx": "player/components/studioShortcuts.ts [prop:label]"
+ },
+ {
+  "id": 64,
+  "text": "Record z depth",
+  "ctx": "player/components/studioShortcuts.ts [prop:label]"
+ },
+ {
+  "id": 65,
+  "text": "Record rotationX / rotationY",
+  "ctx": "player/components/studioShortcuts.ts [prop:label]"
+ },
+ {
+  "id": 66,
+  "text": "Record rotation",
+  "ctx": "player/components/studioShortcuts.ts [prop:label]"
+ },
+ {
+  "id": 67,
+  "text": "Record opacity",
+  "ctx": "player/components/studioShortcuts.ts [prop:label]"
+ },
+ {
+  "id": 68,
+  "text": "Record scale",
+  "ctx": "player/components/studioShortcuts.ts [prop:label]"
+ },
+ {
+  "id": 69,
+  "text": "Canvas",
+  "ctx": "player/components/studioShortcuts.ts [prop:title]"
+ },
+ {
+  "id": 70,
+  "text": "Move element / add keyframe",
+  "ctx": "player/components/studioShortcuts.ts [prop:label]"
+ },
+ {
+  "id": 71,
+  "text": "Move entire animation path",
+  "ctx": "player/components/studioShortcuts.ts [prop:label]"
+ },
+ {
+  "id": 72,
+  "text": "Uniform resize",
+  "ctx": "player/components/studioShortcuts.ts [prop:label]"
+ },
+ {
+  "id": 73,
+  "text": "Crop",
+  "ctx": "player/components/studioShortcuts.ts [prop:title]; player/components/clipMenuToolItems.tsx [jsxtext]"
+ },
+ {
+  "id": 74,
+  "text": "Crop a side",
+  "ctx": "player/components/studioShortcuts.ts [prop:label]"
+ },
+ {
+  "id": 75,
+  "text": "Reposition the crop",
+  "ctx": "player/components/studioShortcuts.ts [prop:label]"
+ },
+ {
+  "id": 76,
+  "text": "Panels",
+  "ctx": "player/components/studioShortcuts.ts [prop:title]"
+ },
+ {
+  "id": 77,
+  "text": "Compositions tab",
+  "ctx": "player/components/studioShortcuts.ts [prop:label]"
+ },
+ {
+  "id": 78,
+  "text": "Assets tab",
+  "ctx": "player/components/studioShortcuts.ts [prop:label]"
+ },
+ {
+  "id": 79,
+  "text": "Work area",
+  "ctx": "player/components/studioShortcuts.ts [prop:title]; player/components/ShortcutsPanel.tsx [jsxtext]"
+ },
+ {
+  "id": 80,
+  "text": "Set in-point",
+  "ctx": "player/components/studioShortcuts.ts [prop:label]"
+ },
+ {
+  "id": 81,
+  "text": "Clear in-point",
+  "ctx": "player/components/studioShortcuts.ts [prop:label]; player/components/ShortcutsPanel.tsx [attr:label]"
+ },
+ {
+  "id": 82,
+  "text": "Set out-point",
+  "ctx": "player/components/studioShortcuts.ts [prop:label]"
+ },
+ {
+  "id": 83,
+  "text": "Clear out-point",
+  "ctx": "player/components/studioShortcuts.ts [prop:label]; player/components/ShortcutsPanel.tsx [attr:label]"
+ },
+ {
+  "id": 84,
+  "text": "Jump to in-point",
+  "ctx": "player/components/studioShortcuts.ts [prop:label]"
+ },
+ {
+  "id": 85,
+  "text": "Jump to out-point",
+  "ctx": "player/components/studioShortcuts.ts [prop:label]"
+ },
+ {
+  "id": 86,
+  "text": "var(--timeline-track-label)",
+  "ctx": "player/components/timelineTheme.ts [prop:label]"
+ },
+ {
+  "id": 87,
+  "text": "Set Gain to",
+  "ctx": "player/components/AudioGainDialog.tsx [prop:label]"
+ },
+ {
+  "id": 88,
+  "text": "Adjust Gain by",
+  "ctx": "player/components/AudioGainDialog.tsx [prop:label]"
+ },
+ {
+  "id": 89,
+  "text": "Normalize Max Peak to",
+  "ctx": "player/components/AudioGainDialog.tsx [prop:label]"
+ },
+ {
+  "id": 90,
+  "text": "Normalize All Peaks to",
+  "ctx": "player/components/AudioGainDialog.tsx [prop:label]"
+ },
+ {
+  "id": 91,
+  "text": "audio-gain-mode",
+  "ctx": "player/components/AudioGainDialog.tsx [attr:name]"
+ },
+ {
+  "id": 92,
+  "text": "${ROWS.find((row) => row.mode === rowMode)?.label ?? \"\"} dB",
+  "ctx": "player/components/AudioGainDialog.tsx [attr:aria-label]"
+ },
+ {
+  "id": 93,
+  "text": "Normalize loudness to −16 LUFS",
+  "ctx": "player/components/AudioGainDialog.tsx [attr:label]"
+ },
+ {
+  "id": 94,
+  "text": "Peak Amplitude:",
+  "ctx": "player/components/AudioGainDialog.tsx [jsxtext]"
+ },
+ {
+  "id": 95,
+  "text": "measuring…",
+  "ctx": "player/components/AudioGainDialog.tsx [jsxexpr]; editor/propertyPanelFxAddMenu.tsx [jsxtext]"
+ },
+ {
+  "id": 96,
+  "text": "Peak targets must be 0 dB or lower.",
+  "ctx": "player/components/AudioGainDialog.tsx [jsxtext]"
+ },
+ {
+  "id": 97,
+  "text": "Cancel",
+  "ctx": "player/components/AudioGainDialog.tsx [jsxtext]; player/components/TimelineFxButton.tsx [jsxtext]"
+ },
+ {
+  "id": 98,
+  "text": "OK",
+  "ctx": "player/components/AudioGainDialog.tsx [jsxtext]"
+ },
+ {
+  "id": 99,
+  "text": "waveform unavailable",
+  "ctx": "player/components/AudioWaveform.tsx [jsxtext]"
+ },
+ {
+  "id": 100,
+  "text": "Fewer than three points in the selection",
+  "ctx": "player/components/AutomationSelectionMenu.tsx [attr:title]"
+ },
+ {
+  "id": 101,
+  "text": "Simplify",
+  "ctx": "player/components/AutomationSelectionMenu.tsx [jsxtext]"
+ },
+ {
+  "id": 102,
+  "text": "${label} value",
+  "ctx": "player/components/AutomationValueInput.tsx [attr:aria-label]; editor/propertyPanelFlatSliderReadout.tsx [attr:aria-label]"
+ },
+ {
+  "id": 103,
+  "text": "Drag to move · ⌥-click to delete",
+  "ctx": "player/components/BeatStrip.tsx [attr:title]"
+ },
+ {
+  "id": 104,
+  "text": "No effects",
+  "ctx": "player/components/ClipBadges.tsx [attr:title]"
+ },
+ {
+  "id": 105,
+  "text": "Clip actions",
+  "ctx": "player/components/ClipContextMenu.tsx [attr:aria-label]"
+ },
+ {
+  "id": 106,
+  "text": "Host",
+  "ctx": "player/components/ClipContextMenu.tsx [attr:aria-label]"
+ },
+ {
+  "id": 107,
+  "text": "Time",
+  "ctx": "player/components/ClipContextMenu.tsx [attr:aria-label]"
+ },
+ {
+  "id": 108,
+  "text": "Sound",
+  "ctx": "player/components/ClipContextMenu.tsx [attr:aria-label]"
+ },
+ {
+  "id": 109,
+  "text": "Picture",
+  "ctx": "player/components/ClipContextMenu.tsx [attr:aria-label]"
+ },
+ {
+  "id": 110,
+  "text": "Clipboard",
+  "ctx": "player/components/ClipContextMenu.tsx [attr:aria-label]"
+ },
+ {
+  "id": 111,
+  "text": "Copy ${selectionSize} clips",
+  "ctx": "player/components/ClipContextMenu.tsx [jsxexpr]"
+ },
+ {
+  "id": 112,
+  "text": "Copy",
+  "ctx": "player/components/ClipContextMenu.tsx [jsxexpr]; ExternalFileConflictBanner.tsx [jsxtext]"
+ },
+ {
+  "id": 113,
+  "text": "Paste",
+  "ctx": "player/components/ClipContextMenu.tsx [jsxtext]"
+ },
+ {
+  "id": 114,
+  "text": "Duplicate ${selectionSize} clips",
+  "ctx": "player/components/ClipContextMenu.tsx [jsxexpr]"
+ },
+ {
+  "id": 115,
+  "text": "Duplicate",
+  "ctx": "player/components/ClipContextMenu.tsx [jsxexpr]; editor/FileTreeNodes.tsx [jsxtext]"
+ },
+ {
+  "id": 116,
+  "text": "Delete",
+  "ctx": "player/components/ClipContextMenu.tsx [attr:aria-label]; player/components/ClipContextMenu.tsx [jsxtext]"
+ },
+ {
+  "id": 117,
+  "text": "Too loud",
+  "ctx": "player/components/ClipPeakMarks.tsx [jsxtext]"
+ },
+ {
+  "id": 118,
+  "text": "What should change?",
+  "ctx": "player/components/EditModal.tsx [attr:placeholder]"
+ },
+ {
+  "id": 119,
+  "text": "Copy failed — check clipboard permissions and try again.",
+  "ctx": "player/components/EditModal.tsx [jsxtext]"
+ },
+ {
+  "id": 120,
+  "text": "Prompt Copied!",
+  "ctx": "player/components/EditModal.tsx [jsxexpr]"
+ },
+ {
+  "id": 121,
+  "text": "Copy Prompt",
+  "ctx": "player/components/EditModal.tsx [jsxexpr]"
+ },
+ {
+  "id": 122,
+  "text": "Copied!",
+  "ctx": "player/components/EditModal.tsx [jsxexpr]; player/components/KeyframeDiamondContextMenu.tsx [jsxexpr]"
+ },
+ {
+  "id": 123,
+  "text": "Copy to Agent",
+  "ctx": "player/components/EditModal.tsx [jsxexpr]; LintModal.tsx [jsxexpr]"
+ },
+ {
+  "id": 124,
+  "text": "Cmd+Enter",
+  "ctx": "player/components/EditModal.tsx [jsxtext]"
+ },
+ {
+  "id": 125,
+  "text": "Keyframe actions",
+  "ctx": "player/components/KeyframeDiamondContextMenu.tsx [attr:aria-label]"
+ },
+ {
+  "id": 126,
+  "text": "Move to Playhead",
+  "ctx": "player/components/KeyframeDiamondContextMenu.tsx [jsxtext]"
+ },
+ {
+  "id": 127,
+  "text": "Edit Ease…",
+  "ctx": "player/components/KeyframeDiamondContextMenu.tsx [jsxtext]"
+ },
+ {
+  "id": 128,
+  "text": "Copy failed — check permissions",
+  "ctx": "player/components/KeyframeDiamondContextMenu.tsx [jsxexpr]; LintModal.tsx [jsxexpr]"
+ },
+ {
+  "id": 129,
+  "text": "Copy Properties",
+  "ctx": "player/components/KeyframeDiamondContextMenu.tsx [jsxexpr]"
+ },
+ {
+  "id": 130,
+  "text": "Delete Keyframe",
+  "ctx": "player/components/KeyframeDiamondContextMenu.tsx [jsxtext]"
+ },
+ {
+  "id": 131,
+  "text": "Delete All Keyframes",
+  "ctx": "player/components/KeyframeDiamondContextMenu.tsx [jsxtext]"
+ },
+ {
+  "id": 132,
+  "text": "${isExpanded ? \"Hide\" : \"Show\"} ${name} lanes",
+  "ctx": "player/components/LayerDisclosureRow.tsx [attr:aria-label]"
+ },
+ {
+  "id": 133,
+  "text": "${isExpanded ? \"Hide\" : \"Show\"} lanes",
+  "ctx": "player/components/LayerDisclosureRow.tsx [attr:title]"
+ },
+ {
+  "id": 134,
+  "text": "Out of sync",
+  "ctx": "player/components/OutOfSyncBadge.tsx [attr:aria-label]"
+ },
+ {
+  "id": 135,
+  "text": "Would move the clip before 0:00",
+  "ctx": "player/components/OutOfSyncBadge.tsx [attr:title]"
+ },
+ {
+  "id": 136,
+  "text": "Move into Sync",
+  "ctx": "player/components/OutOfSyncBadge.tsx [jsxtext]; hooks/timelineLinkEditPlan.ts [prop:label]"
+ },
+ {
+  "id": 137,
+  "text": "Would slip before the start of the file",
+  "ctx": "player/components/OutOfSyncBadge.tsx [attr:title]"
+ },
+ {
+  "id": 138,
+  "text": "Slip into Sync",
+  "ctx": "player/components/OutOfSyncBadge.tsx [jsxtext]; hooks/timelineLinkEditPlan.ts [prop:label]"
+ },
+ {
+  "id": 139,
+  "text": "Out of sync with ${partnerName} by ${label} frames",
+  "ctx": "player/components/OutOfSyncBadge.tsx [attr:aria-label]"
+ },
+ {
+  "id": 140,
+  "text": "Out of sync with ${partnerName} by ${label} — click for Move or Slip into Sync",
+  "ctx": "player/components/OutOfSyncBadge.tsx [attr:title]"
+ },
+ {
+  "id": 141,
+  "text": "Loading composition",
+  "ctx": "player/components/Player.tsx [attr:title]"
+ },
+ {
+  "id": 142,
+  "text": "Preparing the Studio preview.",
+  "ctx": "player/components/Player.tsx [attr:detail]"
+ },
+ {
+  "id": 143,
+  "text": "Preparing preview assets",
+  "ctx": "player/components/Player.tsx [attr:title]"
+ },
+ {
+  "id": 144,
+  "text": "Waiting for media and motion assets before playback starts.",
+  "ctx": "player/components/Player.tsx [attr:detail]"
+ },
+ {
+  "id": 145,
+  "text": "Continue anyway",
+  "ctx": "player/components/Player.tsx [jsxtext]"
+ },
+ {
+  "id": 146,
+  "text": "Preview failed to load",
+  "ctx": "player/components/Player.tsx [jsxtext]"
+ },
+ {
+  "id": 147,
+  "text": "Retry preview",
+  "ctx": "player/components/Player.tsx [jsxtext]"
+ },
+ {
+  "id": 148,
+  "text": "Loop playback",
+  "ctx": "player/components/PlayerControls.tsx [attr:label]"
+ },
+ {
+  "id": 149,
+  "text": "Disable loop playback",
+  "ctx": "player/components/PlayerControls.tsx [attr:aria-label]"
+ },
+ {
+  "id": 150,
+  "text": "Enable loop playback",
+  "ctx": "player/components/PlayerControls.tsx [attr:aria-label]"
+ },
+ {
+  "id": 151,
+  "text": "Exit fullscreen (F)",
+  "ctx": "player/components/PlayerControls.tsx [attr:label]"
+ },
+ {
+  "id": 152,
+  "text": "Enter fullscreen (F)",
+  "ctx": "player/components/PlayerControls.tsx [attr:label]"
+ },
+ {
+  "id": 153,
+  "text": "Exit fullscreen",
+  "ctx": "player/components/PlayerControls.tsx [attr:aria-label]"
+ },
+ {
+  "id": 154,
+  "text": "Enter fullscreen",
+  "ctx": "player/components/PlayerControls.tsx [attr:aria-label]"
+ },
+ {
+  "id": 155,
+  "text": "Switch to frame display",
+  "ctx": "player/components/PlayerControls.tsx [attr:label]"
+ },
+ {
+  "id": 156,
+  "text": "Switch to time display",
+  "ctx": "player/components/PlayerControls.tsx [attr:label]"
+ },
+ {
+  "id": 157,
+  "text": "Pause",
+  "ctx": "player/components/PlayerControls.tsx [attr:label]; player/components/PlayerControls.tsx [attr:aria-label]"
+ },
+ {
+  "id": 158,
+  "text": "Play",
+  "ctx": "player/components/PlayerControls.tsx [attr:label]; player/components/PlayerControls.tsx [attr:aria-label]"
+ },
+ {
+  "id": 159,
+  "text": "Shortcuts and tools",
+  "ctx": "player/components/ShortcutsPanel.tsx [attr:label]; player/components/ShortcutsPanel.tsx [attr:aria-label]"
+ },
+ {
+  "id": 160,
+  "text": "Keyboard shortcuts and tools",
+  "ctx": "player/components/ShortcutsPanel.tsx [attr:aria-label]"
+ },
+ {
+  "id": 161,
+  "text": "Jump to frame",
+  "ctx": "player/components/ShortcutsPanel.tsx [jsxtext]; player/components/ShortcutsPanel.tsx [attr:aria-label]"
+ },
+ {
+  "id": 162,
+  "text": "frame number",
+  "ctx": "player/components/ShortcutsPanel.tsx [attr:placeholder]"
+ },
+ {
+  "id": 163,
+  "text": "Go",
+  "ctx": "player/components/ShortcutsPanel.tsx [jsxtext]"
+ },
+ {
+  "id": 164,
+  "text": "In-point",
+  "ctx": "player/components/ShortcutsPanel.tsx [jsxtext]"
+ },
+ {
+  "id": 165,
+  "text": "Out-point",
+  "ctx": "player/components/ShortcutsPanel.tsx [jsxtext]"
+ },
+ {
+  "id": 166,
+  "text": "Playback speed",
+  "ctx": "player/components/SpeedMenu.tsx [attr:label]; player/components/SpeedMenu.tsx [attr:aria-label]"
+ },
+ {
+  "id": 167,
+  "text": "${playbackRate}x",
+  "ctx": "player/components/SpeedMenu.tsx [jsxexpr]"
+ },
+ {
+  "id": 168,
+  "text": "Playback speed options",
+  "ctx": "player/components/SpeedMenu.tsx [attr:aria-label]"
+ },
+ {
+  "id": 169,
+  "text": "${range.label} automation",
+  "ctx": "player/components/TimelineAutomationLane.tsx [attr:aria-label]"
+ },
+ {
+  "id": 170,
+  "text": "Drop media here",
+  "ctx": "player/components/TimelineCanvas.tsx [jsxexpr]"
+ },
+ {
+  "id": 171,
+  "text": "${displayLabel}, ${startLabel} to ${endLabel} seconds",
+  "ctx": "player/components/TimelineClip.tsx [attr:aria-label]"
+ },
+ {
+  "id": 172,
+  "text": "${el.compositionSrc} • Double-click to open",
+  "ctx": "player/components/TimelineClip.tsx [attr:title]"
+ },
+ {
+  "id": 173,
+  "text": "${displayLabel} • ${startLabel}s – ${endLabel}s",
+  "ctx": "player/components/TimelineClip.tsx [attr:title]"
+ },
+ {
+  "id": 174,
+  "text": "${kf.propertyGroup ?? \"Motion\"} keyframe at ${keyframeTimeLabel(clipStart, clipDuration, kf.percentage)}${boundary ? ` (${boundary} clip)` : \"\"}",
+  "ctx": "player/components/TimelineClipDiamonds.tsx [attr:aria-label]"
+ },
+ {
+  "id": 175,
+  "text": "${roundPct(kf.percentage)}%${boundary ? ` · ${boundary} clip` : \"\"}",
+  "ctx": "player/components/TimelineClipDiamonds.tsx [attr:title]"
+ },
+ {
+  "id": 176,
+  "text": "${text}, snapped to ${snapLabel}",
+  "ctx": "player/components/TimelineClipFades.tsx [attr:label]"
+ },
+ {
+  "id": 177,
+  "text": "${label}, ${clipName}",
+  "ctx": "player/components/TimelineClipFades.tsx [attr:aria-label]"
+ },
+ {
+  "id": 178,
+  "text": "Edit ${ease} easing after ${afterLabel}",
+  "ctx": "player/components/TimelineDiamondConnectors.tsx [attr:aria-label]"
+ },
+ {
+  "id": 179,
+  "text": "Edit ${ease} easing",
+  "ctx": "player/components/TimelineDiamondConnectors.tsx [attr:title]"
+ },
+ {
+  "id": 180,
+  "text": "${Math.floor(s / 60)\n                .toString()\n                .padStart(2, \"0\")}:${(s % 60).toString().padStart(2, \"0\")}",
+  "ctx": "player/components/TimelineEmptyState.tsx [jsxexpr]"
+ },
+ {
+  "id": 181,
+  "text": "Drop media files to import",
+  "ctx": "player/components/TimelineEmptyState.tsx [jsxtext]"
+ },
+ {
+  "id": 182,
+  "text": "Drop media here or describe your video to start",
+  "ctx": "player/components/TimelineEmptyState.tsx [jsxexpr]"
+ },
+ {
+  "id": 183,
+  "text": "Describe your video to start creating",
+  "ctx": "player/components/TimelineEmptyState.tsx [jsxexpr]"
+ },
+ {
+  "id": 184,
+  "text": "This track cannot be grouped",
+  "ctx": "player/components/TimelineFxButton.tsx [attr:aria-label]"
+ },
+ {
+  "id": 185,
+  "text": "Name this group",
+  "ctx": "player/components/TimelineFxButton.tsx [attr:aria-label]; player/components/TimelineFxButton.tsx [jsxtext]"
+ },
+ {
+  "id": 186,
+  "text": "Group name",
+  "ctx": "player/components/TimelineFxButton.tsx [attr:aria-label]"
+ },
+ {
+  "id": 187,
+  "text": "Effects you add to the group apply to",
+  "ctx": "player/components/TimelineFxButton.tsx [jsxtext]"
+ },
+ {
+  "id": 188,
+  "text": "all ${clipCount}",
+  "ctx": "player/components/TimelineFxButton.tsx [jsxexpr]"
+ },
+ {
+  "id": 189,
+  "text": "clips\n        at once, and they share one volume.",
+  "ctx": "player/components/TimelineFxButton.tsx [jsxtext]"
+ },
+ {
+  "id": 190,
+  "text": "Group",
+  "ctx": "player/components/TimelineFxButton.tsx [jsxtext]; editor/LayersPanel.tsx [jsxexpr]"
+ },
+ {
+  "id": 191,
+  "text": "Effects — group these clips first",
+  "ctx": "player/components/TimelineFxButton.tsx [attr:aria-label]"
+ },
+ {
+  "id": 192,
+  "text": "Group these clips to add effects to all of them",
+  "ctx": "player/components/TimelineFxButton.tsx [attr:title]"
+ },
+ {
+  "id": 193,
+  "text": "FX",
+  "ctx": "player/components/TimelineFxButton.tsx [jsxtext]; player/components/TimelineFxButton.tsx [jsxtext]"
+ },
+ {
+  "id": 194,
+  "text": "Effects — ${nodeCount} applied",
+  "ctx": "player/components/TimelineFxButton.tsx [attr:aria-label]"
+ },
+ {
+  "id": 195,
+  "text": "Effects",
+  "ctx": "player/components/TimelineFxButton.tsx [attr:aria-label]; player/components/TimelineFxButton.tsx [attr:title]"
+ },
+ {
+  "id": 196,
+  "text": " ${nodeCount}",
+  "ctx": "player/components/TimelineFxButton.tsx [jsxexpr]"
+ },
+ {
+  "id": 197,
+  "text": "+ New track",
+  "ctx": "player/components/TimelineGestureOverlay.tsx [jsxtext]"
+ },
+ {
+  "id": 198,
+  "text": ", before track",
+  "ctx": "player/components/TimelineGestureOverlay.tsx [jsxtext]"
+ },
+ {
+  "id": 199,
+  "text": "Open ${label} effects",
+  "ctx": "player/components/TimelineGroupHeader.tsx [attr:aria-label]"
+ },
+ {
+  "id": 200,
+  "text": "Select ${label}",
+  "ctx": "player/components/TimelineGroupHeader.tsx [attr:aria-label]"
+ },
+ {
+  "id": 201,
+  "text": "Open effects",
+  "ctx": "player/components/TimelineGroupHeader.tsx [attr:title]"
+ },
+ {
+  "id": 202,
+  "text": "Select group",
+  "ctx": "player/components/TimelineGroupHeader.tsx [attr:title]"
+ },
+ {
+  "id": 203,
+  "text": "${memberCount} tracks",
+  "ctx": "player/components/TimelineGroupHeader.tsx [attr:title]"
+ },
+ {
+  "id": 204,
+  "text": "${isExpanded ? \"Hide\" : \"Show\"} ${label} tracks",
+  "ctx": "player/components/TimelineGroupHeader.tsx [attr:aria-label]"
+ },
+ {
+  "id": 205,
+  "text": "${isExpanded ? \"Hide\" : \"Show\"} tracks",
+  "ctx": "player/components/TimelineGroupHeader.tsx [attr:title]"
+ },
+ {
+  "id": 206,
+  "text": "${isLaneOpen ? \"Hide\" : \"Show\"} ${label} lanes",
+  "ctx": "player/components/TimelineGroupHeader.tsx [attr:aria-label]"
+ },
+ {
+  "id": 207,
+  "text": "${isLaneOpen ? \"Hide\" : \"Show\"} lanes",
+  "ctx": "player/components/TimelineGroupHeader.tsx [attr:title]"
+ },
+ {
+  "id": 208,
+  "text": "Show ${groupLabel} ${parts.name}${parts.param ? ` ${parts.param}` : \"\"} in the effect rack",
+  "ctx": "player/components/TimelineGroupLaneLabels.tsx [attr:aria-label]"
+ },
+ {
+  "id": 209,
+  "text": "${groupLabel} · ${parts.param ? `${parts.name} · ${parts.param}` : parts.name}",
+  "ctx": "player/components/TimelineGroupLaneLabels.tsx [attr:title]"
+ },
+ {
+  "id": 210,
+  "text": "Timeline tracks",
+  "ctx": "player/components/TimelineLanes.tsx [attr:aria-label]"
+ },
+ {
+  "id": 211,
+  "text": "Inside:",
+  "ctx": "player/components/TimelineLayerGroupHeader.tsx [jsxtext]"
+ },
+ {
+  "id": 212,
+  "text": "${group} keyframes",
+  "ctx": "player/components/TimelinePropertyLanes.tsx [attr:aria-label]"
+ },
+ {
+  "id": 213,
+  "text": "Shift",
+  "ctx": "player/components/TimelineShortcutHint.tsx [jsxtext]"
+ },
+ {
+  "id": 214,
+  "text": "+ drag/click to edit range",
+  "ctx": "player/components/TimelineShortcutHint.tsx [jsxtext]"
+ },
+ {
+  "id": 215,
+  "text": "keyframes,",
+  "ctx": "player/components/TimelineTrackRow.tsx [jsxtext]"
+ },
+ {
+  "id": 216,
+  "text": "ease controls",
+  "ctx": "player/components/TimelineTrackRow.tsx [jsxtext]"
+ },
+ {
+  "id": 217,
+  "text": "${clipCount} clips",
+  "ctx": "player/components/TrackClipCount.tsx [attr:aria-label]; player/components/TrackClipCount.tsx [attr:title]"
+ },
+ {
+  "id": 218,
+  "text": "Close gap",
+  "ctx": "player/components/TrackGapContextMenu.tsx [jsxtext]"
+ },
+ {
+  "id": 219,
+  "text": "Close all gaps",
+  "ctx": "player/components/TrackGapContextMenu.tsx [jsxtext]"
+ },
+ {
+  "id": 220,
+  "text": "no preview",
+  "ctx": "player/components/VideoThumbnail.tsx [jsxtext]"
+ },
+ {
+  "id": 221,
+  "text": "Preview volume",
+  "ctx": "player/components/VolumeControl.tsx [attr:aria-label]"
+ },
+ {
+  "id": 222,
+  "text": "Preview volume: ${percentage}%",
+  "ctx": "player/components/VolumeControl.tsx [attr:title]"
+ },
+ {
+  "id": 223,
+  "text": "Audio Gain…",
+  "ctx": "player/components/clipMenuAudioItems.tsx [jsxtext]"
+ },
+ {
+  "id": 224,
+  "text": "Duck under voice",
+  "ctx": "player/components/clipMenuAudioItems.tsx [jsxtext]"
+ },
+ {
+  "id": 225,
+  "text": "Link${suffix && ` to${suffix}`}",
+  "ctx": "player/components/clipMenuLinkItems.tsx [prop:label]"
+ },
+ {
+  "id": 226,
+  "text": "Detach audio",
+  "ctx": "player/components/clipMenuLinkItems.tsx [prop:label]; hooks/timelineLinkEditPlan.ts [prop:label]"
+ },
+ {
+  "id": 227,
+  "text": "Unlink${partnerSuffix(element, members) && ` from${partnerSuffix(element, members)}`}",
+  "ctx": "player/components/clipMenuLinkItems.tsx [prop:label]"
+ },
+ {
+  "id": 228,
+  "text": "Merge audio back into video",
+  "ctx": "player/components/clipMenuLinkItems.tsx [prop:label]; hooks/timelineLinkEditPlan.ts [prop:label]"
+ },
+ {
+  "id": 229,
+  "text": "Delete this clip only",
+  "ctx": "player/components/clipMenuLinkItems.tsx [prop:label]"
+ },
+ {
+  "id": 230,
+  "text": "Character",
+  "ctx": "player/components/clipMenuToolItems.tsx [prop:heading]"
+ },
+ {
+  "id": 231,
+  "text": "Freeze frame",
+  "ctx": "player/components/clipMenuToolItems.tsx [jsxexpr]; hooks/useFreezeFrame.ts [prop:label]"
+ },
+ {
+  "id": 232,
+  "text": "Freeze frame (move playhead inside clip)",
+  "ctx": "player/components/clipMenuToolItems.tsx [jsxexpr]"
+ },
+ {
+  "id": 233,
+  "text": "Voice",
+  "ctx": "player/components/clipMenuToolItems.tsx [attr:label]"
+ },
+ {
+  "id": 234,
+  "text": "Look",
+  "ctx": "player/components/clipMenuToolItems.tsx [attr:label]"
+ },
+ {
+  "id": 235,
+  "text": "Previous ${label} keyframe",
+  "ctx": "player/components/trackHeaderLabelRows.tsx [attr:aria-label]"
+ },
+ {
+  "id": 236,
+  "text": "Next ${label} keyframe",
+  "ctx": "player/components/trackHeaderLabelRows.tsx [attr:aria-label]"
+ },
+ {
+  "id": 237,
+  "text": "${navigation.currentKeyframe ? \"Remove\" : \"Add\"} ${label} keyframe",
+  "ctx": "player/components/trackHeaderLabelRows.tsx [attr:aria-label]; player/components/trackHeaderLabelRows.tsx [attr:title]"
+ },
+ {
+  "id": 238,
+  "text": "Show ${label} in the effect rack",
+  "ctx": "player/components/trackHeaderLabelRows.tsx [attr:aria-label]; player/components/trackHeaderLabelRows.tsx [attr:title]"
+ },
+ {
+  "id": 239,
+  "text": "${alsoAutomatedBy} is also fading this — the two multiply.",
+  "ctx": "player/components/trackHeaderLabelRows.tsx [attr:title]"
+ },
+ {
+  "id": 240,
+  "text": "is also fading this.",
+  "ctx": "player/components/trackHeaderLabelRows.tsx [jsxtext]"
+ },
+ {
+  "id": 241,
+  "text": "Remove ${label} automation",
+  "ctx": "player/components/trackHeaderLabelRows.tsx [attr:aria-label]; player/components/trackHeaderLabelRows.tsx [attr:title]"
+ },
+ {
+  "id": 242,
+  "text": "Server matched the target but reported no change even though the client believed the value changed.",
+  "ctx": "hooks/domEditPersistFailure.ts [prop:detail]"
+ },
+ {
+  "id": 243,
+  "text": "Edit layer style",
+  "ctx": "hooks/domStyleCommit.ts [prop:label]"
+ },
+ {
+  "id": 244,
+  "text": "Move layer",
+  "ctx": "hooks/elementOffsetStager.ts [prop:label]; hooks/elementOffsetStager.ts [prop:label]"
+ },
+ {
+  "id": 245,
+  "text": "Rotate layer",
+  "ctx": "hooks/gsapDragCommit.ts [prop:label]; hooks/gsapDragCommit.ts [prop:label]"
+ },
+ {
+  "id": 246,
+  "text": "Resize layer",
+  "ctx": "hooks/gsapDragCommit.ts [prop:label]; hooks/gsapDragCommit.ts [prop:label]"
+ },
+ {
+  "id": 247,
+  "text": "Move animation path",
+  "ctx": "hooks/gsapDragCommit.ts [prop:label]"
+ },
+ {
+  "id": 248,
+  "text": "Move layer (new keyframe)",
+  "ctx": "hooks/gsapDragPositionCommit.ts [prop:label]; hooks/gsapDragPositionCommit.ts [prop:label]"
+ },
+ {
+  "id": 249,
+  "text": "Move layer (waypoint)",
+  "ctx": "hooks/gsapDragPositionCommit.ts [prop:label]"
+ },
+ {
+  "id": 250,
+  "text": "Convert to keyframes",
+  "ctx": "hooks/gsapKeyframeCommit.ts [prop:label]; hooks/useAnimatedPropertyCommit.ts [prop:label]"
+ },
+ {
+  "id": 251,
+  "text": "Add keyframe at ${roundToCenti(absoluteTime)}s",
+  "ctx": "hooks/gsapKeyframeCommit.ts [prop:label]"
+ },
+ {
+  "id": 252,
+  "text": "New animation at ${roundToCenti(absoluteTime)}s",
+  "ctx": "hooks/gsapKeyframeCommit.ts [prop:label]"
+ },
+ {
+  "id": 253,
+  "text": "Resize",
+  "ctx": "hooks/gsapResizeIntercept.ts [prop:label]; hooks/gsapResizeIntercept.ts [prop:label]"
+ },
+ {
+  "id": 254,
+  "text": "zero-duration-tween",
+  "ctx": "hooks/gsapResizeIntercept.ts [prop:detail]"
+ },
+ {
+  "id": 255,
+  "text": "live-resize-no-source-tween",
+  "ctx": "hooks/gsapResizePreflight.ts [prop:detail]"
+ },
+ {
+  "id": 256,
+  "text": "live-position-no-source-tween",
+  "ctx": "hooks/gsapRuntimeBridge.ts [prop:detail]"
+ },
+ {
+  "id": 257,
+  "text": "no-position-tween",
+  "ctx": "hooks/gsapRuntimeBridge.ts [prop:detail]; hooks/gsapRuntimeBridge.ts [prop:detail]"
+ },
+ {
+  "id": 258,
+  "text": "Consolidate position writes",
+  "ctx": "hooks/gsapRuntimeBridge.ts [prop:label]"
+ },
+ {
+  "id": 259,
+  "text": "live-rotation-no-source-tween",
+  "ctx": "hooks/gsapRuntimeBridge.ts [prop:detail]"
+ },
+ {
+  "id": 260,
+  "text": "Rotate",
+  "ctx": "hooks/gsapRuntimeBridge.ts [prop:label]; editor/DomEditRotateHandle.tsx [attr:title]"
+ }
+]

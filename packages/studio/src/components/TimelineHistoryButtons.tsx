@@ -19,7 +19,7 @@ function HistoryButton({ action, can, label, onClick }: HistoryButtonProps) {
     <Tooltip label={historyTooltipLabel(action, label)}>
       <button
         type="button"
-        aria-label={action === "undo" ? "Undo" : "Redo"}
+        aria-label={action === "undo" ? "撤销" : "重做"}
         disabled={!enabled}
         className={enabled ? flatIdle : flatDisabled}
         onClick={() => {

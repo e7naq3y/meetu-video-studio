@@ -145,7 +145,7 @@ export function TimelinePane({
           onDrop={(event) => event.preventDefault()}
         >
           <span className="rounded-md bg-neutral-900/90 px-2.5 py-1 text-[11px] text-neutral-400">
-            Loading composition…
+            正在加载合成…
           </span>
         </div>
       )}

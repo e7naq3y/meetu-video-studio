@@ -85,7 +85,7 @@ export function AutomationToggle({
 }) {
   if (!onAutomate && !onRemoveAutomation) return null;
   return (
-    <Tooltip label={automated ? "Automated" : "Automate"}>
+    <Tooltip label={automated ? "已自动化" : "自动化"}>
       <button
         type="button"
         className={`hf-fx-automate w-[16px] shrink-0 rounded-[3px] border font-mono text-[9px] leading-none ${
@@ -94,7 +94,7 @@ export function AutomationToggle({
             : "border-panel-border-input text-panel-text-2 hover:text-panel-text-0"
         }`}
         aria-pressed={automated}
-        aria-label={automated ? `Remove ${label} automation` : `Automate ${label}`}
+        aria-label={automated ? `移除${label}自动化` : `自动化${label}`}
         onClick={() => (automated ? onRemoveAutomation?.(paramKey) : onAutomate?.(paramKey))}
       >
         A

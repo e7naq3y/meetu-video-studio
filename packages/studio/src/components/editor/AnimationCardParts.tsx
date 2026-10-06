@@ -12,15 +12,15 @@ import { P } from "./panelTokens";
 export const BOOLEAN_PROPS = new Set(["visibility"]);
 const STRING_PROPS = new Set(["filter", "clipPath"]);
 const FILTER_PRESETS = [
-  { label: "Blur", value: "blur(4px)" },
-  { label: "Bright", value: "brightness(1.5)" },
-  { label: "Gray", value: "grayscale(1)" },
-  { label: "None", value: "none" },
+  { label: "模糊", value: "blur(4px)" },
+  { label: "亮色", value: "brightness(1.5)" },
+  { label: "灰色", value: "grayscale(1)" },
+  { label: "无", value: "none" },
 ];
 const CLIP_PATH_PRESETS = [
-  { label: "Circle", value: "circle(50% at 50% 50%)" },
-  { label: "Inset", value: "inset(10%)" },
-  { label: "None", value: "none" },
+  { label: "圆形", value: "circle(50% at 50% 50%)" },
+  { label: "内嵌", value: "inset(10%)" },
+  { label: "无", value: "none" },
 ];
 
 function isPercentProp(prop: string): boolean {
@@ -93,7 +93,7 @@ export function PropertyRow({
             onClick={() => onCommit(isVisible ? "hidden" : "visible")}
             className="shrink-0 rounded-full transition-colors duration-200 relative"
             style={{ width: 28, height: 16, background: isVisible ? P.accent : P.borderInput }}
-            title={isVisible ? "Visible — click to hide" : "Hidden — click to show"}
+            title={isVisible ? "可见，点击隐藏" : "已隐藏，点击显示"}
           >
             <span
               className="absolute top-[2px] left-0 rounded-full transition-transform duration-200"
@@ -199,7 +199,7 @@ export function AddPropertyTrigger({
         onBlur={onClose}
       >
         <option value="" disabled>
-          Choose property…
+          选择属性…
         </option>
         {available.map((p) => (
           <option key={p} value={p}>

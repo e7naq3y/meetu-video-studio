@@ -47,20 +47,20 @@ function ConflictReview({
         <div className="flex items-start justify-between gap-4">
           <div>
             <h2 id="external-conflict-title" className="text-base font-semibold">
-              Review both versions of {conflict.error.filePath}
+              对比两个版本： {conflict.error.filePath}
             </h2>
             <p className="mt-1 text-xs text-neutral-400">
-              Reviewing or exporting does not change either version.
+              查看或导出不会改动任何一个版本。
             </p>
           </div>
           <button type="button" onClick={onClose} className="rounded-sm px-2 py-1 text-neutral-400">
-            Close
+            关闭
           </button>
         </div>
         <div className="mt-4 grid gap-4 md:grid-cols-2">
           {[
-            { title: "File on disk", content: external, suffix: "external" },
-            { title: "Unsaved Studio version", content: studio, suffix: "studio" },
+            { title: "磁盘上的文件", content: external, suffix: "external" },
+            { title: "视频工作室中未保存的版本", content: studio, suffix: "studio" },
           ].map((side) => (
             <section key={side.suffix} aria-label={side.title}>
               <div className="mb-2 flex items-center justify-between gap-2">
@@ -71,7 +71,7 @@ function ConflictReview({
                     className="rounded-sm border border-neutral-700 px-2 py-1 text-[11px]"
                     onClick={() => void navigator.clipboard.writeText(side.content)}
                   >
-                    Copy
+                    复制
                   </button>
                   <button
                     type="button"
@@ -80,7 +80,7 @@ function ConflictReview({
                       downloadText(`${conflict.error.filePath}.${side.suffix}.html`, side.content)
                     }
                   >
-                    Download
+                    下载
                   </button>
                 </div>
               </div>
@@ -125,14 +125,14 @@ function FailedDraftReview({
         <div className="flex items-start justify-between gap-4">
           <div>
             <h2 id="failed-draft-title" className="text-base font-semibold">
-              Recover unsaved Studio draft for {path}
+              恢复未保存的视频工作室草稿： {path}
             </h2>
             <p className="mt-1 text-xs text-neutral-400">
-              Copy or download this draft before choosing to discard it.
+              放弃前请先复制或下载这份草稿。
             </p>
           </div>
           <button type="button" onClick={onClose} className="rounded-sm px-2 py-1 text-neutral-400">
-            Close
+            关闭
           </button>
         </div>
         <div className="mt-4 flex justify-end gap-2">
@@ -141,14 +141,14 @@ function FailedDraftReview({
             className="rounded-sm border border-neutral-700 px-2 py-1 text-[11px]"
             onClick={() => void navigator.clipboard.writeText(content)}
           >
-            Copy
+            复制
           </button>
           <button
             type="button"
             className="rounded-sm border border-neutral-700 px-2 py-1 text-[11px]"
             onClick={() => downloadText(`${path}.studio.html`, content)}
           >
-            Download
+            下载
           </button>
         </div>
         <textarea
@@ -180,22 +180,22 @@ export function ExternalFileConflictBanner({
       >
         <span>
           {conflict
-            ? `${conflict.error.filePath} changed outside Studio. Preview is paused so neither version is lost.`
-            : `Studio could not safely finish local saves: ${errorMessage(blocked.error)}. Preview is paused.`}
+            ? `${conflict.error.filePath} 在视频工作室外被修改。预览已暂停，两个版本都不会丢失。`
+            : `视频工作室无法安全完成本地保存：${errorMessage(blocked.error)}。预览已暂停。`}
         </span>
         {conflict && (
           <button type="button" onClick={() => setReviewing(true)} className="underline">
-            Review or export both
+            查看或导出两个版本
           </button>
         )}
         {failure?.studioContent != null && (
           <button type="button" onClick={() => setReviewing(true)} className="underline">
-            Review or export Studio draft
+            查看或导出视频工作室草稿
           </button>
         )}
         {failure && !failure.recovered && failure.studioContent != null && (
           <button type="button" onClick={() => void coordinator.retry()} className="underline">
-            Retry save
+            重试保存
           </button>
         )}
         <button
@@ -203,7 +203,7 @@ export function ExternalFileConflictBanner({
           onClick={() => void coordinator.useExternalFile()}
           className="rounded-sm border border-amber-200/30 px-2 py-1"
         >
-          Discard Studio edits and reload file
+          放弃视频工作室中的修改并重新加载文件
         </button>
         {conflict && (
           <button
@@ -219,7 +219,7 @@ export function ExternalFileConflictBanner({
             }}
             className="rounded-sm border border-red-300/40 px-2 py-1 text-red-100"
           >
-            Overwrite file with Studio version
+            用视频工作室版本覆盖文件
           </button>
         )}
         {failure?.recovered && failure.studioContent != null && (
@@ -236,7 +236,7 @@ export function ExternalFileConflictBanner({
             }}
             className="rounded-sm border border-red-300/40 px-2 py-1 text-red-100"
           >
-            Overwrite file with recovered Studio draft
+            用恢复的视频工作室草稿覆盖文件
           </button>
         )}
       </div>

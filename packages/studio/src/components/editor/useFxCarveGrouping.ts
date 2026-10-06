@@ -171,7 +171,7 @@ export function collectCarveCandidates(
     offeredGroupIds.add(group.id);
     described.push({
       id: group.id,
-      label: `${group.label} (${members.length})`,
+      label: `${group.label}（${members.length}）`,
       kind: classifyAudioName(
         group.label,
         ...members.flatMap((m) => [m.id, m.getAttribute("src")]),

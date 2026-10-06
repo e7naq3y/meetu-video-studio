@@ -237,22 +237,22 @@ export const FileTree = memo(function FileTree({
       {hasFileOps && (
         <div className="flex items-center justify-between px-2.5 py-1.5 border-b border-neutral-800/50 shrink-0">
           <span className="text-[10px] font-semibold tracking-wider text-neutral-600 uppercase">
-            Files
+            文件
           </span>
           <div className="flex items-center gap-0.5">
             <button
               onClick={() => handleNewFile("")}
               className="p-1.5 rounded-sm hover:bg-neutral-800 text-neutral-600 hover:text-neutral-400 active:scale-[0.97] transition-colors"
-              title="New File"
-              aria-label="New File"
+              title="新建文件"
+              aria-label="新建文件"
             >
               <Plus size={12} weight="bold" />
             </button>
             <button
               onClick={() => handleNewFolder("")}
               className="p-1.5 rounded-sm hover:bg-neutral-800 text-neutral-600 hover:text-neutral-400 active:scale-[0.97] transition-colors"
-              title="New Folder"
-              aria-label="New Folder"
+              title="新建文件夹"
+              aria-label="新建文件夹"
             >
               <FolderSimplePlus size={12} weight="duotone" />
             </button>
@@ -293,7 +293,7 @@ export const FileTree = memo(function FileTree({
           )}
         {children.length === 0 && !inlineInput && (
           <div className="px-3 py-4 text-center text-[11px] text-neutral-600">
-            No files yet{hasFileOps ? " — use + above to create one" : ""}.
+            还没有文件{hasFileOps ? "，点击上方的 + 新建" : ""}.
           </div>
         )}
         {children.map((child) =>

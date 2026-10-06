@@ -120,7 +120,7 @@ async function replaceSetWithSingleKeyframe(
       keyframes: [{ percentage: 0, properties: position }],
       ease: setAnim.ease,
     },
-    { label: "Enable keyframes", keyframeAction: "add", softReload: true },
+    { label: "启用关键帧", keyframeAction: "add", softReload: true },
   );
 }
 
@@ -256,7 +256,7 @@ async function extendKeyframedTweenToPlayhead(
       ...keyframeEases(anim),
     },
     {
-      label: "Add keyframe",
+      label: "添加关键帧",
       keyframeAction: "add",
       softReload: true,
       ...commitOverrides,
@@ -372,7 +372,7 @@ export async function promoteSetToKeyframes(
       ],
       ease: setAnim.ease,
     },
-    { label: "Add keyframe", keyframeAction: "add", softReload: true },
+    { label: "添加关键帧", keyframeAction: "add", softReload: true },
   );
 }
 
@@ -412,7 +412,7 @@ export async function applyArcKeyframeAtPlayhead(
         keyframes: extended.keyframes,
         ease: "none",
       },
-      { label: "Add keyframe", keyframeAction: "add", softReload: true },
+      { label: "添加关键帧", keyframeAction: "add", softReload: true },
     );
     return;
   }
@@ -434,7 +434,7 @@ export async function applyArcKeyframeAtPlayhead(
           keyframes: nodes.filter((_, index) => index !== timedNodeIndex),
           ease: "none",
         },
-        { label: "Remove keyframe", softReload: true },
+        { label: "移除关键帧", softReload: true },
       );
     }
     return;
@@ -455,7 +455,7 @@ export async function applyArcKeyframeAtPlayhead(
       }),
       ease: "none",
     },
-    { label: "Add keyframe", keyframeAction: "add", softReload: true },
+    { label: "添加关键帧", keyframeAction: "add", softReload: true },
   );
 }
 
@@ -545,7 +545,7 @@ export function useEnableKeyframes(
         Object.assign(position, readTranslatePxLeavingPercent(sel.element));
       const mutation = singleKeyTweenMutation(sel, position, t);
       if (mutation && session.commitMutation) {
-        await session.commitMutation(mutation, { label: "Enable keyframes", softReload: true });
+        await session.commitMutation(mutation, { label: "启用关键帧", softReload: true });
       } else {
         session.handleGsapAddAnimation("to");
       }

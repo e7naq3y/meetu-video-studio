@@ -87,10 +87,10 @@ export function PreviewZoomOverlay({
           type="button"
           className="rounded px-1.5 py-0.5 font-medium text-accent-ink hover:bg-white/10 transition-colors"
           onClick={onFit}
-          aria-label="Fit the whole frame in view"
+          aria-label="让整个画面适应窗口"
           data-testid="preview-zoom-fit"
         >
-          Fit
+          适应窗口
         </button>
       </div>
       <div

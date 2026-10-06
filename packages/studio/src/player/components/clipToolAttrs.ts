@@ -21,24 +21,24 @@ export interface ClipToolChoice {
 }
 
 export const VOICE_CHOICES: readonly ClipToolChoice[] = [
-  { id: "voice-clean", label: "Clean" },
-  { id: "voice-broadcast", label: "Broadcast" },
-  { id: "voice-warm", label: "Warm" },
+  { id: "voice-clean", label: "纯净" },
+  { id: "voice-broadcast", label: "广播" },
+  { id: "voice-warm", label: "温暖" },
 ];
 
 export const CHARACTER_CHOICES: readonly ClipToolChoice[] = [
-  { id: "telephone", label: "Telephone" },
-  { id: "radio-am", label: "AM Radio" },
-  { id: "megaphone", label: "Megaphone" },
+  { id: "telephone", label: "电话" },
+  { id: "radio-am", label: "调幅收音机" },
+  { id: "megaphone", label: "扩音器" },
 ];
 
 export const LOOK_CHOICES: readonly ClipToolChoice[] = [
-  { id: "warm-daylight", label: "Warm daylight" },
-  { id: "clean-studio", label: "Clean studio" },
-  { id: "vintage-wash", label: "Vintage wash" },
-  { id: "mono-clean", label: "Mono" },
-  { id: "deep-contrast", label: "Deep contrast" },
-  { id: "home-movie-8mm", label: "Home movie" },
+  { id: "warm-daylight", label: "暖阳" },
+  { id: "clean-studio", label: "干净棚拍" },
+  { id: "vintage-wash", label: "复古褪色" },
+  { id: "mono-clean", label: "黑白" },
+  { id: "deep-contrast", label: "高对比" },
+  { id: "home-movie-8mm", label: "家庭录像" },
 ];
 
 const VOICE_MENU_IDS = new Set([...VOICE_CHOICES, ...CHARACTER_CHOICES].map((c) => c.id));

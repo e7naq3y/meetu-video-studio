@@ -49,8 +49,8 @@ export function GestureRecordPanelButton({
       >
         <GestureRecordIcon recording={recording} />
         {recording
-          ? `Stop recording ${(recordingDuration ?? 0).toFixed(1)}s -- press R`
-          : "Record gesture (R) -- move pointer to capture motion"}
+          ? `停止录制 ${(recordingDuration ?? 0).toFixed(1)}s，按 R`
+          : "录制手势（R），移动指针来采集动作"}
       </button>
     </div>
   );

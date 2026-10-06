@@ -77,13 +77,13 @@ export function buildBindActions(
     const currentSrc = snapshot.attributes.src ?? "";
     actions.push({
       key: "src",
-      label: tag === "img" ? "Image source" : "Media source",
+      label: tag === "img" ? "图片来源" : "媒体来源",
       kind: "src",
       suggestedId: base,
       declaration: (id) =>
         tag === "img"
-          ? { id, type: "image", label: `${selection.label} image`, default: currentSrc }
-          : { id, type: "string", label: `${selection.label} source`, default: currentSrc },
+          ? { id, type: "image", label: `${selection.label} 图片`, default: currentSrc }
+          : { id, type: "string", label: `${selection.label} 来源`, default: currentSrc },
     });
   }
 
@@ -94,13 +94,13 @@ export function buildBindActions(
   if (text && snapshot.children.length === 0 && !selection.isCompositionHost) {
     actions.push({
       key: "text",
-      label: "Text",
+      label: "文字",
       kind: "text",
       suggestedId: `${base}-text`,
       declaration: (id) => ({
         id,
         type: "string",
-        label: `${selection.label} text`,
+        label: `${selection.label} 文字`,
         default: text,
       }),
     });
@@ -111,40 +111,40 @@ export function buildBindActions(
     actions.push(
       {
         key: "color",
-        label: "Text color",
+        label: "文字颜色",
         kind: "style",
         styleProp: "color",
         suggestedId: `${base}-color`,
         declaration: (id) => ({
           id,
           type: "color",
-          label: `${selection.label} color`,
+          label: `${selection.label} 颜色`,
           default: rgbToHex(computed["color"] ?? "#000000"),
         }),
       },
       {
         key: "background",
-        label: "Background",
+        label: "背景",
         kind: "style",
         styleProp: "background-color",
         suggestedId: `${base}-bg`,
         declaration: (id) => ({
           id,
           type: "color",
-          label: `${selection.label} background`,
+          label: `${selection.label} 背景`,
           default: rgbToHex(computed["background-color"] ?? "#000000"),
         }),
       },
       {
         key: "font",
-        label: "Font",
+        label: "字体",
         kind: "style",
         styleProp: "font-family",
         suggestedId: `${base}-font`,
         declaration: (id) => ({
           id,
           type: "font",
-          label: `${selection.label} font`,
+          label: `${selection.label} 字体`,
           default: firstFontFamily(computed["font-family"] ?? "sans-serif"),
         }),
       },
@@ -200,12 +200,12 @@ export function VariablesBindElement({
   return (
     <div className="space-y-1.5 rounded-lg border border-studio-accent/30 bg-neutral-900/40 p-2">
       <p className="text-[9px] font-medium uppercase tracking-wider text-neutral-500">
-        Bind selected: <span className="normal-case text-neutral-300">{selection.label}</span>
+        绑定所选： <span className="normal-case text-neutral-300">{selection.label}</span>
       </p>
       {active ? (
         <div className="space-y-1.5">
           <label className="text-[9px] font-medium text-neutral-500">
-            Variable id for {active.label.toLowerCase()}
+            变量 ID： {active.label.toLowerCase()}
           </label>
           <input
             type="text"
@@ -216,11 +216,11 @@ export function VariablesBindElement({
           />
           {existingDecl && (
             <p className="text-[9px] leading-snug text-warning-ink">
-              "{trimmedId}" already exists. This element will use its current value
+              "{trimmedId}” 已存在。此元素将使用该变量的当前值
               {existingDecl.default !== undefined && (
                 <span className="font-mono"> ({String(existingDecl.default)})</span>
               )}
-              , not the element's own — binding won't change "{trimmedId}".
+              ，而不是元素自身的值——绑定不会改变“{trimmedId}".
             </p>
           )}
           <div className="flex items-center justify-end gap-2">
@@ -229,7 +229,7 @@ export function VariablesBindElement({
               onClick={() => setActiveKey(null)}
               className="h-6 rounded-sm px-2 text-[10px] text-neutral-500 hover:text-neutral-300"
             >
-              Cancel
+              取消
             </button>
             <button
               type="button"
@@ -240,7 +240,7 @@ export function VariablesBindElement({
               }}
               className="h-6 rounded-sm bg-neutral-800 px-2 text-[10px] font-medium text-neutral-200 hover:bg-neutral-700 disabled:cursor-not-allowed disabled:opacity-40"
             >
-              {existingDecl ? "Bind anyway" : "Bind"}
+              {existingDecl ? "仍然绑定" : "绑定"}
             </button>
           </div>
         </div>
@@ -256,7 +256,7 @@ export function VariablesBindElement({
               }}
               className="h-6 rounded-md border border-neutral-800 px-2 text-[10px] font-medium text-neutral-400 transition-colors hover:border-neutral-700 hover:text-neutral-200"
             >
-              {action.label} →&nbsp;variable
+              {action.label} →&nbsp;变量
             </button>
           ))}
         </div>

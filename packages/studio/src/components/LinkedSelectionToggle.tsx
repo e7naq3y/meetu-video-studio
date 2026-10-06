@@ -17,7 +17,7 @@ function SyncIndicatorMenu({ x, y, onClose }: { x: number; y: number; onClose: (
     <div
       ref={menuRef}
       role="menu"
-      aria-label="Linked clips"
+      aria-label="链接片段"
       className={`${menuClasses.panel} fixed z-200 min-w-[200px]`}
       style={{ left: x, top: y }}
     >
@@ -32,7 +32,7 @@ function SyncIndicatorMenu({ x, y, onClose }: { x: number; y: number; onClose: (
         }}
       >
         <span className="w-3 text-studio-accent">{visible ? "✓" : ""}</span>
-        Show out-of-sync indicators
+        显示不同步提示
       </button>
     </div>,
     document.body,
@@ -50,8 +50,8 @@ export function LinkedSelectionToggle() {
       <Tooltip
         label={
           linkedSelection
-            ? "Linked Selection on — a click selects both halves (⌥-click for one)"
-            : "Linked Selection off — a click selects one clip"
+            ? "联动选择已开启 — 点击会同时选中两部分（⌥+点击只选一个）"
+            : "联动选择已关闭 — 点击只选中一个片段"
         }
       >
         <button
@@ -61,7 +61,7 @@ export function LinkedSelectionToggle() {
             e.preventDefault();
             setMenuAt({ x: e.clientX, y: e.clientY });
           }}
-          aria-label="Linked Selection"
+          aria-label="联动选择"
           aria-pressed={linkedSelection}
           className={linkedSelection ? flatActive : flatIdle}
         >

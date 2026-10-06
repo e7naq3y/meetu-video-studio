@@ -75,12 +75,11 @@ function HdrBanner({ metadata }: { metadata: MediaMetadata | null }) {
       <div className="mb-0.5 flex items-center justify-between gap-2">
         <span className="font-semibold">{metadata.color.label} source</span>
         <span className="rounded-sm bg-amber-500/15 px-1.5 py-0.5 text-[9px] font-semibold uppercase tracking-wide text-warning-ink">
-          SDR preview
+          SDR 预览
         </span>
       </div>
       <p className="text-text-2">
-        These controls use the current SDR shader preview path. Render may stay HDR-tagged, but this
-        is not true HDR color grading yet.
+        这些控件使用当前的 SDR 着色器预览。渲染结果可能仍带 HDR 标记，但这还不是真正的 HDR 调色。
       </p>
       {details && (
         <p data-flat-grade-hdr-detail="true" className="mt-0.5 truncate text-[9px] text-text-muted">
@@ -213,7 +212,7 @@ export function FlatColorGradingSection({
             onClick={onRequestPresetPreviews}
             className="text-[10px] font-medium text-accent-ink hover:text-accent-ink/80"
           >
-            Retry look previews
+            重试风格预览
           </button>
         )}
         <div data-flat-grade-preset-group="presets" className={FLAT_PREVIEW_GRID}>
@@ -268,7 +267,7 @@ export function FlatColorGradingSection({
         </div>
       </div>
       <FlatSlider
-        label="Amount"
+        label="数量"
         value={Math.round(grading.intensity * 100)}
         min={0}
         max={100}
@@ -280,7 +279,7 @@ export function FlatColorGradingSection({
 
       <div className="space-y-0.5 border-t border-panel-hairline pt-1.5">
         <div className="mb-1 text-[9px] font-semibold uppercase tracking-[0.12em] text-panel-text-5">
-          Primary
+          一级
         </div>
         {COLOR_GRADING_ADJUST_SLIDERS.map((slider) => {
           const rawPercent = grading.adjust[slider.key] * slider.scale;
@@ -310,7 +309,7 @@ export function FlatColorGradingSection({
 
       <div className="space-y-1.5 border-t border-panel-hairline pt-1.5">
         <div className="mb-1 text-[9px] font-semibold uppercase tracking-[0.12em] text-panel-text-5">
-          Color wheels
+          色轮
         </div>
         <ColorWheels
           value={resolvedGrading.wheels}
@@ -333,7 +332,7 @@ export function FlatColorGradingSection({
 
       <div className="space-y-1.5 border-t border-panel-hairline pt-1.5">
         <div className="mb-1 text-[9px] font-semibold uppercase tracking-[0.12em] text-panel-text-5">
-          Curves
+          曲线
         </div>
         <ColorCurves
           value={{ curves: resolvedGrading.curves, hueCurves: resolvedGrading.hueCurves }}
@@ -358,7 +357,7 @@ export function FlatColorGradingSection({
 
       <div className="space-y-1.5 border-t border-panel-hairline pt-1.5">
         <div className="mb-1 text-[9px] font-semibold uppercase tracking-[0.12em] text-panel-text-5">
-          Secondary color
+          二级调色
         </div>
         <PropertyPanelColorSecondary
           secondaries={resolvedGrading.secondaries}
@@ -380,7 +379,7 @@ export function FlatColorGradingSection({
           onClick={() => setLutOpen((v) => !v)}
           className="flex min-h-[30px] w-full items-center justify-between text-left"
         >
-          <span className="text-[11px] text-panel-text-2">Custom LUT</span>
+          <span className="text-[11px] text-panel-text-2">自定义 LUT</span>
           <svg
             width="10"
             height="10"
@@ -395,11 +394,11 @@ export function FlatColorGradingSection({
           <div className="space-y-1.5 pb-1">
             <div className="flex items-center justify-between gap-2">
               <span className="min-w-0 flex-1 truncate font-mono text-[10px] text-panel-text-3">
-                {selectedLutName ?? "None"}
+                {selectedLutName ?? "无"}
               </span>
               <select
                 data-flat-grade-lut-select="true"
-                aria-label="Custom LUT"
+                aria-label="自定义 LUT"
                 value={lut?.src ?? ""}
                 onChange={(e) => {
                   const src = e.target.value;
@@ -408,7 +407,7 @@ export function FlatColorGradingSection({
                 }}
                 className="border-b border-panel-border-input/50 bg-transparent font-mono text-[10px] text-panel-text-3 outline-hidden hover:border-panel-border-input"
               >
-                <option value="">None</option>
+                <option value="">无</option>
                 {lutAssets.map((asset) => (
                   <option key={asset} value={asset}>
                     {asset.split("/").pop() ?? asset}
@@ -419,7 +418,7 @@ export function FlatColorGradingSection({
                 type="button"
                 disabled={!onImportAssets}
                 onClick={() => lutInputRef.current?.click()}
-                title="Import .cube LUT"
+                title="导入 .cube LUT"
                 className="shrink-0 text-panel-text-4 hover:text-panel-text-1 disabled:cursor-not-allowed disabled:opacity-40"
               >
                 <Plus size={12} />
@@ -439,7 +438,7 @@ export function FlatColorGradingSection({
             </div>
             {lut && (
               <FlatSlider
-                label="LUT strength"
+                label="LUT 强度"
                 value={Math.round((lut.intensity ?? 1) * 100)}
                 min={0}
                 max={100}
@@ -455,14 +454,14 @@ export function FlatColorGradingSection({
 
       <div className="space-y-1.5 border-t border-panel-hairline pt-1.5">
         <div className="mb-1 text-[9px] font-semibold uppercase tracking-[0.12em] text-panel-text-5">
-          Finish
+          收尾
         </div>
         <div className="flex items-center gap-1.5">
           <div className="flex-1">{renderDetailSlider("vignette")}</div>
           <button
             type="button"
             data-flat-grade-settings="vignette"
-            title="Vignette settings"
+            title="暗角设置"
             onClick={() => setDetailSettingsOpen((c) => (c === "vignette" ? null : "vignette"))}
             className="shrink-0 text-panel-text-4 hover:text-panel-text-1"
           >
@@ -474,7 +473,7 @@ export function FlatColorGradingSection({
           <button
             type="button"
             data-flat-grade-settings="grain"
-            title="Grain settings"
+            title="颗粒设置"
             onClick={() => setDetailSettingsOpen((c) => (c === "grain" ? null : "grain"))}
             className="shrink-0 text-panel-text-4 hover:text-panel-text-1"
           >
@@ -493,9 +492,9 @@ export function FlatColorGradingSection({
       {onApplyScopeAvailable && (
         <div className="flex items-center justify-between gap-2 border-t border-panel-hairline pt-1.5">
           <span className="flex items-center gap-1.5 text-[11px] text-panel-text-2">
-            Copy grade to
+            调色复制到
             <select
-              aria-label="Copy grade to"
+              aria-label="调色复制到"
               value={applyScope}
               onChange={(e) => {
                 track("select", "Copy grade scope");
@@ -504,8 +503,8 @@ export function FlatColorGradingSection({
               disabled={applyBusy}
               className="border-b border-panel-border-input/50 bg-transparent font-mono text-[11px] text-panel-text-0 outline-hidden hover:border-panel-border-input disabled:opacity-50"
             >
-              <option value="source-file">Current file media</option>
-              <option value="project">All project media</option>
+              <option value="source-file">当前文件的媒体</option>
+              <option value="project">项目中所有媒体</option>
             </select>
           </span>
           <button
@@ -518,7 +517,7 @@ export function FlatColorGradingSection({
             }}
             className="text-[11px] font-medium text-accent-ink hover:text-accent-ink/80 disabled:cursor-not-allowed disabled:opacity-50"
           >
-            {applyBusy ? "Applying" : "Apply"}
+            {applyBusy ? "正在应用" : "应用"}
           </button>
         </div>
       )}

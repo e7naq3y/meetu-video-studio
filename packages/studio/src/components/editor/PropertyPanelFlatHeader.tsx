@@ -36,7 +36,7 @@ export function PropertyPanelFlatHeader({
 }) {
   const track = useTrackDesignInput();
   const Icon = ICON_BY_KIND[elementKind];
-  const visibilityLabel = `${hiddenToggleVerb(asMute, hidden)} element`;
+  const visibilityLabel = `${hiddenToggleVerb(asMute, hidden)}元素`;
 
   return (
     <div className="flex items-center gap-2.5 border-b border-panel-hairline px-4 py-3">
@@ -53,8 +53,8 @@ export function PropertyPanelFlatHeader({
         {showUngroup && (
           <button
             type="button"
-            aria-label="Ungroup"
-            title="Ungroup (⌘⇧G)"
+            aria-label="取消编组"
+            title="取消编组 (⌘⇧G)"
             onClick={() => {
               track("button", "Ungroup");
               onUngroup?.();
@@ -88,8 +88,8 @@ export function PropertyPanelFlatHeader({
         )}
         <button
           type="button"
-          aria-label="Copy element info to clipboard"
-          title={copied ? "Copied!" : "Copy element info for any AI agent"}
+          aria-label="复制元素信息到剪贴板"
+          title={copied ? "已复制！" : "复制元素信息，供任意 AI 助手使用"}
           onClick={() => {
             track("button", "Copy element info");
             onCopy();
@@ -100,7 +100,7 @@ export function PropertyPanelFlatHeader({
         </button>
         <button
           type="button"
-          aria-label="Clear selection"
+          aria-label="清除选区"
           onClick={() => {
             track("button", "Clear selection");
             onClear();

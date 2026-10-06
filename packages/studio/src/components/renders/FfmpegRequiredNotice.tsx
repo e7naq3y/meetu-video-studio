@@ -68,14 +68,14 @@ export const FfmpegRequiredNotice = memo(function FfmpegRequiredNotice({
     >
       <div className="flex flex-col gap-0.5">
         <span className="text-[11px] font-semibold text-warning-ink">
-          {status.title ?? "FFmpeg not found"}
+          {status.title ?? "未找到 FFmpeg"}
         </span>
         {/* text-2, not the panel's usual text-4 for secondary copy: the amber
             wash lifts the background, and text-4 measures 2.2:1 on it against
             the 4.5:1 minimum. This is the line that explains why Export is
             off, so it has to be readable. text-2 measures 6.6:1. */}
         <span className="text-[10px] leading-snug text-pretty text-panel-text-2">
-          {status.detail ?? "FFmpeg is required to encode video."}
+          {status.detail ?? "编码视频需要 FFmpeg。"}
         </span>
       </div>
 
@@ -91,7 +91,7 @@ export const FfmpegRequiredNotice = memo(function FfmpegRequiredNotice({
             onClick={() => void copy(status.command ?? "")}
             className={`h-6 w-14 shrink-0 rounded-xs border border-amber-500/30 text-[10px] font-medium text-warning-ink transition-colors hover:bg-amber-500/20 active:scale-[0.98] ${FOCUS_RING}`}
           >
-            {copied ? "Copied" : "Copy"}
+            {copied ? "已复制" : "复制"}
           </button>
         </div>
       ) : (
@@ -109,7 +109,7 @@ export const FfmpegRequiredNotice = memo(function FfmpegRequiredNotice({
           disabled={checking}
           className={`rounded-xs py-0.5 text-[10px] font-medium text-warning-ink underline-offset-2 transition-colors hover:underline disabled:opacity-50 ${FOCUS_RING}`}
         >
-          {checking ? "Checking…" : "Recheck"}
+          {checking ? "检测中…" : "重新检测"}
         </button>
         <a
           href={DOWNLOAD_URL}
@@ -117,7 +117,7 @@ export const FfmpegRequiredNotice = memo(function FfmpegRequiredNotice({
           rel="noreferrer"
           className={`rounded-xs py-0.5 text-[10px] text-panel-text-2 underline-offset-2 transition-colors hover:text-panel-text-0 hover:underline ${FOCUS_RING}`}
         >
-          Other install options
+          其他安装方式
         </a>
         {/* Last in the row and only ever appended, so appearing and vanishing
             moves nothing that sits before it. */}
@@ -125,7 +125,7 @@ export const FfmpegRequiredNotice = memo(function FfmpegRequiredNotice({
           aria-live="polite"
           className="ml-auto text-[10px] text-panel-text-2 transition-opacity"
         >
-          {recheckFailed ? "Still not found" : ""}
+          {recheckFailed ? "仍未找到" : ""}
         </span>
       </div>
     </div>

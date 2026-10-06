@@ -69,7 +69,7 @@ export function TimelineEmptyState({
                 <polyline points="7 10 12 15 17 10" />
                 <line x1="12" y1="15" x2="12" y2="3" />
               </svg>
-              <span className="text-[13px] text-accent-ink">Drop media files to import</span>
+              <span className="text-[13px] text-accent-ink">拖入媒体文件即可导入</span>
             </>
           ) : (
             <>
@@ -92,8 +92,8 @@ export function TimelineEmptyState({
               </svg>
               <span className="text-[13px] text-neutral-500">
                 {onFileDrop
-                  ? "Drop media here or describe your video to start"
-                  : "Describe your video to start creating"}
+                  ? "将媒体拖到这里，或描述你的视频开始创作"
+                  : "描述你的视频，开始创作"}
               </span>
             </>
           )}

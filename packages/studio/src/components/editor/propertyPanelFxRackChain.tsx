@@ -115,7 +115,7 @@ export function FxRackChain({
           them the order reads as a list, which is the one reading that makes
           "move up" look cosmetic — it is the most consequential control here. */}
       <p className="hf-fx-term flex items-baseline gap-1.5 px-1.5 font-mono text-[9px] uppercase tracking-wide text-panel-text-2">
-        <span className="hf-fx-term-cap text-panel-text-1">In</span>
+        <span className="hf-fx-term-cap text-panel-text-1">输入</span>
         <span>{signalPath.inLabel}</span>
       </p>
       {/* Carve leads the rack, which is also where its effects sit in the signal
@@ -157,8 +157,8 @@ export function FxRackChain({
       {handBuiltCount === 0 && eqIds.length === 0 ? (
         <p className="hf-fx-empty py-1 text-[11px] text-panel-text-2">
           {showCarve
-            ? `No other effects on this ${signalPath.subject}.`
-            : `No effects on this ${signalPath.subject}.`}
+            ? `此${signalPath.subject}上没有其他特效。`
+            : `此${signalPath.subject}上没有特效。`}
         </p>
       ) : (
         runs.map((run) => {
@@ -201,7 +201,7 @@ export function FxRackChain({
         })
       )}
       <p className="hf-fx-term hf-fx-term-out flex items-baseline gap-1.5 px-1.5 font-mono text-[9px] uppercase tracking-wide text-panel-text-2">
-        <span className="hf-fx-term-cap text-panel-text-1">Out</span>
+        <span className="hf-fx-term-cap text-panel-text-1">输出</span>
         <span>{signalPath.outLabel}</span>
       </p>
     </div>

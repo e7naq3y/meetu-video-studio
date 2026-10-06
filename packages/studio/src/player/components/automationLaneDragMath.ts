@@ -168,7 +168,7 @@ export function computeGroupMove(input: {
       v0: group.selection.v0 + dv,
       v1: group.selection.v1 + dv,
     },
-    hint: `${group.indices.length} points ${dt >= 0 ? "+" : ""}${dt.toFixed(2)}s`,
+    hint: `${group.indices.length} 个点 ${dt >= 0 ? "+" : ""}${dt.toFixed(2)}s`,
   };
 }
 

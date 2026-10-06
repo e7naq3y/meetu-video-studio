@@ -188,14 +188,14 @@ export function FlatMediaSection({
           className="flex shrink-0 items-center gap-1 text-[10px] text-panel-text-3 hover:text-panel-text-1"
         >
           {copied ? <Check size={11} /> : <ClipboardList size={11} />}
-          {copied ? "Copied" : "Copy"}
+          {copied ? "已复制" : "复制"}
         </button>
       </div>
       {isVisualMedia && (
         <div className="ml-px border-l-2 border-panel-border-input py-1 pl-[10px]">
           <div className="flex min-h-6 items-center justify-between">
             <span className="flex items-baseline gap-[7px]">
-              <span className="text-[11px] font-semibold text-panel-text-1">Cutout</span>
+              <span className="text-[11px] font-semibold text-panel-text-1">抠图</span>
               <span className="font-mono text-[9px] text-panel-text-4">
                 transparent {isVideo ? "WebM" : "PNG"}
               </span>
@@ -208,28 +208,28 @@ export function FlatMediaSection({
               className="flex items-center gap-1 text-[10px] font-medium text-accent-ink disabled:cursor-not-allowed disabled:opacity-50"
               title={
                 canRemoveBackground
-                  ? "Remove background and save a transparent asset"
-                  : "Select a project-local image or video asset"
+                  ? "去除背景并保存为透明素材"
+                  : "选择项目内的图片或视频素材"
               }
             >
-              {removeBusy ? "Working" : "Remove BG"}
+              {removeBusy ? "处理中" : "去除背景"}
             </button>
           </div>
           <FlatSelectRow
-            label="Quality"
+            label="画质"
             value={quality}
             options={["fast", "balanced", "best"]}
             tier="explicitDefault"
             onChange={(next) => setQuality(next as typeof quality)}
           />
           {isVideo && (
-            <FlatToggle label="BG plate" checked={createPlate} onChange={setCreatePlate} />
+            <FlatToggle label="背景板" checked={createPlate} onChange={setCreatePlate} />
           )}
           {removeProgress && (
             <div className="mt-1 space-y-1">
               <div className="flex items-center justify-between text-[10px] text-panel-text-4">
                 <span className="min-w-0 flex-1 truncate">
-                  {removeProgress.error ?? removeProgress.stage ?? "Processing"}
+                  {removeProgress.error ?? removeProgress.stage ?? "处理中"}
                 </span>
                 <span>{Math.round(removeProgress.progress)}%</span>
               </div>
@@ -256,7 +256,7 @@ export function FlatMediaSection({
           >
             <div className="min-w-0 flex-1">
               <FlatSlider
-                label="Volume"
+                label="音量"
                 value={volumeFaderPosition}
                 min={AUDIO_GAIN_FADER_MIN}
                 max={AUDIO_GAIN_FADER_MAX}
@@ -282,7 +282,7 @@ export function FlatMediaSection({
             </div>
             <AutomationToggle
               paramKey="volume"
-              label="Volume"
+              label="音量"
               automated={Boolean(volumeAutomated)}
               onAutomate={onAutomateVolume ? () => onAutomateVolume() : undefined}
               onRemoveAutomation={
@@ -293,7 +293,7 @@ export function FlatMediaSection({
           <div className="flex items-center gap-1">
             <div className="min-w-0 flex-1">
               <FlatSlider
-                label="Speed"
+                label="速度"
                 value={Math.round(toUnit(RATE_RANGE, playbackRate) * 1000)}
                 min={0}
                 max={1000}
@@ -318,7 +318,7 @@ export function FlatMediaSection({
             </div>
             <AutomationToggle
               paramKey="rate"
-              label="Speed"
+              label="速度"
               automated={Boolean(rate?.automated)}
               onAutomate={rate ? () => rate.onAutomate() : undefined}
               onRemoveAutomation={rate ? () => rate.onRemoveAutomation() : undefined}
@@ -329,15 +329,15 @@ export function FlatMediaSection({
               row is video-only. */}
           {rate?.canApplyPreset && !isAudio && (
             <FlatSelectRow
-              label="Speed preset"
+              label="速度预设"
               value=""
-              options={[{ value: "", label: "Choose…" }, ...SPEED_PRESET_OPTIONS]}
+              options={[{ value: "", label: "选择…" }, ...SPEED_PRESET_OPTIONS]}
               tier="default"
               onChange={(id) => id && rate.onApplyPreset(id as SpeedPresetId)}
             />
           )}
           <FlatSlider
-            label="Media start"
+            label="媒体起点"
             value={Math.round(mediaStart * 100)}
             min={0}
             max={mediaStartMax * 100}
@@ -360,18 +360,18 @@ export function FlatMediaSection({
             />
           )}
           <FlatToggle
-            label="Loop"
+            label="循环"
             checked={hasLoop}
             onChange={(next) => void onSetHtmlAttribute("loop", next ? "true" : null)}
           />
           <FlatToggle
-            label="Muted"
+            label="已静音"
             checked={hasMuted}
             onChange={(next) => void commitMutedToggle(mediaEdit, next)}
           />
           {isVideo && (
             <FlatToggle
-              label="Has audio track"
+              label="包含音轨"
               checked={hasAudio}
               onChange={(next) => void commitHasAudioToggle(mediaEdit, next)}
             />
@@ -381,14 +381,14 @@ export function FlatMediaSection({
       {isVisualMedia && (
         <>
           <FlatSelectRow
-            label="Fit"
+            label="适应窗口"
             value={objectFit}
             options={["contain", "cover", "fill", "none", "scale-down"]}
             tier={objectFit === "contain" ? "default" : "explicitCustom"}
             onChange={(next) => void onSetStyle("object-fit", next)}
           />
           <FlatSelectRow
-            label="Position"
+            label="位置"
             value={objectPosition}
             options={[
               "center",
@@ -429,7 +429,7 @@ function MediaFadeSliders({
     return (
       <FlatSlider
         key={edge}
-        label={`Fade ${edge}`}
+        label={edge === "in" ? "淡入" : "淡出"}
         value={Math.round(seconds * 100)}
         min={0}
         max={Math.round(edgeMax * 100)}

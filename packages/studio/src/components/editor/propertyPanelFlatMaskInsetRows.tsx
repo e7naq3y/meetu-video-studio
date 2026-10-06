@@ -57,7 +57,7 @@ export function FlatMaskInsetRows({
   return (
     <>
       <FlatSlider
-        label="Mask inset"
+        label="遮罩内缩"
         value={clipInsetValue}
         min={0}
         max={Math.max(120, Math.ceil(clipInsetValue))}

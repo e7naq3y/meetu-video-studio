@@ -33,7 +33,7 @@ export const ArcPathControls = memo(function ArcPathControls({
     return (
       <div className="rounded-md border border-neutral-800 bg-neutral-900/50 px-3 py-2">
         <p className="text-[11px] text-neutral-500">
-          Add at least 2 position keyframes to enable arc motion.
+          至少添加 2 个位置关键帧才能启用弧线运动。
         </p>
       </div>
     );
@@ -42,17 +42,17 @@ export const ArcPathControls = memo(function ArcPathControls({
   return (
     <div className="space-y-3">
       <div className="flex items-center justify-between">
-        <span className={LABEL}>Arc Motion</span>
+        <span className={LABEL}>弧线运动</span>
         <button
           type="button"
           role="switch"
           aria-checked={Boolean(arcPath.enabled)}
-          aria-label="Arc motion"
+          aria-label="弧线运动"
           onClick={handleToggle}
           disabled={disabled}
           className="relative rounded-full transition-colors duration-200"
           style={{ width: 28, height: 16, background: arcPath.enabled ? P.accent : P.borderInput }}
-          title={arcPath.enabled ? "Disable arc motion" : "Enable arc motion"}
+          title={arcPath.enabled ? "关闭弧线运动" : "开启弧线运动"}
         >
           <span
             className="absolute top-[2px] left-0 rounded-full transition-transform duration-200"
@@ -69,12 +69,12 @@ export const ArcPathControls = memo(function ArcPathControls({
       {arcPath.enabled && (
         <>
           <div className="flex items-center justify-between">
-            <span className={LABEL}>Auto-Rotate</span>
+            <span className={LABEL}>自动旋转</span>
             <button
               type="button"
               role="switch"
               aria-checked={Boolean(arcPath.autoRotate)}
-              aria-label="Auto-rotate along path"
+              aria-label="沿路径自动旋转"
               onClick={handleAutoRotate}
               disabled={disabled}
               className="relative rounded-full transition-colors duration-200"
@@ -85,8 +85,8 @@ export const ArcPathControls = memo(function ArcPathControls({
               }}
               title={
                 arcPath.autoRotate
-                  ? "Disable auto-rotate along path"
-                  : "Rotate element to follow path tangent"
+                  ? "关闭沿路径自动旋转"
+                  : "让元素随路径切线方向旋转"
               }
             >
               <span
@@ -105,16 +105,16 @@ export const ArcPathControls = memo(function ArcPathControls({
             <div key={i} className="grid min-w-0 gap-1.5">
               <div className="flex items-center justify-between">
                 <span className={LABEL}>
-                  {segmentCount === 1 ? "Curviness" : `Segment ${i + 1}`}
+                  {segmentCount === 1 ? "弯曲度" : `第 ${i + 1} 段`}
                 </span>
                 {seg.cp1 && seg.cp2 && (
                   <button
                     type="button"
                     onClick={() => onUpdateSegment(i, { cp1: undefined, cp2: undefined })}
                     className="text-[9px] font-medium text-neutral-500 transition-colors hover:text-neutral-300"
-                    title="Reset to auto-generated control points"
+                    title="重置为自动生成的控制点"
                   >
-                    Reset
+                    重置
                   </button>
                 )}
               </div>

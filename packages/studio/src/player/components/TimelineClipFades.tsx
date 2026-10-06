@@ -527,11 +527,11 @@ function FadeHandle({
   const label = direction === "in" ? "Fade in" : "Fade out";
   const text = `${label} ${formatFadeSeconds(value)} s`;
   return (
-    <Tooltip label={snapLabel ? `${text}, snapped to ${snapLabel}` : text}>
+    <Tooltip label={snapLabel ? `${text}，已吸附到${snapLabel}` : text}>
       <div
         role="slider"
         tabIndex={focusable ? 0 : -1}
-        aria-label={`${label}, ${clipName}`}
+        aria-label={`${label}，${clipName}`}
         aria-valuemin={0}
         aria-valuemax={max}
         aria-valuenow={value}

@@ -495,8 +495,8 @@ export const Player = forwardRef<HTMLIFrameElement, PlayerProps>(
             onPointerDown={(event) => event.preventDefault()}
           >
             <HyperframesLoader
-              title="Loading composition"
-              detail="Preparing the Studio preview."
+              title="正在加载合成"
+              detail="正在准备视频工作室预览。"
               size={56}
             />
           </div>
@@ -516,8 +516,8 @@ export const Player = forwardRef<HTMLIFrameElement, PlayerProps>(
           >
             <div className="flex flex-col items-center gap-3">
               <HyperframesLoader
-                title="Preparing preview assets"
-                detail="Waiting for media and motion assets before playback starts."
+                title="正在准备预览素材"
+                detail="正在等待媒体和动效素材加载，完成后开始播放。"
                 size={56}
               />
               {assetWaitLong && (
@@ -526,7 +526,7 @@ export const Player = forwardRef<HTMLIFrameElement, PlayerProps>(
                   onClick={handleContinueAnyway}
                   className="px-3 py-1.5 text-[11px] rounded-md border border-neutral-700 text-neutral-300 hover:border-neutral-500 hover:bg-neutral-800 transition-colors"
                 >
-                  Continue anyway
+                  仍然继续
                 </button>
               )}
             </div>
@@ -539,14 +539,14 @@ export const Player = forwardRef<HTMLIFrameElement, PlayerProps>(
             data-testid="composition-preview-error"
           >
             <div className="max-w-sm">
-              <p className="text-sm font-semibold text-white">Preview failed to load</p>
+              <p className="text-sm font-semibold text-white">预览加载失败</p>
               <p className="mt-1 text-xs text-neutral-400">{previewError}</p>
               <button
                 type="button"
                 className="mt-4 rounded-md bg-white px-3 py-1.5 text-xs font-semibold text-black transition-colors hover:bg-neutral-200"
                 onClick={() => retryPreviewRef.current?.()}
               >
-                Retry preview
+                重试预览
               </button>
             </div>
           </div>

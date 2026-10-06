@@ -408,7 +408,7 @@ export function useTimelineGroupEditing({
           })),
           eligible: changes.every((change) => !resizeHasPlaybackStartAdjustment(change)),
           needsExtension,
-          label: "Resize timeline clips",
+          label: "调整多个时间线片段长度",
           coalesceKey,
           coalesceMs,
         });
@@ -436,7 +436,7 @@ export function useTimelineGroupEditing({
             projectId,
             iframe: previewIframeRef.current,
             reloadPreview,
-            label: "Resize timeline clips",
+            label: "调整多个时间线片段长度",
             errorLabel: "Failed to scale GSAP positions",
             coalesceKey,
             recordEdit,

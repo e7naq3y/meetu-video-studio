@@ -53,10 +53,10 @@ export function InspectorHeaderActions({
             track("button", "Ungroup");
             onUngroup();
           }}
-          title="Ungroup (⌘⇧G)"
+          title="取消编组 (⌘⇧G)"
           className="flex h-6 items-center rounded-sm px-2 text-[11px] font-medium text-neutral-400 transition-colors hover:bg-neutral-800 hover:text-neutral-200"
         >
-          Ungroup
+          取消编组
         </button>
       )}
       <button
@@ -70,7 +70,7 @@ export function InspectorHeaderActions({
             ? "text-accent-ink"
             : "text-neutral-500 hover:bg-neutral-800 hover:text-neutral-300"
         }`}
-        title={copied ? "Copied!" : "Copy element info to clipboard"}
+        title={copied ? "已复制！" : "复制元素信息到剪贴板"}
       >
         <svg
           width="13"
@@ -86,7 +86,7 @@ export function InspectorHeaderActions({
       </button>
       <button
         type="button"
-        aria-label="Clear selection"
+        aria-label="清除选区"
         onClick={() => {
           track("button", "Clear selection");
           onClear();

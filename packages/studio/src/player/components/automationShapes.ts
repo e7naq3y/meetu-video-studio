@@ -16,10 +16,10 @@ import { fromUnit, toUnit } from "./automationLaneGeometry";
 export type AutomationShapeId = "ramp-up" | "ramp-down" | "swell" | "dip";
 
 export const AUTOMATION_SHAPES: ReadonlyArray<{ id: AutomationShapeId; label: string }> = [
-  { id: "ramp-up", label: "Ramp up" },
-  { id: "ramp-down", label: "Ramp down" },
-  { id: "swell", label: "Swell" },
-  { id: "dip", label: "Dip" },
+  { id: "ramp-up", label: "渐强" },
+  { id: "ramp-down", label: "渐弱" },
+  { id: "swell", label: "隆起" },
+  { id: "dip", label: "凹陷" },
 ];
 
 /** Ease used on the segments entering/leaving a swell or dip midpoint. */

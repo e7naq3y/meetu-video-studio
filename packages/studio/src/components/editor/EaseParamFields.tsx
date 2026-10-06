@@ -81,7 +81,7 @@ export function EaseBezierField({
           ref={inputRef}
           type="text"
           defaultValue={text}
-          aria-label="Cubic bezier control points"
+          aria-label="三次贝塞尔控制点"
           aria-invalid={error !== null}
           aria-describedby={error ? errorId : undefined}
           onInput={() => setError(null)}
@@ -105,7 +105,7 @@ export function EaseBezierField({
         aria-live="polite"
         className={`mt-1 text-[9px] text-danger-ink ${error ? "" : "sr-only"}`}
       >
-        {error ?? "Valid bezier values"}
+        {error ?? "有效的贝塞尔值"}
       </p>
     </div>
   );
@@ -172,9 +172,9 @@ export function SpringBounceField({
 }) {
   return (
     <div className="mt-1.5 flex items-center gap-2 px-0.5 text-[10px] text-neutral-400">
-      <span aria-hidden="true">Bounce</span>
+      <span aria-hidden="true">弹跳</span>
       <NumericCommitInput
-        label="Spring bounce"
+        label="弹簧弹跳"
         value={springBounce}
         min={0}
         max={1}
@@ -200,9 +200,9 @@ export function WiggleField({
   return (
     <div className="mt-1.5 flex items-center gap-2 px-0.5 text-[10px] text-neutral-400">
       <div className="flex items-center gap-1">
-        <span aria-hidden="true">Count</span>
+        <span aria-hidden="true">次数</span>
         <NumericCommitInput
-          label="Wiggle count"
+          label="摆动次数"
           value={config.wiggles}
           min={1}
           step={1}
@@ -211,9 +211,9 @@ export function WiggleField({
         />
       </div>
       <div className="flex items-center gap-1">
-        <span aria-hidden="true">Type</span>
+        <span aria-hidden="true">类型</span>
         <select
-          aria-label="Wiggle type"
+          aria-label="摆动类型"
           value={config.type}
           onChange={(event) => {
             if (isWiggleType(event.currentTarget.value)) {
@@ -230,9 +230,9 @@ export function WiggleField({
         </select>
       </div>
       <div className="flex items-center gap-1">
-        <span aria-hidden="true">Amplitude</span>
+        <span aria-hidden="true">幅度</span>
         <NumericCommitInput
-          label="Wiggle amplitude"
+          label="摆动幅度"
           value={amplitude}
           min={0}
           max={1}

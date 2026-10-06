@@ -56,7 +56,7 @@ export function useLintModal(projectId: string | null, refreshKey?: number) {
       setBackgroundFindings(parsed);
     } catch (err) {
       const msg = err instanceof Error ? err.message : String(err);
-      setLintModal([{ severity: "error", message: `Failed to run lint: ${msg}` }]);
+      setLintModal([{ severity: "error", message: `运行检查失败：${msg}` }]);
     } finally {
       setLinting(false);
     }

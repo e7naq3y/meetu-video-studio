@@ -131,10 +131,10 @@ function ZActionIcon({ action }: { action: ZAction }) {
 }
 
 const Z_ACTIONS: Array<{ action: ZAction; label: string }> = [
-  { action: "bring-to-front", label: "Bring to front" },
-  { action: "bring-forward", label: "Bring forward" },
-  { action: "send-backward", label: "Send backward" },
-  { action: "send-to-back", label: "Send to back" },
+  { action: "bring-to-front", label: "置于顶层" },
+  { action: "bring-forward", label: "上移一层" },
+  { action: "send-backward", label: "下移一层" },
+  { action: "send-to-back", label: "置于底层" },
 ];
 
 export const CanvasContextMenu = memo(function CanvasContextMenu({
@@ -266,7 +266,7 @@ export const CanvasContextMenu = memo(function CanvasContextMenu({
             handleDelete();
           }}
         >
-          <span>Delete</span>
+          <span>删除</span>
           <span className="text-neutral-500 text-[10px] ml-3">⌫</span>
         </button>
       )}

@@ -43,7 +43,7 @@ function partnerSuffix(element: TimelineElement, others: readonly TimelineElemen
   const [partner] = partners;
   if (partners.length !== 1 || !partner) return "";
   const pair = [tagOf(element), tagOf(partner)].sort().join("+");
-  return pair === "audio+video" ? ` ${tagOf(partner)}` : "";
+  return pair === "audio+video" ? ` ${tagOf(partner) === "video" ? "视频" : "音频"}` : "";
 }
 
 function linkItem(
@@ -60,7 +60,7 @@ function linkItem(
   if (!linkPair) return null;
   const suffix = partnerSuffix(element, linkPair);
   return {
-    label: `Link${suffix && ` to${suffix}`}`,
+    label: `关联${suffix && `到${suffix}`}`,
     ...(selectedPair ? { shortcut: "⌘L" } : {}),
     run: () => onLinkEdit({ kind: "link", elements: linkPair }),
   };
@@ -81,7 +81,7 @@ export function resolveLinkMenuItems(input: {
   const linked = members.length > 1;
   if (canDetachAudio(element)) {
     items.push({
-      label: "Detach audio",
+      label: "分离音频",
       shortcut: "⌥⇧D",
       run: () => onLinkEdit({ kind: "detach", element }),
     });
@@ -89,7 +89,7 @@ export function resolveLinkMenuItems(input: {
   const selected = elements.filter((el) => selectedKeys.has(keyOf(el)));
   if (linked) {
     items.push({
-      label: `Unlink${partnerSuffix(element, members) && ` from${partnerSuffix(element, members)}`}`,
+      label: `取消关联${partnerSuffix(element, members) && `（${partnerSuffix(element, members)}）`}`,
       shortcut: "⌘L",
       run: () => onLinkEdit({ kind: "unlink", elements: members }),
     });
@@ -100,14 +100,14 @@ export function resolveLinkMenuItems(input: {
   const pair = findMergePair(element, elements);
   if (pair) {
     items.push({
-      label: "Merge audio back into video",
+      label: "将音频合并回视频",
       disabledReason: isPairInSync(pair.video, pair.audio) ? undefined : "Move into Sync first",
       run: () => onLinkEdit({ kind: "merge", ...pair }),
     });
   }
   if (linked && onDeleteElementOnly) {
     items.push({
-      label: "Delete this clip only",
+      label: "仅删除此片段",
       shortcut: "⌥⌫",
       destructive: true,
       run: () => onDeleteElementOnly(element),

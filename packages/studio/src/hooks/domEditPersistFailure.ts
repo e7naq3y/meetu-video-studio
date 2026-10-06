@@ -90,6 +90,6 @@ export function warnDomEditPersistNoOp(
     target: getTargetTuple(selection),
     operations: summarizeOperations(operations),
     detail:
-      "Server matched the target but reported no change even though the client believed the value changed.",
+      "服务器已找到目标，但报告没有变化，而客户端认为数值已改变。",
   });
 }
