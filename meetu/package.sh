@@ -13,5 +13,7 @@ cp -R $ROOT/packages/studio/dist/. package/dist/studio/
 # 版本号带上 meetu 后缀，便于区分官方版
 jq --arg v "$VER" '.version=$v | .description="Meet U 视频工作室（安杰开发）· 基于 HyperFrames 的中文版"' package/package.json > p.json && mv p.json package/package.json
 cp $HERE/NOTICE.md package/NOTICE-MEETU.md && cp $ROOT/LICENSE package/LICENSE
+# 堵住所有"去下载官方版"的入口（详见 patch_cli.py）
+python3 $HERE/patch_cli.py package
 mkdir -p $HERE/dist && tar czf $HERE/dist/meetu-hyperframes-$VER.tgz package
 echo $HERE/dist/meetu-hyperframes-$VER.tgz
